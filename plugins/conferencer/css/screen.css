@@ -1,0 +1,146 @@
+/* Tabs ==================================================================== */
+
+.conferencer_tabs .tabs {
+	margin: 0;
+	overflow: auto;
+}
+
+.conferencer_tabs .tabs li {
+	float: left;
+	list-style-type: none;
+}
+
+.conferencer_tabs .tabs a {
+	display: block;
+	margin-right: 5px;
+	padding: 5px 15px;
+	border: 1px solid #EEE;
+	border-bottom: 0;
+	background-color: #EEE;
+	text-decoration: none;
+}
+
+.conferencer_tabs .tabs .current a {
+	background-color: #FFF;
+}
+
+/* Sponsors widget ========================================================= */
+
+.widget_conferencer_sponsors_widget .sponsors {
+	position: relative;
+}
+
+.widget_conferencer_sponsors_widget .sponsor {
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	width: 100%;
+	text-align: center;
+}
+
+/* Agenda  ================================================================= */
+
+.conferencer_agenda .grid {
+	table-layout: fixed;
+	border-collapse: collapse;
+}
+
+.conferencer_agenda th {
+	text-align: center;
+}
+.conferencer_agenda th,
+.conferencer_agenda td {
+	padding: 2px 4px;
+	border: 1px solid #EEE;
+}
+
+.conferencer_agenda .column_time_slot {
+	width: 100px;
+}
+
+.conferencer_agenda tr.day td {
+	font-weight: bold;
+	font-style: italic;
+	background-color: #EEE;
+}
+
+.conferencer_agenda tr.non-session {
+	background-color: #F9F9F9;
+}
+
+.conferencer_agenda td.no-sessions {
+	background-color: #FBFBFB;
+}
+
+.conferencer_agenda .session {
+	position: relative;
+	padding: 5px 0;
+	border-bottom: 1px solid #EEE;
+}
+
+.conferencer_agenda .session:first-child {
+	padding-top: 0px;
+}
+
+.conferencer_agenda .session:last-child {
+	padding-bottom: 0px;
+	border-bottom: none;
+}
+
+.conferencer_agenda .session .title {
+	font-weight: bold;
+}
+
+.conferencer_agenda .session-tooltip {
+	display: none;
+	position: absolute;
+	z-index: 10;
+	bottom: 100%;
+	left: 0;
+	margin-bottom: 15px;
+	width: 400px;
+	padding: 10px 15px;
+	border: 3px solid #000;
+	border-radius: 10px; 
+	-moz-border-radius: 10px; 
+	-webkit-border-radius: 10px; 
+	border: 3px solid #000000;
+	background-color: #FFF;
+}
+
+.conferencer_agenda .session:hover {
+	background-color: #F6F8F6;
+}
+
+.conferencer_agenda .session:hover .session-tooltip {
+	display: block;
+}
+
+.conferencer_agenda .session-tooltip .arrow,
+.conferencer_agenda .session-tooltip .inner-arrow {
+	position: absolute;
+	bottom: -20px;
+	left: 30px;
+	width: 0px;
+	height: 0px;
+	border: 20px solid transparent;
+	border-bottom: 0px;
+	border-top-color: #000;
+}
+
+.conferencer_agenda .session-tooltip .inner-arrow {
+	bottom: -16px;
+	border-top-color: #FFF;
+}
+
+.conferencer_session_detail_toggle,
+.conferencer_session_detail_toggle .hide,
+.conferencer_agenda.show_session_details .conferencer_session_detail_toggle .show,
+.conferencer_agenda.show_session_details.session-details .title {
+	display: none;
+}
+
+.conferencer_agenda.show_session_details .conferencer_session_detail_toggle .hide {
+	display: inline;
+}
