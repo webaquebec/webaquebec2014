@@ -1,0 +1,77 @@
+// Mixins
+// ------------------------------------
+
+@mixin imgReplacement( $img ) {
+    @extend .ir;
+    background-image: url( "#{$img-path}#{$img}" );
+    background-repeat: no-repeat;
+    color: transparent;
+    display: block;
+    height: image-height( $img );
+    width: image-width( $img );
+}
+
+@mixin imgBackground( $img, $repeat, $left:center, $top:center, $color:"" ) {
+    background: #{$color} url("#{$img-path}#{$img}") #{$repeat} #{$left} #{$top};
+}
+
+@mixin gradient ( $start, $end ) {
+    background-color: $start; /* Old browsers */
+    background-image: -moz-linear-gradient(top, $start 0%, $end 100%); /* FF3.6+ */
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(139,139,139,1)), color-stop(100%,$end)); /* Chrome,Safari4+ */
+    background-image: -webkit-linear-gradient(top, $start 0%,$end 100%); /* Chrome10+,Safari5.1+ */
+    background-image: -o-linear-gradient(top, $start 0%,$end 100%); /* Opera 11.10+ */
+    background-image: -ms-linear-gradient(top, $start 0%,$end 100%); /* IE10+ */
+    background-image: linear-gradient(to bottom, $start 0%,$end 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$start}', endColorstr='#{$end}',GradientType=0 ); /* IE6-9 */
+}
+
+@mixin rgba-background($color, $opacity, $img:none) {
+    background: $color;
+    background: url("#{$img-path}#{$img}");
+    background: rgba($color, $opacity);
+    zoom: 1;
+}
+
+@mixin textShadow ( $color, $hsize:1px, $vsize:1px, $blur:1px ){
+    text-shadow: $hsize $vsize $blur $color;
+}
+
+// Change px unit in em
+@function emify( $target, $lineheight: null, $base: null ) {
+    $values: ();
+
+    @if $base == null and $lineheight == null { $base: 16 }
+    @if $base == null and $lineheight != null { $base: $lineheight }
+
+    $baseFixed: remove-px( $base );
+
+    @if type-of( $target ) == list {
+        // $values will return element with type list
+        @each $t in $target {
+            $tFixed: remove-px( $t );
+            $values: append( $values, if( type-of( $tFixed ) == number, ( $tFixed / $baseFixed ) + 0em, $tFixed ) );
+        }
+    } @else {
+        // $values will return element with type number
+        $values: ( remove-px( $target ) / $baseFixed ) + 0em;
+        @if $lineheight != null {
+            @if $lineheight == normal {
+                $values: append( $values,#{"/"}$lineheight );
+            } @else {
+                $values: append( $values,#{"/"}remove-px( $lineheight ) / remove-px( $target ) ) + em;
+            }
+        }
+    }
+
+    @return $values;
+}
+
+// Remove px unit
+@function remove-px( $target ) {
+    @if not unitless( $target ) {
+        @return $target / 1px ;
+    } @else {
+        @return $target;
+    }
+}
