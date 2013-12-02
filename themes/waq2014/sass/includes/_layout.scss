@@ -10,6 +10,7 @@
 }
 
 .l-section-wrapper{
+	@include clearfix();
 	position: relative;
 	padding: 15px;
 

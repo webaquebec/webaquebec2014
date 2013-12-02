@@ -508,6 +508,10 @@
 .sponsors-group{
 	margin: 20px 0;
 
+	@include respond-to( 1167px ){
+		margin: 20px 0 50px;
+	}
+
 	header{
 		margin: 0 0 10px;
 		position: relative;
@@ -649,6 +653,21 @@
 
 				&:nth-child(3n){
 					width: 33.3%;
+					margin-right: 0;
+				}
+			}
+
+			@include respond-to( 1167px ){
+				width: 183px;
+				margin-right: 15px;
+				margin-bottom: 10px;
+
+				&:nth-child(1n){
+					width: 183px;
+					margin-right: 15px;
+				}
+
+				&.last-4{
 					margin-right: 0;
 				}
 			}

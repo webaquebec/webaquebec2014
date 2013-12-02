@@ -53,14 +53,28 @@
 } // home
 
 .schedule{
+	@include clearfix();
 
 	h2{
 		color: $c-schedule-h2;
 		font: $font-schedule-h2;
 		text-transform: uppercase;
+
+		@include respond-to( 1167px ){
+			float: left;
+			margin: 40px 0;
+			font-size: emify(72px);
+		}
 	}
 
 	.schedule-filters{
+
+		@include respond-to( 1167px ){
+			float: left;
+			margin: 40px 0 0 75px;
+			padding: 2px 0 2px 15px;
+			border-left: 2px solid $c-schedule-filters-border;
+		}
 
 		h3{
 			color: $c-schedule-filters-h3;
@@ -71,8 +85,16 @@
 			margin: 10px 0 3px;
 			position: relative;
 
+			@include respond-to( 1167px ){
+				margin-top: 0;
+			}
+
 			h3{
 				line-height: 32px;
+
+				@include respond-to( 1167px ){
+					line-height: 18px;
+				}
 			}
 
 			.btn-toggle-filters{
@@ -87,6 +109,10 @@
 				background-image: url( '#{$img-path}icon-arrow-bottom.png' );
 				background-repeat: no-repeat;
 				background-position: center right;
+
+				@include respond-to( 1167px ){
+					display: none;
+				}
 			}
 		}
 
@@ -95,9 +121,20 @@
 			padding: 18px 15px 20px;
 			background-color: $c-bg-schedule-filters-ul;
 
+			@include respond-to( 1167px ){
+				margin: 0;
+				padding: 0;
+				width: 450px;
+				background-color: transparent;
+			}
+
 			li{
 				@include inline-block;
 				margin: 2px 2px 0 0;
+
+				@include respond-to( 1167px ){
+					margin: 6px 6px 0 0;
+				}
 			}
 
 			button{
@@ -108,6 +145,20 @@
 				color: $c-schedule-filters-li;
 				font: $font-schedule-filters-li;
 				background-color: $c-bg-schedule-filters-li;
+				cursor: pointer;
+			}
+
+			:hover button,
+			.active button{
+				font-weight: bold;
+				color: $c-schedule-filters-hover;
+				background-color: $c-bg-schedule-filters-hover;
+
+				@include respond-to( 1167px ){
+					font-weight: normal;
+					color: $c-schedule-filters-li;
+					background-color: $c-bg-schedule-filters-hover-dark;
+				}
 			}
 		}
 	}
@@ -311,14 +362,11 @@
 	background-color: $c-bg-blog;
 	background-image: url( '#{$img-path}bg-strip-dark.png' );
 	background-position: 33% top;
+	border-top: 13px solid $c-blog-border;
+	border-bottom: 13px solid $c-blog-border;
 
 	@include respond-to( 1167px ){
 		background-position: 33% 21%;
-	}
-
-	.l-section-wrapper{
-		border-top: 13px solid $c-blog-border;
-		border-bottom: 13px solid $c-blog-border;
 	}
 
 	h2{
@@ -354,11 +402,8 @@
 	background-color: $c-bg-about;
 	background-image: url( '#{$img-path}bg-strip-light.png' );
 	background-position: 30% top;
-
-	.l-section-wrapper{
-		border-top: 13px solid $c-about-border;
-		border-bottom: 13px solid $c-about-border;
-	}
+	border-top: 13px solid $c-about-border;
+	border-bottom: 13px solid $c-about-border;
 
 	h2{
 		margin: 10px 0;
@@ -367,6 +412,7 @@
 		text-transform: uppercase;
 
 		@include respond-to( 1167px ){
+			margin: 20px 0 10px;
 			font-size: emify(72px);
 		}
 	}
@@ -403,14 +449,38 @@
 		}
 	}
 
+	@include respond-to( 1167px ){
+
+		.l-col{
+			float: left;
+			width: 777px;
+		}
+
+		.l-col + .l-col{
+			width: 315px;
+			margin-left: 15px;
+		}
+	}
+
 } // about
 
 .footer{
+
+	.footer-infos{
+		@include respond-to( 1167px){
+			padding: 20px 0;
+		}
+	}
 
 	.l-col{
 		@include respond-to( 700px ){
 			float: left;
 			width: 33.3333%;
+		}
+		@include respond-to( 1167px ){
+			float: left;
+			width: 248px;
+			margin-right: 15px;
 		}
 	}
 
@@ -420,6 +490,13 @@
 			width: 100%;
 			clear: both;
 			margin: 15px 0 0;
+		}
+		@include respond-to( 1167px ){
+			float: left;
+			width: 315px;
+			margin-top: 0;
+			margin-right: 0;
+			clear: none;
 		}
 	}
 
@@ -432,6 +509,11 @@
 		@include respond-to( 700px ){
 			float: left;
 			width: 33.3333%;
+			margin-top: 0;
+		}
+		@include respond-to( 1167px ){
+			float: left;
+			width: 248px;
 			margin-top: 0;
 		}
 	}
@@ -495,15 +577,31 @@
 			@include respond-to( 560px ){
 				margin: 0;
 			}
+
+			@include respond-to( 1167px ){
+				@include inline-block;
+
+				& + div{
+					margin-left: 35px;
+				}
+			}
 		}
 
 		.l-col{
 			@include respond-to( 560px ){
 				width: 50%;
+				margin: 0;
 			}
 		}
 
 		.archives{
+
+			h3{
+				@include respond-to( 1167px ){
+					float: left;
+					margin-right: 20px;
+				}
+			}
 
 			ul{
 				@include clearfix();
