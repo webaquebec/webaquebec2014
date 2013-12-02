@@ -1,0 +1,27 @@
+// Base
+// ------------------------------------
+
+body{
+	background-color: $c-bg-body
+}
+
+/* Fix for inline-block extra space issue */
+ul,
+ol {
+	font-size: 0;
+}
+
+/* Reset child elements */
+li {
+	font-size: 16px;
+}
+
+img{
+	max-width: 100%;
+}
+
+
+/*DELETE ME*/
+article + article + article + article{
+	display: none;
+}/*DELETE ME*/

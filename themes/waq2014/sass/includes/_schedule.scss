@@ -1,0 +1,55 @@
+// Schedule
+// ------------------------------------
+
+.schedule-wrapper{
+	display: none;
+
+	table{
+		display: block;
+
+		@include respond-to( 768px ){
+			display: table;
+		}
+	}
+
+	thead{
+		display: block;
+
+		@include respond-to( 768px ){
+			display: table-header-group;
+		}
+	}
+
+	tbody{
+		display: block;
+
+		@include respond-to( 768px ){
+			display: table-row-group;
+		}
+	}
+
+	tr{
+		display: block;
+
+		@include respond-to( 768px ){
+			display: table-row;
+		}
+	}
+
+	th{
+		display: block;
+
+		@include respond-to( 768px ){
+			display: table-cell;
+		}
+	}
+
+	td{
+		display: block;
+
+		@include respond-to( 768px ){
+			display: table-cell;
+		}
+	}
+
+}

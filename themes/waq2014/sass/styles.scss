@@ -4,4 +4,9 @@
 @import "config/mixins";
 @import "config/variables";
 
-@import "includes/main";
+@import "includes/base";
+@import "includes/layout";
+@import "includes/module";
+@import "includes/schedule";
+@import "includes/state";
+@import "includes/theme";

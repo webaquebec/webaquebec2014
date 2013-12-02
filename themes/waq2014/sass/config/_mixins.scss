@@ -1,8 +1,32 @@
 // Mixins
 // ------------------------------------
 
-@mixin imgReplacement( $img ) {
-    @extend .ir;
+@mixin respond-to ( $window-width ) {
+    @media only screen and (min-width: $window-width) { @content; }
+}
+
+@mixin js-slider ( $width, $margin, $nbSlides, $displayedSlides ) {
+    width: $width;
+    &{ margin: 0 auto; overflow: hidden; }
+    .js-slider-container{ width: floor( ( $width + $margin ) * $nbSlides ); @include clearfix; }
+    .slide{ margin-right: $margin; width: floor( $width / $displayedSlides - ( ( $margin * ( $displayedSlides - 1 ) ) / $displayedSlides ) ); float: left; position: relative; }
+}
+
+@mixin clearfix () {
+    zoom: 1;
+    &:before, &:after {
+        content: "\0020";
+        display: block;
+        height: 0;
+        overflow: hidden;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+@mixin imgReplacement ( $img ) {
+    @extend .ir !optional;
     background-image: url( "#{$img-path}#{$img}" );
     background-repeat: no-repeat;
     color: transparent;
@@ -11,7 +35,7 @@
     width: image-width( $img );
 }
 
-@mixin imgBackground( $img, $repeat, $left:center, $top:center, $color:"" ) {
+@mixin imgBackground ( $img, $repeat, $left:center, $top:center, $color:"" ) {
     background: #{$color} url("#{$img-path}#{$img}") #{$repeat} #{$left} #{$top};
 }
 
@@ -26,20 +50,21 @@
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$start}', endColorstr='#{$end}',GradientType=0 ); /* IE6-9 */
 }
 
-@mixin rgba-background($color, $opacity, $img:none) {
+@mixin rgba-background ( $color, $opacity, $img:none ) {
     background: $color;
     background: url("#{$img-path}#{$img}");
     background: rgba($color, $opacity);
     zoom: 1;
 }
 
-@mixin textShadow ( $color, $hsize:1px, $vsize:1px, $blur:1px ){
+@mixin textShadow ( $color, $hsize:1px, $vsize:1px, $blur:1px ) {
     text-shadow: $hsize $vsize $blur $color;
 }
 
 // Change px unit in em
 @function emify( $target, $lineheight: null, $base: null ) {
     $values: ();
+    $param-base: $base;
 
     @if $base == null and $lineheight == null { $base: 16 }
     @if $base == null and $lineheight != null { $base: $lineheight }
@@ -55,11 +80,11 @@
     } @else {
         // $values will return element with type number
         $values: ( remove-px( $target ) / $baseFixed ) + 0em;
-        @if $lineheight != null {
+        @if $lineheight != null and $param-base != null {
             @if $lineheight == normal {
-                $values: append( $values,#{"/"}$lineheight );
+                $values: append( $values, #{"/"} $lineheight );
             } @else {
-                $values: append( $values,#{"/"}remove-px( $lineheight ) / remove-px( $target ) ) + em;
+                $values: append( $values, #{"/"} remove-px( $lineheight ) / remove-px( $target ) ) + em;
             }
         }
     }
@@ -68,7 +93,7 @@
 }
 
 // Remove px unit
-@function remove-px( $target ) {
+@function remove-px ( $target ) {
     @if not unitless( $target ) {
         @return $target / 1px ;
     } @else {

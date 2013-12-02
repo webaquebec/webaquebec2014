@@ -1,0 +1,32 @@
+// Layout
+// ------------------------------------
+
+.l-page-wrapper{
+
+
+	@include respond-to(768px){
+
+	}
+}
+
+.l-section-wrapper{
+	position: relative;
+	padding: 15px;
+
+	@include respond-to ( 1167px ){
+		@include box-sizing("border-box");
+		width: 1137px;
+		margin: 0 auto;
+		padding: 15px;
+	}
+}
+
+.l-row{
+	@include clearfix();
+	position: relative;
+}
+
+.l-col{
+	@include clearfix();
+	position: relative;
+}
