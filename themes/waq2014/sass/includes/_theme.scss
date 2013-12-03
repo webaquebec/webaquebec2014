@@ -54,22 +54,40 @@
 
 .schedule{
 	@include clearfix();
+	position: relative;
+
+	@include respond-to( 1024px ){
+		background-color: $c-bg-schedule-highlight;
+
+		&:before{
+			display: block;
+			height: 208px;
+			width: 100%;
+			position: absolute;
+			left: 0; top: 0;
+			background-color: $c-white;
+		}
+	}
 
 	h2{
 		color: $c-schedule-h2;
 		font: $font-schedule-h2;
 		text-transform: uppercase;
 
-		@include respond-to( 1167px ){
+		@include respond-to( 1024px ){
 			float: left;
 			margin: 40px 0;
 			font-size: emify(72px);
 		}
 	}
 
+	header{
+		@include clearfix;
+	}
+
 	.schedule-filters{
 
-		@include respond-to( 1167px ){
+		@include respond-to( 1024px ){
 			float: left;
 			margin: 40px 0 0 75px;
 			padding: 2px 0 2px 15px;
@@ -85,14 +103,14 @@
 			margin: 10px 0 3px;
 			position: relative;
 
-			@include respond-to( 1167px ){
+			@include respond-to( 1024px ){
 				margin-top: 0;
 			}
 
 			h3{
 				line-height: 32px;
 
-				@include respond-to( 1167px ){
+				@include respond-to( 1024px ){
 					line-height: 18px;
 				}
 			}
@@ -110,7 +128,7 @@
 				background-repeat: no-repeat;
 				background-position: center right;
 
-				@include respond-to( 1167px ){
+				@include respond-to( 1024px ){
 					display: none;
 				}
 			}
@@ -121,7 +139,7 @@
 			padding: 18px 15px 20px;
 			background-color: $c-bg-schedule-filters-ul;
 
-			@include respond-to( 1167px ){
+			@include respond-to( 1024px ){
 				margin: 0;
 				padding: 0;
 				width: 450px;
@@ -132,7 +150,7 @@
 				@include inline-block;
 				margin: 2px 2px 0 0;
 
-				@include respond-to( 1167px ){
+				@include respond-to( 1024px ){
 					margin: 6px 6px 0 0;
 				}
 			}
@@ -150,12 +168,10 @@
 
 			:hover button,
 			.active button{
-				font-weight: bold;
 				color: $c-schedule-filters-hover;
 				background-color: $c-bg-schedule-filters-hover;
 
-				@include respond-to( 1167px ){
-					font-weight: normal;
+				@include respond-to( 1024px ){
 					color: $c-schedule-filters-li;
 					background-color: $c-bg-schedule-filters-hover-dark;
 				}

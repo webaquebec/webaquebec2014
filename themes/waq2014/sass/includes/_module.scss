@@ -115,6 +115,15 @@
 		}
 	}
 
+	.event-stats-group.large .stat-number{
+		font-size: 2.6em;
+		line-height: 0.793em;
+
+		@include respond-to( 400px ){
+			font: $font-event-stats-number;
+		}
+	}
+
 	.event-stats-group.timeleft{
 		width: auto;
 		float: none;
@@ -286,6 +295,7 @@
 
 	.speaker-thumb{
 		max-height: 100%;
+		max-width: none;
 	}
 }
 

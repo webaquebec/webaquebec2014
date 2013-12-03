@@ -50,10 +50,12 @@
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$start}', endColorstr='#{$end}',GradientType=0 ); /* IE6-9 */
 }
 
-@mixin rgba-background ( $color, $opacity, $img:none ) {
-    background: $color;
-    background: url("#{$img-path}#{$img}");
-    background: rgba($color, $opacity);
+@mixin rgba-background ( $color, $opacity ) {
+    $rgba: rgba($color, $opacity);
+    $ie-hex-str: ie-hex-str($rgba);
+    background-color: transparent;
+    background-color: $rgba;
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#{$ie-hex-str},endColorstr=#{$ie-hex-str});
     zoom: 1;
 }
 

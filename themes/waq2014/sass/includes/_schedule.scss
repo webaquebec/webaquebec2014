@@ -2,20 +2,21 @@
 // ------------------------------------
 
 .schedule-wrapper{
-	display: none;
+	margin: 0 -15px;
 
 	table{
 		display: block;
 
-		@include respond-to( 768px ){
+		@include respond-to( 1024px ){
 			display: table;
+			width: 100%;
 		}
 	}
 
 	thead{
-		display: block;
+		display: none;
 
-		@include respond-to( 768px ){
+		@include respond-to( 1024px ){
 			display: table-header-group;
 		}
 	}
@@ -23,7 +24,7 @@
 	tbody{
 		display: block;
 
-		@include respond-to( 768px ){
+		@include respond-to( 1024px ){
 			display: table-row-group;
 		}
 	}
@@ -31,7 +32,7 @@
 	tr{
 		display: block;
 
-		@include respond-to( 768px ){
+		@include respond-to( 1024px ){
 			display: table-row;
 		}
 	}
@@ -39,17 +40,414 @@
 	th{
 		display: block;
 
-		@include respond-to( 768px ){
+		@include respond-to( 1024px ){
 			display: table-cell;
 		}
 	}
 
 	td{
 		display: block;
+		border-bottom: 1px solid $c-schedule-border;
 
-		@include respond-to( 768px ){
+		@include respond-to( 1024px ){
 			display: table-cell;
+			vertical-align: middle;
 		}
+	}
+
+	.js-slider{
+		$width 				: 100%;
+		$margin 			: 0;
+		$nbSlides 			: 3;
+		$displayedSlides 	: 1;
+		@include js-slider ( $width, $margin, $nbSlides, $displayedSlides );
+
+		.slide{
+			width: 33.3333%;
+		}
+	}
+	.slide:first-child,
+	.slide:first-child th{
+		position: relative;
+		z-index: 100;
+		background-color: white;
+	}
+
+	@include respond-to( 1167px ){
+		.js-slider{
+			$width 				: 1137px;
+			$margin 			: 0;
+			$nbSlides 			: 3;
+			$displayedSlides 	: 1;
+			@include js-slider ( $width, $margin, $nbSlides, $displayedSlides );
+		}
+	}
+
+	// ------------------------------------
+
+	.day-wrapper{
+		@include respond-to( 1024px ){
+			padding-top: 30px;
+			background-color: white;
+		}
+	}
+
+	th{
+		color: $c-schedule-rooms;
+		font: $font-schedule-rooms;
+		text-transform: uppercase;
+		text-align: left;
+		padding: 10px 0 10px 30px;
+		background-image: url( '#{$img-path}bg-schedule-default.png' );
+		background-repeat: repeat-y;
+		background-position: 1px 0;
+		border-bottom: 1px solid $c-schedule-border;
+	}
+
+	th.column_salle-libeo{
+		background-image: url( '#{$img-path}bg-schedule-libeo.png' );
+	}
+
+	th.column_salle-ixmedia{
+		background-image: url( '#{$img-path}bg-schedule-ixmedia.png' );
+	}
+
+	th.column_salle-bell{
+		background-image: url( '#{$img-path}bg-schedule-bell.png' );
+	}
+
+	th.column_salle-deloitte{
+		background-image: url( '#{$img-path}bg-schedule-deloitte.png' );
+	}
+
+	th:first-child{
+		background: none;
+	}
+
+	.days-buttons{
+		@include clearfix;
+		margin: 0;
+		padding: 20px 15px 0;
+		font-size: 0;
+		background-color: $c-bg-schedule-highlight;
+
+		@include respond-to( 1024px ){
+			padding: 0;
+			background-color: transparent;
+		}
+
+		button{
+			@include inline-block;
+			@include border-radius(3px);
+			@include box-sizing("border-box");
+			width: 32%;
+			width: calc(33.3333% - 2px);
+			padding: 7px 5px;
+			border: none;
+			margin: 8px 1px;
+			font-size: 16px;
+			cursor: pointer;
+			color: $c-schedule-days-buttons;
+			background-color: $c-bg-schedule-days-buttons;
+
+			@include respond-to( 768px ){
+				padding: 15px 5px;
+			}
+
+			span{
+				font: $font-schedule-days-buttons;
+			}
+		}
+
+		button.active{
+			margin: 0 1px 0;
+			padding: 15px 5px 13px;
+			font-weight: bold;
+			background-color: $c-bg-schedule-days-buttons-active;
+
+			@include respond-to( 768px ){
+				margin: 0 1px 2px;
+				padding: 23px 5px 21px;
+			}
+		}
+	}
+
+	.time-slot{
+		position: relative;
+		padding: 20px 15px 8px;
+		color: $c-schedule-timeslot;
+		font: $font-schedule-timeslot;
+		background-color: white;
+		z-index: 10;
+		vertical-align: top;
+
+		@include respond-to( 1024px ){
+			width: 7%;
+			text-align: center;
+			padding: 20px 0 8px;
+			font-size: emify(16px);
+		}
+
+		.time-slot-end{
+			@include respond-to( 1024px ){
+				display: none;
+			}
+		}
+	}
+
+	.session{
+		padding: 10px 0;
+		background-color: white;
+		background-image: url( '#{$img-path}bg-schedule-default.png' );
+		background-repeat: repeat-y;
+		background-position: center left;
+
+		@include respond-to( 1024px ){
+			width: 23.25%;
+			height: 100px;
+			border-left: 1px solid transparent;
+		}
+
+		.session-content{
+			padding: 20px 65px 0 25px;
+			position: relative;
+
+			@include respond-to( 1024px ){
+				padding: 20px 35px 0 25px;
+			}
+		}
+
+		&.no-speaker .session-content{
+			padding: 0 65px 0 25px;
+
+			@include respond-to( 1024px ){
+				padding: 0 35px 0 25px;
+			}
+		}
+
+		.session-title{
+			font: $font-schedule-title;
+
+			a{
+				text-decoration: none;
+				color: $c-schedule-title;
+
+				&:hover{
+					text-decoration: underline;
+				}
+			}
+		}
+
+		.session-speaker,
+		.session-description{
+			display: block;
+			color: $c-schedule-speaker;
+			font: $font-schedule-speaker;
+		}
+
+		span.session-speaker,
+		.session-description,
+		.session-speaker figcaption{
+			position: absolute;
+			top: 0;
+		}
+
+		.session-speaker-thumb{
+			display: none;
+		}
+
+		.session-room{
+			display: block;
+			padding: 8px 0 0;
+			margin-right: 10px;
+			color: $c-schedule-room;
+			font: $font-schedule-room;
+			text-transform: uppercase;
+
+			@include respond-to( 1024px ){
+				display: none;
+				padding: 0;
+			}
+		}
+
+		.session-time-slot{
+			display: none;
+
+			@include respond-to( 1024px ){
+				@include inline-block;
+				color: $c-schedule-time;
+				font: $font-schedule-time;
+			}
+		}
+
+		.session-bookmark{
+			position: absolute;
+			top: 0;
+			right: 0;
+			border: none;
+			background: none;
+			@include imgReplacement("icon-bookmark-small.png");
+		}
+
+	}
+
+	.session.keynote{
+		padding-top: 0;
+		background-color: $c-bg-schedule-highlight;
+
+		@include respond-to( 1024px ){
+			padding: 15px;
+			background-color: white;
+			background-image: none;
+			border-left: 1px solid $c-schedule-border;
+		}
+
+		.session-content{
+			padding: 28px 35px 0 120px;
+
+			@include respond-to( 768px ){
+				padding: 28px 35px 0 130px;
+			}
+
+			@include respond-to( 1024px ){
+				display: table-cell;
+				vertical-align: middle;
+				width: 2000px;
+				height: 95px;
+				padding: 45px 20px 20px 230px;
+				background-color: $c-bg-schedule-highlight;
+				background-image: url( '#{$img-path}bg-schedule-default.png' );
+				background-repeat: repeat-y;
+				background-position: center left;
+			}
+		}
+
+		.session-content-wrapper{
+			position: relative;
+		}
+
+		&.no-speaker{
+			padding: 0;
+
+			@include respond-to( 1024px ){
+				padding: 15px;
+			}
+
+			.session-content{
+				padding: 10px 35px;
+
+				@include respond-to( 768px ){
+					padding: 20px 35px;
+				}
+			}
+		}
+
+		.session-title{
+			display: block;
+			font: $font-schedule-keynote-title;
+
+			@include respond-to( 1024px ){
+				font-size: emify(30px);
+			}
+		}
+
+		.session-speaker{
+			font: $font-schedule-keynote-speaker;
+
+			@include respond-to( 1024px ){
+				figcaption{
+					top: 38px;
+				}
+			}
+		}
+
+		.session-room{
+			@include respond-to( 1024px ){
+				@include inline-block;
+				font: $font-schedule-keynote-room;
+			}
+		}
+
+		.session-speaker-thumb{
+			display: block;
+			position: absolute;
+			left: 15px; top: 0;
+			max-width: 92px;
+			max-height: 92px;
+
+			@include respond-to( 768px ){
+				top: 0;
+				max-width: 100px;
+				max-height: 86px;
+			}
+
+			@include respond-to( 1024px ){
+				top: 0;
+				max-width: 187px;
+				max-height: 160px;
+			}
+		}
+
+	}
+
+	.session.break{
+		height: auto;
+		padding: 0;
+		background: none;
+		text-align: center;
+
+		@include respond-to( 1024px ){
+			border-left: 1px solid $c-schedule-border;
+		}
+
+		.session-content{
+			margin: 15px;
+			padding: 20px 0;
+			background-color: $c-bg-schedule-highlight;
+
+			@include respond-to( 1024px ){
+				padding: 70px 0;
+			}
+		}
+
+		.session-title{
+			font: $font-schedule-panel-speaker;
+
+			&,
+			a{
+				color: $c-schedule-speaker;
+			}
+		}
+
+		button{
+			display: none;
+		}
+	}
+
+	.session.break.small{
+		@include respond-to( 1024px ){
+			.session-content{
+				padding: 8px 0;
+				background: none;
+			}
+		}
+
+	}
+
+	.session.salle-libeo{
+		background-image: url( '#{$img-path}bg-schedule-libeo.png' );
+	}
+
+	.session.salle-ixmedia{
+		background-image: url( '#{$img-path}bg-schedule-ixmedia.png' );
+	}
+
+	.session.salle-bell{
+		background-image: url( '#{$img-path}bg-schedule-bell.png' );
+	}
+
+	.session.salle-deloitte{
+		background-image: url( '#{$img-path}bg-schedule-deloitte.png' );
 	}
 
 }
