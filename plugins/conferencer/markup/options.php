@@ -26,7 +26,7 @@
 							type="text"
 							name="<?php echo $name; ?>"
 							id="<?php echo $name; ?>"
-							value="<?php echo htmlentities($value); ?>"
+							value="<?php echo htmlentities($value,ENT_COMPAT,'UTF-8'); ?>"
 						/>
 					<?php } else if ($option['type'] == 'int') { ?>
 						<input

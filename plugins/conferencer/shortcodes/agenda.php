@@ -13,24 +13,27 @@ class Conferencer_Shortcode_Agenda extends Conferencer_Shortcode {
 	var $shortcode = 'agenda';
 	var $defaults = array(
 		'column_type' => 'track',
-		'session_tooltips' => true,
+		'session_tooltips' => false,
 		'show_empty_rows' => true,
 		'show_empty_columns' => true,
-		'show_empty_cells' => null,
+		'show_empty_cells' => true,
 		'show_unassigned_column' => false,
 		'tabs' => 'days',
 		'tab_day_format' => 'M. j, Y',
+		'tab_day_strf' => '%A %e %B',
+		'tab_day_dt_strf' => '%Y-%m-%d',
 		'row_day_format' => 'l, F j, Y',
-		'row_time_format' => 'g:ia',
-		'show_row_ends' => false,
+		'row_time_format' => 'G:i',
+		'show_row_ends' => true,
 		'keynote_spans_tracks' => true,
 		'link_sessions' => true,
-		'link_speakers' => true,
-		'link_rooms' => true,
-		'link_time_slots' => true,
-		'link_columns' => true,
+		'link_speakers' => false,
+		'link_rooms' => false,
+		'link_time_slots' => false,
+		'link_columns' => false,
 		'unassigned_column_header_text' => 'N/A',
 		'unscheduled_row_text' => 'Unscheduled',
+		'mobile' => false,
 	);
 	
 	var $buttons = array('agenda');
@@ -198,247 +201,281 @@ class Conferencer_Shortcode_Agenda extends Conferencer_Shortcode {
 		ob_start();
 		
 		//echo '<pre>'; var_dump($agenda); echo '</pre>';
+		
+		$output = "";
 	
-		?>
-	
-		<div class="conferencer_agenda">
-			<?php if (isset($conferencer_options['details_toggle']) && $conferencer_options['details_toggle']) { ?>
-				<a href="#" class="conferencer_session_detail_toggle">
-					<span class="show">display session details</span>
-					<span class="hide">hide session details</span>
-				</a>
-			<?php } ?>
-
-			<?php if ($tabs) { ?>
-				<div class="conferencer_tabs">
-				<ul class="tabs">
-					<?php foreach ($tab_headers as $tab_header) { ?>
-						<li>
-							<?php if ($tabs == 'days') { ?>
-								<a href="#conferencer_agenda_tab_<?php echo $tab_header; ?>">
-									<?php echo $tab_header ? date($tab_day_format, $tab_header) : $unscheduled_row_text; ?>
-								</a>
-							<?php } ?>
-						</li>
-					<?php } ?>
-				</ul>
-			<?php } else { ?>
-				<table class="grid">
-					<?php if ($column_type) $this->display_headers($column_headers); ?>
-					<tbody>
-			<?php } ?>
+		$output .= '<div class="schedule-wrapper">';
 			
-					<?php $row_starts = $last_row_starts = $second_table = false; ?>
-					<?php 
-					foreach ($agenda as $time => $time_slots) {
-					  
-  					  $total_cells = array();
-  					  $fake_slot_id = null;
-  					  $number_of_time_slots = 0;
-  					  foreach ($time_slots as $time_slot_id => $cells) { 
-    					  //$total_cells = array_merge($total_cells,$cells);
-    					  foreach($cells as $key => $value){
-    					    $total_cells[$key][] = $value;
-    					  }
-    					  $fake_slot_id = $time_slot_id;
-    					  $number_of_time_slots++;
-  					  }
-  					  $cells = $total_cells;
-  					  $time_slot_id = $fake_slot_id;
-  					  
-  					  
-  					  
-  					  //echo '<pre>'; var_dump($cells); echo '</pre>';
-							// Set up row information
-					
-							$last_row_starts = $row_starts;
-							$row_starts = get_post_meta($time_slot_id, '_conferencer_starts', true);
-							$row_ends = get_post_meta($time_slot_id, '_conferencer_ends', true);
-							$non_session = get_post_meta($time_slot_id, '_conferencer_non_session', true);
-							$no_sessions = deep_empty($cells);
-						
-							// Show day seperators
-							$show_next_day = $row_day_format !== false && date('w', $row_starts) != date('w', $last_row_starts);
-						
-							if ($show_next_day) { ?>
-								
-								<?php if ($tabs) { ?>
+			/*if (isset($conferencer_options['details_toggle']) && $conferencer_options['details_toggle']) { 
+					$output .= '<a href="#" class="conferencer_session_detail_toggle">';
+						$output .= '<span class="show">display session details</span>';
+						$output .= '<span class="hide">hide session details</span>';
+					$output .= '</a>';
+			}*/
 
-									<?php if ($second_table) { ?>
-											</tbody>
-										</table>
-										 <!-- #conferencer_agenda_tab_xxx --> </div>
-									<?php } else $second_table = true; ?>
-
-									<div id="conferencer_agenda_tab_<?php echo get_day($row_starts); ?>">
-									<table class="grid">
-										<?php if ($column_type) $this->display_headers($column_headers); ?>
-										<tbody>
-								<?php } else { ?>
-									<tr class="day">
-										<td colspan="<?php echo $column_type ? count($column_headers) + 1 : 2; ?>">
-											<?php echo $row_starts ? date($row_day_format, $row_starts) : $unscheduled_row_text; ?>
-										</td>
-									</tr>
-								<?php } ?>
-								
-							<?php }
-							// Set row classes
-
-							$classes = array();
-							if ($non_session) $classes[] = 'non-session';
-							else if ($no_sessions) $classes[] = 'no-sessions';
-						?>
-				
-						<tr<?php output_classes($classes); ?>>
-					
-							<?php // Time slot column -------------------------- ?>
-					
-							<td class="time_slot">
-								<?php
-									if ($time_slot_id) {
-										$time_slot_link = get_post_meta($time_slot_id, '_conferencer_link', true)
-											OR $time_slot_link = get_permalink($time_slot_id);
-										$html = date($row_time_format, $row_starts);
-										if ($show_row_ends) $html .= " &ndash; ".date($row_time_format, $row_ends);
-										if ($link_time_slots) $html = "<a href='$time_slot_link'>$html</a>";
-										echo $html;
+      /** Days buttons // Buttons jours **/
+			if ($tabs) {
+					$output .= '<header class="days-buttons">';
+					foreach ($tab_headers as $tab_header) {
+							if ($tabs == 'days') { 
+									$output .= '<button>';
+									if($tab_header){
+									  $output .= '<time datetime="'.strftime($tab_day_dt_strf, $tab_header).'"><span>'.strftime($tab_day_strf, $tab_header).'</span></time>';
 									}
-								?>
-							</td>
-						
-							<?php // Display session cells --------------------- ?>
-							
-							<?php $colspan = $column_type ? count($column_headers) : 1; ?>
-
-							<?php if ($non_session) { // display a non-sessioned time slot ?>
-
-								<td class="sessions" colspan="<?php echo $colspan; ?>">
-									<p>
-										<?php
-											$html = get_the_title($time_slot_id);
-											if ($link_time_slots) $html = "<a href='$time_slot_link'>$html</a>";
-											echo $html;
-										?>
-									</p>
-								</td>
-								
-							<?php } else if (isset($cells[-1])) { ?>
-								
-								<td class="sessions keynote-sessions" colspan="<?php echo $colspan; ?>">
-									<?php
-										foreach ($cells[-1] as $sessions) {
-											foreach ($sessions as $session) {
-												$this->display_session($session);
-											}
-										}
-									?>
-								</td>
-
-							<?php } else if ($column_type) { // if split into columns, multiple cells  ?>
-
-								<?php foreach ($cells as $cell_sessions) { ?>
-									<td class="sessions <?php if (empty($cell_sessions)) echo 'no-sessions'; ?>">
-										<?php
-										
-											foreach ($cell_sessions as $sessions) {
-										  	foreach ($sessions as $session) {
-  												$this->display_session($session);
-												}
-											}
-										?>
-									</td>
-								<?php } ?>
-
-							<?php } else { // all sessions in one cell ?>
-							
-								<td class="sessions <?php if (empty($cells)) echo 'no-sessions'; ?>">
-									<?php
-										foreach ($cells as $sessions) {
-											foreach ($sessions as $session) {
-												$this->display_session($session);
-											}
-										}
-									?>
-								</td>
-							
-							<?php } ?>
-						</tr>
-					<?php 
-					} ?>
-				</tbody>
-			</table>
+									$output .= '</button>';
+							}
+					}
+					$output .= '</header><div class="js-slider"><div class="js-slider-container">';
+			} else {
+			    $output .= '<div class="js-slider"><div class="js-slider-container"><div class="day-wrapper slide">';
+					$output .= '<table class="grid">';
+					if ($column_type)
+					  $output .= $this->display_headers($column_headers);
+					$output .= '<tbody>'; 
+			}
 			
-			<?php if ($tabs) { ?>
-				 <!-- #conferencer_agenda_tab_xxx --> </div>
-				</div> <!-- .conferencer_agenda_tabs -->
-			<?php } ?>
+			$row_starts = $last_row_starts = $second_table = false;
+      $currentDayTab = -1;
+      
+			foreach ($agenda as $time => $time_slots) {
+			  
+				  $total_cells = array();
+				  $fake_slot_id = null;
+				  $number_of_time_slots = 0;
+				  foreach ($time_slots as $time_slot_id => $cells) { 
+					  //$total_cells = array_merge($total_cells,$cells);
+					  foreach($cells as $key => $value){
+					    $total_cells[$key][] = $value;
+					  }
+					  $fake_slot_id = $time_slot_id;
+					  $number_of_time_slots++;
+				  }
+				  $cells = $total_cells;
+				  $time_slot_id = $fake_slot_id;
+				  
+				  
+				  
+				  //echo '<pre>'; var_dump($cells); echo '</pre>';
+					// Set up row information
+			
+					$last_row_starts = $row_starts;
+					$row_starts = get_post_meta($time_slot_id, '_conferencer_starts', true);
+					$row_ends = get_post_meta($time_slot_id, '_conferencer_ends', true);
+					$non_session = get_post_meta($time_slot_id, '_conferencer_non_session', true);
+					$no_sessions = deep_empty($cells);
+				
+					// Show day seperators
+					//$show_next_day = $row_day_format !== false && date('', $row_starts) != date('w', $last_row_starts);
+					$show_next_day =  $row_day_format !== false && $currentDayTab == date('z', $row_starts) ? false : true;
+					$currentDayTab = date('z', $row_starts);
+				
+					if ($show_next_day) {
+						  if ($tabs) {
+                  if ($second_table) {
+  									$output .= '</tbody>';
+    								$output .= '</table>';
+    								$output .= '</div>';
+							    }
+							    else
+							      $second_table = true;
+
+							  //$output .= '<div id="conferencer_agenda_tab_'.get_day($row_starts).'">';
+							  $output .= '<div class="day-wrapper slide">';
+  							  $output .= '<table class="grid">';
+  								if ($column_type)
+  								  $output .= $this->display_headers($column_headers);
+  								$output .= '<tbody>';
+						  } 
+						  else {
+							  $output .= '<tr class="day">';
+								$output .= '<td colspan="'.($column_type ? count($column_headers) + 1 : 2).'">';
+								$output .= $row_starts ? date($row_day_format, $row_starts) : $unscheduled_row_text;
+								$output .= '</td>';
+  							$output .= '</tr>';
+              }
+          }
+					// Set row classes
+
+					$classes = array();
+					if ($non_session) $classes[] = 'non-session';
+					else if ($no_sessions) $classes[] = 'no-sessions';
+		
+				  $output .= '<tr'.output_classes($classes,false).'>';
+			
+					// Time slot column -------------------------- 
+			
+					$output .= '<td class="time-slot">';
+					if ($time_slot_id) {
+						$time_slot_link = get_post_meta($time_slot_id, '_conferencer_link', true)
+							OR $time_slot_link = get_permalink($time_slot_id);
+						$html = date($row_time_format, $row_starts);
+						if ($show_row_ends) $html .= '<span class="time-slot-end"> à '.date($row_time_format, $row_ends) . '</span>';
+						if ($link_time_slots) $html = "<a href='$time_slot_link'>$html</a>";
+						$output .= $html;
+					}
+					$output .= '</td>';
+				
+					// Display session cells --------------------- 
+					
+					$colspan = $column_type ? count($column_headers) : 1; 
+					
+					if ($non_session) { // display a non-sessioned time slot
+					  $output .= '<td class="session" colspan="'.$colspan.'"><p>';
+						  $html = get_the_title($time_slot_id);
+						  if ($link_time_slots)
+						    $html = "<a href='$time_slot_link'>$html</a>";
+						  $output .= $html;
+						$output .= '</p></td>';
+					  
+					}
+					else if (isset($cells[-1])) {
+					  //$output .= '<td class="session keynote" colspan="'.$colspan.'">';
+					  foreach ($cells[-1] as $sessions) {
+					  	foreach ($sessions as $session) {
+					  	  $session->colspan = $colspan;
+					  		$output .= $this->display_session($session,'keynote,title,speakers_w_photos,room,time');
+					  	}
+					  }
+					  //$output .= '</td>';
+					}
+					else if ($column_type) { // if split into columns, multiple cells
+              
+            $smallest_duration = 999999999999;
+            foreach ($cells as $cell_sessions) { 
+              foreach ($cell_sessions as $sessions) {
+                foreach ($sessions as $key => $session) {
+                  $starts = get_post_meta($session->time_slot, '_conferencer_starts', true);
+                  $ends = get_post_meta($session->time_slot, '_conferencer_ends', true);
+                  $duration = $ends-$starts;
+                  
+                  if($duration < $smallest_duration){
+                    $smallest_duration = $duration;
+                  }
+                }
+              }
+            }
+            
+            foreach ($cells as $cell_sessions) { 
+              if(!empty($cell_sessions)){ 
+              
+                foreach ($cell_sessions as $sessions) {
+                  if(!empty($sessions)){
+                    
+                    foreach ($sessions as $key => $session) {
+                  
+                      $time_slot_id = $session->time_slot ? $session->time_slot : 0;
+                      $starts = get_post_meta($time_slot_id, '_conferencer_starts', true);
+                      $ends = get_post_meta($time_slot_id, '_conferencer_ends', true);
+                      $duration = $ends-$starts;
+                      
+                      if($duration > $smallest_duration){
+                        $rowspan_calc = ceil($duration/$smallest_duration);
+                        $session->rowspan = $rowspan_calc;
+                      }
+                      
+                      //$output .= '<td class="session' . (empty($cell_sessions) ? ' no-sessions':'') . '" '.(($ends-$starts) > 3600 ? ' rowspan="2"' : '').'>';
+                    
+                      $output .= $this->display_session($session,(empty($cell_sessions) ? 'no-session,':'session,').'title,speakers,room');
+                  
+                      //$output .= '</td>';
+                    }
+                  }
+                }
+              }
+            }
+            
+            
+					}
+					else { 
+					  $output .= '<td class="session ' . (empty($cells) ? 'no-sessions':'') . '">';
+					  foreach ($cells as $sessions) {
+					  	foreach ($sessions as $session) {
+					  		$output .= $this->display_session($session);
+					  	}
+					  }
+					  $output .= '</td>';
+					}
+				$output .= '</tr>';
+			}
+		$output .= '</tbody>';
+	$output .= '</table>';
+			
+			if ($tabs) {
+				$output .= '</div>';
+			}
 	
-		</div> <!-- .conferencer_agenda -->
-	
-		<?php
+		$output .= '</div></div></div>';
 	
 		// Retrieve and return buffer
+	
+	  echo $output;
 	
 		return ob_get_clean();
 	}
 	
-	function display_headers($column_headers) { ?>
-		<thead>
-			<tr>
-				<th class="column_time_slot"></th>
-				<?php foreach ($column_headers as $column_header) { ?>
-					<th class="<?php echo $column_header['class']; ?>">
-						<?php
-							$html = $column_header['title'];
-							if ($column_header['link']) $html = "<a href='".$column_header['link']."'>$html</a>";
-							echo $html;
-						?>
-					</th>
-				<?php } ?>
-			</tr>
-		</thead>
-	<?php }
+	function display_headers($column_headers) { 
+	  $output = "";
+		$output .= '<thead>';
+			$output .= '<tr>';
+				$output .= '<th class="column-time-slot"></th>';
+				foreach ($column_headers as $column_header) { 
+					$output .= '<th class="'.$column_header['class'].'">';
+					$html = $column_header['title'];
+					if ($column_header['link']) $html = "<a href='".$column_header['link']."'>$html</a>";
+					$output .= $html;
+					$output .= '</th>';
+				}
+			$output .= '</tr>';
+		$output .= '</thead>';
+		
+		return $output;
+	}
 	
-	function display_session($session) {
+	function display_session($session,$show = 'title,speakers' ) {
 		if (function_exists('conferencer_agenda_display_session')) {
 			conferencer_agenda_display_session($session, $this->options);
 			return;
 		}
-
 		extract($this->options);
-		?>
-
-		<div class="session">
-			<?php echo do_shortcode("
+    $output = "";
+    /*echo '<br><br>'; var_dump("
+    		[session_meta
+    			post_id='{$session->ID}'
+    			show='".$show."'
+    			link_title=".($link_sessions ? 'true' : 'false')."
+    			link_speakers=".($link_speakers ? 'true' : 'false')."
+    			link_room=".($link_rooms ? 'true' : 'false')."
+    			colspan='".($session->colspan ? $session->colspan : 0)."'
+    			rowspan='".($session->rowspan ? $session->rowspan : 0)."'
+    		]
+    	");*/
+		$output .= do_shortcode("
 				[session_meta
-					post_id='$session->ID'
-					show='title,speakers".($session_tooltips ? '' : ',room')."'
-					speakers_prefix='with '
-					room_prefix='in '
+					post_id='{$session->ID}'
+					show='".$show."'
 					link_title=".($link_sessions ? 'true' : 'false')."
 					link_speakers=".($link_speakers ? 'true' : 'false')."
 					link_room=".($link_rooms ? 'true' : 'false')."
+					colspan='".($session->colspan ? $session->colspan : 0)."'
+					rowspan='".($session->rowspan ? $session->rowspan : 0)."'
 				]
-			");	?>
+			");
 
-			<?php if ($session_tooltips) { ?>
-				<div class="session-tooltip">
-					<?php echo do_shortcode("
+			if ($session_tooltips) {
+				$output .= '<div class="session-tooltip">'. do_shortcode("
 						[session_meta
-							post_id='$session->ID'
+							post_id='{$session->ID}'
 							show='title,speakers,room'
 							link_all=false
 						]
-					"); ?>
+					");
 					
-					<p class="excerpt"><?php echo generate_excerpt($session); ?></p>
-					<div class="arrow"></div><div class="inner-arrow"></div>
-				</div>
-			<?php } ?>
-		
-		</div>
+					$output .= '<p class="excerpt">'.generate_excerpt($session).'</p>';
+					$output .= '<div class="arrow"></div><div class="inner-arrow"></div>';
+				$output .= '</div>';
+			 }
 
-	<?php }
+    return $output;
+	 }
 	
 }

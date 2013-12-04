@@ -51,8 +51,12 @@ if (!function_exists('deep_trim')) {
 }
 
 if (!function_exists('output_classes')) {
-	function output_classes($classes) {
-		if (count($classes)) echo ' class="'.implode(' ', $classes).'"';
+	function output_classes($classes,$echo = true) {
+		if (count($classes)) 
+		  if($echo)
+		    echo ' class="'.implode(' ', $classes).'"';
+		  else
+		    return ' class="'.implode(' ', $classes).'"';
 	}
 }
 
