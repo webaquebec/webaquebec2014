@@ -208,6 +208,12 @@ class Conferencer_Shortcode_Session_Meta extends Conferencer_Shortcode {
 					    
 					    if(function_exists('aq_resize')){
 					      $image = aq_resize( $img_url, 187, 160, true );
+					      if(!$image){
+					        $image = aq_resize( $img_url, 187, 160, false );
+  					      if(!$image){
+  					        $image = $img_url;
+  					      }
+					      }
 					    }
 					    else{
 					      $image = $img_url;
@@ -215,7 +221,7 @@ class Conferencer_Shortcode_Session_Meta extends Conferencer_Shortcode {
 						  
 						  if($image){
   					    $output_session .= '<span class="session-speaker-thumb"><!-- position: absolute -->';
-  						    $output_session .= '<img src="'.$image.'" itemprop="image">';
+  						    $output_session .= '<img src="'.$image.'">';
   					    $output_session .= '</span>';
 					    }
 					    
