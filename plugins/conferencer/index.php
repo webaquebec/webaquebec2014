@@ -64,8 +64,10 @@ class Conferencer {
 	}
 	
 	function styles_and_scripts() {
+		//wp_register_style('conferencer-jquery-ui', CONFERENCER_URL.'css/jquery-ui-1.8.16.custom.css', false, '1.8.16');
+		//wp_register_script('conferencer-jquery-ui', CONFERENCER_URL.'js/jquery-ui-1.8.16.custom.min.js', array('jquery'), '1.8.16', true);
 		wp_register_style('conferencer-jquery-ui', CONFERENCER_URL.'css/jquery-ui-1.8.16.custom.css', false, '1.8.16');
-		wp_register_script('conferencer-jquery-ui', CONFERENCER_URL.'js/jquery-ui-1.8.16.custom.min.js', array('jquery'), '1.8.16', true);
+		wp_register_script('conferencer-jquery-ui', "//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js", array('jquery'), '1.10.3', true);
 
 		wp_register_style('conferencer-admin', CONFERENCER_URL.'css/admin.css', array('conferencer-jquery-ui'), CONFERENCER_VERSION);
 		wp_register_script('conferencer-admin', CONFERENCER_URL.'js/admin.js', array('jquery'), CONFERENCER_VERSION, true);

@@ -55,7 +55,7 @@ class Conferencer_CustomPostType {
 	}
 	
 	function includes() {
-		if (in_array($GLOBALS['post_type'], Conferencer::$post_types)) {
+		if (isset($GLOBALS['post_type']) && in_array($GLOBALS['post_type'], Conferencer::$post_types)) {
 			wp_enqueue_script('conferencer-cpt');
 		}
 	}
@@ -86,34 +86,44 @@ class Conferencer_CustomPostType {
 	function save_post($post_id) {
 		if (get_post_type($post_id) != $this->slug) return;
 		if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) return;
-		if (!wp_verify_nonce($_POST['conferencer_nonce'], plugin_basename(__FILE__))) return;
+		if (isset($_POST['conferencer_nonce']) && !wp_verify_nonce($_POST['conferencer_nonce'], plugin_basename(__FILE__))) return;
 		if (!current_user_can('edit_post', $post_id)) return;
 		
 		foreach($this->options as $key => $option) {
 			if ($option['type'] == 'internal') continue;
 			
-			$value = deep_trim($_POST['conferencer_'.$key]);
+			if(isset($_POST['conferencer_'.$key])){
+			  $value = deep_trim($_POST['conferencer_'.$key]);
+			}
+			else {
+			  $value = "";
+			}
 			
 			if ($option['type'] == 'int') $value = intval($value);
 			if ($option['type'] == 'money') $value = floatVal($value);
 			if ($option['type'] == 'multi-select') {
 				$values = array();
-				foreach ($_POST['conferencer_'.$key] as $value) {
-					if (!empty($value)) $values[] = $value;
+				if(isset($_POST['conferencer_'.$key])){
+  				foreach ($_POST['conferencer_'.$key] as $value) {
+  					if (!empty($value)) $values[] = $value;
+  				}
 				}
 				$value = $values;
 			}
 			if ($option['type'] == 'date-time') {
-				$date = getdate(strtotime($_POST['conferencer_'.$key]['date']));
-				$time = getdate(strtotime($_POST['conferencer_'.$key]['time']));
-				$value = mktime(
-					$time['hours'],
-					$time['minutes'],
-					$time['seconds'],
-					$date['mon'],
-					$date['mday'],
-					$date['year']
-				);
+			  $value = 0;
+			  if(isset($_POST['conferencer_'.$key])){
+  				$date = getdate(strtotime($_POST['conferencer_'.$key]['date']));
+  				$time = getdate(strtotime($_POST['conferencer_'.$key]['time']));
+  				$value = mktime(
+  					$time['hours'],
+  					$time['minutes'],
+  					$time['seconds'],
+  					$date['mon'],
+  					$date['mday'],
+  					$date['year']
+  				);
+				}
 			}
 			
 			update_post_meta($post_id, '_conferencer_'.$key, $value);
