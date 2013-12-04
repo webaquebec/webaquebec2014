@@ -369,7 +369,8 @@ class Conferencer_Shortcode_Agenda extends Conferencer_Shortcode {
                       $duration = $ends-$starts;
                       
                       if($duration > $smallest_duration){
-                        $session->rowspan = 2;
+                        $rowspan_calc = ceil($duration/$smallest_duration);
+                        $session->rowspan = $rowspan_calc;
                       }
                       
                       //$output .= '<td class="session' . (empty($cell_sessions) ? ' no-sessions':'') . '" '.(($ends-$starts) > 3600 ? ' rowspan="2"' : '').'>';
