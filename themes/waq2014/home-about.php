@@ -117,8 +117,8 @@ if(!empty($volunteers)){
         <div class="l-row about-wrapper">
 
             <div class="l-col">
-                <p class="strong">Par et pour les gens qui imaginent le web</p>
-                <p>Le WAQ est l’occasion privilégiée d’avoir accès au plus grand rassemblement de décideurs, professionnels, gestionnaires, développeurs et étudiants de l’industrie du numérique de Québec.</p>
+                <p class="strong"><?php echo get_field('org_title',$post->ID); ?></p>
+                <p><?php echo get_field('org_text',$post->ID); ?></p>
 
                 <?php echo $organizers_output; ?>
                 
@@ -126,8 +126,8 @@ if(!empty($volunteers)){
 
             <div class="l-col">
                 <div class="highlight">
-                    <p class="strong">Des bénévoles essentiels !</p>
-                    <p>Un merci tout spécial à notre équipe du tonnerre !</p>
+                    <p class="strong"><?php echo get_field('vol_title',$post->ID); ?></p>
+                    <p><?php echo get_field('vol_text',$post->ID); ?></p>
                 </div>
 
                 <?php echo $volunteers_output; ?>

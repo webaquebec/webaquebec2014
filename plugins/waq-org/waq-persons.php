@@ -62,7 +62,6 @@ function register_person_post_type() {
   
   if(function_exists("register_field_group")){
     if(!class_exists('acf_repeater_plugin')){
-      include_once('acf-add-ons/acf-repeater/acf-repeater.php');
     }
     
   }

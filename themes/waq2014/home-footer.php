@@ -120,7 +120,7 @@ foreach ($archives as $archive) {
             </div>
 
             <div class="l-col right">
-                <div><a href="<?php echo get_permalink(get_page_by_path('accessibilite')); ?>'">Accessibilité</a></div>
+                <div><a href="<?php echo get_permalink(get_page_by_path('accessibilite')); ?>">Accessibilité</a></div>
                 <div>
                     <span class="strong">Conception et réalisation :</span>
                     <a href="http://www.libeo.com" itemscope itemtype="http://schema.org/Organization">

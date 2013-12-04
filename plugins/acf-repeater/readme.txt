@@ -7,7 +7,7 @@ Requires at least: 3.0
 Tested up to: 3.5.1
 Stable tag: trunk
 Homepage: http://www.advancedcustomfields.com/add-ons/repeater-field/
-Version: 1.0.1
+Version: 1.1.1
 
 
 == Copyright ==
@@ -44,18 +44,25 @@ However, only when activated as a plugin will updates be available/
 2. Edit your functions.php file and add the following code to include the field:
 
 `
-add_action('acf/register_fields', 'my_register_fields');
-
-function my_register_fields()
-{
-	include_once('acf-repeater/repeater.php');
-}
+include_once('acf-repeater/acf-repeater.php');
 `
-
-3. Make sure the path is correct to include the repeater.php file
+3. Make sure the path is correct to include the acf-repeater.php file
+4. Remove the acf-repeater-update.php file from the folder.
 
 
 == Changelog ==
+
+= 1.1.1 =
+* Fixed CSS bug causing any nested flexible content fields to not display add/remove buttons for each layout
+* Fixes CSS bug causing cropped tables on small screen sizes
+
+= 1.1.0 =
+* Added Support for sub field conditional logic
+* Added Support for sub field required validation
+* Updated UI for 'column width' option (prepend %)
+* Updated UI for 'Maxinmum Rows' option (can be left blank)
+* Updated JS to use .on function instead of .live
+* Added new update script allowing distribution in premium plugins / themes
 
 = 1.0.1 =
 * [Updated] Updated sub field type list to remove 'Tab' as this does not work as a sub field

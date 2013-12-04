@@ -1,33 +1,21 @@
-/*
-*  Repeater field Style
-*
-*  @description: 
-*  @since: 3.6
-*  @created: 30/01/13
-*/
+.repeater {
+	
+}
+
+.repeater > table {
+	margin: 0 0 8px;
+}
+
+.repeater > table.acf-input-table > tbody > tr > td.field {
+	padding: 8px;
+}
 
 .repeater > table > thead > tr > th:last-child {
 	border-right: 0 none;
 }
 
-.repeater > .acf-input-table > tbody > tr:hover > td.remove > a.acf-button-add,
-.repeater > .acf-input-table > tbody > tr:hover > td.remove > a.acf-button-remove {
-
-	-webkit-transition-delay:0s;
-	-moz-transition-delay:0s;
-	-o-transition-delay:0s;
-	transition-delay:0s;
-	
-	visibility: visible;
-	opacity: 1;
-}
-
-.repeater.disabled > .acf-input-table > tbody > tr:hover > td.remove > a.acf-button-add {
-	visibility: hidden !important;
-}
-
-.repeater a.acf-button-add,
-.repeater a.acf-button-remove {
+.repeater > table > tbody > tr > td.remove > a.acf-button-add,
+.repeater > table > tbody > tr > td.remove > a.acf-button-remove {
 	position: absolute;
 	
 	-webkit-transition: opacity 0.25s 0s ease-in-out, visibility 0s linear 0.25s;
@@ -39,8 +27,24 @@
 	opacity: 0;
 }
 
-.repeater a.acf-button-remove {
+.repeater > table > tbody > tr > td.remove > a.acf-button-remove {
 	position: relative;
+}
+
+.repeater > table > tbody > tr:hover > td.remove > a.acf-button-add,
+.repeater > table > tbody > tr:hover > td.remove > a.acf-button-remove {
+
+	-webkit-transition-delay:0s;
+	-moz-transition-delay:0s;
+	-o-transition-delay:0s;
+	transition-delay:0s;
+	
+	visibility: visible;
+	opacity: 1;
+}
+
+.repeater.disabled > table > tbody > tr:hover > td.remove > a.acf-button-add {
+	visibility: hidden !important;
 }
 
 .repeater > table > thead > tr > th.order,
@@ -71,16 +75,12 @@
 
 .repeater > table > thead > tr > th.remove,
 .repeater > table > tbody > tr > td.remove{
-	width: 16px;
+	width: 16px !important;
 	vertical-align: middle;
 }
 
-.repeater .repeater-footer {
-	margin: 8px 0;
-}
-
 .repeater tr.row-clone {
-	display: none;
+	display: none !important;
 }
 
 .repeater > table > tbody > tr.ui-sortable-helper {
@@ -97,9 +97,27 @@
 	background: rgba(0,0,0,0.075);
 }
 
+
+/*
+*  Empty
+*/
+
 .repeater.empty table thead th {
 	border-bottom: 0 none;
 }
+
+.repeater.empty table.row_layout {
+	box-shadow: none;
+	border: 0 none;
+	margin: 0;
+}
+
+
+/*
+*  Conditiona Logic
+*/
+
+
 
 
 /*---------------------------------------------------------------------------------------------
