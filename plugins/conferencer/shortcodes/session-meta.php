@@ -79,7 +79,9 @@ class Conferencer_Shortcode_Session_Meta extends Conferencer_Shortcode {
 		
 		Conferencer::add_meta($post);
 
-		$meta = array();
+
+		$output = $output_session = $output_content = "";
+		
 		foreach (explode(',', $show) as $type) {
 			$type = trim($type);
 			switch ($type) {
@@ -87,14 +89,14 @@ class Conferencer_Shortcode_Session_Meta extends Conferencer_Shortcode {
 				case 'double-session':
 				case 'keynote':
 				
-				  $type_rendered = $type;			
+				  $type_rendered = $type;
 				
-				  $html = '<td class="session';
+				  $output .= '<td class="session';
 				  
 				  $terms = wp_get_post_terms($post->ID, 'theme', array("fields" => "slugs"));
 				  
 				  if(!empty($terms)){
-  				  $html .= ' '.implode(' ', $terms);
+  				  $output .= ' '.implode(' ', $terms);
 				  }
 				  
 				  $starts = get_post_meta($post->time_slot, '_conferencer_starts', true);
@@ -102,25 +104,25 @@ class Conferencer_Shortcode_Session_Meta extends Conferencer_Shortcode {
 				  $duration = $ends-$starts;
 				  
 				  if($type == 'keynote' && !$post->room && ($duration < 2000)){
-				    $html .= ' break small';
+				    $output .= ' break small';
 				    $type_rendered = 'break';
 				  }
 				  else if($type == 'keynote' && !$post->room){
-				    $html .= ' break';
+				    $output .= ' break';
 				    $type_rendered = 'break';
 				  }
 				  else if($type == 'keynote'){
-				    $html .= ' keynote';
+				    $output .= ' keynote';
 				  }
 				  
 			  	if ($post->room) {
 			  	  $room = get_post($post->room);
-			  	  $html .= ' '.$room->post_name;
+			  	  $output .= ' '.$room->post_name;
 			  	}
 			  	
 			  	if (count($speakers = Conferencer::get_posts('speaker', $post->speakers))) {
 			  	  if(count($speakers) > 1){
-			  	    $html .= ' panel';
+			  	    $output .= ' panel';
 			  	  }
 			  	  else if(count($speakers) == 1){
 			  	    $speaker = array_shift($speakers);
@@ -129,38 +131,37 @@ class Conferencer_Shortcode_Session_Meta extends Conferencer_Shortcode {
 			  	    $img_url = wp_get_attachment_url( $thumb,'full' );
 			  	    
 			  	    if(!empty($img_url)){
-			  	      $html .= ' speaker-thumb';
+			  	      $output .= ' speaker-thumb';
 			  	    }
 			  	  }
 			  	}
 		  	  else{
-		  	    $html .= ' no-speaker';
+		  	    $output .= ' no-speaker';
 		  	  }
 			  	
-			  	$html .= '"';
+			  	$output .= '"';
 			  	
 			  	if ($type == 'double-session' || !empty($rowspan)) {
 			  	  if(empty($rowspan))
 			  	    $rowspan = 2;
-			  	  $html .= ' rowspan="'.$rowspan.'"';
+			  	  $output .= ' rowspan="'.$rowspan.'"';
 			  	}
 			  	
 			  	if ($type == 'keynote') {
-			  	  $html .= ' colspan="'.$colspan.'"';
+			  	  $output .= ' colspan="'.$colspan.'"';
 			  	}
 			  	
-			  	$html .= '>';
+			  	if ($post->room){
+			  	  $output .= ' itemprop="subEvent" itemscope itemtype="http://schema.org/Event"';
+			  	}
 			  	
-			  	$html .= '<div class="session-content" itemprop="subEvent" itemscope itemtype="http://schema.org/Event">';
-		  	  $html .= '<div class="session-content-wrapper">';
-			  	
-					$meta[] = $html;
+			  	$output .= '>';
 					break;
 					
 				case 'title':
 					$html = $post->post_title;
 					if ($link_title) $html = "<a href='".get_permalink($post->ID)."'>$html</a>";
-					$meta[] = '<span class="session-title" itemprop="name">'.$title_prefix.$html.$title_suffix."</span>";
+					$output_content .= '<span class="session-title" itemprop="name">'.$title_prefix.$html.$title_suffix."</span>";
 					break;
 				
 				case 'time':
@@ -173,7 +174,7 @@ class Conferencer_Shortcode_Session_Meta extends Conferencer_Shortcode {
   						$html .= '<span><time itemprop="startDate" datetime="'.date("c",$starts).'">'.date("G:i",$starts).'</time></span> à ';
   						$html .= '<span><time itemprop="endDate" datetime="'.date("c",$ends).'">'.date("G:i",$ends).'</time></span>';
 						$html .= '</span>';
-						$meta[] = $time_prefix.$html.$time_suffix;
+						$output_content .= $time_prefix.$html.$time_suffix;
 					}
 					break;
 		
@@ -189,7 +190,7 @@ class Conferencer_Shortcode_Session_Meta extends Conferencer_Shortcode {
   					    $html .= '<span itemprop="name">'.$speaker->post_title.'</span>';
 					    $html .= '</span>';
 					  }
-						$meta[] = $speakers_prefix.$html.$speaker_suffix;
+						$output_content .= $speakers_prefix.$html.$speaker_suffix;
 					}
 					break;
 					
@@ -197,7 +198,7 @@ class Conferencer_Shortcode_Session_Meta extends Conferencer_Shortcode {
 					if (count($speakers = Conferencer::get_posts('speaker', $post->speakers))) {
 					  $html = "";
 					  if(count($speakers) > 1){
-					    $html .= '<span class="session-description" itemprop="description">Panel</span>';
+					    $output_content .= '<span class="session-description" itemprop="description">Panel</span>';
 					  }
 					  else{
 					    $speaker = array_shift($speakers);
@@ -213,16 +214,14 @@ class Conferencer_Shortcode_Session_Meta extends Conferencer_Shortcode {
 					    }
 						  
 						  if($image){
-  					    $html .= '<figure class="session-speaker" itemprop="performer" itemscope itemtype="http://schema.org/Person">';
-  						    $html .= '<figcaption><span itemprop="name">'.$speaker->post_title.'</span></figcaption>';
-  						    $html .= '<img class="session-speaker-thumb" src="'.$image.'" itemprop="image">';
-  					    $html .= '</figure>';
+  					    $output_session .= '<span class="session-speaker-thumb"><!-- position: absolute -->';
+  						    $output_session .= '<img src="'.$image.'" itemprop="image">';
+  					    $output_session .= '</span>';
 					    }
-					    else{
-  					    $html .= '<span class="session-speaker" itemprop="performer" itemscope itemtype="http://schema.org/Person">';
-  					      $html .= '<span itemprop="name">'.$speaker->post_title.'</span>';
-  					    $html .= '</span>';
-					    }
+					    
+					    $output_content .= '<span class="session-speaker" itemprop="performer" itemscope itemtype="http://schema.org/Person">';
+					      $output_content .= '<span itemprop="name">'.$speaker->post_title.'</span>';
+					    $output_content .= '</span>';
 					  }
 						$meta[] = $speakers_prefix.$html.$speaker_suffix;
 					}
@@ -232,7 +231,7 @@ class Conferencer_Shortcode_Session_Meta extends Conferencer_Shortcode {
 					if ($post->room) {
 						$html = get_the_title($post->room);
 						if ($link_room) $html = "<a href='".get_permalink($post->room)."'><span itemprop='name'>$html</span></a>";
-						$meta[] = '<span class="session-room" itemprop="location" itemscope itemtype="http://schema.org/Place"><span itemprop="name">'.$room_prefix.$html.$room_suffix."</span></span>";
+						$output_content .= '<span class="session-room" itemprop="location" itemscope itemtype="http://schema.org/Place"><span itemprop="name">'.$room_prefix.$html.$room_suffix."</span></span>";
 					}
 					break;
 
@@ -240,28 +239,31 @@ class Conferencer_Shortcode_Session_Meta extends Conferencer_Shortcode {
 					if ($post->track) {
 						$html = get_the_title($post->track);
 						if ($link_track) $html = "<a href='".get_permalink($post->track)."'>$html</a>";
-						$meta[] = "<span class='track'>".$track_prefix.$html.$track_suffix."</span>";
+						$output_content .= "<span class='track'>".$track_prefix.$html.$track_suffix."</span>";
 					}
 					break;
 
 				case 'sponsors':
 					if (count($sponsors = Conferencer::get_posts('sponsor', $post->sponsors))) {
 						$html = comma_separated_post_titles($sponsors, $link_sponsors);
-						$meta[] = "<span class='sponsors'>".$sponsors_prefix.$html.$sponsors_suffix."</span>";
+						$output_content .= "<span class='sponsors'>".$sponsors_prefix.$html.$sponsors_suffix."</span>";
 					}
 					break;
 					
 				default:
-					$meta[] = "Unknown session attribute";
+					//$meta[] = "Unknown session attribute";
 			}
 		}
 		
-		$output = implode("", $meta);
-		
+          					
+    $output .= '<div class="session-wrapper"><!-- position: relative -->';
+    $output .= '<div class="session-content"><!-- table-cell -->
+    	<div class="session-content-wrapper"><!-- position: relative -->';
+    $output .= $output_content;
+    $output .= '</div></div>';
+    $output .= $output_session;
 		$output .= '<button class="session-bookmark"><span class="visuallyhidden">Ajouter cette conférence à mon horaire</span></button>';
-	  $output .= '</div>';
-		
-		$output .= '</div></td>';
+	  $output .= '</div></td>';
 
 		return $output;
 	}
