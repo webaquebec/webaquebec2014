@@ -196,7 +196,6 @@
 	}
 
 	.session{
-		padding: 10px 0;
 		background-color: white;
 		background-image: url( '#{$img-path}bg-schedule-default.png' );
 		background-repeat: repeat-y;
@@ -204,24 +203,25 @@
 
 		@include respond-to( 1024px ){
 			width: 23.25%;
-			height: 100px;
 			border-left: 1px solid transparent;
 		}
 
 		.session-content{
-			padding: 20px 65px 0 25px;
+			padding: 32px 65px 15px 25px;
 			position: relative;
 
 			@include respond-to( 1024px ){
-				padding: 20px 35px 0 25px;
+				padding: 0;
 			}
-		}
 
-		&.no-speaker .session-content{
-			padding: 0 65px 0 25px;
+			.session-content-wrapper{
 
-			@include respond-to( 1024px ){
-				padding: 0 35px 0 25px;
+				@include respond-to( 1024px ){
+					display: table-cell;
+					vertical-align: middle;
+					padding: 20px 40px 0 25px;
+					height: 110px;
+				}
 			}
 		}
 
@@ -283,7 +283,7 @@
 		.session-bookmark{
 			position: absolute;
 			top: 0;
-			right: 0;
+			right: 14px;
 			border: none;
 			background: none;
 			@include imgReplacement("icon-bookmark-small.png");
@@ -292,29 +292,18 @@
 	}
 
 	.session.keynote{
-		padding-top: 0;
 		background-color: $c-bg-schedule-highlight;
 
 		@include respond-to( 1024px ){
-			padding: 15px;
 			background-color: white;
 			background-image: none;
 			border-left: 1px solid $c-schedule-border;
 		}
 
 		.session-content{
-			padding: 28px 35px 0 120px;
-
-			@include respond-to( 768px ){
-				padding: 28px 35px 0 130px;
-			}
 
 			@include respond-to( 1024px ){
-				display: table-cell;
-				vertical-align: middle;
-				width: 2000px;
-				height: 95px;
-				padding: 45px 20px 20px 230px;
+				margin: 15px;
 				background-color: $c-bg-schedule-highlight;
 				background-image: url( '#{$img-path}bg-schedule-default.png' );
 				background-repeat: repeat-y;
@@ -324,6 +313,9 @@
 
 		.session-content-wrapper{
 			position: relative;
+			width: 2000px;
+			height: 160px;
+			padding: 0 60px 0 230px;
 		}
 
 		&.no-speaker{
@@ -402,19 +394,19 @@
 
 		.session-content{
 			margin: 15px;
-			padding: 20px 0;
 			background-color: $c-bg-schedule-highlight;
+		}
 
-			@include respond-to( 1024px ){
-				padding: 70px 0;
-			}
+		.session-content-wrapper{
+			text-align: center;
+			width: 2000px;
+			height: 150px;
 		}
 
 		.session-title{
 			font: $font-schedule-panel-speaker;
 
-			&,
-			a{
+			&, a{
 				color: $c-schedule-speaker;
 			}
 		}
@@ -425,10 +417,16 @@
 	}
 
 	.session.break.small{
+
 		@include respond-to( 1024px ){
+
 			.session-content{
-				padding: 8px 0;
+				margin: 0;
 				background: none;
+			}
+
+			.session-content-wrapper{
+				height: 75px;
 			}
 		}
 
