@@ -16,7 +16,7 @@ class Conferencer_Shortcode_Agenda extends Conferencer_Shortcode {
 		'session_tooltips' => false,
 		'show_empty_rows' => true,
 		'show_empty_columns' => true,
-		'show_empty_cells' => null,
+		'show_empty_cells' => true,
 		'show_unassigned_column' => false,
 		'tabs' => 'days',
 		'tab_day_format' => 'M. j, Y',
@@ -339,8 +339,25 @@ class Conferencer_Shortcode_Agenda extends Conferencer_Shortcode {
 					  //$output .= '</td>';
 					}
 					else if ($column_type) { // if split into columns, multiple cells
+              
+            $smallest_duration = 999999999999;
+            foreach ($cells as $cell_sessions) { 
+              foreach ($cell_sessions as $sessions) {
+                foreach ($sessions as $key => $session) {
+                  $starts = get_post_meta($session->time_slot, '_conferencer_starts', true);
+                  $ends = get_post_meta($session->time_slot, '_conferencer_ends', true);
+                  $duration = $ends-$starts;
+                  
+                  if($duration < $smallest_duration){
+                    $smallest_duration = $duration;
+                  }
+                }
+              }
+            }
+            
             foreach ($cells as $cell_sessions) { 
               if(!empty($cell_sessions)){ 
+              
                 foreach ($cell_sessions as $sessions) {
                   if(!empty($sessions)){
                     
@@ -349,10 +366,15 @@ class Conferencer_Shortcode_Agenda extends Conferencer_Shortcode {
                       $time_slot_id = $session->time_slot ? $session->time_slot : 0;
                       $starts = get_post_meta($time_slot_id, '_conferencer_starts', true);
                       $ends = get_post_meta($time_slot_id, '_conferencer_ends', true);
-                    
+                      $duration = $ends-$starts;
+                      
+                      if($duration > $smallest_duration){
+                        $session->rowspan = 2;
+                      }
+                      
                       //$output .= '<td class="session' . (empty($cell_sessions) ? ' no-sessions':'') . '" '.(($ends-$starts) > 3600 ? ' rowspan="2"' : '').'>';
                     
-                      $output .= $this->display_session($session,(empty($cell_sessions) ? 'no-session,':(($ends-$starts) > 3600 ? 'double-session,' : 'session,')).'title,speakers,room');
+                      $output .= $this->display_session($session,(empty($cell_sessions) ? 'no-session,':'session,').'title,speakers,room');
                   
                       //$output .= '</td>';
                     }
@@ -360,6 +382,8 @@ class Conferencer_Shortcode_Agenda extends Conferencer_Shortcode {
                 }
               }
             }
+            
+            
 					}
 					else { 
 					  $output .= '<td class="session ' . (empty($cells) ? 'no-sessions':'') . '">';
@@ -413,6 +437,17 @@ class Conferencer_Shortcode_Agenda extends Conferencer_Shortcode {
 		}
 		extract($this->options);
     $output = "";
+    /*echo '<br><br>'; var_dump("
+    		[session_meta
+    			post_id='{$session->ID}'
+    			show='".$show."'
+    			link_title=".($link_sessions ? 'true' : 'false')."
+    			link_speakers=".($link_speakers ? 'true' : 'false')."
+    			link_room=".($link_rooms ? 'true' : 'false')."
+    			colspan='".($session->colspan ? $session->colspan : 0)."'
+    			rowspan='".($session->rowspan ? $session->rowspan : 0)."'
+    		]
+    	");*/
 		$output .= do_shortcode("
 				[session_meta
 					post_id='{$session->ID}'
@@ -420,7 +455,8 @@ class Conferencer_Shortcode_Agenda extends Conferencer_Shortcode {
 					link_title=".($link_sessions ? 'true' : 'false')."
 					link_speakers=".($link_speakers ? 'true' : 'false')."
 					link_room=".($link_rooms ? 'true' : 'false')."
-					colspan=".$session->colspan."
+					colspan='".($session->colspan ? $session->colspan : 0)."'
+					rowspan='".($session->rowspan ? $session->rowspan : 0)."'
 				]
 			");
 

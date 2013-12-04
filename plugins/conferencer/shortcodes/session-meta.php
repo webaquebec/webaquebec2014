@@ -139,8 +139,10 @@ class Conferencer_Shortcode_Session_Meta extends Conferencer_Shortcode {
 			  	
 			  	$html .= '"';
 			  	
-			  	if ($type == 'double-session') {
-			  	  $html .= ' rowspan="2"';
+			  	if ($type == 'double-session' || !empty($rowspan)) {
+			  	  if(empty($rowspan))
+			  	    $rowspan = 2;
+			  	  $html .= ' rowspan="'.$rowspan.'"';
 			  	}
 			  	
 			  	if ($type == 'keynote') {
