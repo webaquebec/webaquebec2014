@@ -1,0 +1,3 @@
+[submodule "themes/waq2014/lib/aqua-resizer"]
+	path = themes/waq2014/lib/aqua-resizer
+	url = https://github.com/syamilmj/Aqua-Resizer.git
