@@ -391,6 +391,8 @@ class Conferencer_Shortcode_Agenda extends Conferencer_Shortcode {
                     }
                   }
                 }
+                echo date($row_time_format, $row_starts);
+                var_dump("$no_sessions && $rowspan_nosession == 0");echo '<br><br>';
                 if($no_sessions && $rowspan_nosession == 0){
                   $output .= '<td></td>';
                 }
