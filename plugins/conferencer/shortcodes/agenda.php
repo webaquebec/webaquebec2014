@@ -236,8 +236,13 @@ class Conferencer_Shortcode_Agenda extends Conferencer_Shortcode {
 			
 			$row_starts = $last_row_starts = $second_table = false;
       $currentDayTab = -1;
+      $rowspan_nosession = 0;
       
 			foreach ($agenda as $time => $time_slots) {
+			
+    			if($rowspan_nosession != 0){
+    			  $rowspan_nosession--;
+    			}
 			  
 				  $total_cells = array();
 				  $fake_slot_id = null;
@@ -358,10 +363,14 @@ class Conferencer_Shortcode_Agenda extends Conferencer_Shortcode {
             foreach ($cells as $cell_sessions) { 
               if(!empty($cell_sessions)){ 
               
+                $no_sessions = true;
+              
                 foreach ($cell_sessions as $sessions) {
                   if(!empty($sessions)){
                     
                     foreach ($sessions as $key => $session) {
+                  
+                      $no_sessions = false;
                   
                       $time_slot_id = $session->time_slot ? $session->time_slot : 0;
                       $starts = get_post_meta($time_slot_id, '_conferencer_starts', true);
@@ -370,6 +379,7 @@ class Conferencer_Shortcode_Agenda extends Conferencer_Shortcode {
                       
                       if($duration > $smallest_duration){
                         $rowspan_calc = ceil($duration/$smallest_duration);
+                        $rowspan_nosession = $rowspan_calc;
                         $session->rowspan = $rowspan_calc;
                       }
                       
@@ -380,6 +390,9 @@ class Conferencer_Shortcode_Agenda extends Conferencer_Shortcode {
                       //$output .= '</td>';
                     }
                   }
+                }
+                if($no_sessions && $rowspan_nosession == 0){
+                  $output .= '<td></td>';
                 }
               }
             }
