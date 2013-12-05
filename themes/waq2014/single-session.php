@@ -18,16 +18,20 @@
       	foreach ($speakers_ids as $speaker_id) {
       	  $speaker_post = get_post(array_shift($speakers_ids));
       	  
-      	  $speakers_output .= '<h2><span>À propos de </span>'.$speaker_name.'</h2>';
+      	  $speakers_output .= '<h2><span>À propos de </span>'.$speaker_post->post_title.'</h2>';
       	  
       	  $speakers_output .= (get_post_field('post_excerpt', $speaker_post->ID) ? get_post_field('post_excerpt', $speaker_post->ID) : get_post_field('post_content', $speaker_post->ID));
       	  
       	  $speaker_twitter_handle = str_replace('@', '', get_post_meta($speaker_post->ID, 'twitter_handle', true));
-      	  $speakers_output .= '<p><a href="http://twitter.com/'.$speaker_twitter_handle.'">@'.$speaker_twitter_handle.'</a></p>';
+      	  if(!empty($speaker_twitter_handle)){
+      	    $speakers_output .= '<p><a href="http://twitter.com/'.$speaker_twitter_handle.'">@'.$speaker_twitter_handle.'</a></p>';
+      	  }
       	  
       	  $speaker_website = addhttp(get_post_meta($speaker_post->ID, 'website', true));
       	  $speaker_website_clean = rtrim(str_replace('www.', '', str_replace('https://', '', str_replace('http://', '', $speaker_website))), '/');
-      	  $speakers_output .= '<p><a href="'.$speaker_website.'">'.$speaker_website_clean.'</a></p>';
+      	  if(!empty($speaker_website)){
+      	    $speakers_output .= '<p><a href="'.$speaker_website.'">'.$speaker_website_clean.'</a></p>';
+      	  }
       	  unset($speaker_post);
       	}
   	}
