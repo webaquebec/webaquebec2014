@@ -396,7 +396,7 @@ class Conferencer_Shortcode_Agenda extends Conferencer_Shortcode {
                 }
                 
                 if($no_sessions && $track > 0 && empty($rowspan_nosession[$track])){
-                  $output .= '<td></td>';
+                  $output .= '<td class="empty"></td>';
                 }
               }
             }
