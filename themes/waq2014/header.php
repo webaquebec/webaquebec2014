@@ -47,19 +47,43 @@
 <script>
   window.fbAsyncInit = function() {
     // init the FB JS SDK
-    FB.init({
-      appId      : '1382147128676757',                   // App ID from the app dashboard
+    
+    var fb_conf = {
+      appId      : 'XXXXXXXXXXXXXXXX',                   // App ID from the app dashboard
       status     : true,                                 // Check Facebook Login status
       xfbml      : true,                                  // Look for social plugins on the page
       cookie : true
-    });
+    }
+    
+    if(window.location.hostname == 'waq2014.dev.libeo.com'){
+      fb_conf = {
+        appId      : '1421838541381572',                   // App ID from the app dashboard
+        status     : true,                                 // Check Facebook Login status
+        xfbml      : true,                                  // Look for social plugins on the page
+        cookie : true
+      }
+    }
+    else if(window.location.hostname == 'waq2014.job.paulcote.net'){
+      fb_conf = {
+        appId      : '1382147128676757',                   // App ID from the app dashboard
+        status     : true,                                 // Check Facebook Login status
+        xfbml      : true,                                  // Look for social plugins on the page
+        cookie : true
+      }
+    }
+    
+    FB.init(fb_conf);
     
     FB.getLoginStatus(function(response) {
       if (response.status === 'connected') {
         facebook_connected = true;
+        $('.facebook-connect').css('display','none');
+        $('.facebook-logout').css('display','block');
         fb_init_php(function(){get_user_sessions();});
       }
       else{
+        $('.facebook-connect').css('display','block');
+        $('.facebook-logout').css('display','none');
         get_user_sessions();
         load_sessions();
       }

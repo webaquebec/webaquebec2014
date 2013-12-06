@@ -68,13 +68,32 @@ function add_my_menus() {
 
 $facebook = null;
 function facebook_init() {
+
   global $facebook;
-	
-	$facebook = new Facebook(array(
-    'appId'  => '1382147128676757',
-    'secret' => 'ed369652e881a20feae7beb8961f3f5f',
+  
+  $facebook_conf = array(
+    'appId'  => 'XXXXXXXXXXXX',
+    'secret' => 'XXXXXXXXXXXXXXXXXXXXXXXX',
     'cookie' => true
-  ));
+  );
+  
+  if($_SERVER['SERVER_NAME'] == 'waq2014.job.paulcote.net'){
+    $facebook_conf = array(
+      'appId'  => '1382147128676757',
+      'secret' => 'ed369652e881a20feae7beb8961f3f5f',
+      'cookie' => true
+    );
+  }
+  else if($_SERVER['SERVER_NAME'] == 'waq2014.dev.libeo.com'){
+    $facebook_conf = array(
+      'appId'  => '1421838541381572',
+      'secret' => '30e1d430b36dafff1be00f753a979b27',
+      'cookie' => true
+    );
+  }
+  
+	
+	$facebook = new Facebook($facebook_conf);
 }
 
 

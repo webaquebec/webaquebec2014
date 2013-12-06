@@ -30,6 +30,7 @@ foreach ($schedule_categories as $schedule_categories) {
         </header>
 
         <button class="facebook-connect">Facebook Connect</button>
+        <button class="facebook-logout">Facebook Logout</button>
       
         <?php 
         

@@ -50,6 +50,13 @@ $(window).load(function(){
 	$(document.body).on('click', '.facebook-connect', function(){
 	  facebook_connect(function(){save_user_sessions();});
 	});
+	
+	$(document.body).on('click', '.facebook-logout', function(){
+	  FB.logout(function(response) {
+	    $('.facebook-connect').css('display','block');
+	    $('.facebook-logout').css('display','none');
+	  });
+	});
 
 });
 
@@ -84,6 +91,8 @@ function facebook_connect(callback){
     FB.getLoginStatus(function(response) {
       if (response.status === 'connected') {
         facebook_connected = true;
+        $('.facebook-connect').css('display','none');
+        $('.facebook-logout').css('display','block');
         fb_init_php(callback);
       }
       /*else if (response.status === 'not_authorized') {
@@ -93,6 +102,8 @@ function facebook_connect(callback){
         FB.login(function(response) {
           if (response.authResponse) {
             facebook_connected = true;
+            $('.facebook-connect').css('display','none');
+            $('.facebook-logout').css('display','block');
             fb_init_php(callback);
           }
           else {
