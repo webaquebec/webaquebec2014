@@ -65,7 +65,7 @@ function add_session(session_id){
     user_sessions.push(parseInt(session_id));
     
     $('.session[data-session-id=\''+session_id+'\'] button').removeClass('add').addClass('remove');
-    $('.session[data-session-id=\''+session_id+'\'] button').parents('td').addClass('user-selected');
+    $('.session[data-session-id=\''+session_id+'\'] button').parents('td').addClass('bookmarked');
     $('.session[data-session-id=\''+session_id+'\'] button').find('span').text('Retirer cette conférence à mon horaire');
   }
   
@@ -78,7 +78,7 @@ function remove_session(session_id){
     user_sessions.splice(user_sessions.indexOf(parseInt(session_id)), 1);
     
     $('.session[data-session-id=\''+session_id+'\'] button').removeClass('remove').addClass('add');
-    $('.session[data-session-id=\''+session_id+'\']').removeClass('user-selected');
+    $('.session[data-session-id=\''+session_id+'\']').removeClass('bookmarked');
     $('.session[data-session-id=\''+session_id+'\'] button').find('span').text('Ajouter cette conférence à mon horaire');
   }
   
@@ -198,12 +198,12 @@ function load_sessions(){
          
    $('.session button').removeClass('remove').addClass('add');
    $('.session button').find('span').text('Ajouter cette conférence à mon horaire');
-   $('.session').removeClass('user-selected');
+   $('.session').removeClass('bookmarked');
    
    user_sessions.forEach(function(entry) {
        $('.session[data-session-id=\''+entry+'\'] button').removeClass('add').addClass('remove');
        $('.session[data-session-id=\''+entry+'\'] button').find('span').text('Retirer cette conférence à mon horaire');
-       $('.session[data-session-id=\''+entry+'\']').addClass('user-selected');
+       $('.session[data-session-id=\''+entry+'\']').addClass('bookmarked');
    });
 
 }
