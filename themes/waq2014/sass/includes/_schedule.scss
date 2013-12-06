@@ -2,7 +2,7 @@
 // ------------------------------------
 
 .schedule-wrapper{
-	margin: 0 -15px;
+	margin: 0 -15px 40px;
 
 	table{
 		display: block;
@@ -184,7 +184,7 @@
 		@include respond-to( 1024px ){
 			width: 7%;
 			text-align: center;
-			padding: 20px 0 8px;
+			padding: 15px 0 8px;
 			font-size: emify(16px);
 		}
 
@@ -211,12 +211,15 @@
 		}
 
 		.session-content{
-			display: table-cell;
-			vertical-align: middle;
+			padding: 30px 65px 12px 25px;
+			background-repeat: repeat-y;
+			background-position: center left;
 
 			@include respond-to( 1024px ){
-				/* padding: 20px 40px 0 25px;
-				height: 110px; */
+				padding: 20px 35px 0 25px;
+				display: table-cell;
+				vertical-align: middle;
+				height: 110px - 20px;
 			}
 		}
 
@@ -248,7 +251,16 @@
 		.session-description,
 		.session-speaker figcaption{
 			position: absolute;
-			top: 0;
+			top: -20px;
+		}
+
+		&.no-speaker .session-content{
+			padding: 12px 65px 12px 25px;
+
+			@include respond-to( 1024px ){
+				padding: 0 40px 0 25px;
+				height: 110px;
+			}
 		}
 
 		.session-speaker-thumb{
@@ -294,9 +306,19 @@
 		background-color: $c-bg-schedule-highlight;
 
 		@include respond-to( 1024px ){
+			padding: 15px;
 			background-color: white;
-			background-image: none;
+			background-image: none !important;
 			border-left: 1px solid $c-schedule-border;
+		}
+
+		.session-content{
+			@include respond-to( 1024px ){
+				width: 2000px;
+				height: 160px - 28px;
+				padding: 28px 65px 0 230px;
+				background-color: $c-bg-schedule-highlight;
+			}
 		}
 
 		.session-title{
@@ -309,6 +331,7 @@
 		}
 
 		.session-speaker{
+			top: -28px;
 			font: $font-schedule-keynote-speaker;
 		}
 
@@ -339,6 +362,14 @@
 			}
 		}
 
+		&.no-speaker .session-content{
+
+			@include respond-to( 1024px ){
+				padding: 0 65px 0 50px;
+			}
+
+		}
+
 	}
 
 	.session.break{
@@ -346,6 +377,19 @@
 		padding: 0;
 		background: none;
 		text-align: center;
+
+		@include respond-to( 1024px ){
+			padding: 15px;
+			border-left: 1px solid $c-schedule-border;
+		}
+
+		.session-content{
+			@include respond-to( 1024px ){
+				width: 2000px;
+				height: 140px;
+				background-color: $c-bg-schedule-highlight;
+			}
+		}
 
 		.session-title{
 			font: $font-schedule-panel-speaker;
@@ -360,7 +404,22 @@
 		}
 	}
 
-	.session.grand-hall{
+	.session.break.small{
+
+		@include respond-to( 1024px ){
+			padding: 0;
+		}
+
+		.session-content{
+			@include respond-to( 1024px ){
+				height: 75px;
+				background-color: transparent;
+			}
+		}
+	}
+
+	.session.grand-hall,
+	.session.grand-hall .session-content{
 		background-image: url( '#{$img-path}bg-schedule-default.png' );
 	}
 

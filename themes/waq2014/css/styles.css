@@ -1228,7 +1228,7 @@ article + article + article + article {
 
 /* line 4, ../sass/includes/_schedule.scss */
 .schedule-wrapper {
-  margin: 0 -15px;
+  margin: 0 -15px 40px;
 }
 /* line 7, ../sass/includes/_schedule.scss */
 .schedule-wrapper table {
@@ -1500,7 +1500,7 @@ article + article + article + article {
   .schedule-wrapper .time-slot {
     width: 7%;
     text-align: center;
-    padding: 20px 0 8px;
+    padding: 15px 0 8px;
     font-size: 1em;
   }
 }
@@ -1530,52 +1530,66 @@ article + article + article + article {
 }
 /* line 213, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session .session-content {
-  display: table-cell;
-  vertical-align: middle;
+  padding: 30px 65px 12px 25px;
+  background-repeat: repeat-y;
+  background-position: center left;
 }
 @media only screen and (min-width: 1024px) {
   /* line 213, ../sass/includes/_schedule.scss */
   .schedule-wrapper .session .session-content {
-    /* padding: 20px 40px 0 25px;
-    height: 110px; */
+    padding: 20px 35px 0 25px;
+    display: table-cell;
+    vertical-align: middle;
+    height: 90px;
   }
 }
-/* line 223, ../sass/includes/_schedule.scss */
+/* line 226, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session .session-content-wrapper {
   position: relative;
 }
-/* line 227, ../sass/includes/_schedule.scss */
+/* line 230, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session .session-title {
   font: 400 1.125em / 1.11111em "Roboto Condensed", sans-serif;
 }
-/* line 230, ../sass/includes/_schedule.scss */
+/* line 233, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session .session-title a {
   text-decoration: none;
   color: #006b9f;
 }
-/* line 234, ../sass/includes/_schedule.scss */
+/* line 237, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session .session-title a:hover {
   text-decoration: underline;
 }
-/* line 241, ../sass/includes/_schedule.scss */
+/* line 244, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session .session-speaker,
 .schedule-wrapper .session .session-description {
   display: block;
   color: #333f47;
   font: 400 1em / 1.25em "Lusitana", sans-serif;
 }
-/* line 249, ../sass/includes/_schedule.scss */
+/* line 252, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session span.session-speaker,
 .schedule-wrapper .session .session-description,
 .schedule-wrapper .session .session-speaker figcaption {
   position: absolute;
-  top: 0;
+  top: -20px;
 }
-/* line 254, ../sass/includes/_schedule.scss */
+/* line 257, ../sass/includes/_schedule.scss */
+.schedule-wrapper .session.no-speaker .session-content {
+  padding: 12px 65px 12px 25px;
+}
+@media only screen and (min-width: 1024px) {
+  /* line 257, ../sass/includes/_schedule.scss */
+  .schedule-wrapper .session.no-speaker .session-content {
+    padding: 0 40px 0 25px;
+    height: 110px;
+  }
+}
+/* line 266, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session .session-speaker-thumb {
   display: none;
 }
-/* line 258, ../sass/includes/_schedule.scss */
+/* line 270, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session .session-room {
   display: block;
   padding: 8px 0 0;
@@ -1585,18 +1599,18 @@ article + article + article + article {
   text-transform: uppercase;
 }
 @media only screen and (min-width: 1024px) {
-  /* line 258, ../sass/includes/_schedule.scss */
+  /* line 270, ../sass/includes/_schedule.scss */
   .schedule-wrapper .session .session-room {
     display: none;
     padding: 0;
   }
 }
-/* line 272, ../sass/includes/_schedule.scss */
+/* line 284, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session .session-time-slot {
   display: none;
 }
 @media only screen and (min-width: 1024px) {
-  /* line 272, ../sass/includes/_schedule.scss */
+  /* line 284, ../sass/includes/_schedule.scss */
   .schedule-wrapper .session .session-time-slot {
     display: -moz-inline-stack;
     display: inline-block;
@@ -1608,7 +1622,7 @@ article + article + article + article {
     font: 400 1.125em / 1.33333em "Roboto Condensed", sans-serif;
   }
 }
-/* line 282, ../sass/includes/_schedule.scss */
+/* line 294, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session .session-bookmark {
   position: absolute;
   top: 0;
@@ -1622,35 +1636,46 @@ article + article + article + article {
   height: 31px;
   width: 21px;
 }
-/* line 293, ../sass/includes/_schedule.scss */
+/* line 305, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session.keynote {
   background-color: #e6f3fa;
 }
 @media only screen and (min-width: 1024px) {
-  /* line 293, ../sass/includes/_schedule.scss */
+  /* line 305, ../sass/includes/_schedule.scss */
   .schedule-wrapper .session.keynote {
+    padding: 15px;
     background-color: white;
-    background-image: none;
+    background-image: none !important;
     border-left: 1px solid #dfe5e8;
   }
 }
-/* line 302, ../sass/includes/_schedule.scss */
+@media only screen and (min-width: 1024px) {
+  /* line 315, ../sass/includes/_schedule.scss */
+  .schedule-wrapper .session.keynote .session-content {
+    width: 2000px;
+    height: 132px;
+    padding: 28px 65px 0 230px;
+    background-color: #e6f3fa;
+  }
+}
+/* line 324, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session.keynote .session-title {
   display: block;
   font: 400 1.375em / 1.09091em "Roboto Condensed", sans-serif;
 }
 @media only screen and (min-width: 1024px) {
-  /* line 302, ../sass/includes/_schedule.scss */
+  /* line 324, ../sass/includes/_schedule.scss */
   .schedule-wrapper .session.keynote .session-title {
     font-size: 1.875em;
   }
 }
-/* line 311, ../sass/includes/_schedule.scss */
+/* line 333, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session.keynote .session-speaker {
+  top: -28px;
   font: 400 1.125em / 2em "Lusitana", sans-serif;
 }
 @media only screen and (min-width: 1024px) {
-  /* line 315, ../sass/includes/_schedule.scss */
+  /* line 338, ../sass/includes/_schedule.scss */
   .schedule-wrapper .session.keynote .session-room {
     display: -moz-inline-stack;
     display: inline-block;
@@ -1661,7 +1686,7 @@ article + article + article + article {
     font: 700 1.125em / 1.33333em "Roboto Condensed", sans-serif;
   }
 }
-/* line 322, ../sass/includes/_schedule.scss */
+/* line 345, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session.keynote .session-speaker-thumb {
   display: block;
   position: absolute;
@@ -1671,7 +1696,7 @@ article + article + article + article {
   max-height: 92px;
 }
 @media only screen and (min-width: 768px) {
-  /* line 322, ../sass/includes/_schedule.scss */
+  /* line 345, ../sass/includes/_schedule.scss */
   .schedule-wrapper .session.keynote .session-speaker-thumb {
     top: 0;
     max-width: 100px;
@@ -1679,49 +1704,84 @@ article + article + article + article {
   }
 }
 @media only screen and (min-width: 1024px) {
-  /* line 322, ../sass/includes/_schedule.scss */
+  /* line 345, ../sass/includes/_schedule.scss */
   .schedule-wrapper .session.keynote .session-speaker-thumb {
     top: 0;
     max-width: 187px;
     max-height: 160px;
   }
 }
-/* line 344, ../sass/includes/_schedule.scss */
+@media only screen and (min-width: 1024px) {
+  /* line 365, ../sass/includes/_schedule.scss */
+  .schedule-wrapper .session.keynote.no-speaker .session-content {
+    padding: 0 65px 0 50px;
+  }
+}
+/* line 375, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session.break {
   height: auto;
   padding: 0;
   background: none;
   text-align: center;
 }
-/* line 350, ../sass/includes/_schedule.scss */
+@media only screen and (min-width: 1024px) {
+  /* line 375, ../sass/includes/_schedule.scss */
+  .schedule-wrapper .session.break {
+    padding: 15px;
+    border-left: 1px solid #dfe5e8;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  /* line 386, ../sass/includes/_schedule.scss */
+  .schedule-wrapper .session.break .session-content {
+    width: 2000px;
+    height: 140px;
+    background-color: #e6f3fa;
+  }
+}
+/* line 394, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session.break .session-title {
   font: 400 1.125em / 2em "Lusitana", sans-serif;
 }
-/* line 353, ../sass/includes/_schedule.scss */
+/* line 397, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session.break .session-title, .schedule-wrapper .session.break .session-title a {
   color: #333f47;
 }
-/* line 358, ../sass/includes/_schedule.scss */
+/* line 402, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session.break button {
   display: none;
 }
-/* line 363, ../sass/includes/_schedule.scss */
-.schedule-wrapper .session.grand-hall {
+@media only screen and (min-width: 1024px) {
+  /* line 407, ../sass/includes/_schedule.scss */
+  .schedule-wrapper .session.break.small {
+    padding: 0;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  /* line 413, ../sass/includes/_schedule.scss */
+  .schedule-wrapper .session.break.small .session-content {
+    height: 75px;
+    background-color: transparent;
+  }
+}
+/* line 422, ../sass/includes/_schedule.scss */
+.schedule-wrapper .session.grand-hall,
+.schedule-wrapper .session.grand-hall .session-content {
   background-image: url("../img/bg-schedule-default.png");
 }
-/* line 367, ../sass/includes/_schedule.scss */
+/* line 426, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session.salle-libeo {
   background-image: url("../img/bg-schedule-libeo.png");
 }
-/* line 371, ../sass/includes/_schedule.scss */
+/* line 430, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session.salle-ixmedia {
   background-image: url("../img/bg-schedule-ixmedia.png");
 }
-/* line 375, ../sass/includes/_schedule.scss */
+/* line 434, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session.salle-bell {
   background-image: url("../img/bg-schedule-bell.png");
 }
-/* line 379, ../sass/includes/_schedule.scss */
+/* line 438, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session.salle-deloitte {
   background-image: url("../img/bg-schedule-deloitte.png");
 }
