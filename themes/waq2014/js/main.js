@@ -48,10 +48,11 @@ $(window).load(function(){
 	});
 	
 	$(document.body).on('click', '.facebook-connect', function(){
-	  facebook_connect(function(){save_user_sessions();});
+	  facebook_connect(function(){get_user_sessions(function(){save_user_sessions();});});
 	});
 	
 	$(document.body).on('click', '.facebook-logout', function(){
+	  facebook_connected = null;
 	  FB.logout(function(response) {
 	    $('.facebook-connect').css('display','block');
 	    $('.facebook-logout').css('display','none');
@@ -163,8 +164,8 @@ function get_user_sessions(callback){
        dataType : "json",
        url : get_user_sessions_ajax,
        success: function(response) {
-         if(response.length > user_sessions.length){
-           user_sessions = response;
+         if(response.length > 0){
+           user_sessions =  user_sessions.concat(response).unique();
          }
          
          if(typeof callback === 'function')
@@ -180,8 +181,8 @@ function get_user_sessions(callback){
   }
   else{
     response = JSON.parse(readCookie('waq_user_sessions'));
-    if(response != null && response.length > user_sessions.length){
-      user_sessions = response;
+    if(response != null && response.length > 0){
+      user_sessions =  user_sessions.concat(response).unique();
     }
       
     if(typeof callback === 'function')
@@ -232,3 +233,15 @@ function readCookie(name) {
 function eraseCookie(name) {
 	createCookie(name,"",-1);
 }
+
+Array.prototype.unique = function() {
+    var a = this.concat();
+    for(var i=0; i<a.length; ++i) {
+        for(var j=i+1; j<a.length; ++j) {
+            if(a[i] === a[j])
+                a.splice(j--, 1);
+        }
+    }
+
+    return a;
+};
