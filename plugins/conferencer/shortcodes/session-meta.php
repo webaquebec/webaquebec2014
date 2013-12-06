@@ -82,6 +82,12 @@ class Conferencer_Shortcode_Session_Meta extends Conferencer_Shortcode {
 
 		$output = $output_session = $output_content = "";
 		
+    $user_sessions = get_user_sessions();
+    $user_session_selected = false;
+    if(in_array($post->ID, $user_sessions)){
+      $user_session_selected = true;
+    }
+		
 		foreach (explode(',', $show) as $type) {
 			$type = trim($type);
 			switch ($type) {
@@ -91,12 +97,16 @@ class Conferencer_Shortcode_Session_Meta extends Conferencer_Shortcode {
 				
 				  $type_rendered = $type;
 				
-				  $output .= '<td class="session';
+				  $output .= '<td data-session-id="'.$post->ID.'" class="session';
 				  
 				  $terms = wp_get_post_terms($post->ID, 'theme', array("fields" => "slugs"));
 				  
 				  if(!empty($terms)){
   				  $output .= ' '.implode(' ', $terms);
+				  }
+				  
+				  if($user_session_selected){
+				    $output .= ' user-selected';
 				  }
 				  
 				  $starts = get_post_meta($post->time_slot, '_conferencer_starts', true);
@@ -268,7 +278,14 @@ class Conferencer_Shortcode_Session_Meta extends Conferencer_Shortcode {
     $output .= $output_content;
     $output .= '</div></div>';
     $output .= $output_session;
-		$output .= '<button class="session-bookmark"><span class="visuallyhidden">Ajouter cette conférence à mon horaire</span></button>';
+    
+    if($user_session_selected){
+      $output .= '<button class="session-bookmark remove"><span class="visuallyhidden">Retirer cette conférence à mon horaire</span></button>';
+    }
+    else{
+		  $output .= '<button class="session-bookmark add"><span class="visuallyhidden">Ajouter cette conférence à mon horaire</span></button>';
+	  }
+	  
 	  $output .= '</div></td>';
 
 		return $output;
