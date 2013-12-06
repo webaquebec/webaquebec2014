@@ -236,13 +236,9 @@ class Conferencer_Shortcode_Agenda extends Conferencer_Shortcode {
 			
 			$row_starts = $last_row_starts = $second_table = false;
       $currentDayTab = -1;
-      $rowspan_nosession = 0;
+      $rowspan_nosession = array();
       
 			foreach ($agenda as $time => $time_slots) {
-			
-    			if($rowspan_nosession != 0){
-    			  $rowspan_nosession--;
-    			}
 			  
 				  $total_cells = array();
 				  $fake_slot_id = null;
@@ -344,7 +340,7 @@ class Conferencer_Shortcode_Agenda extends Conferencer_Shortcode {
 					  //$output .= '</td>';
 					}
 					else if ($column_type) { // if split into columns, multiple cells
-              
+            
             $smallest_duration = 999999999999;
             foreach ($cells as $cell_sessions) { 
               foreach ($cell_sessions as $sessions) {
@@ -360,7 +356,12 @@ class Conferencer_Shortcode_Agenda extends Conferencer_Shortcode {
               }
             }
             
-            foreach ($cells as $cell_sessions) { 
+            foreach ($cells as $track => $cell_sessions) { 
+            
+          		if(isset($rowspan_nosession[$track]) && $rowspan_nosession[$track] != 0){
+          		  $rowspan_nosession[$track] = $rowspan_nosession[$track]-1;
+          		}
+            		
               if(!empty($cell_sessions)){ 
               
                 $no_sessions = true;
@@ -378,11 +379,13 @@ class Conferencer_Shortcode_Agenda extends Conferencer_Shortcode {
                       $duration = $ends-$starts;
                       
                       if($duration > $smallest_duration){
-                        $rowspan_calc = ceil($duration/$smallest_duration);
-                        $rowspan_nosession = $rowspan_calc;
+                        $rowspan_calc = intval(ceil($duration/$smallest_duration));
+                        $rowspan_nosession[$track] = $rowspan_calc;
                         $session->rowspan = $rowspan_calc;
                       }
-                      
+                      else{
+                        $rowspan_nosession[$track] = 0;
+                      }
                       //$output .= '<td class="session' . (empty($cell_sessions) ? ' no-sessions':'') . '" '.(($ends-$starts) > 3600 ? ' rowspan="2"' : '').'>';
                     
                       $output .= $this->display_session($session,(empty($cell_sessions) ? 'no-session,':'session,').'title,speakers,room');
@@ -391,7 +394,8 @@ class Conferencer_Shortcode_Agenda extends Conferencer_Shortcode {
                     }
                   }
                 }
-                if($no_sessions && $rowspan_nosession == 0){
+                
+                if($no_sessions && empty($rowspan_nosession[$track])){
                   $output .= '<td></td>';
                 }
               }
