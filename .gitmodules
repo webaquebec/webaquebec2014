@@ -1,3 +1,6 @@
 [submodule "themes/waq2014/lib/aqua-resizer"]
 	path = themes/waq2014/lib/aqua-resizer
 	url = https://github.com/syamilmj/Aqua-Resizer.git
+[submodule "themes/waq2014/lib/facebook"]
+	path = themes/waq2014/lib/facebook
+	url = https://github.com/facebook/facebook-php-sdk.git

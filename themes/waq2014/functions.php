@@ -15,17 +15,26 @@ Pour valider la conformité du code, veuillez utiliser PHPCodeSniffer et le stan
 */
 
 require_once('lib/aqua-resizer/aq_resizer.php');
+require('lib/facebook/src/facebook.php');
 
 // Bonne pratique de mettre tous les add_action et add_filter dans le haut!
 add_action( 'wp_enqueue_scripts', 'add_my_scripts' );
 add_action( 'wp_enqueue_scripts', 'add_my_styles' );
 add_action( 'init', 'add_my_menus' );
+add_action( 'init', 'facebook_init' );
 
 add_filter( 'wp_title', 'my_title', 10, 2 );
 add_filter( 'the_generator', 'remove_generator' );
 add_filter( 'wp_nav_menu_args', 'my_wp_nav_menu_args' );
 
 add_filter('get_terms', 'get_terms_ordered', 10, 3);
+
+add_action("wp_ajax_save_user_sessions", "save_user_sessions");
+add_action("wp_ajax_nopriv_save_user_sessions", "save_user_sessions");
+add_action("wp_ajax_fb_init", "facebook_init");
+add_action("wp_ajax_nopriv_fb_init", "facebook_init");
+add_action("wp_ajax_get_user_sessions", "user_sessions");
+add_action("wp_ajax_nopriv_get_user_sessions", "user_sessions");
 
 
 function add_my_scripts() {
@@ -55,6 +64,36 @@ function add_my_menus() {
 	register_nav_menus(
 	    array( 'menu-principal' => 'Menu principal du site web', )
 	);
+}
+
+$facebook = null;
+function facebook_init() {
+
+  global $facebook;
+  
+  $facebook_conf = array(
+    'appId'  => 'XXXXXXXXXXXX',
+    'secret' => 'XXXXXXXXXXXXXXXXXXXXXXXX',
+    'cookie' => true
+  );
+  
+  if($_SERVER['SERVER_NAME'] == 'waq2014.job.paulcote.net'){
+    $facebook_conf = array(
+      'appId'  => '1382147128676757',
+      'secret' => 'ed369652e881a20feae7beb8961f3f5f',
+      'cookie' => true
+    );
+  }
+  else if($_SERVER['SERVER_NAME'] == 'waq2014.dev.libeo.com'){
+    $facebook_conf = array(
+      'appId'  => '1421838541381572',
+      'secret' => '30e1d430b36dafff1be00f753a979b27',
+      'cookie' => true
+    );
+  }
+  
+	
+	$facebook = new Facebook($facebook_conf);
 }
 
 
@@ -222,4 +261,71 @@ function addhttp($url) {
         $url = "http://" . $url;
     }
     return $url;
+}
+
+function get_user_sessions() {
+
+    global $facebook;
+    
+    $uid = $facebook->getUser();
+    
+    if(!empty($uid)){
+    
+      $user_sesssions = get_transient( 'fb_'.$uid.'_sessions');
+      
+      if(!empty($user_sesssions)){
+        return $user_sesssions;
+      }
+      else {
+        return array();
+      }
+    }
+    else {
+      return array();
+    }
+}
+
+function user_sessions() {
+  echo json_encode(get_user_sessions());die;
+}
+
+function save_user_sessions() {
+
+    global $facebook;
+    
+    /*if ( !wp_verify_nonce( $_REQUEST['nonce'], "save_user_sessions_nonce")) {
+      exit("Not authorized");
+    }*/
+    
+    $uid = $facebook->getUser();
+    
+    if(!empty($uid)){
+    
+      $user_sessions = json_decode($_REQUEST['user_sessions']);
+    
+      set_transient( 'fb_'.$uid.'_sessions', $user_sessions );
+      
+      echo json_encode($user_sessions); die;
+    }
+}
+
+function parse_signed_request($signed_request) {
+  list($encoded_sig, $payload) = explode('.', $signed_request, 2); 
+
+  // decode the data
+  $sig = base64_url_decode($encoded_sig);
+  $data = json_decode(base64_url_decode($payload), true);
+
+  // confirm the signature
+  $expected_sig = hash_hmac('sha256', $payload, $secret, $raw = true);
+  if ($sig !== $expected_sig) {
+    error_log('Bad Signed JSON signature!');
+    return null;
+  }
+
+  return $data;
+}
+
+function base64_url_decode($input) {
+  return base64_decode(strtr($input, '-_', '+/'));
 }

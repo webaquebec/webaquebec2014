@@ -23,16 +23,84 @@
 	<!--[if lt IE 9]>
 		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
-	<?php
-		/**
-		 * Les Javascripts et les CSS ne doivent pas être inclus ici!
-		 * Ils doivent être ajouter dans la fonction add_my_scripts() et add_my_styles()
-		 * dans le fichier functions.php (hint, allez voir la fichier functions.php)		 *
-		 */
-	?>
+	<script type="text/javascript">
+  	<?php
+  		/**
+  		 * Les Javascripts et les CSS ne doivent pas être inclus ici!
+  		 * Ils doivent être ajouter dans la fonction add_my_scripts() et add_my_styles()
+  		 * dans le fichier functions.php (hint, allez voir la fichier functions.php)		 *
+  		 */
+  		 $save_nonce = wp_create_nonce("save_user_sessions_nonce");
+  		 $get_nonce = wp_create_nonce("get_user_sessions_nonce");
+  		 $init_nonce = wp_create_nonce("fb_init_nonce");
+  		 echo 'var save_user_sessions_ajax = "'.admin_url('admin-ajax.php?action=save_user_sessions&nonce='.$save_nonce).'"'."\n";
+  		 echo 'var get_user_sessions_ajax = "'.admin_url('admin-ajax.php?action=get_user_sessions&nonce='.$get_nonce).'"'."\n";
+  		 echo 'var fb_init_ajax = "'.admin_url('admin-ajax.php?action=fb_init&nonce='.$init_nonce).'"'."\n";
+  		 echo 'var user_sessions = '.json_encode(get_user_sessions()).''."\n";
+  		 
+  	?>
+	</script>
 
 </head>
 <body>
+<div id="fb-root"></div>
+<script>
+  window.fbAsyncInit = function() {
+    // init the FB JS SDK
+    
+    var fb_conf = {
+      appId      : 'XXXXXXXXXXXXXXXX',                   // App ID from the app dashboard
+      status     : true,                                 // Check Facebook Login status
+      xfbml      : true,                                  // Look for social plugins on the page
+      cookie : true
+    }
+    
+    if(window.location.hostname == 'waq2014.dev.libeo.com'){
+      fb_conf = {
+        appId      : '1421838541381572',                   // App ID from the app dashboard
+        status     : true,                                 // Check Facebook Login status
+        xfbml      : true,                                  // Look for social plugins on the page
+        cookie : true
+      }
+    }
+    else if(window.location.hostname == 'waq2014.job.paulcote.net'){
+      fb_conf = {
+        appId      : '1382147128676757',                   // App ID from the app dashboard
+        status     : true,                                 // Check Facebook Login status
+        xfbml      : true,                                  // Look for social plugins on the page
+        cookie : true
+      }
+    }
+    
+    FB.init(fb_conf);
+    
+    FB.getLoginStatus(function(response) {
+      if (response.status === 'connected') {
+        facebook_connected = true;
+        $('.facebook-connect').css('display','none');
+        $('.facebook-logout').css('display','block');
+        fb_init_php(function(){get_user_sessions();});
+      }
+      else{
+        $('.facebook-connect').css('display','block');
+        $('.facebook-logout').css('display','none');
+        get_user_sessions();
+        load_sessions();
+      }
+    });
+
+    // Additional initialization code such as adding Event Listeners goes here
+  };
+
+  // Load the SDK asynchronously
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/all.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
 
 <!-- Page wrapper -->
 <div class="l-page-wrapper" itemscope itemtype="http://schema.org/Event">

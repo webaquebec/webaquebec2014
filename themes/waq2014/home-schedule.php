@@ -29,7 +29,9 @@ foreach ($schedule_categories as $schedule_categories) {
             </div>
         </header>
 
-
+        <button class="facebook-connect">Facebook Connect</button>
+        <button class="facebook-logout">Facebook Logout</button>
+      
         <?php 
         
           echo do_shortcode('[agenda]');
