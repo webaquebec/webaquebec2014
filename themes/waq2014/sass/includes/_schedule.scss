@@ -98,9 +98,8 @@
 		text-transform: uppercase;
 		text-align: left;
 		padding: 10px 0 10px 30px;
-		background-image: url( '#{$img-path}bg-schedule-default.png' );
 		background-repeat: repeat-y;
-		background-position: 1px 0;
+		background-position: 0;
 		border-bottom: 1px solid $c-schedule-border;
 	}
 
@@ -203,7 +202,7 @@
 
 		@include respond-to( 1024px ){
 			width: 23.25%;
-			border-left: 1px solid transparent;
+			//border-left: 1px solid transparent;
 		}
 
 		.session-wrapper{
@@ -220,6 +219,7 @@
 				display: table-cell;
 				vertical-align: middle;
 				height: 110px - 20px;
+				width: 400px;
 			}
 		}
 
@@ -297,9 +297,32 @@
 			right: 14px;
 			border: none;
 			background: none;
+			cursor: pointer;
 			@include imgReplacement("icon-bookmark-small.png");
 		}
 
+		.session-bookmark.active{
+			@include imgReplacement("icon-bookmark-small-active.png");
+		}
+
+	}
+
+	.session[rowspan="2"] .session-content{
+		@include respond-to( 1024px ){
+			height: 100px * 2 + 1;
+		}
+	}
+
+	.session[rowspan="3"] .session-content{
+		@include respond-to( 1024px ){
+			height: 100px * 3 + 2;
+		}
+	}
+
+	.session[rowspan="4"] .session-content{
+		@include respond-to( 1024px ){
+			height: 100px * 4 + 3;
+		}
 	}
 
 	.session.keynote{
@@ -362,6 +385,14 @@
 			}
 		}
 
+		.session-bookmark{
+			@include imgReplacement("icon-bookmark-big.png");
+		}
+
+		.session-bookmark.active{
+			@include imgReplacement("icon-bookmark-big-active.png");
+		}
+
 		&.no-speaker .session-content{
 
 			@include respond-to( 1024px ){
@@ -418,24 +449,54 @@
 		}
 	}
 
-	.session.grand-hall,
+	.session.bookmarked{
+
+		.session-content{
+			background-color: $c-bg-schedule-bookmarked;
+		}
+
+		.session-title a,
+		.session-speaker,
+		.session-content,
+		.session-description,
+		.session-time-slot,
+		.session-room{
+			color: $c-white;
+		}
+
+		.session-bookmark{
+			@include imgReplacement("icon-bookmark-small-active.png");
+		}
+
+		&.keynote .session-bookmark{
+			@include imgReplacement("icon-bookmark-big-active.png");
+		}
+
+	}
+
+	.session.filtered{
+
+		@include opacity(0.3);
+
+	}
+
 	.session.grand-hall .session-content{
 		background-image: url( '#{$img-path}bg-schedule-default.png' );
 	}
 
-	.session.salle-libeo{
+	.session.salle-libeo .session-content{
 		background-image: url( '#{$img-path}bg-schedule-libeo.png' );
 	}
 
-	.session.salle-ixmedia{
+	.session.salle-ixmedia .session-content{
 		background-image: url( '#{$img-path}bg-schedule-ixmedia.png' );
 	}
 
-	.session.salle-bell{
+	.session.salle-bell .session-content{
 		background-image: url( '#{$img-path}bg-schedule-bell.png' );
 	}
 
-	.session.salle-deloitte{
+	.session.salle-deloitte .session-content{
 		background-image: url( '#{$img-path}bg-schedule-deloitte.png' );
 	}
 
