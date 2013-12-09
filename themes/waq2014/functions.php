@@ -329,3 +329,119 @@ function parse_signed_request($signed_request) {
 function base64_url_decode($input) {
   return base64_decode(strtr($input, '-_', '+/'));
 }
+
+function metas_facebook_og(){
+
+  global $post;
+    
+  setlocale(LC_ALL, 'fr_CA.utf-8');
+
+  $metas = array(
+    'title' => get_bloginfo('name'),
+    'DC.title' => get_bloginfo('name'),
+    'description' => "Le Web à Québec c'est trois jours de rencontres par et pour les gens qui imaginent le web.",
+    'DC.description' => "Le Web à Québec c'est trois jours de rencontres par et pour les gens qui imaginent le web.",
+    'image_src'=>get_bloginfo('template_directory')."/img/fb-image.png"
+  );
+  
+  $ogs = array(
+    'title' => get_bloginfo('name'),
+    'description' => "Le Web à Québec c'est trois jours de rencontres par et pour les gens qui imaginent le web.",
+    'image'=>get_bloginfo('template_directory')."/img/fb-image.png",
+    'type' => 'website'
+  );
+  
+  $fbs = array(
+    'app_id' => ''
+  );
+  
+  if($_SERVER['SERVER_NAME'] == 'waq2014.job.paulcote.net'){
+    $fbs['app_id'] = '1382147128676757';
+  }
+  else if($_SERVER['SERVER_NAME'] == 'waq2014.dev.libeo.com'){
+    $fbs['app_id'] = '1421838541381572';
+  }
+                  
+  if(is_singular('session')){
+  
+  
+  	$time_slot_id = get_post_meta($post->ID, '_conferencer_time_slot', true);
+    $session_start_unix = get_post_meta($time_slot_id, '_conferencer_starts', true);
+    $session_ends_unix = get_post_meta($time_slot_id, '_conferencer_ends', true);
+    $speakers_ids = get_post_meta($post->ID, '_conferencer_speakers', true);
+    $room_id = get_post_meta($post->ID, '_conferencer_room', true);
+    $session_room = get_the_title($room_id);
+    
+    $speaker_name = "";
+    if(count($speakers_ids) > 1){
+    	$speaker_name = "Panel";
+    }
+    else if(count($speakers_ids) == 1){
+      $speaker_name = get_the_title(array_shift($speakers_ids));
+    }
+  
+    $session_desc = $speaker_name."\n".strftime("%A %e %B",$session_start_unix)." / ".strftime("%k h %M",$session_start_unix)." à ".strftime("%k h %M",$session_ends_unix)."\n".$session_room;
+  
+    $metas['title'] = get_the_title( $post->ID );
+    $metas['DC.title'] = get_the_title( $post->ID );
+    //$metas['description'] = strip_tags(get_excerpt_by_id( $post->ID ));
+    //$metas['DC.description'] = strip_tags(get_excerpt_by_id( $post->ID ));
+    $metas['description'] = $session_desc;
+    $metas['DC.description'] = $session_desc;
+    
+    
+    $ogs['url'] = get_permalink( $post->ID );
+    $ogs['site_name'] = get_bloginfo('name');
+    $ogs['title'] = get_the_title( $post->ID );
+    //$ogs['description'] = strip_tags(get_excerpt_by_id( $post->ID ));
+    $ogs['description'] = fbLinkDescriptionNewLines($session_desc);
+    $ogs['type'] = 'event';
+  }
+  else if(is_home()){
+    $ogs['url'] = get_bloginfo('url');
+  }
+  
+  displayMetas($metas,$ogs,$fbs);
+}
+
+
+/**
+ * This function takes an associative array in parameter and displays a meta and opengraph meta 
+ * with the name and content of each array element.
+ * @param array $metas formated like "metaname" => "metavalue"
+ */
+function displayMetas( $metas = array(), $ogs = array(), $fbs = array() )
+{
+    foreach( $metas as $k => $v )
+    {
+        echo "<meta name=\"{$k}\" content=\"{$v}\" />\n\t";
+    }
+
+    foreach( $ogs as $k => $v )
+    {
+        echo "<meta property=\"og:{$k}\" content=\"{$v}\" />\n\t";
+    }
+
+    foreach( $fbs as $k => $v )
+    {
+        echo "<meta property=\"fb:{$k}\" content=\"{$v}\" />\n\t";
+    }
+}
+
+function fbLinkDescriptionNewLines($string){
+    $parts = explode("\n", $string);
+    $row_limit = 60;
+
+    $message = '';
+    foreach($parts as $part){
+      $str_len = strlen($part);
+      $diff = ($row_limit - $str_len);
+
+      $message .= $part;
+
+      for($i=0; $i <= $diff; $i++){
+        $message .= '&nbsp;';
+      }
+   }
+    return $message;
+}

@@ -106,7 +106,7 @@ class Conferencer_Shortcode_Session_Meta extends Conferencer_Shortcode {
 				  }
 				  
 				  if($user_session_selected){
-				    $output .= ' user-selected';
+				    $output .= ' bookmarked';
 				  }
 				  
 				  $starts = get_post_meta($post->time_slot, '_conferencer_starts', true);
