@@ -329,3 +329,64 @@ function parse_signed_request($signed_request) {
 function base64_url_decode($input) {
   return base64_decode(strtr($input, '-_', '+/'));
 }
+
+function metas_facebook_og(){
+
+  global $post;
+
+  $metas = array(
+    'title' => get_bloginfo('name'),
+    'description' => "Le Web à Québec c'est trois jours de rencontres par et pour les gens qui imaginent le web.",
+    'image_src'=>get_bloginfo('template_directory')."/images/logo.png"
+  );
+  
+  $ogs = array(
+    'title' => get_bloginfo('name'),
+    'description' => "Le Web à Québec c'est trois jours de rencontres par et pour les gens qui imaginent le web.",
+    'image'=>get_bloginfo('template_directory')."/images/logo.png",
+    'type' => 'website'
+  );
+                  
+  if(is_singular('session')){
+    $metas['title'] = get_the_title( $post->ID );
+    $metas['description'] = strip_tags(get_excerpt_by_id( $post->ID ));
+    
+    
+    $ogs['url'] = get_permalink( $post->ID );
+    $ogs['site_name'] = get_bloginfo('name');
+    $ogs['title'] = get_the_title( $post->ID );
+    $ogs['description'] = strip_tags(get_excerpt_by_id( $post->ID ));
+    $ogs['type'] = '';
+    
+    if($_SERVER['SERVER_NAME'] == 'waq2014.job.paulcote.net'){
+      $ogs['type'] = 'waqpaul:session';
+    }
+    else if($_SERVER['SERVER_NAME'] == 'waq2014.dev.libeo.com'){
+      $ogs['type'] = 'waqdev:session';
+    }
+  }
+  else if(is_home()){
+    $ogs['url'] = get_bloginfo('url');
+  }
+  
+  displayMetas($metas,$ogs);
+}
+
+
+/**
+ * This function takes an associative array in parameter and displays a meta and opengraph meta 
+ * with the name and content of each array element.
+ * @param array $metas formated like "metaname" => "metavalue"
+ */
+function displayMetas( $metas, $ogs )
+{
+    foreach( $metas as $k => $v )
+    {
+        echo "<meta name=\"{$k}\" content=\"{$v}\" />\n\t";
+    }
+
+    foreach( $ogs as $k => $v )
+    {
+        echo "<meta property=\"og:{$k}\" content=\"{$v}\" />\n\t";
+    }
+}

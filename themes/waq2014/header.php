@@ -16,6 +16,8 @@
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 
 	<title><?php wp_title( ' | ', true, 'right' ); ?></title>
+	
+	<?php metas_facebook_og(); ?>
 
 	<?php wp_head(); ?>
 
