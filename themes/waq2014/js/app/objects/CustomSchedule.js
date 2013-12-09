@@ -60,7 +60,7 @@ var CustomSchedule = (function($, window, document, undefined) {
                   self.facebookConnected = true;
                   $('.facebook-connect').css('display','none');
                   $('.facebook-logout').css('display','block');
-                  self.fbInitPhp(function(){self.get_user_sessions();});
+                  self.fbInitPhp(function(){self.getUserSessions();});
                 }
                 else{
                   $('.facebook-connect').css('display','block');
@@ -79,7 +79,7 @@ var CustomSchedule = (function($, window, document, undefined) {
                     self.facebookConnected = true;
                     $('.facebook-connect').css('display','none');
                     $('.facebook-logout').css('display','block');
-                    self.fbInitPhp(function(){self.get_user_sessions();});
+                    self.fbInitPhp(function(){self.getUserSessions();});
                   }
                   else{
                     $('.facebook-connect').css('display','block');
@@ -95,32 +95,34 @@ var CustomSchedule = (function($, window, document, undefined) {
         },
 
         bindEvents: function(){
+            var self = this;
+            
             $(document.body).on('click', '.session-bookmark.add', function(){
 
-                if(facebook_connected == null){
-                    CustomSchedule.facebookConnect('self.getUserSessions(\'self.addSession('+$(this).parents('td').attr("data-session-id")+')\')');
+                if(self.facebookConnected == null){
+                    self.facebookConnect('self.getUserSessions(\'self.addSession('+$(this).parents('td').attr("data-session-id")+')\')');
                 }
                 else{
-                    CustomSchedule.addSession($(this).parents('td').attr("data-session-id"));
+                    self.addSession($(this).parents('td').attr("data-session-id"));
                 }
             });
 
             $(document.body).on('click', '.session-bookmark.remove', function(){
 
-                if(facebook_connected == null){
-                    CustomSchedule.facebookConnect('self.getUserSessions(\'self.removeSession('+$(this).parents('td').attr("data-session-id")+')\')');
+                if(self.facebookConnected == null){
+                    self.facebookConnect('self.getUserSessions(\'self.removeSession('+$(this).parents('td').attr("data-session-id")+')\')');
                 }
                 else{
-                    CustomSchedule.removeSession($(this).parents('td').attr("data-session-id"));
+                    self.removeSession($(this).parents('td').attr("data-session-id"));
                 }
             });
 
             $(document.body).on('click', '.facebook-connect', function(){
-                CustomSchedule.facebookConnect(function(){self.getUserSessions(function(){self.saveUserSessions();});});
+                self.facebookConnect(function(){self.getUserSessions(function(){self.saveUserSessions();});});
             });
 
             $(document.body).on('click', '.facebook-logout', function(){
-                facebook_connected = null;
+                self.facebookConnected = null;
                 FB.logout(function(response) {
                     $('.facebook-connect').css('display','block');
                     $('.facebook-logout').css('display','none');
@@ -130,9 +132,11 @@ var CustomSchedule = (function($, window, document, undefined) {
         },
 
         facebookConnect: function(){
+            var self = this;
+            
             FB.getLoginStatus(function(response) {
                 if (response.status === 'connected') {
-                    facebook_connected = true;
+                    self.facebookConnected = true;
                     $('.facebook-connect').css('display','none');
                     $('.facebook-logout').css('display','block');
                     self.fbInitPhp(callback);
@@ -163,7 +167,8 @@ var CustomSchedule = (function($, window, document, undefined) {
 
         },
 
-        addSession: function(){
+        addSession: function(session_id){
+            var self = this;
 
             if(user_sessions.indexOf(parseInt(session_id)) == -1){
                 user_sessions.push(parseInt(session_id));
@@ -178,7 +183,8 @@ var CustomSchedule = (function($, window, document, undefined) {
 
         },
 
-        removeSession: function(){
+        removeSession: function(session_id){
+            var self = this;
 
             if(user_sessions.indexOf(parseInt(session_id)) != -1){
                 user_sessions.splice(user_sessions.indexOf(parseInt(session_id)), 1);
@@ -193,7 +199,8 @@ var CustomSchedule = (function($, window, document, undefined) {
 
         },
 
-        fbInitPhp: function(){
+        fbInitPhp: function(callback){
+            var self = this;
 
             jQuery.ajax({
                 type : "post",
@@ -212,12 +219,13 @@ var CustomSchedule = (function($, window, document, undefined) {
         },
 
         saveUserSessions: function(){
+            var self = this;
 
-            if(facebook_connected){
+            if(self.facebookConnected){
                 jQuery.ajax({
                     type : "post",
                     dataType : "json",
-                    url : self.saveUserSessions_ajax,
+                    url : save_user_sessions_ajax,
                     data: {'user_sessions' : JSON.stringify(user_sessions)},
                     success: function(response) {
                     }
@@ -229,13 +237,14 @@ var CustomSchedule = (function($, window, document, undefined) {
 
         },
 
-        getUserSessions: function(){
+        getUserSessions: function(callback){
+            var self = this;
 
-            if(facebook_connected){
+            if(self.facebookConnected){
                 jQuery.ajax({
                     type : "post",
                     dataType : "json",
-                    url : self.getUserSessions_ajax,
+                    url : get_user_sessions_ajax,
                     success: function(response) {
                         if(response.length > 0){
                             user_sessions =  user_sessions.concat(response).unique();
@@ -269,6 +278,7 @@ var CustomSchedule = (function($, window, document, undefined) {
         },
 
         loadSessions: function(){
+            var self = this;
 
             $('.session button').removeClass('remove').addClass('add');
             $('.session button').find('span').text('Ajouter cette conférence à mon horaire');
@@ -283,6 +293,8 @@ var CustomSchedule = (function($, window, document, undefined) {
         },
 
         createCookie: function(name,value,days) {
+            var self = this;
+            
             if (days) {
                 var date = new Date();
                 date.setTime(date.getTime()+(days*24*60*60*1000));
@@ -293,6 +305,8 @@ var CustomSchedule = (function($, window, document, undefined) {
         },
 
         readCookie: function(name) {
+            var self = this;
+            
             var nameEQ = name + "=";
             var ca = document.cookie.split(';');
             for(var i=0;i < ca.length;i++) {
@@ -304,6 +318,8 @@ var CustomSchedule = (function($, window, document, undefined) {
         },
 
         eraseCookie: function(name) {
+            var self = this;
+            
             self.createCookie(name,"",-1);
         }
 
