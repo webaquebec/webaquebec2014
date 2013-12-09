@@ -312,7 +312,7 @@ article + article + article + article {
 
 /* line 66, ../sass/includes/_module.scss */
 .event-description {
-  max-width: 320px;
+  max-width: 390px;
 }
 @media only screen and (min-width: 1167px) {
   /* line 66, ../sass/includes/_module.scss */
