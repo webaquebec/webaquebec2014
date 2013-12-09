@@ -73,16 +73,6 @@
 		background-color: white;
 	}
 
-	@include respond-to( 1167px ){
-		.js-slider{
-			$width 				: 1137px;
-			$margin 			: 0;
-			$nbSlides 			: 3;
-			$displayedSlides 	: 1;
-			@include js-slider ( $width, $margin, $nbSlides, $displayedSlides );
-		}
-	}
-
 	// ------------------------------------
 
 	.day-wrapper{

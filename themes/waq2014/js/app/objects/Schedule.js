@@ -26,7 +26,7 @@ var Schedule = ( function( $, window, document, undefined ) {
         this.slides = this.schedule.find( '.slide' );
 
         // Get current slide
-        this.currentSlide = ( this.slides.filter( '.active' ).length > 1 ? this.slides.filter( '.active' ) : this.slides.eq(0) ) ;
+        this.currentSlide = ( this.slides.filter( '.active' ).length > 0 ? this.slides.filter( '.active' ) : this.slides.eq(0) ) ;
 
         // Get all slides number
         this.nbSlides = this.slides.length;
@@ -42,34 +42,52 @@ var Schedule = ( function( $, window, document, undefined ) {
     }
 
     Schedule.prototype = {
-        // Check if a fold has content or if it's empty. If empty, replace the button by a span
+        // Initialize function
         init: function() {
             var self = this;
 
             self.initLayout();
         },
 
-        // Initiate layout
+        // Initialize layout
         initLayout: function() {
-            var self = this;
+            var self = this,
+                index = self.currentSlide.index(),
+                offset = index / self.nbSlides * - 100;
 
             self.bindEvents();
             self.setHeight( self.currentSlide );
-            self.changeSlide( self.currentSlide.index() );
+
+            self.slides.css('left', offset + '%' );
+            self.buttons.removeClass( 'active' );
+            self.buttons.eq( index ).addClass( 'active' );
         },
 
         // Bind events
         bindEvents: function() {
             var self = this;
 
-            self.buttons.on('click', function(){
+            self.buttons.on( 'click', function() {
                 var $this = $(this),
                     index = $this.index();
 
-                self.changeSlide( index, function(){
-                    console.log('callback called');
-                });
+                self.changeSlide( index );
             });
+
+            $( window ).on( 'resize', function() {
+                //self.setLayout();
+            });
+        },
+
+        // Set layout
+        setLayout: function() {
+            var self = this,
+                index = self.currentSlide.index();
+
+            self.slideWidth = self.currentSlide.outerWidth( true );
+
+            self.setHeight( self.currentSlide );
+            self.slides.css('left', index / self.nbSlides * - 100 );
         },
 
         // Set height of current slide
@@ -78,24 +96,30 @@ var Schedule = ( function( $, window, document, undefined ) {
                 height = slide.outerHeight( true );
 
             self.wrapper.height( height );
+            self.currentHeight = height;
         },
 
-        // Change slides
-        changeSlide: function( index, callback ) {
+        // Change current slide
+        changeSlide: function( index ) {
             var self = this,
-                offset = self.slideWidth * ( index * -1 )/*,
-                callback = ( callback ? callback() : function(){} )*/;
-
-            if( callback ){
-                callback();
-            }
+                offset = index / self.nbSlides * - 100,
+                currentSlide = self.slides.eq( index ),
+                currentHeight = currentSlide.outerHeight( true );
 
             self.buttons.removeClass( 'active' );
             self.buttons.eq( index ).addClass( 'active' );
 
+            if ( currentHeight > self.currentHeight ){
+                self.setHeight( currentSlide );
+            }
+
             self.slides.animate({
-                left: offset
-            }, self.config.changeSlideDuration );
+                left: offset + '%'
+            }, self.config.changeSlideDuration, function(){
+                self.currentIndex = index;
+                self.currentSlide = currentSlide;
+                self.setHeight( currentSlide );
+            });
         }
     };
 

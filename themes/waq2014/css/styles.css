@@ -1350,48 +1350,14 @@ article + article + article + article {
   z-index: 100;
   background-color: white;
 }
-@media only screen and (min-width: 1167px) {
-  /* line 77, ../sass/includes/_schedule.scss */
-  .schedule-wrapper .js-slider {
-    width: 1137px;
-  }
-  /* line 10, ../sass/config/_mixins.scss */
-  .schedule-wrapper .js-slider {
-    margin: 0 auto;
-    overflow: hidden;
-  }
-  /* line 11, ../sass/config/_mixins.scss */
-  .schedule-wrapper .js-slider .js-slider-container {
-    width: 3411px;
-    zoom: 1;
-  }
-  /* line 17, ../sass/config/_mixins.scss */
-  .schedule-wrapper .js-slider .js-slider-container:before, .schedule-wrapper .js-slider .js-slider-container:after {
-    content: "\0020";
-    display: block;
-    height: 0;
-    overflow: hidden;
-  }
-  /* line 23, ../sass/config/_mixins.scss */
-  .schedule-wrapper .js-slider .js-slider-container:after {
-    clear: both;
-  }
-  /* line 12, ../sass/config/_mixins.scss */
-  .schedule-wrapper .js-slider .slide {
-    margin-right: 0;
-    width: 1137px;
-    float: left;
-    position: relative;
-  }
-}
 @media only screen and (min-width: 1024px) {
-  /* line 88, ../sass/includes/_schedule.scss */
+  /* line 78, ../sass/includes/_schedule.scss */
   .schedule-wrapper .day-wrapper {
     padding-top: 30px;
     background-color: white;
   }
 }
-/* line 95, ../sass/includes/_schedule.scss */
+/* line 85, ../sass/includes/_schedule.scss */
 .schedule-wrapper th {
   color: #333f47;
   font: 700 1.125em / 1.11111em "Roboto Condensed", sans-serif;
@@ -1402,27 +1368,27 @@ article + article + article + article {
   background-position: 0;
   border-bottom: 1px solid #dfe5e8;
 }
-/* line 106, ../sass/includes/_schedule.scss */
+/* line 96, ../sass/includes/_schedule.scss */
 .schedule-wrapper th.column_salle-libeo {
   background-image: url("../img/bg-schedule-libeo.png");
 }
-/* line 110, ../sass/includes/_schedule.scss */
+/* line 100, ../sass/includes/_schedule.scss */
 .schedule-wrapper th.column_salle-ixmedia {
   background-image: url("../img/bg-schedule-ixmedia.png");
 }
-/* line 114, ../sass/includes/_schedule.scss */
+/* line 104, ../sass/includes/_schedule.scss */
 .schedule-wrapper th.column_salle-bell {
   background-image: url("../img/bg-schedule-bell.png");
 }
-/* line 118, ../sass/includes/_schedule.scss */
+/* line 108, ../sass/includes/_schedule.scss */
 .schedule-wrapper th.column_salle-deloitte {
   background-image: url("../img/bg-schedule-deloitte.png");
 }
-/* line 122, ../sass/includes/_schedule.scss */
+/* line 112, ../sass/includes/_schedule.scss */
 .schedule-wrapper th:first-child {
   background: none;
 }
-/* line 126, ../sass/includes/_schedule.scss */
+/* line 116, ../sass/includes/_schedule.scss */
 .schedule-wrapper .days-buttons {
   zoom: 1;
   margin: 0;
@@ -1442,13 +1408,13 @@ article + article + article + article {
   clear: both;
 }
 @media only screen and (min-width: 1024px) {
-  /* line 126, ../sass/includes/_schedule.scss */
+  /* line 116, ../sass/includes/_schedule.scss */
   .schedule-wrapper .days-buttons {
     padding: 0;
     background-color: transparent;
   }
 }
-/* line 138, ../sass/includes/_schedule.scss */
+/* line 128, ../sass/includes/_schedule.scss */
 .schedule-wrapper .days-buttons button {
   display: -moz-inline-stack;
   display: inline-block;
@@ -1475,16 +1441,16 @@ article + article + article + article {
   background-color: #006b9f;
 }
 @media only screen and (min-width: 768px) {
-  /* line 138, ../sass/includes/_schedule.scss */
+  /* line 128, ../sass/includes/_schedule.scss */
   .schedule-wrapper .days-buttons button {
     padding: 15px 5px;
   }
 }
-/* line 156, ../sass/includes/_schedule.scss */
+/* line 146, ../sass/includes/_schedule.scss */
 .schedule-wrapper .days-buttons button span {
   font: 400 1em / 1.125em "Roboto", sans-serif;
 }
-/* line 161, ../sass/includes/_schedule.scss */
+/* line 151, ../sass/includes/_schedule.scss */
 .schedule-wrapper .days-buttons button.active {
   margin: 0 1px 0;
   padding: 15px 5px 13px;
@@ -1492,13 +1458,13 @@ article + article + article + article {
   background-color: #333f47;
 }
 @media only screen and (min-width: 768px) {
-  /* line 161, ../sass/includes/_schedule.scss */
+  /* line 151, ../sass/includes/_schedule.scss */
   .schedule-wrapper .days-buttons button.active {
     margin: 0 1px 2px;
     padding: 23px 5px 21px;
   }
 }
-/* line 174, ../sass/includes/_schedule.scss */
+/* line 164, ../sass/includes/_schedule.scss */
 .schedule-wrapper .time-slot {
   position: relative;
   padding: 20px 15px 8px;
@@ -1509,7 +1475,7 @@ article + article + article + article {
   vertical-align: top;
 }
 @media only screen and (min-width: 1024px) {
-  /* line 174, ../sass/includes/_schedule.scss */
+  /* line 164, ../sass/includes/_schedule.scss */
   .schedule-wrapper .time-slot {
     width: 7%;
     text-align: center;
@@ -1518,12 +1484,12 @@ article + article + article + article {
   }
 }
 @media only screen and (min-width: 1024px) {
-  /* line 190, ../sass/includes/_schedule.scss */
+  /* line 180, ../sass/includes/_schedule.scss */
   .schedule-wrapper .time-slot .time-slot-end {
     display: none;
   }
 }
-/* line 197, ../sass/includes/_schedule.scss */
+/* line 187, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session {
   background-color: white;
   background-image: url("../img/bg-schedule-default.png");
@@ -1531,23 +1497,23 @@ article + article + article + article {
   background-position: center left;
 }
 @media only screen and (min-width: 1024px) {
-  /* line 197, ../sass/includes/_schedule.scss */
+  /* line 187, ../sass/includes/_schedule.scss */
   .schedule-wrapper .session {
     width: 23.25%;
   }
 }
-/* line 208, ../sass/includes/_schedule.scss */
+/* line 198, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session .session-wrapper {
   position: relative;
 }
-/* line 212, ../sass/includes/_schedule.scss */
+/* line 202, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session .session-content {
   padding: 30px 65px 12px 25px;
   background-repeat: repeat-y;
   background-position: center left;
 }
 @media only screen and (min-width: 1024px) {
-  /* line 212, ../sass/includes/_schedule.scss */
+  /* line 202, ../sass/includes/_schedule.scss */
   .schedule-wrapper .session .session-content {
     padding: 20px 35px 0 25px;
     display: table-cell;
@@ -1556,53 +1522,53 @@ article + article + article + article {
     width: 400px;
   }
 }
-/* line 226, ../sass/includes/_schedule.scss */
+/* line 216, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session .session-content-wrapper {
   position: relative;
 }
-/* line 230, ../sass/includes/_schedule.scss */
+/* line 220, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session .session-title {
   font: 400 1.125em / 1.11111em "Roboto Condensed", sans-serif;
 }
-/* line 233, ../sass/includes/_schedule.scss */
+/* line 223, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session .session-title a {
   text-decoration: none;
   color: #006b9f;
 }
-/* line 237, ../sass/includes/_schedule.scss */
+/* line 227, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session .session-title a:hover {
   text-decoration: underline;
 }
-/* line 244, ../sass/includes/_schedule.scss */
+/* line 234, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session .session-speaker,
 .schedule-wrapper .session .session-description {
   display: block;
   color: #333f47;
   font: 400 1em / 1.25em "Lusitana", sans-serif;
 }
-/* line 252, ../sass/includes/_schedule.scss */
+/* line 242, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session span.session-speaker,
 .schedule-wrapper .session .session-description,
 .schedule-wrapper .session .session-speaker figcaption {
   position: absolute;
   top: -20px;
 }
-/* line 257, ../sass/includes/_schedule.scss */
+/* line 247, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session.no-speaker .session-content {
   padding: 12px 65px 12px 25px;
 }
 @media only screen and (min-width: 1024px) {
-  /* line 257, ../sass/includes/_schedule.scss */
+  /* line 247, ../sass/includes/_schedule.scss */
   .schedule-wrapper .session.no-speaker .session-content {
     padding: 0 40px 0 25px;
     height: 110px;
   }
 }
-/* line 266, ../sass/includes/_schedule.scss */
+/* line 256, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session .session-speaker-thumb {
   display: none;
 }
-/* line 270, ../sass/includes/_schedule.scss */
+/* line 260, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session .session-room {
   display: block;
   padding: 8px 0 0;
@@ -1612,18 +1578,18 @@ article + article + article + article {
   text-transform: uppercase;
 }
 @media only screen and (min-width: 1024px) {
-  /* line 270, ../sass/includes/_schedule.scss */
+  /* line 260, ../sass/includes/_schedule.scss */
   .schedule-wrapper .session .session-room {
     display: none;
     padding: 0;
   }
 }
-/* line 284, ../sass/includes/_schedule.scss */
+/* line 274, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session .session-time-slot {
   display: none;
 }
 @media only screen and (min-width: 1024px) {
-  /* line 284, ../sass/includes/_schedule.scss */
+  /* line 274, ../sass/includes/_schedule.scss */
   .schedule-wrapper .session .session-time-slot {
     display: -moz-inline-stack;
     display: inline-block;
@@ -1635,7 +1601,7 @@ article + article + article + article {
     font: 400 1.125em / 1.33333em "Roboto Condensed", sans-serif;
   }
 }
-/* line 294, ../sass/includes/_schedule.scss */
+/* line 284, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session .session-bookmark {
   position: absolute;
   top: 0;
@@ -1650,7 +1616,7 @@ article + article + article + article {
   height: 31px;
   width: 21px;
 }
-/* line 304, ../sass/includes/_schedule.scss */
+/* line 294, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session .session-bookmark.active {
   background-image: url("../img/icon-bookmark-small-active.png");
   background-repeat: no-repeat;
@@ -1660,29 +1626,29 @@ article + article + article + article {
   width: 21px;
 }
 @media only screen and (min-width: 1024px) {
-  /* line 310, ../sass/includes/_schedule.scss */
+  /* line 300, ../sass/includes/_schedule.scss */
   .schedule-wrapper .session[rowspan="2"] .session-content {
     height: 201px;
   }
 }
 @media only screen and (min-width: 1024px) {
-  /* line 316, ../sass/includes/_schedule.scss */
+  /* line 306, ../sass/includes/_schedule.scss */
   .schedule-wrapper .session[rowspan="3"] .session-content {
     height: 302px;
   }
 }
 @media only screen and (min-width: 1024px) {
-  /* line 322, ../sass/includes/_schedule.scss */
+  /* line 312, ../sass/includes/_schedule.scss */
   .schedule-wrapper .session[rowspan="4"] .session-content {
     height: 403px;
   }
 }
-/* line 328, ../sass/includes/_schedule.scss */
+/* line 318, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session.keynote {
   background-color: #e6f3fa;
 }
 @media only screen and (min-width: 1024px) {
-  /* line 328, ../sass/includes/_schedule.scss */
+  /* line 318, ../sass/includes/_schedule.scss */
   .schedule-wrapper .session.keynote {
     padding: 15px;
     background-color: white;
@@ -1691,7 +1657,7 @@ article + article + article + article {
   }
 }
 @media only screen and (min-width: 1024px) {
-  /* line 338, ../sass/includes/_schedule.scss */
+  /* line 328, ../sass/includes/_schedule.scss */
   .schedule-wrapper .session.keynote .session-content {
     width: 2000px;
     height: 132px;
@@ -1699,24 +1665,24 @@ article + article + article + article {
     background-color: #e6f3fa;
   }
 }
-/* line 347, ../sass/includes/_schedule.scss */
+/* line 337, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session.keynote .session-title {
   display: block;
   font: 400 1.375em / 1.09091em "Roboto Condensed", sans-serif;
 }
 @media only screen and (min-width: 1024px) {
-  /* line 347, ../sass/includes/_schedule.scss */
+  /* line 337, ../sass/includes/_schedule.scss */
   .schedule-wrapper .session.keynote .session-title {
     font-size: 1.875em;
   }
 }
-/* line 356, ../sass/includes/_schedule.scss */
+/* line 346, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session.keynote .session-speaker {
   top: -28px;
   font: 400 1.125em / 2em "Lusitana", sans-serif;
 }
 @media only screen and (min-width: 1024px) {
-  /* line 361, ../sass/includes/_schedule.scss */
+  /* line 351, ../sass/includes/_schedule.scss */
   .schedule-wrapper .session.keynote .session-room {
     display: -moz-inline-stack;
     display: inline-block;
@@ -1727,7 +1693,7 @@ article + article + article + article {
     font: 700 1.125em / 1.33333em "Roboto Condensed", sans-serif;
   }
 }
-/* line 368, ../sass/includes/_schedule.scss */
+/* line 358, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session.keynote .session-speaker-thumb {
   display: block;
   position: absolute;
@@ -1737,7 +1703,7 @@ article + article + article + article {
   max-height: 92px;
 }
 @media only screen and (min-width: 768px) {
-  /* line 368, ../sass/includes/_schedule.scss */
+  /* line 358, ../sass/includes/_schedule.scss */
   .schedule-wrapper .session.keynote .session-speaker-thumb {
     top: 0;
     max-width: 100px;
@@ -1745,14 +1711,14 @@ article + article + article + article {
   }
 }
 @media only screen and (min-width: 1024px) {
-  /* line 368, ../sass/includes/_schedule.scss */
+  /* line 358, ../sass/includes/_schedule.scss */
   .schedule-wrapper .session.keynote .session-speaker-thumb {
     top: 0;
     max-width: 187px;
     max-height: 160px;
   }
 }
-/* line 388, ../sass/includes/_schedule.scss */
+/* line 378, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session.keynote .session-bookmark {
   background-image: url("../img/icon-bookmark-big.png");
   background-repeat: no-repeat;
@@ -1761,7 +1727,7 @@ article + article + article + article {
   height: 56px;
   width: 38px;
 }
-/* line 392, ../sass/includes/_schedule.scss */
+/* line 382, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session.keynote .session-bookmark.active {
   background-image: url("../img/icon-bookmark-big-active.png");
   background-repeat: no-repeat;
@@ -1771,12 +1737,12 @@ article + article + article + article {
   width: 38px;
 }
 @media only screen and (min-width: 1024px) {
-  /* line 396, ../sass/includes/_schedule.scss */
+  /* line 386, ../sass/includes/_schedule.scss */
   .schedule-wrapper .session.keynote.no-speaker .session-content {
     padding: 0 65px 0 50px;
   }
 }
-/* line 406, ../sass/includes/_schedule.scss */
+/* line 396, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session.break {
   height: auto;
   padding: 0;
@@ -1784,50 +1750,50 @@ article + article + article + article {
   text-align: center;
 }
 @media only screen and (min-width: 1024px) {
-  /* line 406, ../sass/includes/_schedule.scss */
+  /* line 396, ../sass/includes/_schedule.scss */
   .schedule-wrapper .session.break {
     padding: 15px;
     border-left: 1px solid #dfe5e8;
   }
 }
 @media only screen and (min-width: 1024px) {
-  /* line 417, ../sass/includes/_schedule.scss */
+  /* line 407, ../sass/includes/_schedule.scss */
   .schedule-wrapper .session.break .session-content {
     width: 2000px;
     height: 140px;
     background-color: #e6f3fa;
   }
 }
-/* line 425, ../sass/includes/_schedule.scss */
+/* line 415, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session.break .session-title {
   font: 400 1.125em / 2em "Lusitana", sans-serif;
 }
-/* line 428, ../sass/includes/_schedule.scss */
+/* line 418, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session.break .session-title, .schedule-wrapper .session.break .session-title a {
   color: #333f47;
 }
-/* line 433, ../sass/includes/_schedule.scss */
+/* line 423, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session.break button {
   display: none;
 }
 @media only screen and (min-width: 1024px) {
-  /* line 438, ../sass/includes/_schedule.scss */
+  /* line 428, ../sass/includes/_schedule.scss */
   .schedule-wrapper .session.break.small {
     padding: 0;
   }
 }
 @media only screen and (min-width: 1024px) {
-  /* line 444, ../sass/includes/_schedule.scss */
+  /* line 434, ../sass/includes/_schedule.scss */
   .schedule-wrapper .session.break.small .session-content {
     height: 75px;
     background-color: transparent;
   }
 }
-/* line 454, ../sass/includes/_schedule.scss */
+/* line 444, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session.bookmarked .session-content {
   background-color: #333f47;
 }
-/* line 463, ../sass/includes/_schedule.scss */
+/* line 453, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session.bookmarked .session-title a,
 .schedule-wrapper .session.bookmarked .session-speaker,
 .schedule-wrapper .session.bookmarked .session-content,
@@ -1836,7 +1802,7 @@ article + article + article + article {
 .schedule-wrapper .session.bookmarked .session-room {
   color: white;
 }
-/* line 467, ../sass/includes/_schedule.scss */
+/* line 457, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session.bookmarked .session-bookmark {
   background-image: url("../img/icon-bookmark-small-active.png");
   background-repeat: no-repeat;
@@ -1845,7 +1811,7 @@ article + article + article + article {
   height: 31px;
   width: 21px;
 }
-/* line 471, ../sass/includes/_schedule.scss */
+/* line 461, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session.bookmarked.keynote .session-bookmark {
   background-image: url("../img/icon-bookmark-big-active.png");
   background-repeat: no-repeat;
@@ -1854,28 +1820,28 @@ article + article + article + article {
   height: 56px;
   width: 38px;
 }
-/* line 477, ../sass/includes/_schedule.scss */
+/* line 467, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session.filtered {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=30);
   opacity: 0.3;
 }
-/* line 483, ../sass/includes/_schedule.scss */
+/* line 473, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session.grand-hall .session-content {
   background-image: url("../img/bg-schedule-default.png");
 }
-/* line 487, ../sass/includes/_schedule.scss */
+/* line 477, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session.salle-libeo .session-content {
   background-image: url("../img/bg-schedule-libeo.png");
 }
-/* line 491, ../sass/includes/_schedule.scss */
+/* line 481, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session.salle-ixmedia .session-content {
   background-image: url("../img/bg-schedule-ixmedia.png");
 }
-/* line 495, ../sass/includes/_schedule.scss */
+/* line 485, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session.salle-bell .session-content {
   background-image: url("../img/bg-schedule-bell.png");
 }
-/* line 499, ../sass/includes/_schedule.scss */
+/* line 489, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session.salle-deloitte .session-content {
   background-image: url("../img/bg-schedule-deloitte.png");
 }
