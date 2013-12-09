@@ -10,7 +10,7 @@ $schedule_categories = get_terms( 'theme' , $schedule_categories_args );
 
 $schedule_categories_output = "<li><button>Tous</button></li>";
 foreach ($schedule_categories as $schedule_categories) {
-  $schedule_categories_output .= '<li><button data-slug="'.$schedule_categories->slug.'">'.$schedule_categories->name.'</button></li>';
+  $schedule_categories_output .= '<li><button data-slug="filter-'.$schedule_categories->slug.'">'.$schedule_categories->name.'</button></li>';
 }
 
 
