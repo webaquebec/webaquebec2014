@@ -59,13 +59,27 @@ table {
   border-spacing: 0;
 }
 
-/* line 1, ../sass/config/_utils.scss */
+/* line 3, ../sass/config/_utils.scss */
+a:focus,
+button:focus,
+input:focus {
+  outline: none;
+}
+
+/* line 9, ../sass/config/_utils.scss */
+a:focus:not(.isHover):not(.isClicked),
+button:focus:not(.isHover):not(.isClicked),
+input:focus:not(.isHover):not(.isClicked) {
+  outline: 2px solid #ff5917;
+}
+
+/* line 13, ../sass/config/_utils.scss */
 .linebreak:before {
   content: '\A';
   white-space: pre;
 }
 
-/* line 6, ../sass/config/_utils.scss */
+/* line 18, ../sass/config/_utils.scss */
 .clearfix:after {
   content: ".";
   display: block;
@@ -75,17 +89,17 @@ table {
   height: 0;
 }
 
-/* line 15, ../sass/config/_utils.scss */
+/* line 27, ../sass/config/_utils.scss */
 html[xmlns] .clearfix {
   display: block;
 }
 
-/* line 19, ../sass/config/_utils.scss */
+/* line 31, ../sass/config/_utils.scss */
 * html .clearfix {
   height: 1%;
 }
 
-/* line 23, ../sass/config/_utils.scss */
+/* line 35, ../sass/config/_utils.scss */
 .visuallyhidden {
   border: 0;
   clip: rect(0 0 0 0);
@@ -97,7 +111,7 @@ html[xmlns] .clearfix {
   width: 1px;
 }
 
-/* line 24, ../sass/config/_utils.scss */
+/* line 36, ../sass/config/_utils.scss */
 .visuallyhidden.focusable:active, .visuallyhidden.focusable:focus {
   clip: auto;
   height: auto;

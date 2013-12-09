@@ -32,7 +32,7 @@
         <header class="home">
             <div class="l-section-wrapper">
 
-                <a href="#" class="visuallyhidden focusable">Passer au contenu</a>
+                <a href="#" class="l-a11y visuallyhidden focusable">Passer au contenu</a>
 
                 <h1 itemprop="name" class="visuallyhidden">Le Web à Québec</h1>
 
@@ -882,6 +882,16 @@
     </div><!-- end of Page wrapper -->
 
     <!-- Custom scripts -->
+    <script src="../js/vendor/jquery-1.10.2.min.js"></script>
+    <script src="../js/vendor/underscore-min.js"></script>
+
+    <script src="../js/plugins/buttonize.jquery.js"></script>
+    <script src="../js/plugins/eminize.jquery.js"></script>
+    <script src="../js/plugins/onfontresize.jquery.js"></script>
+
+    <script src="../js/app/objects/Schedule.js"></script>
+
+    <script src="../js/app/WAQ.Common.js"></script>
     <script src="../js/main.js"></script>
 
 </body>

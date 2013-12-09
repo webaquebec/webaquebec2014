@@ -1,3 +1,15 @@
+a:focus,
+button:focus,
+input:focus{
+	outline: none;
+}
+
+a:focus:not(.isHover):not(.isClicked),
+button:focus:not(.isHover):not(.isClicked),
+input:focus:not(.isHover):not(.isClicked){
+	outline: $outline;
+}
+
 .linebreak:before {
 	content:'\A';
 	white-space:pre;

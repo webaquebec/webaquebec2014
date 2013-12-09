@@ -269,6 +269,16 @@
     </div><!-- end of Page wrapper -->
 
     <!-- Custom scripts -->
+    <script src="../js/vendor/jquery-1.10.2.min.js"></script>
+    <script src="../js/vendor/underscore-min.js"></script>
+
+    <script src="../js/plugins/buttonize.jquery.js"></script>
+    <script src="../js/plugins/eminize.jquery.js"></script>
+    <script src="../js/plugins/onfontresize.jquery.js"></script>
+
+    <script src="../js/app/objects/Schedule.js"></script>
+
+    <script src="../js/app/WAQ.Common.js"></script>
     <script src="../js/main.js"></script>
 
 </body>
