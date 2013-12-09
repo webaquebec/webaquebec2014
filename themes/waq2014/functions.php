@@ -46,10 +46,22 @@ function add_my_scripts() {
 
 	//Mettre la version la plus à jour de jQuery
 	wp_deregister_script( 'jquery' );
-	wp_enqueue_script( 'jquery', '//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js', array(), '1.9.0', false );
-	wp_enqueue_script( 'resize', get_template_directory_uri() . '/js/vendor/jquery.onfontresize.js', array(), '1.0.0', false );
+	
 	wp_enqueue_script( 'modernizr', get_template_directory_uri() . '/js/vendor/modernizr-2.6.2.min.js', array(), '2.6.2', false );
-	wp_enqueue_script( 'main', get_template_directory_uri() . '/js/main.js', array(), '1.0.0', true );
+	
+	wp_enqueue_script( 'jquery', '//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js', array(), '1.9.0', true );
+	wp_enqueue_script( 'waq-underscore', get_template_directory_uri() . '/js/vendor/underscore-min.js', array(), null, true );
+	
+	wp_enqueue_script( 'waq-buttonize', get_template_directory_uri() . '/js/plugins/buttonize.jquery.js', array(), null, true );
+	wp_enqueue_script( 'waq-eminize', get_template_directory_uri() . '/js/plugins/eminize.jquery.js', array(), null, true );
+	wp_enqueue_script( 'waq-resize', get_template_directory_uri() . '/js/plugins/onfontresize.jquery.js', array(), null, true );
+	
+	wp_enqueue_script( 'waq-schedules', get_template_directory_uri() . '/js/app/objects/Schedule.js', array(), null, true );
+	wp_enqueue_script( 'waq-usersessions', get_template_directory_uri() . '/js/app/objects/CustomSchedule.js', array(), null, true );
+	
+	wp_enqueue_script( 'waq-common', get_template_directory_uri() . '/js/app/WAQ.Common.js', array(), null, true );
+	wp_enqueue_script( 'waq-main', get_template_directory_uri() . '/js/main.js', array(), null, true );
+	//wp_enqueue_script( 'facebookbkp', get_template_directory_uri() . '/js/app/objects/facebookbkp.js', array(), null, true );
 }
 
 function add_my_styles() {
@@ -417,6 +429,7 @@ function metas_facebook_og(){
     $properties['og:type'] = 'event';
     $properties['event:start_time'] = strftime("%Y-%m-%dT%H:%M",$session_start_unix);
     $properties['event:end_time'] = strftime("%Y-%m-%dT%H:%M",$session_ends_unix);
+    $properties['event:location'] = $session_room;
   }
   else if(is_home()){
     $properties['og:url'] = get_bloginfo('url');

@@ -2,36 +2,37 @@ var LIBEO;
 
 (function($, window, document, undefined) {
 
-    // On document ready
-    $(document).ready(function() {
+  // On document ready
+  $(document).ready(function() {
 
-        // Check if the 'WAQ' object is defined
-        if (typeof WAQ === 'object') {
+    // Check if the 'WAQ' object is defined
+    if (typeof WAQ === 'object') {
 
-        	LIBEO = WAQ;
+    	LIBEO = WAQ;
 
-        	WAQ.Constants = {
-        		name            : 'WAQ',
-        		onClickClass    : 'isClicked',
-        		onHoverClass    : 'isHover',
-        		onZoomClass     : 'l-zoomed',
-        		fontPrefixClass : 'l-font',
-        		isOpenClass     : 'isOpen',
-        		isActiveClass   : 'isActive',
-        		extLinksClass   : 'external'
-        	};
+    	WAQ.Constants = {
+    		name            : 'WAQ',
+    		onClickClass    : 'isClicked',
+    		onHoverClass    : 'isHover',
+    		onZoomClass     : 'l-zoomed',
+    		fontPrefixClass : 'l-font',
+    		isOpenClass     : 'isOpen',
+    		isActiveClass   : 'isActive',
+    		extLinksClass   : 'external'
+    	};
 
-            // Instantiate and store objects
-            WAQ.Schedule = WAQ.Common.createObjects($('.schedule-wrapper'), Schedule);
+      // Instantiate and store objects
+      WAQ.Schedule = WAQ.Common.createObjects($('.schedule-wrapper'), Schedule);
+      WAQ.CustomSchedule = WAQ.Common.createObjects($('.schedule-wrapper'), CustomSchedule);
 
-            // Common functions
-            WAQ.Common.goToContent($('.l-a11y'));
-            WAQ.Common.betterFocus(['a', 'button', 'input']);
-            WAQ.Common.checkForKeyboardInput();
-            WAQ.Common.checkFontSize();
-            WAQ.Common.externalLinks();
-        }
+      // Common functions
+      WAQ.Common.goToContent($('.l-a11y'));
+      WAQ.Common.betterFocus(['a', 'button', 'input']);
+      WAQ.Common.checkForKeyboardInput();
+      WAQ.Common.checkFontSize();
+      WAQ.Common.externalLinks();
+  }
 
-    });
+});
 
 })(jQuery, window, document);
