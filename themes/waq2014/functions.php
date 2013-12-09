@@ -424,7 +424,7 @@ function displayMetas( $names = array(), $properties = array() )
 
 function fbLinkDescriptionNewLines($string){
     $parts = explode("\n", $string);
-    $row_limit = 60;
+    $row_limit = 80;
 
     $message = '';
     foreach($parts as $part){
