@@ -381,6 +381,9 @@ function metas_facebook_og(){
     if($speaker_name == 'Panel'){
       $session_desc .= "Un panel présenté";
     }
+    else if(empty($speaker_name)){
+      $session_desc .= "Une conférence présentée";
+    }
     else{
       $session_desc .= "Une conférence de ". $speaker_name ." présentée";
     }
