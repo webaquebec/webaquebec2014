@@ -337,13 +337,13 @@ function metas_facebook_og(){
   $metas = array(
     'title' => get_bloginfo('name'),
     'description' => "Le Web à Québec c'est trois jours de rencontres par et pour les gens qui imaginent le web.",
-    'image_src'=>get_bloginfo('template_directory')."/images/logo.png"
+    'image_src'=>get_bloginfo('template_directory')."/images/fb-image.png"
   );
   
   $ogs = array(
     'title' => get_bloginfo('name'),
     'description' => "Le Web à Québec c'est trois jours de rencontres par et pour les gens qui imaginent le web.",
-    'image'=>get_bloginfo('template_directory')."/images/logo.png",
+    'image'=>get_bloginfo('template_directory')."/images/fb-image.png",
     'type' => 'website'
   );
                   
