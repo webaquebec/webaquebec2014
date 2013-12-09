@@ -396,7 +396,7 @@ function metas_facebook_og(){
     else{
       $session_desc .= " dans la ";
     }
-    $session_desc .= $session_room;
+    $session_desc .= str_replace('Salle', 'salle', $session_room);
     $session_desc .= ".";
     
     
