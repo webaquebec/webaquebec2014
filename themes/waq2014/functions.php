@@ -336,7 +336,9 @@ function metas_facebook_og(){
 
   $metas = array(
     'title' => get_bloginfo('name'),
+    'DC.title' => get_bloginfo('name'),
     'description' => "Le Web à Québec c'est trois jours de rencontres par et pour les gens qui imaginent le web.",
+    'DC.description' => "Le Web à Québec c'est trois jours de rencontres par et pour les gens qui imaginent le web.",
     'image_src'=>get_bloginfo('template_directory')."/img/fb-image.png"
   );
   
@@ -360,21 +362,16 @@ function metas_facebook_og(){
                   
   if(is_singular('session')){
     $metas['title'] = get_the_title( $post->ID );
+    $metas['DC.title'] = get_the_title( $post->ID );
     $metas['description'] = strip_tags(get_excerpt_by_id( $post->ID ));
+    $metas['DC.description'] = strip_tags(get_excerpt_by_id( $post->ID ));
     
     
     $ogs['url'] = get_permalink( $post->ID );
     $ogs['site_name'] = get_bloginfo('name');
     $ogs['title'] = get_the_title( $post->ID );
     $ogs['description'] = strip_tags(get_excerpt_by_id( $post->ID ));
-    $ogs['type'] = '';
-    
-    if($_SERVER['SERVER_NAME'] == 'waq2014.job.paulcote.net'){
-      $ogs['type'] = 'waqpaul:session';
-    }
-    else if($_SERVER['SERVER_NAME'] == 'waq2014.dev.libeo.com'){
-      $ogs['type'] = 'waqdevv:session';
-    }
+    $ogs['type'] = 'event';
   }
   else if(is_home()){
     $ogs['url'] = get_bloginfo('url');
