@@ -44,7 +44,7 @@
 	</script>
 
 </head>
-<body>
+<body class="<?php custom_body_classes();?>">
 
 <div id="fb-root"></div>
 <script>

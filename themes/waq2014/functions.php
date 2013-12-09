@@ -458,3 +458,16 @@ function displayMetas( $names = array(), $properties = array() )
         echo "<meta property=\"{$k}\" content=\"{$v}\" />\n\t";
     }
 }
+
+function custom_body_classes(){
+    if(is_front_page()){
+      echo ' homepage';
+    }
+    else if(is_singular('session')){
+      echo ' single-page';
+    }
+    else{
+      echo ' single-page';
+    }
+
+}
