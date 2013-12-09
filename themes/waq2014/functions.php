@@ -377,7 +377,26 @@ function metas_facebook_og(){
       $speaker_name = get_the_title(array_shift($speakers_ids));
     }
   
-    $session_desc = $speaker_name."\n".strftime("%A %e %B",$session_start_unix)." / ".strftime("%k h %M",$session_start_unix)." à ".strftime("%k h %M",$session_ends_unix)."\n".$session_room;
+    $session_desc = "";
+    if($speaker_name == 'Panel'){
+      $session_desc .= "Un panel présenté";
+    }
+    else{
+      $session_desc .= "Une conférence de ". $speaker_name ." présentée";
+    }
+    $session_desc .= " le ".strtolower(strftime("%A %e %B",$session_start_unix));
+    $session_desc .= " de ".trim(strftime("%kh%M",$session_start_unix))." à ".trim(strftime("%kh%M",$session_ends_unix));
+    
+    if(strpos(strtolower($session_room), "salle") === false){
+      $session_desc .= " dans le ";
+    }
+    else{
+      $session_desc .= " dans la ";
+    }
+    $session_desc .= $session_room;
+    $session_desc .= ".";
+    
+    
   
     $names['title'] = get_the_title( $post->ID );
     $names['DC.title'] = get_the_title( $post->ID );
@@ -391,7 +410,7 @@ function metas_facebook_og(){
     $properties['og:site_name'] = get_bloginfo('name');
     $properties['og:title'] = get_the_title( $post->ID );
     //$ogs['description'] = strip_tags(get_excerpt_by_id( $post->ID ));
-    $properties['og:description'] = fbLinkDescriptionNewLines($session_desc);
+    $properties['og:description'] = $session_desc;
     $properties['og:type'] = 'event';
     $properties['event:start_time'] = strftime("%Y-%m-%dT%H:%M",$session_start_unix);
     $properties['event:end_time'] = strftime("%Y-%m-%dT%H:%M",$session_ends_unix);
@@ -420,22 +439,4 @@ function displayMetas( $names = array(), $properties = array() )
     {
         echo "<meta property=\"{$k}\" content=\"{$v}\" />\n\t";
     }
-}
-
-function fbLinkDescriptionNewLines($string){
-    $parts = explode("\n", $string);
-    $row_limit = 80;
-
-    $message = '';
-    foreach($parts as $part){
-      $str_len = strlen($part);
-      $diff = ($row_limit - $str_len);
-
-      $message .= $part;
-
-      for($i=0; $i <= $diff; $i++){
-        $message .= '&nbsp;';
-      }
-   }
-    return $message;
 }
