@@ -346,6 +346,17 @@ function metas_facebook_og(){
     'image'=>get_bloginfo('template_directory')."/img/fb-image.png",
     'type' => 'website'
   );
+  
+  $fbs = array(
+    'app_id' => ''
+  );
+  
+  if($_SERVER['SERVER_NAME'] == 'waq2014.job.paulcote.net'){
+    $fbs['app_id'] = '1382147128676757';
+  }
+  else if($_SERVER['SERVER_NAME'] == 'waq2014.dev.libeo.com'){
+    $fbs['app_id'] = '1421838541381572';
+  }
                   
   if(is_singular('session')){
     $metas['title'] = get_the_title( $post->ID );
@@ -369,7 +380,7 @@ function metas_facebook_og(){
     $ogs['url'] = get_bloginfo('url');
   }
   
-  displayMetas($metas,$ogs);
+  displayMetas($metas,$ogs,$fbs);
 }
 
 
@@ -378,7 +389,7 @@ function metas_facebook_og(){
  * with the name and content of each array element.
  * @param array $metas formated like "metaname" => "metavalue"
  */
-function displayMetas( $metas, $ogs )
+function displayMetas( $metas = array(), $ogs = array(), $fbs = array() )
 {
     foreach( $metas as $k => $v )
     {
@@ -388,5 +399,10 @@ function displayMetas( $metas, $ogs )
     foreach( $ogs as $k => $v )
     {
         echo "<meta property=\"og:{$k}\" content=\"{$v}\" />\n\t";
+    }
+
+    foreach( $fbs as $k => $v )
+    {
+        echo "<meta property=\"fb:{$k}\" content=\"{$v}\" />\n\t";
     }
 }
