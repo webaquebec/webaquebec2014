@@ -86,18 +86,14 @@ if(time() <= $start_unixtime){
   
   //$countdown_output .= '<span class="visuallyhidden">Il reste</span>';
   
-  if($time_remaining->days > 3){
+  $countdown_output .= '<div class="event-stats-group days'.($time_remaining->days > 100 ? ' large' : '').' '.($time_remaining->days > 3 ? '' : 'visuallyhidden').'"><div class="stat days">';
+      $countdown_output .= '<span class="stat-number">'.$time_remaining->days.'</span>';
+      $countdown_output .= '<span class="stat-caption">jours</span>';
+  $countdown_output .= '</div></div>';
   
-    $countdown_output .= '<div class="event-stats-group days'.($time_remaining->days > 100 ? ' large' : '').'"><div class="stat days">';
-        $countdown_output .= '<span class="stat-number">'.$time_remaining->days.'</span>';
-        $countdown_output .= '<span class="stat-caption">jours</span>';
-    $countdown_output .= '</div></div>';
-    
-    $hours_remaining = $time_remaining->h;
+  $hours_remaining = $time_remaining->h;
   
-  }
-  
-  $countdown_output .= '<div class="event-stats-group hours"><div class="stat hours">';
+  $countdown_output .= '<div data-from-unix-time="'.$start_unixtime.'" class="event-stats-group hours"><div class="stat hours">';
       $countdown_output .= '<span class="stat-number">'.$hours_remaining.'</span>';
       $countdown_output .= '<span class="stat-caption">heures</span>';
   $countdown_output .= '</div></div>';
@@ -111,13 +107,12 @@ if(time() <= $start_unixtime){
       $countdown_output .= '<span class="stat-caption">minutes</span>';
   $countdown_output .= '</div></div>';
   
-  if(!$time_remaining->days > 3){
-      $countdown_output .= '<span class="visuallyhidden">et</span>';
-      $countdown_output .= '<div class="event-stats-group seconds"><div class="stat seconds">';
-          $countdown_output .= '<span class="stat-number">'.$time_remaining->s.'</span>';
-          $countdown_output .= '<span class="stat-caption">secondes</span>';
-      $countdown_output .= '</div></div>';
-  }
+
+  $countdown_output .= '<span class="visuallyhidden">et</span>';
+  $countdown_output .= '<div class="event-stats-group seconds '.($time_remaining->days > 3 ? 'visuallyhidden' : '').'"><div class="stat seconds">';
+      $countdown_output .= '<span class="stat-number">'.$time_remaining->s.'</span>';
+      $countdown_output .= '<span class="stat-caption">secondes</span>';
+  $countdown_output .= '</div></div>';
   
   //$countdown_output .= '<span class="visuallyhidden">avant l\'événement du Web à Québec.</span>';
 }
