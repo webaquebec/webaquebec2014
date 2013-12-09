@@ -362,7 +362,7 @@ function metas_facebook_og(){
       $ogs['type'] = 'waqpaul:session';
     }
     else if($_SERVER['SERVER_NAME'] == 'waq2014.dev.libeo.com'){
-      $ogs['type'] = 'waqdev:session';
+      $ogs['type'] = 'waqdevv:session';
     }
   }
   else if(is_home()){
