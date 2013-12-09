@@ -170,7 +170,7 @@ class Conferencer_Shortcode_Session_Meta extends Conferencer_Shortcode {
 					
 				case 'title':
 					$html = $post->post_title;
-					if ($link_title) $html = "<a href='".get_permalink($post->ID)."'>$html</a>";
+					if ($link_title && $type_rendered != 'break') $html = "<a href='".get_permalink($post->ID)."'>$html</a>";
 					$output_content .= '<span class="session-title" itemprop="name">'.$title_prefix.$html.$title_suffix."</span>";
 					break;
 				

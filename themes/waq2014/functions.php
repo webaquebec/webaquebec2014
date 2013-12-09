@@ -336,7 +336,7 @@ function metas_facebook_og(){
     
   setlocale(LC_ALL, 'fr_CA.utf-8');
 
-  $metas = array(
+  $names = array(
     'title' => get_bloginfo('name'),
     'DC.title' => get_bloginfo('name'),
     'description' => "Le Web à Québec c'est trois jours de rencontres par et pour les gens qui imaginent le web.",
@@ -344,22 +344,19 @@ function metas_facebook_og(){
     'image_src'=>get_bloginfo('template_directory')."/img/fb-image.png"
   );
   
-  $ogs = array(
-    'title' => get_bloginfo('name'),
-    'description' => "Le Web à Québec c'est trois jours de rencontres par et pour les gens qui imaginent le web.",
-    'image'=>get_bloginfo('template_directory')."/img/fb-image.png",
-    'type' => 'website'
-  );
-  
-  $fbs = array(
-    'app_id' => ''
+  $properties = array(
+    'og:title' => get_bloginfo('name'),
+    'og:description' => "Le Web à Québec c'est trois jours de rencontres par et pour les gens qui imaginent le web.",
+    'og:image'=>get_bloginfo('template_directory')."/img/fb-image.png",
+    'og:type' => 'website',
+    'fb:app_id' => ''
   );
   
   if($_SERVER['SERVER_NAME'] == 'waq2014.job.paulcote.net'){
-    $fbs['app_id'] = '1382147128676757';
+    $properties['fb:app_id'] = '1382147128676757';
   }
   else if($_SERVER['SERVER_NAME'] == 'waq2014.dev.libeo.com'){
-    $fbs['app_id'] = '1421838541381572';
+    $properties['fb:app_id'] = '1421838541381572';
   }
                   
   if(is_singular('session')){
@@ -380,28 +377,52 @@ function metas_facebook_og(){
       $speaker_name = get_the_title(array_shift($speakers_ids));
     }
   
-    $session_desc = $speaker_name."\n".strftime("%A %e %B",$session_start_unix)." / ".strftime("%k h %M",$session_start_unix)." à ".strftime("%k h %M",$session_ends_unix)."\n".$session_room;
+    $session_desc = "";
+    if($speaker_name == 'Panel'){
+      $session_desc .= "Un panel présenté";
+    }
+    else if(empty($speaker_name)){
+      $session_desc .= "Une conférence présentée";
+    }
+    else{
+      $session_desc .= "Une conférence de ". $speaker_name ." présentée";
+    }
+    $session_desc .= " le ".strtolower(strftime("%A %e %B",$session_start_unix));
+    $session_desc .= " de ".trim(strftime("%kh%M",$session_start_unix))." à ".trim(strftime("%kh%M",$session_ends_unix));
+    
+    if(strpos(strtolower($session_room), "salle") === false){
+      $session_desc .= " dans le ";
+    }
+    else{
+      $session_desc .= " dans la ";
+    }
+    $session_desc .= str_replace('Salle', 'salle', $session_room);
+    $session_desc .= ".";
+    
+    
   
-    $metas['title'] = get_the_title( $post->ID );
-    $metas['DC.title'] = get_the_title( $post->ID );
-    //$metas['description'] = strip_tags(get_excerpt_by_id( $post->ID ));
-    //$metas['DC.description'] = strip_tags(get_excerpt_by_id( $post->ID ));
-    $metas['description'] = $session_desc;
-    $metas['DC.description'] = $session_desc;
+    $names['title'] = get_the_title( $post->ID );
+    $names['DC.title'] = get_the_title( $post->ID );
+    //$names['description'] = strip_tags(get_excerpt_by_id( $post->ID ));
+    //$names['DC.description'] = strip_tags(get_excerpt_by_id( $post->ID ));
+    $names['description'] = $session_desc;
+    $names['DC.description'] = $session_desc;
     
     
-    $ogs['url'] = get_permalink( $post->ID );
-    $ogs['site_name'] = get_bloginfo('name');
-    $ogs['title'] = get_the_title( $post->ID );
+    $properties['og:url'] = get_permalink( $post->ID );
+    $properties['og:site_name'] = get_bloginfo('name');
+    $properties['og:title'] = get_the_title( $post->ID );
     //$ogs['description'] = strip_tags(get_excerpt_by_id( $post->ID ));
-    $ogs['description'] = fbLinkDescriptionNewLines($session_desc);
-    $ogs['type'] = 'event';
+    $properties['og:description'] = $session_desc;
+    $properties['og:type'] = 'event';
+    $properties['event:start_time'] = strftime("%Y-%m-%dT%H:%M",$session_start_unix);
+    $properties['event:end_time'] = strftime("%Y-%m-%dT%H:%M",$session_ends_unix);
   }
   else if(is_home()){
-    $ogs['url'] = get_bloginfo('url');
+    $properties['og:url'] = get_bloginfo('url');
   }
   
-  displayMetas($metas,$ogs,$fbs);
+  displayMetas($names,$properties);
 }
 
 
@@ -410,38 +431,15 @@ function metas_facebook_og(){
  * with the name and content of each array element.
  * @param array $metas formated like "metaname" => "metavalue"
  */
-function displayMetas( $metas = array(), $ogs = array(), $fbs = array() )
+function displayMetas( $names = array(), $properties = array() )
 {
-    foreach( $metas as $k => $v )
+    foreach( $names as $k => $v )
     {
         echo "<meta name=\"{$k}\" content=\"{$v}\" />\n\t";
     }
 
-    foreach( $ogs as $k => $v )
+    foreach( $properties as $k => $v )
     {
-        echo "<meta property=\"og:{$k}\" content=\"{$v}\" />\n\t";
+        echo "<meta property=\"{$k}\" content=\"{$v}\" />\n\t";
     }
-
-    foreach( $fbs as $k => $v )
-    {
-        echo "<meta property=\"fb:{$k}\" content=\"{$v}\" />\n\t";
-    }
-}
-
-function fbLinkDescriptionNewLines($string){
-    $parts = explode("\n", $string);
-    $row_limit = 60;
-
-    $message = '';
-    foreach($parts as $part){
-      $str_len = strlen($part);
-      $diff = ($row_limit - $str_len);
-
-      $message .= $part;
-
-      for($i=0; $i <= $diff; $i++){
-        $message .= '&nbsp;';
-      }
-   }
-    return $message;
 }
