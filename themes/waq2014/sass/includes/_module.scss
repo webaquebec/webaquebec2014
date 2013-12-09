@@ -507,7 +507,7 @@
 			background-color: $c-bg-blog-nav;
 
 			&:hover,
-			&.active{
+			&.isActive{
 				color: $c-bg-blog-nav;
 				background-color: $c-blog-nav;
 			}

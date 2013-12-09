@@ -202,15 +202,15 @@
                             <button class="btn-toggle-filters"><span class="visuallyhidden">Ouvrir les filtres</span></button>
                         </div>
                         <ul>
-                            <li class="active"><button>Tous</button></li>
-                            <li><button>Design</button></li>
-                            <li><button>Mobile</button></li>
-                            <li><button>Analytics</button></li>
-                            <li><button>Contenu</button></li>
-                            <li><button>Programmation</button></li>
-                            <li><button>Médias sociaux</button></li>
-                            <li><button>UX</button></li>
-                            <li><button>Entreprise</button></li>
+                            <li><button data-slug="all">Tous</button></li>
+                            <li><button data-slug="analytics">Analytics</button></li>
+                            <li><button data-slug="contenu">Contenu</button></li>
+                            <li><button data-slug="design">Design</button></li>
+                            <li><button data-slug="entreprise">Entreprise</button></li>
+                            <li><button data-slug="medias-sociaux">Médias Sociaux</button></li>
+                            <li><button data-slug="mobile">Mobile</button></li>
+                            <li><button data-slug="programmation">Programmation</button></li>
+                            <li><button data-slug="ux">UX</button></li>
                         </ul>
                     </div>
                 </header>

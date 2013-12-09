@@ -148,7 +148,7 @@
 			}
 		}
 
-		button.active{
+		button.isActive{
 			margin: 0 1px 0;
 			padding: 15px 5px 13px;
 			font-weight: bold;
@@ -189,6 +189,7 @@
 		background-image: url( '#{$img-path}bg-schedule-default.png' );
 		background-repeat: repeat-y;
 		background-position: center left;
+        @include transition(opacity, 0.3s);
 
 		@include respond-to( 1024px ){
 			width: 23.25%;
@@ -291,7 +292,7 @@
 			@include imgReplacement("icon-bookmark-small.png");
 		}
 
-		.session-bookmark.active{
+		.session-bookmark.isActive{
 			@include imgReplacement("icon-bookmark-small-active.png");
 		}
 
@@ -379,7 +380,7 @@
 			@include imgReplacement("icon-bookmark-big.png");
 		}
 
-		.session-bookmark.active{
+		.session-bookmark.isActive{
 			@include imgReplacement("icon-bookmark-big-active.png");
 		}
 
@@ -464,10 +465,11 @@
 
 	}
 
-	.session.filtered{
-
-		@include opacity(0.3);
-
+	.session:hover,
+	.session:focus,
+	.session.isHover,
+	.session.isFocus{
+		opacity: 1 !important;
 	}
 
 	.session.grand-hall .session-content{
@@ -488,6 +490,10 @@
 
 	.session.salle-deloitte .session-content{
 		background-image: url( '#{$img-path}bg-schedule-deloitte.png' );
+	}
+
+	td.empty{
+		border-left: 1px solid $c-schedule-border;
 	}
 
 }

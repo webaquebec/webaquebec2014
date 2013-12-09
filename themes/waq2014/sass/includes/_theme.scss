@@ -166,8 +166,8 @@
 				cursor: pointer;
 			}
 
-			:hover button,
-			.active button{
+			button:hover,
+			button.isActive{
 				color: $c-schedule-filters-hover;
 				background-color: $c-bg-schedule-filters-hover;
 
@@ -175,6 +175,10 @@
 					color: $c-schedule-filters-li;
 					background-color: $c-bg-schedule-filters-hover-dark;
 				}
+			}
+
+			button.isActive{
+				font-weight: 700;
 			}
 		}
 	}

@@ -10,7 +10,8 @@ var Schedule = ( function( $, window, document, undefined ) {
 
         // Overwrite the default configuration
         this.config = $.extend({
-            changeSlideDuration : 300
+            changeSlideDuration : 300,
+            filterSessionsDuration : 300,
         }, defaultConfig, config );
 
         // Set the "Schedule" or the main container
@@ -34,8 +35,14 @@ var Schedule = ( function( $, window, document, undefined ) {
         // Get slides width
         this.slideWidth = this.slides.eq(0).outerWidth( true );
 
+        // Get all sessions
+        this.sessions = this.schedule.find('.session');
+
         // Get all buttons
         this.buttons = this.schedule.find( '.days-buttons button' );
+
+        // Get all filter buttons
+        this.filterButtons = this.schedule.find('.schedule-filters li > button');
 
         // Initialize default functions
         this.init();
@@ -59,8 +66,8 @@ var Schedule = ( function( $, window, document, undefined ) {
             self.setHeight( self.currentSlide );
 
             self.slides.css('left', offset + '%' );
-            self.buttons.removeClass( 'active' );
-            self.buttons.eq( index ).addClass( 'active' );
+            self.buttons.removeClass( WAQ.Constants.isActiveClass );
+            self.buttons.eq( index ).addClass( WAQ.Constants.isActiveClass );
         },
 
         // Bind events
@@ -68,26 +75,31 @@ var Schedule = ( function( $, window, document, undefined ) {
             var self = this;
 
             self.buttons.on( 'click', function() {
-                var $this = $(this),
+                var $this = $( this ),
                     index = $this.index();
 
                 self.changeSlide( index );
             });
 
+            self.filterButtons.on( 'click', function() {
+                var $this = $( this ),
+                    tag = $this.attr( 'data-slug' );
+
+                self.filterButtons.removeClass( WAQ.Constants.isActiveClass );
+                $this.addClass( WAQ.Constants.isActiveClass );
+                self.filterSessions( tag );
+            });
+
             $( window ).on( 'resize', function() {
-                //self.setLayout();
+                self.setLayout();
             });
         },
 
         // Set layout
         setLayout: function() {
-            var self = this,
-                index = self.currentSlide.index();
-
-            self.slideWidth = self.currentSlide.outerWidth( true );
+            var self = this;
 
             self.setHeight( self.currentSlide );
-            self.slides.css('left', index / self.nbSlides * - 100 );
         },
 
         // Set height of current slide
@@ -106,8 +118,8 @@ var Schedule = ( function( $, window, document, undefined ) {
                 currentSlide = self.slides.eq( index ),
                 currentHeight = currentSlide.outerHeight( true );
 
-            self.buttons.removeClass( 'active' );
-            self.buttons.eq( index ).addClass( 'active' );
+            self.buttons.removeClass( WAQ.Constants.isActiveClass );
+            self.buttons.eq( index ).addClass( WAQ.Constants.isActiveClass );
 
             if ( currentHeight > self.currentHeight ){
                 self.setHeight( currentSlide );
@@ -120,6 +132,24 @@ var Schedule = ( function( $, window, document, undefined ) {
                 self.currentSlide = currentSlide;
                 self.setHeight( currentSlide );
             });
+        },
+
+        // Filter sessions
+        filterSessions: function( tag ){
+            var self = this,
+                filteredSessions = self.sessions.filter( '.filter-' + tag + ':not(.break)' ),
+                unfilteredSessions = self.sessions.filter( ':not(.filter-' + tag + '):not(.break)' );
+
+            unfilteredSessions.removeClass('filtered');
+            filteredSessions.addClass('filtered');
+
+            filteredSessions.animate({
+                opacity: 1
+            }, self.config.filterSessionsDuration);
+
+            unfilteredSessions.animate({
+                opacity: 0.3
+            }, self.config.filterSessionsDuration);
         }
     };
 
