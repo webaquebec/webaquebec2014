@@ -153,7 +153,8 @@
 
 	.event-stats-group.days,
 	.event-stats-group.hours,
-	.event-stats-group.minutes{
+	.event-stats-group.minutes,
+	.event-stats-group.seconds{
 		.stat{
 			@include rgba-background($c-darkblue, 0.8);
 		}

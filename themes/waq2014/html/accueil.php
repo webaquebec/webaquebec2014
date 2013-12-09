@@ -38,7 +38,7 @@
     </script>
 
     <!-- Page wrapper -->
-    <div class="l-page-wrapper" itemscope itemtype="http://schema.org/Event">
+    <div class="l-page-wrapper homepage" itemscope itemtype="http://schema.org/Event">
 
         <!-- Home section -->
         <header class="home">

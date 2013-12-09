@@ -50,7 +50,7 @@
 
 
         <!-- Page content section -->
-        <section id="partenaires" class="content">
+        <section id="content" class="content">
             <div class="l-section-wrapper">
 
                 <div class="l-row">
@@ -277,6 +277,7 @@
     <script src="../js/plugins/onfontresize.jquery.js"></script>
 
     <script src="../js/app/objects/Schedule.js"></script>
+    <script src="../js/app/objects/CustomSchedule.js"></script>
 
     <script src="../js/app/WAQ.Common.js"></script>
     <script src="../js/main.js"></script>

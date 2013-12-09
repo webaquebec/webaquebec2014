@@ -23,6 +23,7 @@ $c-bg-body 							: $c-white;
 $c-bg-pagewrapper 					: $c-darkblue;
 $c-bg-navmain 						: $c-darkblue;
 $c-bg-navmain-subscribe				: $c-orange;
+$c-bg-navmain-backlink 				: #1d272d;
 $c-bg-event-description				: $c-darkblue;
 $c-bg-event-stats 	 				: $c-lightblue;
 $c-bg-event-subscribe 				: $c-orange;
@@ -48,6 +49,7 @@ $c-bg-highlight 					: #1d272d;
 
 $c-navmain 							: $c-white;
 $c-navmain-subscribe				: $c-white;
+$c-navmain-backlink 				: $c-white;
 
 $c-event-description				: $c-white;
 $c-event-description-strong 		: $c-white;
@@ -112,6 +114,7 @@ $font-body 							: 400 emify(16px, 19px, 16px) 'Roboto', sans-serif;
 $font-navmain 						: 700 emify(20px, 17px, 16px) 'Roboto Condensed', sans-serif;
 $font-navmain-subscribe-big			: 700 emify(20px, 22px, 16px) 'Roboto', sans-serif;
 $font-navmain-subscribe-small		: 700 emify(18px, 20px, 16px) 'Roboto', sans-serif;
+$font-back-link 					: 700 emify(16px, 24px, 16px) 'Roboto Condensed', sans-serif;
 
 $font-event-description				: 400 emify(22px, 24px, 16px) 'Lusitana', sans-serif;
 $font-event-description-strong 		: 700 emify(30px, 26px, 16px) 'Roboto Condensed', sans-serif;

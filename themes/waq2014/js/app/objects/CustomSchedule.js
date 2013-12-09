@@ -50,43 +50,43 @@ var CustomSchedule = (function($, window, document, undefined) {
                 }
             }
 
-            
-            
+
+
             if(typeof FB != undefined){
-              FB.init(fb_conf);
-            
-              FB.getLoginStatus(function(response) {
-                if (response.status === 'connected') {
-                  self.facebookConnected = true;
-                  $('.facebook-connect').css('display','none');
-                  $('.facebook-logout').css('display','block');
-                  self.fbInitPhp(function(){self.get_user_sessions();});
-                }
-                else{
-                  $('.facebook-connect').css('display','block');
-                  $('.facebook-logout').css('display','none');
-                  self.getUserSessions();
-                  self.loadSessions();
-                }
-              });
+                FB.init(fb_conf);
+
+                FB.getLoginStatus(function(response) {
+                    if (response.status === 'connected') {
+                        self.facebookConnected = true;
+                        $('.facebook-connect').css('display','none');
+                        $('.facebook-logout').css('display','block');
+                        self.fbInitPhp(function(){self.get_user_sessions();});
+                    }
+                    else{
+                        $('.facebook-connect').css('display','block');
+                        $('.facebook-logout').css('display','none');
+                        self.getUserSessions();
+                        self.loadSessions();
+                    }
+                });
             }
             else{
               window.fbasyncinit = function(){
                 FB.init(fb_conf);
-              
+
                 FB.getLoginStatus(function(response) {
-                  if (response.status === 'connected') {
-                    self.facebookConnected = true;
-                    $('.facebook-connect').css('display','none');
-                    $('.facebook-logout').css('display','block');
-                    self.fbInitPhp(function(){self.get_user_sessions();});
-                  }
-                  else{
-                    $('.facebook-connect').css('display','block');
-                    $('.facebook-logout').css('display','none');
-                    self.getUserSessions();
-                    self.loadSessions();
-                  }
+                    if (response.status === 'connected') {
+                        self.facebookConnected = true;
+                        $('.facebook-connect').css('display','none');
+                        $('.facebook-logout').css('display','block');
+                        self.fbInitPhp(function(){self.get_user_sessions();});
+                    }
+                    else{
+                        $('.facebook-connect').css('display','block');
+                        $('.facebook-logout').css('display','none');
+                        self.getUserSessions();
+                        self.loadSessions();
+                    }
                 });
               }
             }
