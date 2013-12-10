@@ -24,6 +24,7 @@ var LIBEO;
             // Instantiate and store objects
             WAQ.Schedule = WAQ.Common.createObjects($('.schedule'), Schedule);
             WAQ.CustomSchedule = WAQ.Common.createObjects($('.schedule-wrapper'), CustomSchedule);
+            WAQ.Countdown = WAQ.Common.createObjects($('.event-stats'), Countdown);
 
             // Common functions
             WAQ.Common.goToContent($('.l-a11y'));

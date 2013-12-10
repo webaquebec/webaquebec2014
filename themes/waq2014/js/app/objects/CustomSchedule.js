@@ -14,6 +14,7 @@ var CustomSchedule = (function($, window, document, undefined) {
         // Set the "CustomSchedule" or the main container
         this.CustomSchedule = $(obj);
 
+        // Is the user connected to facebook (null : not connected, true = connected, false = not authorized)
         this.facebookConnected = null;
 
         // Initialize default functions
@@ -60,7 +61,7 @@ var CustomSchedule = (function($, window, document, undefined) {
                         self.facebookConnected = true;
                         $('.facebook-connect').css('display','none');
                         $('.facebook-logout').css('display','block');
-                        self.fbInitPhp(function(){self.get_user_sessions();});
+                        self.fbInitPhp(function(){self.getUserSessions();});
                     }
                     else{
                         $('.facebook-connect').css('display','block');
@@ -79,7 +80,7 @@ var CustomSchedule = (function($, window, document, undefined) {
                         self.facebookConnected = true;
                         $('.facebook-connect').css('display','none');
                         $('.facebook-logout').css('display','block');
-                        self.fbInitPhp(function(){self.get_user_sessions();});
+                        self.fbInitPhp(function(){self.getUserSessions();});
                     }
                     else{
                         $('.facebook-connect').css('display','block');
@@ -147,13 +148,13 @@ var CustomSchedule = (function($, window, document, undefined) {
                 else {
                     FB.login(function(response) {
                         if (response.authResponse) {
-                            facebook_connected = true;
+                            self.facebookConnected = true;
                             $('.facebook-connect').css('display','none');
                             $('.facebook-logout').css('display','block');
                             self.fbInitPhp(callback);
                         }
                         else {
-                            facebook_connected = false;
+                            self.facebookConnected = false;
                             if(typeof callback === 'function')
                                 callback();
                             else if(typeof callback === 'string'){
