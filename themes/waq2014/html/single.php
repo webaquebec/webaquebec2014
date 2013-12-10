@@ -42,15 +42,15 @@
                     </a>
                 </div>
 
-                <a href="#" class="event-back-link">Retour à l'horaire</a>
-                <a href="#" class="event-subscribe event-subscribe-menu">Achetez vos billets</a>
+                <div class="event-subscribe event-subscribe-menu"><a href="#">Achetez vos billets</a></div>
+                <div class="event-back-link"><a href="#">Retour à l'horaire</a></div>
 
             </div>
         </header><!-- end of Home section -->
 
 
         <!-- Page content section -->
-        <section id="content" class="content">
+        <section id="content" class="page-content">
             <div class="l-section-wrapper">
 
                 <div class="l-row">
@@ -64,7 +64,7 @@
                                     <span class="session-speaker" itemprop="performer" itemscope itemtype="http://schema.org/Person">
                                         <span itemprop="name">Peter Morville</span>
                                     </span>
-                                    <span class="meta">
+                                    <span class="session-meta">
                                         <span class="date"><time datetime="2014-02-23">Jeudi 23 février</time></span>
                                         <span class="time">
                                             <time itemprop="startDate" datetime="2014-02-23 08:30">8 h 30</time> à
@@ -76,7 +76,7 @@
                                             </span>
                                         </span>
                                     </span>
-                                    <p class="language">La conférence sera donnée en anglais.</p>
+                                    <p class="language">La conférence sera donnée en anglais</p>
                                 </div>
                             </header>
 
@@ -84,31 +84,33 @@
                                 <p>Au carrefour entre l’informatique omniprésente et l’Internet, l’information rend floue la distinction entre les produits et services, permettant des expériences usager multicanal et à travers les médias. Cette interconnectivité offre une opportunité sans précédent de réimaginer l’architecture d’information. Jamais auparavant n’avons-nous pu mettre en oeuvre une telle combinaison de réseaux, d’appareils et de capteurs pour recueillir et partager l’information et créer des parcours significatifs pour l’usager. Lors de cette séance, nous ferons le pont entre l’architecture d’information classique et multi-réseaux.</p>
                                 <p>Nous porterons une attention spéciale à l’intégration des appareils mobiles et du social dans une “stratégie web” réactive et orientée vers le futur, tout en mettant en lumière les relations clé avec la stratégie de contenu, la trouvabilité, les analytics et la gouvernance. Nous explorerons aussi comment les cartes d’experience et la “pensée IA” peuvent améliorer le processus et le produit de l’architecture d’information et la conception de l’expérience usager.</p>
                                 <h2>Questions centrales</h2>
-                                <ul>
+                                <ul class="questions">
                                     <li>Pourquoi l’architecture d’information est-elle encore plus importante à l’ère de l’expérience usager inter-plateforme, du mobile et du social?</li>
                                     <li>Comment pouvons-nous appliquer la “pensée systémique” et la “pensée IA” afin d’améliorer nos produits et services?</li>
                                     <li>Comment pouvons-nous concevoir des parcours qui englobent une gamme grandissante de points de contact physiques et numériques?</li>
                                 </ul>
                                 <h2>Thématiques de cette conférence</h2>
-                                <ul>
-                                    <li><a href="#">Design</a></li>
+                                <ul class="tags">
                                     <li><a href="#">Mobile</a></li>
+                                    <li><a href="#">Design</a></li>
                                     <li><a href="#">Médias</a></li>
                                     <li><a href="#">UX</a></li>
+                                    <li><a href="#">Design</a></li>
+                                    <li><a href="#">Mobile</a></li>
                                 </ul>
                             </div>
 
                         </article>
 
-                        <a href="#" class="back-link">Retour à l'horaire</a>
+                        <div class="back-link"><a href="#">Retour à l'horaire</a></div>
 
                     </div>
-                    <div class="l-col">
+                    <div class="l-col sidebar">
 
-                        <aside role="complementary">
+                        <aside class="highlight" role="complementary">
                             <h2>
                                 <span class="small">À propos de </span>
-                                <span class="name">Peter Morville</span>
+                                <span class="big">Peter Morville</span>
                             </h2>
 
                             <div class="content">
@@ -124,7 +126,7 @@
 
                         <h2>Ces conférences pourraient vous intéresser : </h2>
 
-                        <ul>
+                        <ul class="subevents">
                             <li itemprop="subEvent" itemscope itemtype="http://schema.org/Event">
                                 <h3 class="session-title" itemprop="name">
                                     <a href="#">Beyond mobile: where no geek has gone before </a>
@@ -132,13 +134,15 @@
                                 <span class="session-speaker" itemprop="performer" itemscope="" itemtype="http://schema.org/Person">
                                     <span itemprop="name">Josh Clark</span>
                                 </span>
-                                <span class="session-date"><time datetime="2014-02-23">Jeudi 23 février</time></span>
-                                <span class="session-time-slot">
-                                    <span><time itemprop="startDate" datetime="2014-03-20">8:30</time></span> à
-                                    <span><time itemprop="endDate" datetime="2014-03-20">10:00</time></span>
-                                </span>
-                                <span class="session-room" itemprop="location" itemscope="" itemtype="http://schema.org/Place">
-                                    <span itemprop="name">Grand Hall</span>
+                                <span class="session-meta">
+                                    <span class="session-date"><time datetime="2014-02-23">Jeudi 23 février</time></span>
+                                    <span class="session-time-slot">
+                                        <span><time itemprop="startDate" datetime="2014-03-20">8:30</time></span> à
+                                        <span><time itemprop="endDate" datetime="2014-03-20">10:00</time></span>
+                                    </span>
+                                    <span class="session-room" itemprop="location" itemscope="" itemtype="http://schema.org/Place">
+                                        <span itemprop="name">Grand Hall</span>
+                                    </span>
                                 </span>
                             </li>
                             <li itemprop="subEvent" itemscope itemtype="http://schema.org/Event">
@@ -148,13 +152,15 @@
                                 <span class="session-speaker" itemprop="performer" itemscope="" itemtype="http://schema.org/Person">
                                     <span itemprop="name">Josh Clark</span>
                                 </span>
-                                <span class="session-date"><time datetime="2014-02-23">Jeudi 23 février</time></span>
-                                <span class="session-time-slot">
-                                    <span><time itemprop="startDate" datetime="2014-03-20">8:30</time></span> à
-                                    <span><time itemprop="endDate" datetime="2014-03-20">10:00</time></span>
-                                </span>
-                                <span class="session-room" itemprop="location" itemscope="" itemtype="http://schema.org/Place">
-                                    <span itemprop="name">Grand Hall</span>
+                                <span class="session-meta">
+                                    <span class="session-date"><time datetime="2014-02-23">Jeudi 23 février</time></span>
+                                    <span class="session-time-slot">
+                                        <span><time itemprop="startDate" datetime="2014-03-20">8:30</time></span> à
+                                        <span><time itemprop="endDate" datetime="2014-03-20">10:00</time></span>
+                                    </span>
+                                    <span class="session-room" itemprop="location" itemscope="" itemtype="http://schema.org/Place">
+                                        <span itemprop="name">Grand Hall</span>
+                                    </span>
                                 </span>
                             </li>
                             <li itemprop="subEvent" itemscope itemtype="http://schema.org/Event">
@@ -164,13 +170,15 @@
                                 <span class="session-speaker" itemprop="performer" itemscope="" itemtype="http://schema.org/Person">
                                     <span itemprop="name">Josh Clark</span>
                                 </span>
-                                <span class="session-date"><time datetime="2014-02-23">Jeudi 23 février</time></span>
-                                <span class="session-time-slot">
-                                    <span><time itemprop="startDate" datetime="2014-03-20">8:30</time></span> à
-                                    <span><time itemprop="endDate" datetime="2014-03-20">10:00</time></span>
-                                </span>
-                                <span class="session-room" itemprop="location" itemscope="" itemtype="http://schema.org/Place">
-                                    <span itemprop="name">Grand Hall</span>
+                                <span class="session-meta">
+                                    <span class="session-date"><time datetime="2014-02-23">Jeudi 23 février</time></span>
+                                    <span class="session-time-slot">
+                                        <span><time itemprop="startDate" datetime="2014-03-20">8:30</time></span> à
+                                        <span><time itemprop="endDate" datetime="2014-03-20">10:00</time></span>
+                                    </span>
+                                    <span class="session-room" itemprop="location" itemscope="" itemtype="http://schema.org/Place">
+                                        <span itemprop="name">Grand Hall</span>
+                                    </span>
                                 </span>
                             </li>
                         </ul>

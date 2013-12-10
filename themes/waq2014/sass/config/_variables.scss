@@ -16,6 +16,7 @@ $c-highlightblue					: #00c8ef;
 $c-linkblue 						: #006b9f;
 $c-orange 							: #ff5917;
 $c-lightgrey 						: #cdcdcd;
+$c-grey 							: #a4adb3;
 
 // -------------------------------------------
 
@@ -28,6 +29,8 @@ $c-bg-event-description				: $c-darkblue;
 $c-bg-event-stats 	 				: $c-lightblue;
 $c-bg-event-subscribe 				: $c-orange;
 $c-bg-event-speakers 				: $c-lightblue;
+$c-bg-single-tags 					: $c-darkblue;
+$c-bg-aside-highlight 				: #242e35;
 $c-bg-schedule-filters-ul 			: $c-darkblue;
 $c-bg-schedule-filters-li 			: $c-linkblue;
 $c-bg-schedule-filters-hover 		: $c-white;
@@ -89,9 +92,9 @@ $c-blog-h2 			 				: $c-white;
 $c-blog-border 						: $c-darkerblue;
 $c-blog-wrapper-border 				: $c-white;
 $c-blog-title  						: $c-highlightblue;
-$c-blog-date 						: #a4adb3;
+$c-blog-date 						: $c-grey;
 $c-blog-nav 						: $c-white;
-$c-blog-content 					: #a4adb3;
+$c-blog-content 					: $c-grey;
 
 $c-sponsors-h2 						: #056797;
 $c-sponsors-h3 						: #adb0b2;
@@ -99,10 +102,26 @@ $c-sponsors-border 					: #999fa3;
 
 $c-about-h2 		 				: $c-white;
 $c-about-h3 						: $c-white;
-$c-about-p 							: #a4adb3;
+$c-about-p 							: $c-grey;
 $c-about-border 					: $c-darkblue;
 $c-about-figcaption 				: $c-white;
 $c-about-volunteers 				: $c-white;
+
+$c-single-speaker 					: $c-darkblue;
+$c-single-meta 						: $c-darkblue;
+$c-single-title 					: $c-darkblue;
+$c-single-language 		 			: #e6f3fa;
+$c-single-content 					: $c-darkblue;
+$c-single-h2 						: $c-darkblue;
+$c-single-tags 						: $c-white;
+$c-single-aside-title-small			: $c-grey;
+$c-single-aside-title-big 			: $c-grey;
+$c-single-aside-content 			: $c-grey;
+$c-single-aside-social 				: #00c8ef;
+$c-single-sidebar-h2 				: $c-darkblue;
+$c-single-sidebar-title 			: $c-linkblue;
+$c-single-sidebar-speaker 			: $c-darkblue;
+$c-single-sidebar-meta 				: $c-darkblue;
 
 $c-footer-bar-border				: $c-darkblue;
 $c-footer-link 						: $c-linkblue;
@@ -114,7 +133,7 @@ $font-body 							: 400 emify(16px, 19px, 16px) 'Roboto', sans-serif;
 $font-navmain 						: 700 emify(20px, 17px, 16px) 'Roboto Condensed', sans-serif;
 $font-navmain-subscribe-big			: 700 emify(20px, 22px, 16px) 'Roboto', sans-serif;
 $font-navmain-subscribe-small		: 700 emify(18px, 20px, 16px) 'Roboto', sans-serif;
-$font-back-link 					: 700 emify(16px, 24px, 16px) 'Roboto Condensed', sans-serif;
+$font-back-link 					: 700 emify(16px, 20px, 16px) 'Roboto Condensed', sans-serif;
 
 $font-event-description				: 400 emify(22px, 24px, 16px) 'Lusitana', sans-serif;
 $font-event-description-strong 		: 700 emify(30px, 26px, 16px) 'Roboto Condensed', sans-serif;
@@ -168,6 +187,20 @@ $font-about-figcaption	 			: 400 emify(18px, 20px, 16px) 'Lusitana', sans-serif;
 $font-about-highlight-p 		 	: 300 emify(20px, 24px, 16px) 'Roboto', sans-serif;
 $font-about-highlight-p-strong	 	: 700 emify(20px, 24px, 16px) 'Roboto Condensed', sans-serif;
 $font-about-volunteers	 			: 400 emify(16px, 20px, 16px) 'Lusitana', sans-serif;
+
+$font-single-speaker 				: 700 emify(30px, 34px, 16px) 'Roboto Condensed', sans-serif;
+$font-single-meta 					: 400 emify(18px, 20px, 16px) 'Roboto Condensed', sans-serif;
+$font-single-title 					: 300 emify(48px, 52px, 16px) 'Roboto Condensed', sans-serif;
+$font-single-content 				: 400 emify(18px, 24px, 16px) 'Roboto', sans-serif;
+$font-single-h2 					: 300 emify(30px, 34px, 16px) 'Roboto Condensed', sans-serif;
+$font-single-tags 					: 400 emify(22px, 32px, 16px) 'Roboto Condensed', sans-serif;
+$font-single-aside-title-small		: 400 emify(18px, 20px, 22px) 'Roboto', sans-serif;
+$font-single-aside-title-big 	 	: 700 emify(36px, 38px, 22px) 'Roboto Condensed', sans-serif;
+$font-single-aside-content 			: 400 emify(15px, 17px, 16px) 'Roboto', sans-serif;
+$font-single-sidebar-h2 			: 700 emify(22px, 24px, 16px) 'Roboto Condensed', sans-serif;
+$font-single-sidebar-title 			: 400 emify(22px, 24px, 16px) 'Roboto Condensed', sans-serif;
+$font-single-sidebar-speaker 		: 400 emify(20px, 22px, 16px) 'Lusitana', sans-serif;
+$font-single-sidebar-meta 			: 700 emify(14px, 16px, 16px) 'Roboto Condensed', sans-serif;
 
 $font-footer-strong 	 			: 700 emify(16px, 20px, 16px) 'Roboto Condensed', sans-serif;
 $font-footer-link 		 			: 300 emify(16px, 20px, 16px) 'Roboto Condensed', sans-serif;
