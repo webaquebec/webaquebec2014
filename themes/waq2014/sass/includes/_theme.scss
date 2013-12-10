@@ -545,6 +545,7 @@
 			color: $c-single-title;
 			font: $font-single-title;
 			font-size: emify( 28px );
+			text-transform: uppercase;
 
 			@include respond-to( 768px ){
 				font-size: emify( 48px );

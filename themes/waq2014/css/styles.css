@@ -2676,6 +2676,7 @@ aside.highlight .social .twitter {
   color: #333f47;
   font: 300 3em / 1.08333em "Roboto Condensed", sans-serif;
   font-size: 1.75em;
+  text-transform: uppercase;
 }
 @media only screen and (min-width: 768px) {
   /* line 544, ../sass/includes/_theme.scss */
@@ -2683,7 +2684,7 @@ aside.highlight .social .twitter {
     font-size: 3em;
   }
 }
-/* line 554, ../sass/includes/_theme.scss */
+/* line 555, ../sass/includes/_theme.scss */
 .single-page .page-content .content-header .session-speaker {
   position: absolute;
   top: 0;
@@ -2691,7 +2692,7 @@ aside.highlight .social .twitter {
   font: 700 1.875em / 1.13333em "Roboto Condensed", sans-serif;
   text-transform: uppercase;
 }
-/* line 562, ../sass/includes/_theme.scss */
+/* line 563, ../sass/includes/_theme.scss */
 .single-page .page-content .content-header .session-meta {
   position: absolute;
   top: 35px;
@@ -2699,29 +2700,29 @@ aside.highlight .social .twitter {
   color: #333f47;
   font: 400 1.125em / 1.11111em "Roboto Condensed", sans-serif;
 }
-/* line 569, ../sass/includes/_theme.scss */
+/* line 570, ../sass/includes/_theme.scss */
 .single-page .page-content .content-header .session-meta .date {
   display: block;
 }
-/* line 573, ../sass/includes/_theme.scss */
+/* line 574, ../sass/includes/_theme.scss */
 .single-page .page-content .content-header .session-meta .location:before {
   content: "/";
 }
 @media only screen and (min-width: 768px) {
-  /* line 562, ../sass/includes/_theme.scss */
+  /* line 563, ../sass/includes/_theme.scss */
   .single-page .page-content .content-header .session-meta {
     top: 45px;
   }
-  /* line 580, ../sass/includes/_theme.scss */
+  /* line 581, ../sass/includes/_theme.scss */
   .single-page .page-content .content-header .session-meta .date {
     display: inline;
   }
-  /* line 584, ../sass/includes/_theme.scss */
+  /* line 585, ../sass/includes/_theme.scss */
   .single-page .page-content .content-header .session-meta .time:before {
     content: "/";
   }
 }
-/* line 590, ../sass/includes/_theme.scss */
+/* line 591, ../sass/includes/_theme.scss */
 .single-page .page-content .content-header .language {
   display: -moz-inline-stack;
   display: inline-block;
@@ -2736,18 +2737,18 @@ aside.highlight .social .twitter {
   font-weight: bold;
   background-color: #e6f3fa;
 }
-/* line 603, ../sass/includes/_theme.scss */
+/* line 604, ../sass/includes/_theme.scss */
 .single-page .page-content .content h2 {
   margin: 1em 0 0.5em;
   color: #333f47;
   font: 300 1.875em / 1.13333em "Roboto Condensed", sans-serif;
   text-transform: uppercase;
 }
-/* line 610, ../sass/includes/_theme.scss */
+/* line 611, ../sass/includes/_theme.scss */
 .single-page .page-content .content .questions {
   font-size: 16px;
 }
-/* line 613, ../sass/includes/_theme.scss */
+/* line 614, ../sass/includes/_theme.scss */
 .single-page .page-content .content .questions li {
   margin: 10px 0;
   padding: 0 0 0 25px;
@@ -2759,13 +2760,13 @@ aside.highlight .social .twitter {
   background-position: center left;
 }
 @media only screen and (min-width: 768px) {
-  /* line 613, ../sass/includes/_theme.scss */
+  /* line 614, ../sass/includes/_theme.scss */
   .single-page .page-content .content .questions li {
     margin: 20px 0;
     font-size: 1.125em;
   }
 }
-/* line 630, ../sass/includes/_theme.scss */
+/* line 631, ../sass/includes/_theme.scss */
 .single-page .page-content .content .tags {
   zoom: 1;
   margin-bottom: 20px;
@@ -2782,12 +2783,12 @@ aside.highlight .social .twitter {
 .single-page .page-content .content .tags:after {
   clear: both;
 }
-/* line 635, ../sass/includes/_theme.scss */
+/* line 636, ../sass/includes/_theme.scss */
 .single-page .page-content .content .tags li {
   float: left;
   margin: 0 5px 5px 0;
 }
-/* line 639, ../sass/includes/_theme.scss */
+/* line 640, ../sass/includes/_theme.scss */
 .single-page .page-content .content .tags li a {
   display: block;
   padding: 0 10px;
@@ -2797,7 +2798,7 @@ aside.highlight .social .twitter {
   text-transform: uppercase;
   background-color: #333f47;
 }
-/* line 652, ../sass/includes/_theme.scss */
+/* line 653, ../sass/includes/_theme.scss */
 .single-page .page-content p {
   color: #333f47;
   font: 400 1.125em / 1.33333em "Roboto", sans-serif;
@@ -2805,40 +2806,40 @@ aside.highlight .social .twitter {
   margin: 1em 0;
 }
 @media only screen and (min-width: 768px) {
-  /* line 652, ../sass/includes/_theme.scss */
+  /* line 653, ../sass/includes/_theme.scss */
   .single-page .page-content p {
     font-size: 1.125em;
   }
 }
-/* line 663, ../sass/includes/_theme.scss */
+/* line 664, ../sass/includes/_theme.scss */
 .single-page .page-content .back-link {
   width: auto;
   float: left;
   display: none;
 }
-/* line 669, ../sass/includes/_theme.scss */
+/* line 670, ../sass/includes/_theme.scss */
 .single-page .page-content .back-link a {
   height: 40px;
 }
 @media only screen and (min-width: 1167px) {
-  /* line 663, ../sass/includes/_theme.scss */
+  /* line 664, ../sass/includes/_theme.scss */
   .single-page .page-content .back-link {
     display: block;
     margin: 20px 0 0;
   }
 }
-/* line 681, ../sass/includes/_theme.scss */
+/* line 682, ../sass/includes/_theme.scss */
 .single-page .page-content .sidebar h2 {
   color: #333f47;
   font: 700 1.375em / 1.09091em "Roboto Condensed", sans-serif;
   text-transform: uppercase;
 }
-/* line 689, ../sass/includes/_theme.scss */
+/* line 690, ../sass/includes/_theme.scss */
 .single-page .page-content .sidebar ul.subevents li {
   margin: 1em 0;
 }
 @media only screen and (min-width: 560px) {
-  /* line 689, ../sass/includes/_theme.scss */
+  /* line 690, ../sass/includes/_theme.scss */
   .single-page .page-content .sidebar ul.subevents li {
     float: left;
     width: 48%;
@@ -2846,57 +2847,57 @@ aside.highlight .social .twitter {
   }
 }
 @media only screen and (min-width: 1167px) {
-  /* line 689, ../sass/includes/_theme.scss */
+  /* line 690, ../sass/includes/_theme.scss */
   .single-page .page-content .sidebar ul.subevents li {
     float: none;
     width: auto;
   }
 }
-/* line 704, ../sass/includes/_theme.scss */
+/* line 705, ../sass/includes/_theme.scss */
 .single-page .page-content .sidebar ul.subevents li .session-title a {
   color: #006b9f;
   font: 400 1.375em / 1.09091em "Roboto Condensed", sans-serif;
   text-decoration: none;
 }
-/* line 709, ../sass/includes/_theme.scss */
+/* line 710, ../sass/includes/_theme.scss */
 .single-page .page-content .sidebar ul.subevents li .session-title a:hover {
   text-decoration: underline;
 }
-/* line 715, ../sass/includes/_theme.scss */
+/* line 716, ../sass/includes/_theme.scss */
 .single-page .page-content .sidebar ul.subevents li .session-speaker {
   display: block;
   margin: 6px 0 4px;
   color: #333f47;
   font: 400 1.25em / 1.1em "Lusitana", sans-serif;
 }
-/* line 722, ../sass/includes/_theme.scss */
+/* line 723, ../sass/includes/_theme.scss */
 .single-page .page-content .sidebar ul.subevents li .session-meta {
   display: block;
   color: #333f47;
   font: 700 0.875em / 1.14286em "Roboto Condensed", sans-serif;
   text-transform: uppercase;
 }
-/* line 730, ../sass/includes/_theme.scss */
+/* line 731, ../sass/includes/_theme.scss */
 .single-page .page-content .sidebar ul.subevents li .session-time-slot:before,
 .single-page .page-content .sidebar ul.subevents li .session-room:before {
   content: "/";
 }
 
 @media only screen and (min-width: 1167px) {
-  /* line 741, ../sass/includes/_theme.scss */
+  /* line 742, ../sass/includes/_theme.scss */
   .footer .footer-infos {
     padding: 20px 0;
   }
 }
 @media only screen and (min-width: 700px) {
-  /* line 747, ../sass/includes/_theme.scss */
+  /* line 748, ../sass/includes/_theme.scss */
   .footer .l-col {
     float: left;
     width: 33.3333%;
   }
 }
 @media only screen and (min-width: 1167px) {
-  /* line 747, ../sass/includes/_theme.scss */
+  /* line 748, ../sass/includes/_theme.scss */
   .footer .l-col {
     float: left;
     width: 248px;
@@ -2904,7 +2905,7 @@ aside.highlight .social .twitter {
   }
 }
 @media only screen and (min-width: 700px) {
-  /* line 759, ../sass/includes/_theme.scss */
+  /* line 760, ../sass/includes/_theme.scss */
   .footer .l-col.large {
     float: none;
     width: 100%;
@@ -2913,7 +2914,7 @@ aside.highlight .social .twitter {
   }
 }
 @media only screen and (min-width: 1167px) {
-  /* line 759, ../sass/includes/_theme.scss */
+  /* line 760, ../sass/includes/_theme.scss */
   .footer .l-col.large {
     float: left;
     width: 315px;
@@ -2923,7 +2924,7 @@ aside.highlight .social .twitter {
   }
 }
 @media only screen and (min-width: 560px) {
-  /* line 775, ../sass/includes/_theme.scss */
+  /* line 776, ../sass/includes/_theme.scss */
   .footer .l-col.two-elements {
     float: right;
     width: 50%;
@@ -2931,7 +2932,7 @@ aside.highlight .social .twitter {
   }
 }
 @media only screen and (min-width: 700px) {
-  /* line 775, ../sass/includes/_theme.scss */
+  /* line 776, ../sass/includes/_theme.scss */
   .footer .l-col.two-elements {
     float: left;
     width: 33.3333%;
@@ -2939,79 +2940,79 @@ aside.highlight .social .twitter {
   }
 }
 @media only screen and (min-width: 1167px) {
-  /* line 775, ../sass/includes/_theme.scss */
+  /* line 776, ../sass/includes/_theme.scss */
   .footer .l-col.two-elements {
     float: left;
     width: 248px;
     margin-top: 0;
   }
 }
-/* line 793, ../sass/includes/_theme.scss */
+/* line 794, ../sass/includes/_theme.scss */
 .footer .contact-element {
   margin: 5px 0 15px;
 }
-/* line 796, ../sass/includes/_theme.scss */
+/* line 797, ../sass/includes/_theme.scss */
 .footer .contact-element span {
   font-size: 1em;
 }
-/* line 800, ../sass/includes/_theme.scss */
+/* line 801, ../sass/includes/_theme.scss */
 .footer .contact-element .name {
   font-weight: 700;
 }
-/* line 805, ../sass/includes/_theme.scss */
+/* line 806, ../sass/includes/_theme.scss */
 .footer .contact-element .addressLocality,
 .footer .contact-element .postalCode {
   display: inline;
 }
-/* line 810, ../sass/includes/_theme.scss */
+/* line 811, ../sass/includes/_theme.scss */
 .footer .contact-element .link,
 .footer .contact-element .link a {
   text-transform: none;
 }
-/* line 815, ../sass/includes/_theme.scss */
+/* line 816, ../sass/includes/_theme.scss */
 .footer .social-medias {
   margin: 5px 0 10px;
 }
-/* line 818, ../sass/includes/_theme.scss */
+/* line 819, ../sass/includes/_theme.scss */
 .footer .social-medias a {
   margin-right: 5px;
 }
-/* line 824, ../sass/includes/_theme.scss */
+/* line 825, ../sass/includes/_theme.scss */
 .footer h3,
 .footer .strong {
   color: #333f47;
   font: 700 1em / 1.25em "Roboto Condensed", sans-serif;
   text-transform: uppercase;
 }
-/* line 830, ../sass/includes/_theme.scss */
+/* line 831, ../sass/includes/_theme.scss */
 .footer a {
   color: #006b9f;
   font: 300 1em / 1.25em "Roboto Condensed", sans-serif;
   text-transform: uppercase;
   text-decoration: none;
 }
-/* line 836, ../sass/includes/_theme.scss */
+/* line 837, ../sass/includes/_theme.scss */
 .footer a:hover {
   text-decoration: underline;
 }
-/* line 841, ../sass/includes/_theme.scss */
+/* line 842, ../sass/includes/_theme.scss */
 .footer .footer-bar {
   margin: 5px -15px 0;
   padding: 15px 15px 0;
   border-top: 1px solid #333f47;
 }
-/* line 846, ../sass/includes/_theme.scss */
+/* line 847, ../sass/includes/_theme.scss */
 .footer .footer-bar .l-col > div {
   margin: 8px 0 0;
 }
 @media only screen and (min-width: 560px) {
-  /* line 846, ../sass/includes/_theme.scss */
+  /* line 847, ../sass/includes/_theme.scss */
   .footer .footer-bar .l-col > div {
     margin: 0;
   }
 }
 @media only screen and (min-width: 1167px) {
-  /* line 846, ../sass/includes/_theme.scss */
+  /* line 847, ../sass/includes/_theme.scss */
   .footer .footer-bar .l-col > div {
     display: -moz-inline-stack;
     display: inline-block;
@@ -3020,26 +3021,26 @@ aside.highlight .social .twitter {
     zoom: 1;
     *display: inline;
   }
-  /* line 856, ../sass/includes/_theme.scss */
+  /* line 857, ../sass/includes/_theme.scss */
   .footer .footer-bar .l-col > div + div {
     margin-left: 35px;
   }
 }
 @media only screen and (min-width: 560px) {
-  /* line 862, ../sass/includes/_theme.scss */
+  /* line 863, ../sass/includes/_theme.scss */
   .footer .footer-bar .l-col {
     width: 50%;
     margin: 0;
   }
 }
 @media only screen and (min-width: 1167px) {
-  /* line 871, ../sass/includes/_theme.scss */
+  /* line 872, ../sass/includes/_theme.scss */
   .footer .footer-bar .archives h3 {
     float: left;
     margin-right: 20px;
   }
 }
-/* line 878, ../sass/includes/_theme.scss */
+/* line 879, ../sass/includes/_theme.scss */
 .footer .footer-bar .archives ul {
   zoom: 1;
 }
@@ -3054,36 +3055,36 @@ aside.highlight .social .twitter {
 .footer .footer-bar .archives ul:after {
   clear: both;
 }
-/* line 881, ../sass/includes/_theme.scss */
+/* line 882, ../sass/includes/_theme.scss */
 .footer .footer-bar .archives ul li {
   float: left;
 }
-/* line 885, ../sass/includes/_theme.scss */
+/* line 886, ../sass/includes/_theme.scss */
 .footer .footer-bar .archives ul li + li:before {
   content: "/";
   color: #006b9f;
   margin: 0 8px;
 }
 @media only screen and (min-width: 560px) {
-  /* line 869, ../sass/includes/_theme.scss */
+  /* line 870, ../sass/includes/_theme.scss */
   .footer .footer-bar .archives {
     float: left;
   }
 }
 @media only screen and (min-width: 560px) {
-  /* line 897, ../sass/includes/_theme.scss */
+  /* line 898, ../sass/includes/_theme.scss */
   .footer .footer-bar .right {
     float: right;
     text-align: right;
   }
 }
 
-/* line 907, ../sass/includes/_theme.scss */
+/* line 908, ../sass/includes/_theme.scss */
 .single-page .footer .l-section-wrapper {
   border-top: 1px solid #333f47;
 }
 @media only screen and (min-width: 1167px) {
-  /* line 907, ../sass/includes/_theme.scss */
+  /* line 908, ../sass/includes/_theme.scss */
   .single-page .footer .l-section-wrapper {
     margin-top: 30px;
   }
