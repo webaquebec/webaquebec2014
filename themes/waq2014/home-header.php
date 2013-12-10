@@ -91,16 +91,16 @@ if(time() <= $start_unixtime){
       $countdown_output .= '<span class="stat-caption">jours</span>';
   $countdown_output .= '</div></div>';
   
-  $hours_remaining = $time_remaining->h;
+  if($time_remaining->days > 3){
+      $hours_remaining = $time_remaining->h;
+  }
   
   $countdown_output .= '<div data-from-unix-time="'.$start_unixtime.'" class="event-stats-group hours"><div class="stat hours">';
       $countdown_output .= '<span class="stat-number">'.$hours_remaining.'</span>';
       $countdown_output .= '<span class="stat-caption">heures</span>';
   $countdown_output .= '</div></div>';
   
-  if($time_remaining->days > 3){
     //$countdown_output .= '<span class="visuallyhidden">et</span>';
-  }
   
   $countdown_output .= '<div class="event-stats-group minutes"><div class="stat minutes">';
       $countdown_output .= '<span class="stat-number">'.$time_remaining->i.'</span>';
