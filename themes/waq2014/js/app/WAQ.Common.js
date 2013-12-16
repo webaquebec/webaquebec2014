@@ -12,6 +12,8 @@ var WAQ = (function(WAQ, $, window, document, undefined) {
 				if (keyCode === 9 || keyCode === 13 || keyCode === 37 || keyCode === 38 || keyCode === 39 || keyCode === 40) {
 					WAQ.keyboardNavigation = true;
 					$.event.trigger('keyboardIsActive');
+					$( '.' + WAQ.Constants.onClickClass ).removeClass( WAQ.Constants.onClickClass );
+					$( '.' + WAQ.Constants.onHoverClass ).removeClass( WAQ.Constants.onHoverClass );
 				}
 			});
 		},
@@ -33,7 +35,8 @@ var WAQ = (function(WAQ, $, window, document, undefined) {
 		// Go straight to page main content
 		goToContent: function($obj) {
 			$obj.on('click', function(e) {
-				$('h1').eq(0).attr('tabindex', '-1').focus();
+				$('.schedule h2').eq(0).attr('tabindex', '-1').focus();
+				$( window ).scrollTop( $('.schedule h2').offset().top - 64 - 15 );
 				e.preventDefault();
 			});
 		},
@@ -54,8 +57,10 @@ var WAQ = (function(WAQ, $, window, document, undefined) {
 			if (bodyClasses) $body.attr('class', '').addClass(bodyClasses.join(' '));
 
 			if (fontsize > 16) {
+				$body.removeClass('not-zoomed');
 				$body.addClass(WAQ.Constants.onZoomClass + ' ' + WAQ.Constants.fontPrefixClass + fontsize);
 			} else {
+				$body.addClass('not-zoomed');
 				$body.removeClass(WAQ.Constants.onZoomClass);
 			}
 		},
@@ -71,6 +76,42 @@ var WAQ = (function(WAQ, $, window, document, undefined) {
 		// Add 'extLinksClass' to external links
 		externalLinks: function() {
 			$('a[href^="http:"]:not([href*="' + window.location.host + '"])').addClass(WAQ.Constants.extLinksClass);
+		},
+
+		// Get class name that start with specific string
+		getClassStartingWith: function(obj, className) {
+			var result = $.grep( obj[0].className.split( " " ), function( v, i ){
+                return v.indexOf( className ) === 0;
+            }).join();
+
+            return result;
+		},
+
+		// Sequential fade in objects
+		sequentialFadeIn: function(selectorText, speed, display, callback) {
+			display = typeof display !== 'undefined' ? display : 'block';
+
+			var els = $(selectorText),
+			    i   = 0;
+
+			(function helper() {
+			    els.eq(i++).fadeIn(speed, helper).css('display', display);
+			    if (callback && i === els.length) {callback();}
+			})();
+		},
+
+		// Sequential fade out objects
+		sequentialFadeOut: function(selectorText, speed, display, callback) {
+			display = typeof display !== 'undefined' ? display : 'none';
+
+			var els = $(selectorText),
+			    i   = els.length - 1;
+
+			(function helper() {
+				if( i == -1 ){return;}
+			    els.eq(i--).fadeOut(speed, helper).css('display', display);
+			    if (callback && i === -1) {callback();}
+			})();
 		},
 
 		// Main function to create objects

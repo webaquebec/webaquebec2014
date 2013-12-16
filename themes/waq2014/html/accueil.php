@@ -8,7 +8,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>Web à Québec 2014</title>
     <meta name="description" content="Web à Québec 2014">
-    <meta name="viewport" content="width=device-width">
+    <!-- <meta name="viewport" content="width=device-width"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Fonts -->
     <link href='http://fonts.googleapis.com/css?family=Lusitana:400,700|Roboto:400,300,500,700,900|Roboto+Condensed:400,700,300' rel='stylesheet' type='text/css'>
@@ -23,68 +24,87 @@
     <script src="../js/vendor/respond.js"></script>
 
 </head>
-<body>
+<body class="not-zoomed">
 
     <div id="fb-root"></div>
     <script>
     // Load the SDK asynchronously
-    (function(d, s, id){
+    /*(function(d, s, id){
         var js, fjs = d.getElementsByTagName(s)[0];
         if (d.getElementById(id)) {return;}
         js = d.createElement(s); js.id = id;
         js.src = "//connect.facebook.net/en_US/all.js";
         fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
+    }(document, 'script', 'facebook-jssdk'));*/
     </script>
 
     <!-- Page wrapper -->
     <div class="l-page-wrapper homepage" itemscope itemtype="http://schema.org/Event">
 
+        <a href="#" class="l-a11y visuallyhidden focusable">Passer à l'horaire</a>
+
         <!-- Home section -->
         <header class="home">
             <div class="l-section-wrapper">
 
-                <a href="#" class="l-a11y visuallyhidden focusable">Passer au contenu</a>
-
                 <h1 itemprop="name" class="visuallyhidden">Le Web à Québec</h1>
 
-                <div class="event-logo">
+                <!-- <div class="event-logo">
                     <a href="#">
                         <img src="../img/logo.png" alt="">
                     </a>
+                </div> -->
+
+                <div id="nav-main">
+                    <div class="snapmenu-wrapper">
+
+                        <div class="snapmenu-logo">
+                            <a href="#">
+                                <img src="../img/logo.png" alt="">
+                            </a>
+                        </div>
+
+                        <div class="snapmenu-mobile-buttons">
+                            <a href="#horaire">Horaire</a>
+                            <button class="btn-toggle-menu">
+                                <span class="visuallyhidden">Ouvrir le menu</span>
+                            </button>
+                        </div>
+
+                        <nav role="navigation" class="nav-main-wrapper">
+                            <ul itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+                                <li>
+                                    <a itemprop="url" href="#horaire">
+                                        <span itemprop="name">Horaire</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a itemprop="url" href="#lieu">
+                                        <span itemprop="name">Lieu et coordonnées</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a itemprop="url" href="#blogue">
+                                        <span itemprop="name">Blogue</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a itemprop="url" href="#partenaires">
+                                        <span itemprop="name">Partenaires</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a itemprop="url" href="#apropos">
+                                        <span itemprop="name">À propos</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+
+                        <a href="#" class="event-subscribe event-subscribe-menu">Achetez vos billets</a>
+                    </div>
                 </div>
 
-                <nav role="navigation" id="nav-main">
-                    <ul class="nav-main-wrapper" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-                        <li>
-                            <a itemprop="url" href="#horaire">
-                                <span itemprop="name">Horaire</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a itemprop="url" href="#lieu">
-                                <span itemprop="name">Lieu et coordonnées</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a itemprop="url" href="#blogue">
-                                <span itemprop="name">Blogue</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a itemprop="url" href="#partenaires">
-                                <span itemprop="name">Partenaires</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a itemprop="url" href="#apropos">
-                                <span itemprop="name">À propos</span>
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-
-                <a href="#" class="event-subscribe event-subscribe-menu">Achetez vos billets</a>
 
                 <div class="event-description">
                     <p class="strong">Web à Québec</p>
@@ -103,11 +123,11 @@
                 <div class="event-stats">
                     <div class="event-stats-group days large">
                         <div class="stat days">
-                            <span class="stat-number">322</span>
+                            <span class="stat-number">98</span>
                             <span class="stat-caption">jours</span>
                         </div>
                     </div>
-                    <div class="event-stats-group hours">
+                    <div class="event-stats-group hours" data-from-unix-time="1395230400">
                         <div class="stat hours">
                             <span class="stat-number">23</span>
                             <span class="stat-caption">heures</span>
@@ -199,6 +219,13 @@
                 </div>
 
             </div>
+
+            <video id="video_background" preload="auto" autoplay="true" loop="loop" muted="muted" volume="0">
+                <source src="../video/loop.webm" type="video/webm">
+                <source src="../video/loop.mp4" type="video/mp4">
+                Video not supported
+            </video>
+
         </header><!-- end of Home section -->
 
 
@@ -214,15 +241,7 @@
                             <button class="btn-toggle-filters"><span class="visuallyhidden">Ouvrir les filtres</span></button>
                         </div>
                         <ul>
-                            <li><button data-slug="all">Tous</button></li>
-                            <li><button data-slug="analytics">Analytics</button></li>
-                            <li><button data-slug="contenu">Contenu</button></li>
-                            <li><button data-slug="design">Design</button></li>
-                            <li><button data-slug="entreprise">Entreprise</button></li>
-                            <li><button data-slug="medias-sociaux">Médias Sociaux</button></li>
-                            <li><button data-slug="mobile">Mobile</button></li>
-                            <li><button data-slug="programmation">Programmation</button></li>
-                            <li><button data-slug="ux">UX</button></li>
+                            <li><button data-slug="all">Tous</button></li><li><button data-slug="analytics">Analytics</button></li><li><button data-slug="contenu">Contenu</button></li><li><button data-slug="design">Design</button></li><li><button data-slug="entreprise">Entreprise</button></li><li><button data-slug="medias-sociaux">Médias Sociaux</button></li><li><button data-slug="mobile">Mobile</button></li><li><button data-slug="programmation">Programmation</button></li><li><button data-slug="ux">UX</button></li>
                         </ul>
                     </div>
                 </header>
@@ -291,7 +310,7 @@
                             <article class="slide" itemscope itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
                                 <header class="article-header">
                                     <h3 class="article-title" itemprop="headline">
-                                        <a href="#">Dolor sit amet curabitur it sut dolor</a>
+                                        <a href="#">1 Dolor sit amet curabitur it sut dolor</a>
                                     </h3>
                                     <p class="article-meta">
                                         <time class="article-date" itemprop="datePublished" datetime="2013-12-20">20/12/2013</time>
@@ -314,7 +333,7 @@
                             <article class="slide" itemscope itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
                                 <header class="article-header">
                                     <h3 class="article-title" itemprop="headline">
-                                        <a href="#">Dolor sit amet curabitur</a>
+                                        <a href="#">2 Dolor sit amet curabitur</a>
                                     </h3>
                                     <p class="article-meta">
                                         <time class="article-date" itemprop="datePublished" datetime="2013-12-20">20/12/2013</time>
@@ -337,7 +356,7 @@
                             <article class="slide" itemscope itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
                                 <header class="article-header">
                                     <h3 class="article-title" itemprop="headline">
-                                        <a href="#">Dolor sit amet curabitur it sut dolor</a>
+                                        <a href="#">3 Dolor sit amet curabitur it sut dolor</a>
                                     </h3>
                                     <p class="article-meta">
                                         <time class="article-date" itemprop="datePublished" datetime="2013-12-20">20/12/2013</time>
@@ -357,7 +376,7 @@
                             <article class="slide" itemscope itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
                                 <header class="article-header">
                                     <h3 class="article-title" itemprop="headline">
-                                        <a href="#">Dolor sit amet curabitur it sut dolor</a>
+                                        <a href="#">4 Dolor sit amet curabitur it sut dolor</a>
                                     </h3>
                                     <p class="article-meta">
                                         <time class="article-date" itemprop="datePublished" datetime="2013-12-20">20/12/2013</time>
@@ -377,7 +396,207 @@
                             <article class="slide" itemscope itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
                                 <header class="article-header">
                                     <h3 class="article-title" itemprop="headline">
-                                        <a href="#">Dolor sit amet curabitur it sut dolor</a>
+                                        <a href="#">5 Dolor sit amet curabitur it sut dolor</a>
+                                    </h3>
+                                    <p class="article-meta">
+                                        <time class="article-date" itemprop="datePublished" datetime="2013-12-20">20/12/2013</time>
+                                    </p>
+                                </header>
+                                <div class="article-content" itemprop="description">
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ac lacinia turpis.
+                                        Donec ac posuere massa, at egestas tortor. Sed porta lacus id nunc adipiscing.
+                                    </p>
+                                </div>
+                                <div class="article-readmore">
+                                    <a href="#">Lire la suite <span class="visuallyhidden">de l'article « Dolor sit amet curabitur it sut dolor ».</span></a>
+                                </div>
+                            </article>
+
+                            <article class="slide" itemscope itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
+                                <header class="article-header">
+                                    <h3 class="article-title" itemprop="headline">
+                                        <a href="#">6 Dolor sit amet curabitur it sut dolor</a>
+                                    </h3>
+                                    <p class="article-meta">
+                                        <time class="article-date" itemprop="datePublished" datetime="2013-12-20">20/12/2013</time>
+                                    </p>
+                                </header>
+                                <div class="article-content" itemprop="description">
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ac lacinia turpis.
+                                        Donec ac posuere massa, at egestas tortor. Sed porta lacus id nunc adipiscing.
+                                    </p>
+                                </div>
+                                <div class="article-readmore">
+                                    <a href="#">Lire la suite <span class="visuallyhidden">de l'article « Dolor sit amet curabitur it sut dolor ».</span></a>
+                                </div>
+                            </article>
+
+                            <article class="slide" itemscope itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
+                                <header class="article-header">
+                                    <h3 class="article-title" itemprop="headline">
+                                        <a href="#">7 Dolor sit amet curabitur it sut dolor</a>
+                                    </h3>
+                                    <p class="article-meta">
+                                        <time class="article-date" itemprop="datePublished" datetime="2013-12-20">20/12/2013</time>
+                                    </p>
+                                </header>
+                                <div class="article-content" itemprop="description">
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ac lacinia turpis.
+                                        Donec ac posuere massa, at egestas tortor. Sed porta lacus id nunc adipiscing.
+                                    </p>
+                                </div>
+                                <div class="article-readmore">
+                                    <a href="#">Lire la suite <span class="visuallyhidden">de l'article « Dolor sit amet curabitur it sut dolor ».</span></a>
+                                </div>
+                            </article>
+
+                            <article class="slide" itemscope itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
+                                <header class="article-header">
+                                    <h3 class="article-title" itemprop="headline">
+                                        <a href="#">8 Dolor sit amet curabitur it sut dolor</a>
+                                    </h3>
+                                    <p class="article-meta">
+                                        <time class="article-date" itemprop="datePublished" datetime="2013-12-20">20/12/2013</time>
+                                    </p>
+                                </header>
+                                <div class="article-content" itemprop="description">
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ac lacinia turpis.
+                                        Donec ac posuere massa, at egestas tortor. Sed porta lacus id nunc adipiscing.
+                                    </p>
+                                </div>
+                                <div class="article-readmore">
+                                    <a href="#">Lire la suite <span class="visuallyhidden">de l'article « Dolor sit amet curabitur it sut dolor ».</span></a>
+                                </div>
+                            </article>
+
+                            <article class="slide" itemscope itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
+                                <header class="article-header">
+                                    <h3 class="article-title" itemprop="headline">
+                                        <a href="#">9 Dolor sit amet curabitur it sut dolor</a>
+                                    </h3>
+                                    <p class="article-meta">
+                                        <time class="article-date" itemprop="datePublished" datetime="2013-12-20">20/12/2013</time>
+                                    </p>
+                                </header>
+                                <div class="article-content" itemprop="description">
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ac lacinia turpis.
+                                        Donec ac posuere massa, at egestas tortor. Sed porta lacus id nunc adipiscing.
+                                    </p>
+                                </div>
+                                <div class="article-readmore">
+                                    <a href="#">Lire la suite <span class="visuallyhidden">de l'article « Dolor sit amet curabitur it sut dolor ».</span></a>
+                                </div>
+                            </article>
+
+                            <article class="slide" itemscope itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
+                                <header class="article-header">
+                                    <h3 class="article-title" itemprop="headline">
+                                        <a href="#">10 Dolor sit amet curabitur it sut dolor</a>
+                                    </h3>
+                                    <p class="article-meta">
+                                        <time class="article-date" itemprop="datePublished" datetime="2013-12-20">20/12/2013</time>
+                                    </p>
+                                </header>
+                                <div class="article-content" itemprop="description">
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ac lacinia turpis.
+                                        Donec ac posuere massa, at egestas tortor. Sed porta lacus id nunc adipiscing.
+                                    </p>
+                                </div>
+                                <div class="article-readmore">
+                                    <a href="#">Lire la suite <span class="visuallyhidden">de l'article « Dolor sit amet curabitur it sut dolor ».</span></a>
+                                </div>
+                            </article>
+
+                            <article class="slide" itemscope itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
+                                <header class="article-header">
+                                    <h3 class="article-title" itemprop="headline">
+                                        <a href="#">11 Dolor sit amet curabitur it sut dolor</a>
+                                    </h3>
+                                    <p class="article-meta">
+                                        <time class="article-date" itemprop="datePublished" datetime="2013-12-20">20/12/2013</time>
+                                    </p>
+                                </header>
+                                <div class="article-content" itemprop="description">
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ac lacinia turpis.
+                                        Donec ac posuere massa, at egestas tortor. Sed porta lacus id nunc adipiscing.
+                                    </p>
+                                </div>
+                                <div class="article-readmore">
+                                    <a href="#">Lire la suite <span class="visuallyhidden">de l'article « Dolor sit amet curabitur it sut dolor ».</span></a>
+                                </div>
+                            </article>
+
+                            <article class="slide" itemscope itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
+                                <header class="article-header">
+                                    <h3 class="article-title" itemprop="headline">
+                                        <a href="#">12 Dolor sit amet curabitur it sut dolor</a>
+                                    </h3>
+                                    <p class="article-meta">
+                                        <time class="article-date" itemprop="datePublished" datetime="2013-12-20">20/12/2013</time>
+                                    </p>
+                                </header>
+                                <div class="article-content" itemprop="description">
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ac lacinia turpis.
+                                        Donec ac posuere massa, at egestas tortor. Sed porta lacus id nunc adipiscing.
+                                    </p>
+                                </div>
+                                <div class="article-readmore">
+                                    <a href="#">Lire la suite <span class="visuallyhidden">de l'article « Dolor sit amet curabitur it sut dolor ».</span></a>
+                                </div>
+                            </article>
+
+                            <article class="slide" itemscope itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
+                                <header class="article-header">
+                                    <h3 class="article-title" itemprop="headline">
+                                        <a href="#">13 Dolor sit amet curabitur it sut dolor</a>
+                                    </h3>
+                                    <p class="article-meta">
+                                        <time class="article-date" itemprop="datePublished" datetime="2013-12-20">20/12/2013</time>
+                                    </p>
+                                </header>
+                                <div class="article-content" itemprop="description">
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ac lacinia turpis.
+                                        Donec ac posuere massa, at egestas tortor. Sed porta lacus id nunc adipiscing.
+                                    </p>
+                                </div>
+                                <div class="article-readmore">
+                                    <a href="#">Lire la suite <span class="visuallyhidden">de l'article « Dolor sit amet curabitur it sut dolor ».</span></a>
+                                </div>
+                            </article>
+
+                            <article class="slide" itemscope itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
+                                <header class="article-header">
+                                    <h3 class="article-title" itemprop="headline">
+                                        <a href="#">14 Dolor sit amet curabitur it sut dolor</a>
+                                    </h3>
+                                    <p class="article-meta">
+                                        <time class="article-date" itemprop="datePublished" datetime="2013-12-20">20/12/2013</time>
+                                    </p>
+                                </header>
+                                <div class="article-content" itemprop="description">
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ac lacinia turpis.
+                                        Donec ac posuere massa, at egestas tortor. Sed porta lacus id nunc adipiscing.
+                                    </p>
+                                </div>
+                                <div class="article-readmore">
+                                    <a href="#">Lire la suite <span class="visuallyhidden">de l'article « Dolor sit amet curabitur it sut dolor ».</span></a>
+                                </div>
+                            </article>
+
+                            <article class="slide" itemscope itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
+                                <header class="article-header">
+                                    <h3 class="article-title" itemprop="headline">
+                                        <a href="#">15 Dolor sit amet curabitur it sut dolor</a>
                                     </h3>
                                     <p class="article-meta">
                                         <time class="article-date" itemprop="datePublished" datetime="2013-12-20">20/12/2013</time>
@@ -400,9 +619,7 @@
                     <div class="blog-nav">
                         <button class="button prev"><span class="visuallyhidden">Articles précédents</span></button>
                         <button class="button next"><span class="visuallyhidden">Articles suivants</span></button>
-                        <button class="button-page"><span class="visuallyhidden">Page </span>1</button>
-                        <button class="button-page active"><span class="visuallyhidden">Page </span>2</button>
-                        <button class="button-page"><span class="visuallyhidden">Page </span>3</button>
+                        <button class="button-page"><span class="visuallyhidden">Page </span>1</button><button class="button-page"><span class="visuallyhidden">Page </span>2</button><button class="button-page"><span class="visuallyhidden">Page </span>3</button><button class="button-page"><span class="visuallyhidden">Page </span>4</button><button class="button-page"><span class="visuallyhidden">Page </span>5</button>
                     </div>
                 </div>
 
@@ -902,7 +1119,11 @@
     <script src="../js/plugins/onfontresize.jquery.js"></script>
 
     <script src="../js/app/objects/Schedule.js"></script>
-    <script src="../js/app/objects/CustomSchedule.js"></script>
+    <script src="../js/app/objects/SnapMenu.js"></script>
+    <script src="../js/app/objects/Slideshow.js"></script>
+    <script src="../js/app/objects/MobileMenu.js"></script>
+    <!--<script src="../js/app/objects/CustomSchedule.js"></script>-->
+    <!--<script src="../js/app/objects/Countdown.js"></script>-->
 
     <script src="../js/app/WAQ.Common.js"></script>
     <script src="../js/main.js"></script>

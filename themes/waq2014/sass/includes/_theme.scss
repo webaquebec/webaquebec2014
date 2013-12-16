@@ -5,9 +5,31 @@
 	border-width: 5px;
 	border-style: solid;
 	border-color: $c-bg-pagewrapper;
+	//@include transition(border-color, 0.5s);
 
+	.not-zoomed & {
 	@include respond-to(768px){
 		border-width: 15px;
+	}}
+
+	&.highlight-libeo{
+		border-color: $c-libeo;
+	}
+
+	&.highlight-ixmedia{
+		border-color: $c-ixmedia;
+	}
+
+	&.highlight-bell{
+		border-color: $c-bell;
+	}
+
+	&.highlight-deloitte{
+		border-color: $c-deloitte;
+	}
+
+	&.highlight-grand-hall{
+		border-color: $c-grandhall;
 	}
 }
 
@@ -16,17 +38,52 @@
 	background-position: -150px 0;
 	background-size: cover;
 
-	@include respond-to( 1167px ){
-		background-repeat: no-repeat;
-		background-attachment: fixed;
-		background-position: center center;
+	#video_background{
+		display: none;
 	}
+
+	.not-zoomed & {
+	@include respond-to( 72.938em ){
+		background-repeat: no-repeat;
+		background-position: center top;
+		background-size: 100% 100%;
+
+		.l-section-wrapper{
+			padding-top: 170px;
+		}
+	}}
+}
+
+.video .home{
+	.not-zoomed & {
+	@include respond-to( 72.938em ){
+		background-position: center -15px;
+		background-size: auto auto;
+		background-image: url( '#{$img-path}bg-home-video.png' );
+	}}
+}
+
+.video .home #video_background{
+	.not-zoomed & {
+	@include respond-to( 72.938em ){
+		display: block;
+		position: absolute;
+		bottom: 0px;
+		right: 0px;
+		min-width: 100%;
+		min-height: 100%;
+		width: auto;
+		height: auto;
+		z-index: -1000;
+		overflow: hidden;
+	}}
 }
 
 .single-page .home{
 	margin: 10px 0 0;
 	background-color: $c-linkblue;
 
+	.not-zoomed & {
 	@include respond-to( 560px ){
 		.l-section-wrapper{
 			padding: 0;
@@ -35,11 +92,12 @@
 			float: left;
 			margin: 11px 15px;
 		}
-	}
+	}}
 
-	@include respond-to( 768px ){
+	.not-zoomed & {
+	@include respond-to( 48.000em ){
 		margin: 20px 0;
-	}
+	}}
 
 }
 
@@ -52,26 +110,29 @@
 	.event-description{
 		margin-bottom: 28px;
 
-		@include respond-to( 1167px ){
+		.not-zoomed & {
+		@include respond-to( 72.938em ){
 			margin-bottom: 60px;
-		}
+		}}
 	}
 
 	.event-stats{
 		margin-bottom: 20px;
 
-		@include respond-to( 1167px ){
+		.not-zoomed & {
+		@include respond-to( 72.938em ){
 			margin-bottom: 60px;
-		}
+		}}
 	}
 
 	.event-speakers{
 		margin-top: 20px;
 
-		@include respond-to( 1167px ){
+		.not-zoomed & {
+		@include respond-to( 72.938em ){
 			margin-top: 0;
 			margin-bottom: 60px;
-		}
+		}}
 	}
 
 } // home
@@ -79,8 +140,11 @@
 .schedule{
 	@include clearfix();
 	position: relative;
+	border-top: 13px solid $c-schedule-border-top;
+	border-bottom: 13px solid $c-schedule-border-bottom;
 
-	@include respond-to( 1024px ){
+	.not-zoomed & {
+	@include respond-to( 64.000em ){
 		background-color: $c-bg-schedule-highlight;
 
 		&:before{
@@ -91,18 +155,19 @@
 			left: 0; top: 0;
 			background-color: $c-white;
 		}
-	}
+	}}
 
 	h2{
 		color: $c-schedule-h2;
 		font: $font-schedule-h2;
 		text-transform: uppercase;
 
-		@include respond-to( 1024px ){
+		.not-zoomed & {
+		@include respond-to( 64.000em ){
 			float: left;
 			margin: 40px 0;
 			font-size: emify(72px);
-		}
+		}}
 	}
 
 	header{
@@ -111,12 +176,13 @@
 
 	.schedule-filters{
 
-		@include respond-to( 1024px ){
+		.not-zoomed & {
+		@include respond-to( 64.000em ){
 			float: left;
 			margin: 40px 0 0 75px;
 			padding: 2px 0 2px 15px;
 			border-left: 2px solid $c-schedule-filters-border;
-		}
+		}}
 
 		h3{
 			color: $c-schedule-filters-h3;
@@ -127,16 +193,18 @@
 			margin: 10px 0 3px;
 			position: relative;
 
-			@include respond-to( 1024px ){
+			.not-zoomed & {
+			@include respond-to( 64.000em ){
 				margin-top: 0;
-			}
+			}}
 
 			h3{
 				line-height: 32px;
 
-				@include respond-to( 1024px ){
+				.not-zoomed & {
+				@include respond-to( 64.000em ){
 					line-height: 18px;
-				}
+				}}
 			}
 
 			.btn-toggle-filters{
@@ -148,35 +216,45 @@
 				border: none;
 				cursor: pointer;
 				background-color: transparent;
-				background-image: url( '#{$img-path}icon-arrow-bottom.png' );
+				background-image: url( '#{$img-path}icon-more.png' );
 				background-repeat: no-repeat;
-				background-position: center right;
+				background-position: 210px center;
 
-				@include respond-to( 1024px ){
+				.not-zoomed & {
+				@include respond-to( 64.000em ){
 					display: none;
+				}}
+
+				&.isActive{
+					background-image: url( '#{$img-path}icon-less.png' );
 				}
 			}
 		}
 
 		ul{
+			font-size: 16px;
+			display: none;
 			margin: 0 -15px;
 			padding: 18px 15px 20px;
 			background-color: $c-bg-schedule-filters-ul;
 
-			@include respond-to( 1024px ){
+			.not-zoomed & {
+			@include respond-to( 64.000em ){
+				display: block !important;
 				margin: 0;
 				padding: 0;
-				width: 450px;
+				width: emify(450px, 16px);
 				background-color: transparent;
-			}
+			}}
 
 			li{
 				@include inline-block;
 				margin: 2px 2px 0 0;
 
-				@include respond-to( 1024px ){
+				.not-zoomed & {
+				@include respond-to( 64.000em ){
 					margin: 6px 6px 0 0;
-				}
+				}}
 			}
 
 			button{
@@ -195,10 +273,11 @@
 				color: $c-schedule-filters-hover;
 				background-color: $c-bg-schedule-filters-hover;
 
-				@include respond-to( 1024px ){
+				.not-zoomed & {
+				@include respond-to( 64.000em ){
 					color: $c-schedule-filters-li;
 					background-color: $c-bg-schedule-filters-hover-dark;
-				}
+				}}
 			}
 
 			button.isActive{
@@ -212,16 +291,18 @@
 .place{
 	position: relative;
 
-	@include respond-to( 1167px ){
+	.not-zoomed & {
+	@include respond-to( 72.938em ){
 		min-height: 520px;
-	}
+	}}
 
 	.l-section-wrapper{
 		padding-bottom: 10px;
 
-		@include respond-to( 1167px ){
+		.not-zoomed & {
+		@include respond-to( 72.938em ){
 			padding: 50px 15px 0;
-		}
+		}}
 	}
 
 	h2{
@@ -234,31 +315,34 @@
 		margin-top: 10px;
 		min-height: 320px - 15px - 10px;
 
-		@include respond-to( 1167px ){
+		.not-zoomed & {
+		@include respond-to( 72.938em ){
 			max-width: none;
 			min-height: 0;
 			margin-top: 0;
-		}
+		}}
 
 		h2{
 			color: $c-place-header-h2;
 
-			@include respond-to( 1167px ){
+			.not-zoomed & {
+			@include respond-to( 72.938em ){
 				@include inline-block;
 				float: left;
 				padding: 7px 15px 6px;
 				font-size: emify(48px);
 				background-color: $c-bg-place-header-h2;
-			}
+			}}
 
 			span{
 				padding: 0 6px;
 				background-color: $c-bg-place-header-h2;
 
-				@include respond-to( 1167px ){
+				.not-zoomed & {
+				@include respond-to( 72.938em ){
 					padding: 0;
 					background-color: transparent;
-				}
+				}}
 			}
 		}
 
@@ -272,17 +356,19 @@
 			font: $font-place-header-route;
 			background-color: $c-bg-place-header-route;
 
-			@include respond-to( 1167px ){
+			.not-zoomed & {
+			@include respond-to( 72.938em ){
 				display: none;
-			}
+			}}
 		}
 	}
 
 	.place-wrapper{
 
-		@include respond-to( 1167px ){
+		.not-zoomed & {
+		@include respond-to( 72.938em ){
 			float: right;
-		}
+		}}
 
 		.contact{
 			@include clearfix();
@@ -291,10 +377,11 @@
 			border-top: 1px solid $c-place-border;
 			border-bottom: 1px solid $c-place-border;
 
-			@include respond-to( 1167px ){
+			.not-zoomed & {
+			@include respond-to( 72.938em ){
 				background-color: $c-bg-place;
 				border: 1px solid $c-place-border;
-			}
+			}}
 
 			h2{
 				color: $c-contactelement;
@@ -302,14 +389,16 @@
 			}
 
 			.contact-element{
+				.not-zoomed & {
 				@include respond-to( 580px ){
 					width: 50%;
 					float: left;
-				}
-				@include respond-to( 1167px ){
+				}}
+				.not-zoomed & {
+				@include respond-to( 72.938em ){
 					width: auto;
 					float: none;
-				}
+				}}
 			}
 		}
 
@@ -355,30 +444,34 @@
 			}
 
 			.field{
+				.not-zoomed & {
 				@include respond-to( 560px ){
 					@include inline-block;
 					width: 75%;
 					margin-right: 5px;
 					vertical-align: bottom;
-				}
+				}}
+				.not-zoomed & {
 				@include respond-to( 1137px ){
 					width: 255px;
-				}
+				}}
 			}
 
 			.buttons{
+				.not-zoomed & {
 				@include respond-to( 560px ){
 					@include inline-block;
 					vertical-align: bottom;
-				}
+				}}
 			}
 		}
 
 		.contact,
 		.newsletter{
-			@include respond-to( 1167px ){
+			.not-zoomed & {
+			@include respond-to( 72.938em ){
 				margin: 0;
-			}
+			}}
 		}
 
 		.contact-element{
@@ -396,9 +489,10 @@
 		background-size: cover;
 		z-index: -1;
 
-		@include respond-to( 1167px ){
+		.not-zoomed & {
+		@include respond-to( 72.938em ){
 			min-height: 520px;
-		}
+		}}
 	}
 } // place
 
@@ -409,9 +503,10 @@
 	border-top: 13px solid $c-blog-border;
 	border-bottom: 13px solid $c-blog-border;
 
-	@include respond-to( 1167px ){
+	.not-zoomed & {
+	@include respond-to( 72.938em ){
 		background-position: 33% 21%;
-	}
+	}}
 
 	h2{
 		color: $c-blog-h2;
@@ -419,9 +514,10 @@
 		text-align: center;
 		text-transform: uppercase;
 
-		@include respond-to( 1167px ){
+		.not-zoomed & {
+		@include respond-to( 72.938em ){
 			font-size: emify(72px);
-		}
+		}}
 	}
 
 } // blog
@@ -434,10 +530,11 @@
 		font: $font-sponsors-h2;
 		text-transform: uppercase;
 
-		@include respond-to( 1167px ){
+		.not-zoomed & {
+		@include respond-to( 72.938em ){
 			font-size: emify(72px);
 			margin: 15px 0 25px;
-		}
+		}}
 	}
 
 } // sponsors
@@ -455,28 +552,31 @@
 		font: $font-about-h2;
 		text-transform: uppercase;
 
-		@include respond-to( 1167px ){
+		.not-zoomed & {
+		@include respond-to( 72.938em ){
 			margin: 20px 0 10px;
 			font-size: emify(72px);
-		}
+		}}
 	}
 
 	p{
 		color: $c-about-p;
 		font: $font-about-p;
 
-		@include respond-to( 1167px ){
+		.not-zoomed & {
+		@include respond-to( 72.938em ){
 			font-size: emify(20px);
 			line-height: emify(24px, 20px);
-		}
+		}}
 	}
 
 	p.strong{
 		font: $font-about-p-strong;
 
-		@include respond-to( 1167px ){
+		.not-zoomed & {
+		@include respond-to( 72.938em ){
 			font-size: emify(20px);
-		}
+		}}
 	}
 
 	.highlight{
@@ -493,7 +593,8 @@
 		}
 	}
 
-	@include respond-to( 1167px ){
+	.not-zoomed & {
+	@include respond-to( 72.938em ){
 
 		.l-col{
 			float: left;
@@ -504,32 +605,35 @@
 			width: 315px;
 			margin-left: 15px;
 		}
-	}
+	}}
 
 } // about
 
 .single-page .page-content{
 
-	@include respond-to( 1167px ){
+	.not-zoomed & {
+	@include respond-to( 72.938em ){
 		margin-top: 40px;
-	}
+	}}
 
 	.l-col{
 
-		@include respond-to( 1167px ){
+		.not-zoomed & {
+		@include respond-to( 72.938em ){
 			float: left;
 			width: 710px;
-		}
+		}}
 	}
 
 	.sidebar{
 		margin-top: 1em;
 
-		@include respond-to( 1167px ){
+		.not-zoomed & {
+		@include respond-to( 72.938em ){
 			float: left;
 			width: 380px;
 			margin: 0 0 0 17px;
-		}
+		}}
 	}
 
 	.content-header{
@@ -537,9 +641,10 @@
 		padding-top: 85px;
 		margin: 10px 0 0;
 
-		@include respond-to( 768px ){
+		.not-zoomed & {
+		@include respond-to( 48.000em ){
 			padding-top: 70px;
-		}
+		}}
 
 		h1{
 			color: $c-single-title;
@@ -547,9 +652,10 @@
 			font-size: emify( 28px );
 			text-transform: uppercase;
 
-			@include respond-to( 768px ){
+			.not-zoomed & {
+			@include respond-to( 48.000em ){
 				font-size: emify( 48px );
-			}
+			}}
 		}
 
 		.session-speaker{
@@ -575,7 +681,8 @@
 				content: "/";
 			}
 
-			@include respond-to( 768px ){
+			.not-zoomed & {
+			@include respond-to( 48.000em ){
 				top: 45px;
 
 				.date{
@@ -585,7 +692,7 @@
 				.time:before{
 					content: "/";
 				}
-			}
+			}}
 		}
 
 		.language{
@@ -621,10 +728,11 @@
 				background-repeat: repeat-y;
 				background-position: center left;
 
-				@include respond-to( 768px ){
+				.not-zoomed & {
+				@include respond-to( 48.000em ){
 					margin: 20px 0;
 					font-size: emify( 18px );
-				}
+				}}
 			}
 		}
 
@@ -656,9 +764,10 @@
 		font-size: emify( 16px );
 		margin: 1em 0;
 
-		@include respond-to( 768px ){
+		.not-zoomed & {
+		@include respond-to( 48.000em ){
 			font-size: emify( 18px );
-		}
+		}}
 	}
 
 	.back-link{
@@ -671,10 +780,11 @@
 			height: 40px;
 		}
 
-		@include respond-to( 1167px ){
+		.not-zoomed & {
+		@include respond-to( 72.938em ){
 			display: block;
 			margin: 20px 0 0;
-		}
+		}}
 	}
 
 	.sidebar{
@@ -690,16 +800,18 @@
 			li{
 				margin: 1em 0;
 
+				.not-zoomed & {
 				@include respond-to( 560px ){
 					float: left;
 					width: 48%;
 					margin-right: 2%;
-				}
+				}}
 
-				@include respond-to( 1167px ){
+				.not-zoomed & {
+				@include respond-to( 72.938em ){
 					float: none;
 					width: auto;
-				}
+				}}
 
 				.session-title{
 					a{
@@ -740,55 +852,63 @@
 .footer{
 
 	.footer-infos{
+		.not-zoomed & {
 		@include respond-to( 1167px){
 			padding: 20px 0;
-		}
+		}}
 	}
 
 	.l-col{
+		.not-zoomed & {
 		@include respond-to( 700px ){
 			float: left;
 			width: 33.3333%;
-		}
-		@include respond-to( 1167px ){
+		}}
+		.not-zoomed & {
+		@include respond-to( 72.938em ){
 			float: left;
 			width: 248px;
 			margin-right: 15px;
-		}
+		}}
 	}
 
 	.l-col.large{
+		.not-zoomed & {
 		@include respond-to( 700px ){
 			float: none;
 			width: 100%;
 			clear: both;
 			margin: 15px 0 0;
-		}
-		@include respond-to( 1167px ){
+		}}
+		.not-zoomed & {
+		@include respond-to( 72.938em ){
 			float: left;
 			width: 315px;
 			margin-top: 0;
 			margin-right: 0;
 			clear: none;
-		}
+		}}
 	}
 
 	.l-col.two-elements{
+		.not-zoomed & {
 		@include respond-to( 560px ){
 			float: right;
 			width: 50%;
 			margin-top: -92px;
-		}
+		}}
+		.not-zoomed & {
 		@include respond-to( 700px ){
 			float: left;
 			width: 33.3333%;
 			margin-top: 0;
-		}
-		@include respond-to( 1167px ){
+		}}
+		.not-zoomed & {
+		@include respond-to( 72.938em ){
 			float: left;
 			width: 248px;
 			margin-top: 0;
-		}
+		}}
 	}
 
 	.contact-element{
@@ -817,7 +937,10 @@
 		margin: 5px 0 10px;
 
 		a{
+			display: block;
+			float: left;
 			margin-right: 5px;
+			line-height: 0;
 		}
 	}
 
@@ -847,33 +970,37 @@
 		.l-col > div{
 			margin: 8px 0 0;
 
+			.not-zoomed & {
 			@include respond-to( 560px ){
 				margin: 0;
-			}
+			}}
 
-			@include respond-to( 1167px ){
+			.not-zoomed & {
+			@include respond-to( 72.938em ){
 				@include inline-block;
 
 				& + div{
 					margin-left: 35px;
 				}
-			}
+			}}
 		}
 
 		.l-col{
+			.not-zoomed & {
 			@include respond-to( 560px ){
 				width: 50%;
 				margin: 0;
-			}
+			}}
 		}
 
 		.archives{
 
 			h3{
-				@include respond-to( 1167px ){
+				.not-zoomed & {
+				@include respond-to( 72.938em ){
 					float: left;
 					margin-right: 20px;
-				}
+				}}
 			}
 
 			ul{
@@ -890,16 +1017,18 @@
 				}
 			}
 
+			.not-zoomed & {
 			@include respond-to( 560px ){
 				float: left;
-			}
+			}}
 		}
 
 		.right{
+			.not-zoomed & {
 			@include respond-to( 560px ){
 				float: right;
 				text-align: right;
-			}
+			}}
 		}
 	}
 
@@ -908,7 +1037,8 @@
 .single-page .footer .l-section-wrapper{
 	border-top: 1px solid $c-footer-bar-border;
 
-	@include respond-to( 1167px ){
+	.not-zoomed & {
+	@include respond-to( 72.938em ){
 		margin-top: 30px;
-	}
+	}}
 }

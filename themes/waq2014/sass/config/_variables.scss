@@ -18,6 +18,12 @@ $c-orange 							: #ff5917;
 $c-lightgrey 						: #cdcdcd;
 $c-grey 							: #a4adb3;
 
+$c-libeo 							: #ba0046;
+$c-ixmedia 							: #00d3b8;
+$c-bell 							: #ffca31;
+$c-deloitte 						: #64009e;
+$c-grandhall 						: #006b9f;
+
 // -------------------------------------------
 
 $c-bg-body 							: $c-white;
@@ -25,6 +31,7 @@ $c-bg-pagewrapper 					: $c-darkblue;
 $c-bg-navmain 						: $c-darkblue;
 $c-bg-navmain-subscribe				: $c-orange;
 $c-bg-navmain-backlink 				: #1d272d;
+$c-bg-snapmenu-mobile-link 			: $c-linkblue;
 $c-bg-event-description				: $c-darkblue;
 $c-bg-event-stats 	 				: $c-lightblue;
 $c-bg-event-subscribe 				: $c-orange;
@@ -53,6 +60,7 @@ $c-bg-highlight 					: #1d272d;
 $c-navmain 							: $c-white;
 $c-navmain-subscribe				: $c-white;
 $c-navmain-backlink 				: $c-white;
+$c-snapmenu-mobile-link 			: $c-white;
 
 $c-event-description				: $c-white;
 $c-event-description-strong 		: $c-white;
@@ -67,6 +75,8 @@ $c-schedule-filters-h3 				: $c-darkblue;
 $c-schedule-filters-li 				: $c-white;
 $c-schedule-filters-hover			: $c-darkblue;
 $c-schedule-filters-border			: #b7c6cb;
+$c-schedule-border-top				: $c-darkblue;
+$c-schedule-border-bottom 			: $c-white;
 
 $c-schedule-rooms 					: $c-darkblue;
 $c-schedule-border 					: #dfe5e8;
@@ -134,6 +144,7 @@ $font-navmain 						: 700 emify(20px, 17px, 16px) 'Roboto Condensed', sans-serif
 $font-navmain-subscribe-big			: 700 emify(20px, 22px, 16px) 'Roboto', sans-serif;
 $font-navmain-subscribe-small		: 700 emify(18px, 20px, 16px) 'Roboto', sans-serif;
 $font-back-link 					: 700 emify(16px, 20px, 16px) 'Roboto Condensed', sans-serif;
+$font-snapmenu-mobile-link 			: 700 emify(20px, 17px, 16px) 'Roboto Condensed', sans-serif;
 
 $font-event-description				: 400 emify(22px, 24px, 16px) 'Lusitana', sans-serif;
 $font-event-description-strong 		: 700 emify(30px, 26px, 16px) 'Roboto Condensed', sans-serif;

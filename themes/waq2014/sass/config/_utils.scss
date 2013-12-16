@@ -1,10 +1,12 @@
 a:focus,
+h2:focus,
 button:focus,
 input:focus{
 	outline: none;
 }
 
 a:focus:not(.isHover):not(.isClicked),
+h2:focus:not(.isHover):not(.isClicked),
 button:focus:not(.isHover):not(.isClicked),
 input:focus:not(.isHover):not(.isClicked){
 	outline: $outline;

@@ -1,60 +1,134 @@
 // Module
 // ------------------------------------
 
-.event-logo{
-	margin-bottom: 20px;
-	max-width: 123px;
-
-	a{
-		display: block;
-		font-size: 0;
-	}
-}
-
-.homepage .event-logo{
-	@include respond-to( 1167px ){
-		max-width: none;
-		margin: 15px 0 60px;
-	}
-}
-
 #nav-main{
-	display: none;
+	position: relative;
+	//@include transition(background, 0.2s);
 
-	@include respond-to( 1167px ){
+	.nav-main-wrapper{
+		display: none;
+	}
+
+	.snapmenu-logo{
+		max-width: 45%;
+		margin: 0 0 20px 5px;
+
+		a{
+			display: block;
+		}
+	}
+
+	.snapmenu-mobile-buttons{
+		a{
+			@include inline-block;
+			position: absolute;
+			top: 18px;
+			right: 49px;
+			padding: 8px 10px 7px;
+			text-decoration: none;
+			text-transform: uppercase;
+			color: $c-snapmenu-mobile-link;
+			font: $font-snapmenu-mobile-link;
+			background-color: $c-bg-snapmenu-mobile-link;
+		}
+
+		.btn-toggle-menu{
+			position: absolute;
+			top: 18px;
+			right: 15px;
+			border: none;
+			z-index: 100;
+			cursor: pointer;
+			@include imgReplacement("icon-toggle-menu.png");
+		}
+
+
+		.not-zoomed & {
+		@include respond-to( 72.938em ){
+			display: none;
+		}}
+	}
+
+	@include respond-to( 72.938em ){
 		display: block;
 		position: absolute;
-		top: 30px;
+		top: 0;
 		right: 0;
+		width: 100%;
+		padding-top: 30px;
 
 		.nav-main-wrapper{
 			@include clearfix();
 			@include rgba-background($c-bg-navmain, 0.8);
+			float: right;
 			padding: 0 175px 0 20px;
+			display: block;
 
 			li{
+				//@include transition(all, 0.2s);
+				display: block !important;
 				float: left;
 				padding: 32px 15px 28px;
+				background-image: url( '#{$img-path}icon-menu-hover.png' );
+				background-repeat: no-repeat;
+				background-position: center (64px + 15px);
+				height: auto !important;
 
 				a{
 					color: $c-navmain;
-					font: $font-navmain;
+					font: $font-navmain !important;
 					text-decoration: none;
 					text-transform: uppercase;
+					height: auto !important;
 				}
 			}
+
+			li.isActive,
+			li:hover{
+				background-position: center bottom;
+			}
+
+			li.isActive{
+				background-position: center bottom;
+				background-image: url( '#{$img-path}icon-menu-active.png' );
+			}
+		}
+
+		.snapmenu-wrapper{
+			@include clearfix;
+			position: relative;
+		}
+
+		.snapmenu-logo{
+			//@include transition(left, 0.3s);
+			display: block;
+			padding: 0 0 0 15px;
+			margin: 0;
+			float: left;
 		}
 	}
 }
 
+.lt-ie9 .home{
+	.l-section-wrapper{
+		padding-bottom: 0;
+	}
+	#nav-main li{
+		padding: 32px 10px 28px !important;
+	}
+}
+
 .homepage .event-subscribe-menu{
+	//@include transition(padding, 0.3s);
 	display: none;
 
-	@include respond-to( 1167px ){
+	.not-zoomed & {
+	@include respond-to( 72.938em ){
 		@include box-sizing("border-box");
 		display: block;
 		position: absolute;
 		top: 0;
+		margin-top: -30px;
 		right: 15px;
 		width: 145px;
 		padding: 45px 20px 30px;
@@ -62,7 +136,7 @@
 		font: $font-navmain-subscribe-big;
 		text-decoration: none;
 		background-color: $c-bg-navmain-subscribe;
-	}
+	}}
 }
 
 .single-page .event-back-link,
@@ -94,6 +168,7 @@
 		font: $font-back-link;
 	}
 
+	.not-zoomed & {
 	@include respond-to( 560px ){
 		width: calc( 200px + 0px );
 		float: right;
@@ -102,7 +177,7 @@
 		a{
 			width: calc( 145px + 0px );
 		}
-	}
+	}}
 }
 
 .single-page .event-subscribe-menu{
@@ -120,17 +195,19 @@
 		font: $font-navmain-subscribe-small;
 	}
 
+	.not-zoomed & {
 	@include respond-to( 560px ){
 		margin-right: 15px;
-	}
+	}}
 }
 
 .event-description{
 	max-width: 390px;
 
-	@include respond-to( 1167px ){
+	.not-zoomed & {
+	@include respond-to( 72.938em ){
 		float: left;
-	}
+	}}
 
 	p{
 		@include inline-block;
@@ -157,9 +234,10 @@
 	@include clearfix();
 	font-size: 0;
 
-	@include respond-to( 1167px ){
+	.not-zoomed & {
+	@include respond-to( 72.938em ){
 		float: right;
-	}
+	}}
 
 	.event-stats-group{
 		@include clearfix();
@@ -170,20 +248,22 @@
 		padding-right: 2px;
 		padding-bottom: 2px;
 
-		@include respond-to( 768px ){
+		.not-zoomed & {
+		@include respond-to( 48.000em ){
 			@include inline-block;
 			float: none;
 			width: auto;
-		}
+		}}
 	}
 
 	.event-stats-group.large .stat-number{
 		font-size: 2.6em;
 		line-height: 0.793em;
 
+		.not-zoomed & {
 		@include respond-to( 400px ){
 			font: $font-event-stats-number;
-		}
+		}}
 	}
 
 	.event-stats-group.timeleft{
@@ -197,20 +277,22 @@
 			@include inline-block;
 			background: none;
 
-			@include respond-to( 768px ){
+			.not-zoomed & {
+			@include respond-to( 48.000em ){
 				width: auto;
-			}
+			}}
 		}
 
 		.stat + .stat .stat-number:before{
 			content: ":";
 		}
 
-		@include respond-to( 768px ){
+		.not-zoomed & {
+		@include respond-to( 48.000em ){
 			@include inline-block;
 			margin: 0;
 			padding: 0 17px;
-		}
+		}}
 	}
 
 	.event-stats-group.days,
@@ -225,9 +307,10 @@
 	.event-stats-group.city{
 		display: none;
 
-		@include respond-to( 768px ){
+		.not-zoomed & {
+		@include respond-to( 48.000em ){
 			@include inline-block;
-		}
+		}}
 	}
 
 	.stat{
@@ -249,15 +332,17 @@
 			font: $font-event-stats-caption;
 		}
 
-		@include respond-to( 768px ){
+		.not-zoomed & {
+		@include respond-to( 48.000em ){
 			min-width: 76px;
 			padding: 14px 10px 15px;
-		}
+		}}
 
-		@include respond-to( 1167px ){
+		.not-zoomed & {
+		@include respond-to( 72.938em ){
 			min-width: 80px;
 			padding: 14px 10px 15px;
-		}
+		}}
 	}
 }
 
@@ -266,12 +351,14 @@
 	text-decoration: none;
 	font: $font-event-subscribe-big;
 
-	@include respond-to( 1167px ){
+	.not-zoomed & {
+	@include respond-to( 72.938em ){
 		float: right;
 		margin-top: 25px;
-	}
+	}}
 
 	a{
+		display: block;
 		text-transform: uppercase;
 		color: $c-event-subscribe;
 	}
@@ -292,9 +379,10 @@
 .event-speakers{
 	@include clearfix();
 
-	@include respond-to( 1167px ){
+	.not-zoomed & {
+	@include respond-to( 72.938em ){
 		float: left;
-	}
+	}}
 
 	figure{
 		min-height: 92px;
@@ -320,14 +408,20 @@
 		}
 
 		a{
+			display: block;
 			text-decoration: none;
 		}
 
-		@include respond-to( 768px ){
+		.not-zoomed & {
+		@include respond-to( 48.000em ){
 			@include box-sizing("border-box");
 			width: 226px;
 			float: left;
-			padding: 190px 15px 0;
+			padding: 0;
+
+			a{
+				padding: 190px 15px 0;
+			}
 
 			& + figure{
 				margin-left: 15px;
@@ -336,12 +430,12 @@
 			figcaption{
 				padding: 10px 0;
 			}
-		}
+		}}
 	}
 
 	.img-crop{
 		position: absolute;
-		left: 0;
+		left: -92px;
 		top: 0;
 		width: auto;
 		height: auto;
@@ -350,10 +444,12 @@
 		overflow: hidden;
 		text-align: center;
 
-		@include respond-to( 768px ){
+		.not-zoomed & {
+		@include respond-to( 48.000em ){
 			max-width: 100%;
 			max-height: 190px;
-		}
+			left: 0;
+		}}
 	}
 
 	.speaker-thumb{
@@ -401,34 +497,31 @@
 	border-top: 1px solid $c-blog-wrapper-border;
 	border-bottom: 1px solid $c-blog-wrapper-border;
 
-	.js-slider{
-		margin: 15px auto;
-
-		@include respond-to( 768px ){
-			$width 				: 600px;
-			$margin 			: 20px;
-			$nbSlides 			: 5;
-			$displayedSlides 	: 2;
-			@include js-slider ( $width, $margin, $nbSlides, $displayedSlides );
+	.js-slider-container{
+		@media only screen and (max-width: 767px) {
+			width: 100% !important;
 		}
+	}
 
-		@include respond-to( 1024px ){
-			$width 				: 850px;
-			$margin 			: 20px;
-			$nbSlides 			: 5;
-			$displayedSlides 	: 3;
-			@include js-slider ( $width, $margin, $nbSlides, $displayedSlides );
-		}
+	.load-more{
+		border: none;
+		padding: 8px 15px;
+		margin: 2px auto 10px;
+		text-transform: uppercase;
+		font: $font-newsletter-input-submit;
+		color: $c-newsletter-input-submit;
+		background-color: $c-newsletter-border;
+		cursor: pointer;
+		width: 216px;
+		text-align: center;
+		position: relative;
+		left: 50%;
+		margin-left: -108px;
 
-		@include respond-to( 1167px ){
-			$width 				: 975px;
-			$margin 			: 20px;
-			$nbSlides 			: 5;
-			$displayedSlides 	: 3;
-			@include js-slider ( $width, $margin, $nbSlides, $displayedSlides );
-
-			padding: 10px 0;
-		}
+		.not-zoomed & {
+		@include respond-to( 48.000em ){
+			display: none;
+		}}
 	}
 
 	article{
@@ -437,6 +530,11 @@
 		/* &:hover .article-thumb:after{
 			display: none;
 		} */
+
+		.not-zoomed & {
+		@include respond-to( 48.000em ){
+			display: block !important;
+		}}
 	}
 
 	.article-header{
@@ -449,10 +547,11 @@
 		margin: 5px 0 0;
 		font: $font-blog-title;
 
-		@include respond-to( 1167px ){
+		.not-zoomed & {
+		@include respond-to( 72.938em ){
 			font-size: emify(30px);
 
-		}
+		}}
 
 		a{
 			color: $c-blog-title;
@@ -493,17 +592,19 @@
 	.article-content{
 		display: none;
 
-		@include respond-to( 768px ){
+		.not-zoomed & {
+		@include respond-to( 48.000em ){
 			display: block;
 			color: $c-blog-content;
 			font: $font-blog-content;
-		}
+		}}
 	}
 
 	.article-readmore{
 		display: none;
 
-		@include respond-to( 768px ){
+		.not-zoomed & {
+		@include respond-to( 48.000em ){
 			display: block;
 			margin-top: 10px;
 			font: $font-blog-content;
@@ -516,16 +617,18 @@
 					text-decoration: underline;
 				}
 			}
-		}
+		}}
 	}
 
 	.blog-nav{
+		display: none;
 		height: 0;
 		text-align: center;
 
-		@include respond-to( 1167px ){
+		.not-zoomed & {
+		@include respond-to( 72.938em ){
 			text-align: right;
-		}
+		}}
 
 		.prev,
 		.next{
@@ -539,21 +642,23 @@
 		.prev{
 			display: none;
 
-			@include respond-to( 768px ){
+			.not-zoomed & {
+			@include respond-to( 48.000em ){
 				@include imgReplacement("icon-arrow-blog-left.png");
 				margin-top: ceil( image-height("icon-arrow-blog-left.png") / 2 * -1 );
 				left: 1%;
-			}
+			}}
 		}
 
 		.next{
 			display: none;
 
-			@include respond-to( 768px ){
+			.not-zoomed & {
+			@include respond-to( 48.000em ){
 				@include imgReplacement("icon-arrow-blog-right.png");
 				margin-top: ceil( image-height("icon-arrow-blog-right.png") / 2 * -1 );
 				right: 1%;
-			}
+			}}
 		}
 
 		.button-page{
@@ -578,12 +683,65 @@
 	}
 }
 
+.js .blog-wrapper .js-slider{
+	margin: 15px auto;
+
+	.not-zoomed & {
+	@include respond-to( 48.000em ){
+		$width 				: 600px;
+		$margin 			: 20px;
+		$nbSlides 			: 5;
+		$displayedSlides 	: 1;
+		@include js-slider ( $width, $margin, $nbSlides, $displayedSlides );
+	}}
+
+	.not-zoomed & {
+	@include respond-to( 64.000em ){
+		$width 				: 850px;
+		$margin 			: 20px;
+		$nbSlides 			: 5;
+		$displayedSlides 	: 3;
+		@include js-slider ( $width, $margin, $nbSlides, $displayedSlides );
+	}}
+
+	.not-zoomed & {
+	@include respond-to( 72.938em ){
+		$width 				: 975px;
+		$margin 			: 20px;
+		$nbSlides 			: 5;
+		$displayedSlides 	: 3;
+		@include js-slider ( $width, $margin, $nbSlides, $displayedSlides );
+
+		padding: 10px 0;
+	}}
+
+	& + .blog-nav{
+		.not-zoomed & {
+		@include respond-to( 48.000em ){
+			display: block;
+
+			.button-page{
+				display: none;
+			}
+
+			.button-page{
+				.not-zoomed & {
+				@include respond-to( 64.000em ){
+					@include inline-block;
+					margin: 2px;
+				}}
+			}
+		}}
+	}
+}
+
 .sponsors-group{
 	margin: 20px 0;
 
-	@include respond-to( 1167px ){
+	.not-zoomed & {
+	@include respond-to( 72.938em ){
 		margin: 20px 0 50px;
-	}
+	}}
 
 	header{
 		margin: 0 0 10px;
@@ -629,18 +787,25 @@
 				margin: 0 5%;
 			}
 
+			a{
+				display: block;
+			}
+
+			.not-zoomed & {
 			@include respond-to( 560px ){
 				width: 33.333%;
-			}
+			}}
 
-			@include respond-to( 768px ){
+			.not-zoomed & {
+			@include respond-to( 48.000em ){
 				width: 25%;
-			}
+			}}
 
-			@include respond-to( 1167px ){
+			.not-zoomed & {
+			@include respond-to( 72.938em ){
 				width: auto;
 				margin: 10px 25px;
-			}
+			}}
 		}
 	}
 
@@ -655,14 +820,16 @@
 				max-width: 100%;
 			}
 
+			.not-zoomed & {
 			@include respond-to( 560px ){
 				width: 50%;
-			}
+			}}
 
-			@include respond-to( 1167px ){
+			.not-zoomed & {
+			@include respond-to( 72.938em ){
 				width: 25%;
 				margin: 10px 0;
-			}
+			}}
 		}
 	}
 }
@@ -705,6 +872,7 @@
 				top: 0;
 			}
 
+			.not-zoomed & {
 			@include respond-to( 560px ){
 				width: 49%;
 				margin-right: 1%;
@@ -713,9 +881,10 @@
 					width: 50%;
 					margin-right: 0;
 				}
-			}
+			}}
 
-			@include respond-to( 768px ){
+			.not-zoomed & {
+			@include respond-to( 48.000em ){
 				width: 32.3%;
 				margin-right: 1%;
 
@@ -728,9 +897,10 @@
 					width: 33.3%;
 					margin-right: 0;
 				}
-			}
+			}}
 
-			@include respond-to( 1167px ){
+			.not-zoomed & {
+			@include respond-to( 72.938em ){
 				width: 183px;
 				margin-right: 15px;
 				margin-bottom: 10px;
@@ -743,7 +913,7 @@
 				&.last-4{
 					margin-right: 0;
 				}
-			}
+			}}
 		}
 	}
 

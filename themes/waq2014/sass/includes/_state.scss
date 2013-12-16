@@ -1,2 +1,130 @@
 // State
 // ------------------------------------
+
+#nav-main.isSnap{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 110;
+	padding-top: 0;
+	//border-bottom: 5px solid white;
+	@include rgba-background($c-bg-navmain, 1);
+
+	.not-zoomed & {
+	@include respond-to( 72.938em ){
+		left: 50%;
+		width: calc( 100% - 30px );
+		width: -webkit-calc( 100% - 30px );
+		margin-left: calc( ( 100% - 30px ) / -2 );
+		margin-left: -webkit-calc( ( 100% - 30px ) / -2 );
+	}}
+
+	.snapmenu-wrapper{
+		@include clearfix;
+		position: relative;
+		margin: 0 auto;
+		padding: 0;
+		.not-zoomed & {
+		@include respond-to( 72.938em ){
+			width: 1137px;
+		}}
+	}
+
+	.nav-main-wrapper{
+		background: none;
+
+		li{
+			.not-zoomed & {
+			@include respond-to( 72.938em ){
+				padding: 25px 15px 20px !important;
+			}}
+		}
+	}
+
+	.snapmenu-logo{
+		max-width: 123px;
+		padding: 0 0 0 15px;
+		position: relative;
+		top: 10px;
+		.not-zoomed & {
+		@include respond-to( 72.938em ){
+			@include animation(0, 0.3s, snapmenu-logo);
+		}}
+	}
+
+	.event-subscribe-menu{
+		padding: 10px 20px;
+		margin: 0;
+
+	}
+
+	& + .event-description{
+		@media only screen and (max-width: 1166px) {
+			padding-top: 69px;
+		}
+	}
+}
+
+#nav-main.isSnap.isOpen{
+
+	.nav-main-wrapper{
+		display: block;
+		//padding-bottom: 20px;
+
+		li{
+			display: none;
+			padding: 0;
+
+			&:hover{
+				background-color: $c-linkblue;
+			}
+
+			a{
+				display: block;
+				padding: 0 0 0 20px;
+				color: $c-navmain;
+				font: $font-navmain;
+				text-decoration: none;
+				text-transform: uppercase;
+			}
+		}
+	}
+}
+
+.not-zoomed {
+@include respond-to( 72.938em ){
+
+	.js .schedule-wrapper .days-buttons.isSnap{
+		display: block;
+		position: fixed;
+		top: 64px;
+		left: 50%;
+		z-index: 110;
+		width: 1137px;
+		padding: 5px 0;
+		margin-left: ceil( 1137px / 2 * - 1 );
+		background-color: $c-bg-schedule-highlight;
+
+		button{
+			width: 377px;
+		}
+
+		& + .js-slider{
+			margin-top: 64px;
+		}
+	}
+
+}}
+
+// Animations
+@include keyframe(snapmenu-logo) {
+    0% {
+        left: 100px;
+        top: 10px;
+    }
+    100% {
+        left: 0;
+        top: 10px;
+    }
+}

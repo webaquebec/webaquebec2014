@@ -44,6 +44,8 @@ var Schedule = ( function( $, window, document, undefined ) {
         // Get all filter buttons
         this.filterButtons = this.schedule.find('.schedule-filters li > button');
 
+        this.scrolling = false;
+
         // Initialize default functions
         this.init();
     }
@@ -68,6 +70,7 @@ var Schedule = ( function( $, window, document, undefined ) {
             self.slides.css('left', offset + '%' );
             self.buttons.removeClass( WAQ.Constants.isActiveClass );
             self.buttons.eq( index ).addClass( WAQ.Constants.isActiveClass );
+            self.slides.filter(':not(.active)').find('a, button').attr('tabindex', '-1');
         },
 
         // Bind events
@@ -78,6 +81,8 @@ var Schedule = ( function( $, window, document, undefined ) {
                 var $this = $( this ),
                     index = $this.index();
 
+                self.scrolling = false;
+
                 self.changeSlide( index );
             });
 
@@ -87,8 +92,34 @@ var Schedule = ( function( $, window, document, undefined ) {
 
                 self.filterButtons.removeClass( WAQ.Constants.isActiveClass );
                 $this.addClass( WAQ.Constants.isActiveClass );
+
                 self.filterSessions( tag );
             });
+
+            self.schedule.find( '.btn-toggle-filters' ).on( 'click', function() {
+                $(this).toggleClass( WAQ.Constants.isActiveClass );
+                $(this).parents('.schedule-filters').find('ul').toggle();
+            });
+
+            self.sessions.hover(
+                // Mouse in
+                function(){
+                    var $this = $( this ),
+                        session = $this;
+
+                    // Get class name that start with 'salle'
+                    var roomClass = WAQ.Common.getClassStartingWith( session, 'salle-' );
+
+                    // Extract room name from class name
+                    var room = roomClass.replace( 'salle-', '' );
+
+                    self.highlightSession( room );
+                },
+                // Mouse out
+                function(){
+                    self.highlightSession();
+                }
+            );
 
             $( window ).on( 'resize', function() {
                 self.setLayout();
@@ -109,6 +140,11 @@ var Schedule = ( function( $, window, document, undefined ) {
 
             self.wrapper.height( height );
             self.currentHeight = height;
+
+            // Update navigation breakpoints
+            if( ! $('html').hasClass('lt-ie9') ){
+                SnapMenu.prototype.createBreakpoints.call( WAQ.SnapMenu[0] );
+            }
         },
 
         // Change current slide
@@ -131,6 +167,24 @@ var Schedule = ( function( $, window, document, undefined ) {
                 self.currentIndex = index;
                 self.currentSlide = currentSlide;
                 self.setHeight( currentSlide );
+
+                self.slides.removeClass( WAQ.Constants.isActiveClass );
+                self.currentSlide.addClass( WAQ.Constants.isActiveClass );
+
+                self.slides.filter('.' + WAQ.Constants.isActiveClass).find('a, button').removeAttr('tabindex');
+                self.slides.filter(':not(.' + WAQ.Constants.isActiveClass + ')').find('a, button').attr('tabindex', '-1');
+
+                // Check if current scroll position is inside schedule. If not, scroll back to schedule.
+                if ( $( window ).scrollTop() + 200 > self.wrapper.offset().top + self.wrapper.height() ){
+
+                    if( ! self.scrolling ){
+                        $('html, body').animate({
+                            scrollTop: self.wrapper.offset().top - 133
+                        }, 0);
+
+                        self.scrolling = true;
+                    }
+                }
             });
         },
 
@@ -150,6 +204,22 @@ var Schedule = ( function( $, window, document, undefined ) {
             unfilteredSessions.animate({
                 opacity: 0.3
             }, self.config.filterSessionsDuration);
+        },
+
+        //
+        highlightSession: function( room ) {
+            // Get wrapper element
+            var $pageWrapper = $( '.l-page-wrapper' );
+
+            // Get current highlight class
+            var currentClass = WAQ.Common.getClassStartingWith( $pageWrapper, 'highlight-' );
+
+            // Remove current highlight class and add new highlight class
+            $pageWrapper.removeClass( currentClass );
+
+            if( typeof( room ) !== 'undefined' ){
+                $pageWrapper.addClass( 'highlight-' + room );
+            }
         }
     };
 

@@ -3,9 +3,27 @@
 
 // Formule magique pour empêcher des bugs sur les images à causes des transitions d'opacité.
 img, a{ @include experimental(transform, translateZ(0)); }
+#nav-main{ @include experimental(transform, translateZ(10px)); }
 
 body{
-	background-color: $c-bg-body
+	background-color: $c-bg-body;
+}
+
+button,
+input[type="submit"]{
+	@include experimental(appearance, none);
+}
+
+.l-a11y.visuallyhidden.focusable:focus{
+	position: absolute;
+	top: 2px;
+	left: 2px;
+	padding: 5px 10px;
+	background-color: $c-bg-navmain;
+	text-decoration: none;
+	font: $font-body;
+	color: white;
+	z-index: 100;
 }
 
 /* Fix for inline-block extra space issue */
@@ -22,9 +40,3 @@ li {
 img{
 	max-width: 100%;
 }
-
-
-/*DELETE ME*/
-article + article + article + article{
-	display: none;
-}/*DELETE ME*/

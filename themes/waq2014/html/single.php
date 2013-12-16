@@ -286,6 +286,9 @@
 
     <script src="../js/app/objects/Schedule.js"></script>
     <script src="../js/app/objects/CustomSchedule.js"></script>
+    <script src="../js/app/objects/SnapMenu.js"></script>
+    <script src="../js/app/objects/MobileMenu.js"></script>
+    <script src="../js/app/objects/Countdown.js"></script>
 
     <script src="../js/app/WAQ.Common.js"></script>
     <script src="../js/main.js"></script>
