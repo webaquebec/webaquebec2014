@@ -130,7 +130,7 @@
 	  }
 	?>
   <!-- Page content section -->
-  <section id="partenaires" class="content">
+  <section id="content" class="page-content">
       <div class="l-section-wrapper">
 
           <div class="l-row">
