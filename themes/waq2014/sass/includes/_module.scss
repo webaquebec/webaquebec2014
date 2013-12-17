@@ -396,14 +396,13 @@
 	}}
 
 	figure{
-		min-height: 92px;
 		position: relative;
 		padding-left: 92px;
 		margin-bottom: 2px;
 		@include rgba-background($c-bg-event-speakers, 0.8);
 
 		figcaption{
-			padding: 20px 0 20px 10px;
+			padding: 23px 0 22px 10px;
 
 			.name{
 				@include clearfix();
@@ -417,41 +416,43 @@
 				font: $font-event-speakers-job;
 			}
 		}
+	}
 
-		a{
-			color: $c-event-speakers-job;
-			display: block;
-			text-decoration: none;
+	a{
+		color: $c-event-speakers-job;
+		display: block;
+		text-decoration: none;
 
-			&:hover .name{
-				text-decoration: underline;
-			}
+		&:hover .name{
+			text-decoration: underline;
 		}
+	}
 
-		.not-zoomed & {
-		@include respond-to( 48.000em ){
+	.not-zoomed & {
+	@include respond-to( 48.000em ){
+		figure{
 			@include box-sizing("border-box");
 			width: 226px;
-			float: left;
 			padding: 0;
+		}
 
-			a{
-				padding: 190px 15px 0;
-			}
+		a{
+			float: left;
+			padding: 190px 0 0;
+		}
 
-			& + figure{
-				margin-left: 15px;
-			}
+		a + a{
+			margin-left: 15px;
+		}
 
-			figcaption{
-				padding: 10px 0;
-			}
-		}}
-	}
+		figcaption{
+			padding: 10px 15px;
+		}
+	}}
 
 	.img-crop{
 		position: absolute;
-		left: -92px;
+		left: 0;
 		top: 0;
 		width: auto;
 		height: auto;
@@ -465,6 +466,7 @@
 			max-width: 100%;
 			max-height: 190px;
 			left: 0;
+			top: -190px;
 		}}
 	}
 
