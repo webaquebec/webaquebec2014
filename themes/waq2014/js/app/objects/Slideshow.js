@@ -142,7 +142,7 @@ var Slideshow = ( function( $, window, document, undefined ) {
 					self.arrowButtons.eq(0).hide();
 				}
 
-				if( index + 1 != Math.floor( self.nbSlides / self.displayedSlides ) ){
+				if( index + 1 < self.pageButtons.length ){
 					self.arrowButtons.eq(1).show();
 				} else {
 					self.arrowButtons.eq(1).hide();
@@ -181,7 +181,7 @@ var Slideshow = ( function( $, window, document, undefined ) {
 					self.arrowButtons.eq(0).hide();
 				}
 
-				if( newActivePage + 1 != Math.floor( self.nbSlides / self.displayedSlides ) ){
+				if( newActivePage + 1 < self.pageButtons.length ){
 					self.arrowButtons.eq(1).show();
 				} else {
 					self.arrowButtons.eq(1).hide();
