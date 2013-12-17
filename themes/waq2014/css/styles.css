@@ -2564,38 +2564,39 @@ aside.highlight .social .twitter {
     height: auto;
     z-index: -1000;
     overflow: hidden;
+    background-color: #2a343b;
   }
 }
 
-/* line 82, ../sass/includes/_theme.scss */
+/* line 83, ../sass/includes/_theme.scss */
 .single-page .home {
   margin: 10px 0 0;
   background-color: #006b9f;
 }
 @media only screen and (min-width: 560px) {
-  /* line 88, ../sass/includes/_theme.scss */
+  /* line 89, ../sass/includes/_theme.scss */
   .not-zoomed .single-page .home .l-section-wrapper {
     padding: 0;
   }
-  /* line 91, ../sass/includes/_theme.scss */
+  /* line 92, ../sass/includes/_theme.scss */
   .not-zoomed .single-page .home .event-logo {
     float: left;
     margin: 9px 15px 8px;
     max-width: 123px;
   }
-  /* line 96, ../sass/includes/_theme.scss */
+  /* line 97, ../sass/includes/_theme.scss */
   .not-zoomed .single-page .home .event-back-link, .not-zoomed .single-page .home .page-content .back-link, .not-zoomed .single-page .page-content .home .back-link {
     float: right;
   }
 }
 @media only screen and (min-width: 48em) {
-  /* line 101, ../sass/includes/_theme.scss */
+  /* line 102, ../sass/includes/_theme.scss */
   .not-zoomed .single-page .home {
     margin: 20px 0;
   }
 }
 
-/* line 111, ../sass/includes/_theme.scss */
+/* line 112, ../sass/includes/_theme.scss */
 .home {
   zoom: 1;
 }
@@ -2610,39 +2611,39 @@ aside.highlight .social .twitter {
 .home:after {
   clear: both;
 }
-/* line 114, ../sass/includes/_theme.scss */
+/* line 115, ../sass/includes/_theme.scss */
 .home .event-description {
   margin-bottom: 28px;
 }
 @media only screen and (min-width: 72.938em) {
-  /* line 117, ../sass/includes/_theme.scss */
+  /* line 118, ../sass/includes/_theme.scss */
   .not-zoomed .home .event-description {
     margin-bottom: 60px;
   }
 }
-/* line 123, ../sass/includes/_theme.scss */
+/* line 124, ../sass/includes/_theme.scss */
 .home .event-stats {
   margin-bottom: 20px;
 }
 @media only screen and (min-width: 72.938em) {
-  /* line 126, ../sass/includes/_theme.scss */
+  /* line 127, ../sass/includes/_theme.scss */
   .not-zoomed .home .event-stats {
     margin-bottom: 60px;
   }
 }
-/* line 132, ../sass/includes/_theme.scss */
+/* line 133, ../sass/includes/_theme.scss */
 .home .event-speakers {
   margin-top: 20px;
 }
 @media only screen and (min-width: 72.938em) {
-  /* line 135, ../sass/includes/_theme.scss */
+  /* line 136, ../sass/includes/_theme.scss */
   .not-zoomed .home .event-speakers {
     margin-top: 0;
     margin-bottom: 60px;
   }
 }
 
-/* line 144, ../sass/includes/_theme.scss */
+/* line 145, ../sass/includes/_theme.scss */
 .schedule {
   zoom: 1;
   position: relative;
@@ -2661,11 +2662,11 @@ aside.highlight .social .twitter {
   clear: both;
 }
 @media only screen and (min-width: 64em) {
-  /* line 150, ../sass/includes/_theme.scss */
+  /* line 151, ../sass/includes/_theme.scss */
   .not-zoomed .schedule {
     background-color: #e6f3fa;
   }
-  /* line 154, ../sass/includes/_theme.scss */
+  /* line 155, ../sass/includes/_theme.scss */
   .not-zoomed .schedule:before {
     display: block;
     height: 208px;
@@ -2676,21 +2677,21 @@ aside.highlight .social .twitter {
     background-color: white;
   }
 }
-/* line 164, ../sass/includes/_theme.scss */
+/* line 165, ../sass/includes/_theme.scss */
 .schedule h2 {
   color: #333f47;
   font: 300 2.25em / 1.11111em "Roboto Condensed", sans-serif;
   text-transform: uppercase;
 }
 @media only screen and (min-width: 64em) {
-  /* line 169, ../sass/includes/_theme.scss */
+  /* line 170, ../sass/includes/_theme.scss */
   .not-zoomed .schedule h2 {
     float: left;
     margin: 40px 0;
     font-size: 4.5em;
   }
 }
-/* line 177, ../sass/includes/_theme.scss */
+/* line 178, ../sass/includes/_theme.scss */
 .schedule header {
   zoom: 1;
 }
@@ -2706,7 +2707,7 @@ aside.highlight .social .twitter {
   clear: both;
 }
 @media only screen and (min-width: 64em) {
-  /* line 183, ../sass/includes/_theme.scss */
+  /* line 184, ../sass/includes/_theme.scss */
   .not-zoomed .schedule .schedule-filters {
     float: left;
     margin: 40px 0 0 75px;
@@ -2714,33 +2715,33 @@ aside.highlight .social .twitter {
     border-left: 2px solid #b7c6cb;
   }
 }
-/* line 191, ../sass/includes/_theme.scss */
+/* line 192, ../sass/includes/_theme.scss */
 .schedule .schedule-filters h3 {
   color: #333f47;
   font: 400 1.25em / 0.85em "Lusitana", sans-serif;
 }
-/* line 196, ../sass/includes/_theme.scss */
+/* line 197, ../sass/includes/_theme.scss */
 .schedule .schedule-filters .toggle-filters {
   margin: 10px 0 3px;
   position: relative;
 }
 @media only screen and (min-width: 64em) {
-  /* line 200, ../sass/includes/_theme.scss */
+  /* line 201, ../sass/includes/_theme.scss */
   .not-zoomed .schedule .schedule-filters .toggle-filters {
     margin-top: 0;
   }
 }
-/* line 205, ../sass/includes/_theme.scss */
+/* line 206, ../sass/includes/_theme.scss */
 .schedule .schedule-filters .toggle-filters h3 {
   line-height: 32px;
 }
 @media only screen and (min-width: 64em) {
-  /* line 208, ../sass/includes/_theme.scss */
+  /* line 209, ../sass/includes/_theme.scss */
   .not-zoomed .schedule .schedule-filters .toggle-filters h3 {
     line-height: 18px;
   }
 }
-/* line 214, ../sass/includes/_theme.scss */
+/* line 215, ../sass/includes/_theme.scss */
 .schedule .schedule-filters .toggle-filters .btn-toggle-filters {
   position: absolute;
   left: 0;
@@ -2755,16 +2756,16 @@ aside.highlight .social .twitter {
   background-position: 210px center;
 }
 @media only screen and (min-width: 64em) {
-  /* line 227, ../sass/includes/_theme.scss */
+  /* line 228, ../sass/includes/_theme.scss */
   .not-zoomed .schedule .schedule-filters .toggle-filters .btn-toggle-filters {
     display: none;
   }
 }
-/* line 232, ../sass/includes/_theme.scss */
+/* line 233, ../sass/includes/_theme.scss */
 .schedule .schedule-filters .toggle-filters .btn-toggle-filters.isActive {
   background-image: url("../img/icon-less.png");
 }
-/* line 238, ../sass/includes/_theme.scss */
+/* line 239, ../sass/includes/_theme.scss */
 .schedule .schedule-filters ul {
   font-size: 16px;
   display: none;
@@ -2773,7 +2774,7 @@ aside.highlight .social .twitter {
   background-color: #333f47;
 }
 @media only screen and (min-width: 64em) {
-  /* line 245, ../sass/includes/_theme.scss */
+  /* line 246, ../sass/includes/_theme.scss */
   .not-zoomed .schedule .schedule-filters ul {
     display: block !important;
     margin: 0;
@@ -2782,7 +2783,7 @@ aside.highlight .social .twitter {
     background-color: transparent;
   }
 }
-/* line 254, ../sass/includes/_theme.scss */
+/* line 255, ../sass/includes/_theme.scss */
 .schedule .schedule-filters ul li {
   display: -moz-inline-stack;
   display: inline-block;
@@ -2793,12 +2794,12 @@ aside.highlight .social .twitter {
   margin: 2px 2px 0 0;
 }
 @media only screen and (min-width: 64em) {
-  /* line 258, ../sass/includes/_theme.scss */
+  /* line 259, ../sass/includes/_theme.scss */
   .not-zoomed .schedule .schedule-filters ul li {
     margin: 6px 6px 0 0;
   }
 }
-/* line 264, ../sass/includes/_theme.scss */
+/* line 265, ../sass/includes/_theme.scss */
 .schedule .schedule-filters ul button {
   margin: 0;
   border: none;
@@ -2809,41 +2810,41 @@ aside.highlight .social .twitter {
   background-color: #006b9f;
   cursor: pointer;
 }
-/* line 276, ../sass/includes/_theme.scss */
+/* line 277, ../sass/includes/_theme.scss */
 .schedule .schedule-filters ul button:hover,
 .schedule .schedule-filters ul button.isActive {
   color: #333f47;
   background-color: white;
 }
 @media only screen and (min-width: 64em) {
-  /* line 280, ../sass/includes/_theme.scss */
+  /* line 281, ../sass/includes/_theme.scss */
   .not-zoomed .schedule .schedule-filters ul button:hover, .not-zoomed
   .schedule .schedule-filters ul button.isActive {
     color: white;
     background-color: #333f47;
   }
 }
-/* line 287, ../sass/includes/_theme.scss */
+/* line 288, ../sass/includes/_theme.scss */
 .schedule .schedule-filters ul button.isActive {
   font-weight: 700;
 }
 
-/* line 295, ../sass/includes/_theme.scss */
+/* line 296, ../sass/includes/_theme.scss */
 .place {
   position: relative;
 }
 @media only screen and (min-width: 72.938em) {
-  /* line 298, ../sass/includes/_theme.scss */
+  /* line 299, ../sass/includes/_theme.scss */
   .not-zoomed .place {
     min-height: 520px;
   }
 }
-/* line 303, ../sass/includes/_theme.scss */
+/* line 304, ../sass/includes/_theme.scss */
 .place .l-section-wrapper {
   padding-bottom: 10px;
 }
 @media only screen and (min-width: 72.938em) {
-  /* line 307, ../sass/includes/_theme.scss */
+  /* line 308, ../sass/includes/_theme.scss */
   .not-zoomed .place .l-section-wrapper {
     padding: 50px 15px 0;
     position: absolute;
@@ -2852,37 +2853,37 @@ aside.highlight .social .twitter {
     pointer-events: none;
     width: 100%;
   }
-  /* line 317, ../sass/includes/_theme.scss */
+  /* line 318, ../sass/includes/_theme.scss */
   .not-zoomed .place .l-section-wrapper > div {
     margin: 0 auto;
     max-width: 1137px;
   }
 }
-/* line 324, ../sass/includes/_theme.scss */
+/* line 325, ../sass/includes/_theme.scss */
 .place h2 {
   font: 300 2.25em / 1.11111em "Roboto Condensed", sans-serif;
   text-transform: uppercase;
 }
-/* line 329, ../sass/includes/_theme.scss */
+/* line 330, ../sass/includes/_theme.scss */
 .place header {
   max-width: 320px;
   margin-top: 10px;
   min-height: 295px;
 }
 @media only screen and (min-width: 72.938em) {
-  /* line 334, ../sass/includes/_theme.scss */
+  /* line 335, ../sass/includes/_theme.scss */
   .not-zoomed .place header {
     max-width: none;
     min-height: 0;
     margin-top: 0;
   }
 }
-/* line 341, ../sass/includes/_theme.scss */
+/* line 342, ../sass/includes/_theme.scss */
 .place header h2 {
   color: white;
 }
 @media only screen and (min-width: 72.938em) {
-  /* line 344, ../sass/includes/_theme.scss */
+  /* line 345, ../sass/includes/_theme.scss */
   .not-zoomed .place header h2 {
     display: -moz-inline-stack;
     display: inline-block;
@@ -2896,19 +2897,19 @@ aside.highlight .social .twitter {
     background-color: #333f47;
   }
 }
-/* line 353, ../sass/includes/_theme.scss */
+/* line 354, ../sass/includes/_theme.scss */
 .place header h2 span {
   padding: 0 6px;
   background-color: #333f47;
 }
 @media only screen and (min-width: 72.938em) {
-  /* line 357, ../sass/includes/_theme.scss */
+  /* line 358, ../sass/includes/_theme.scss */
   .not-zoomed .place header h2 span {
     padding: 0;
     background-color: transparent;
   }
 }
-/* line 365, ../sass/includes/_theme.scss */
+/* line 366, ../sass/includes/_theme.scss */
 .place header .route {
   position: relative;
   top: 6px;
@@ -2920,22 +2921,22 @@ aside.highlight .social .twitter {
   background-color: #333f47;
 }
 @media only screen and (min-width: 72.938em) {
-  /* line 375, ../sass/includes/_theme.scss */
+  /* line 376, ../sass/includes/_theme.scss */
   .not-zoomed .place header .route {
     display: none;
   }
 }
-/* line 382, ../sass/includes/_theme.scss */
+/* line 383, ../sass/includes/_theme.scss */
 .place .place-wrapper {
   pointer-events: auto;
 }
 @media only screen and (min-width: 72.938em) {
-  /* line 386, ../sass/includes/_theme.scss */
+  /* line 387, ../sass/includes/_theme.scss */
   .not-zoomed .place .place-wrapper {
     float: right;
   }
 }
-/* line 391, ../sass/includes/_theme.scss */
+/* line 392, ../sass/includes/_theme.scss */
 .place .place-wrapper .contact {
   zoom: 1;
   margin: 5px -15px;
@@ -2955,32 +2956,32 @@ aside.highlight .social .twitter {
   clear: both;
 }
 @media only screen and (min-width: 72.938em) {
-  /* line 398, ../sass/includes/_theme.scss */
+  /* line 399, ../sass/includes/_theme.scss */
   .not-zoomed .place .place-wrapper .contact {
     background-color: white;
     border: 1px solid #cdcdcd;
   }
 }
-/* line 404, ../sass/includes/_theme.scss */
+/* line 405, ../sass/includes/_theme.scss */
 .place .place-wrapper .contact h2 {
   color: #333f47;
   font-size: 3em;
 }
 @media only screen and (min-width: 580px) {
-  /* line 410, ../sass/includes/_theme.scss */
+  /* line 411, ../sass/includes/_theme.scss */
   .not-zoomed .place .place-wrapper .contact .contact-element {
     width: 50%;
     float: left;
   }
 }
 @media only screen and (min-width: 72.938em) {
-  /* line 415, ../sass/includes/_theme.scss */
+  /* line 416, ../sass/includes/_theme.scss */
   .not-zoomed .place .place-wrapper .contact .contact-element {
     width: auto;
     float: none;
   }
 }
-/* line 423, ../sass/includes/_theme.scss */
+/* line 424, ../sass/includes/_theme.scss */
 .place .place-wrapper .newsletter {
   zoom: 1;
   margin: 5px -15px;
@@ -2998,21 +2999,21 @@ aside.highlight .social .twitter {
 .place .place-wrapper .newsletter:after {
   clear: both;
 }
-/* line 429, ../sass/includes/_theme.scss */
+/* line 430, ../sass/includes/_theme.scss */
 .place .place-wrapper .newsletter h2 {
   text-transform: none;
   font: 400 1.25em / 1.2em "Roboto Condensed", sans-serif;
   color: white;
 }
-/* line 435, ../sass/includes/_theme.scss */
+/* line 436, ../sass/includes/_theme.scss */
 .place .place-wrapper .newsletter form {
   font-size: 0;
 }
-/* line 438, ../sass/includes/_theme.scss */
+/* line 439, ../sass/includes/_theme.scss */
 .place .place-wrapper .newsletter form > div {
   font-size: 16px;
 }
-/* line 443, ../sass/includes/_theme.scss */
+/* line 444, ../sass/includes/_theme.scss */
 .place .place-wrapper .newsletter .input-email {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -3025,7 +3026,7 @@ aside.highlight .social .twitter {
   color: #a2a2a2;
   border: 3px solid #005b87;
 }
-/* line 454, ../sass/includes/_theme.scss */
+/* line 455, ../sass/includes/_theme.scss */
 .place .place-wrapper .newsletter .input-submit {
   border: none;
   padding: 8px 15px;
@@ -3036,7 +3037,7 @@ aside.highlight .social .twitter {
   background-color: #005b87;
 }
 @media only screen and (min-width: 560px) {
-  /* line 465, ../sass/includes/_theme.scss */
+  /* line 466, ../sass/includes/_theme.scss */
   .not-zoomed .place .place-wrapper .newsletter .field {
     display: -moz-inline-stack;
     display: inline-block;
@@ -3050,13 +3051,13 @@ aside.highlight .social .twitter {
   }
 }
 @media only screen and (min-width: 1137px) {
-  /* line 472, ../sass/includes/_theme.scss */
+  /* line 473, ../sass/includes/_theme.scss */
   .not-zoomed .place .place-wrapper .newsletter .field {
     width: 255px;
   }
 }
 @media only screen and (min-width: 560px) {
-  /* line 479, ../sass/includes/_theme.scss */
+  /* line 480, ../sass/includes/_theme.scss */
   .not-zoomed .place .place-wrapper .newsletter .buttons {
     display: -moz-inline-stack;
     display: inline-block;
@@ -3068,17 +3069,17 @@ aside.highlight .social .twitter {
   }
 }
 @media only screen and (min-width: 72.938em) {
-  /* line 489, ../sass/includes/_theme.scss */
+  /* line 490, ../sass/includes/_theme.scss */
   .not-zoomed .place .place-wrapper .contact, .not-zoomed
   .place .place-wrapper .newsletter {
     margin: 0;
   }
 }
-/* line 495, ../sass/includes/_theme.scss */
+/* line 496, ../sass/includes/_theme.scss */
 .place .place-wrapper .contact-element {
   margin: 15px 0;
 }
-/* line 500, ../sass/includes/_theme.scss */
+/* line 501, ../sass/includes/_theme.scss */
 .place .googlemap {
   width: 100%;
   min-height: 320px;
@@ -3086,15 +3087,15 @@ aside.highlight .social .twitter {
   top: 0;
   z-index: -1;
 }
-/* line 510, ../sass/includes/_theme.scss */
+/* line 511, ../sass/includes/_theme.scss */
 .place .googlemap #gmap {
   min-height: 320px;
 }
-/* line 512, ../sass/includes/_theme.scss */
+/* line 513, ../sass/includes/_theme.scss */
 .place .googlemap #gmap img {
   max-width: none;
 }
-/* line 515, ../sass/includes/_theme.scss */
+/* line 516, ../sass/includes/_theme.scss */
 .place .googlemap #gmap .customInfoWindow {
   display: block;
   color: #005674;
@@ -3102,11 +3103,11 @@ aside.highlight .social .twitter {
   text-transform: uppercase;
   border: 1px solid #e2e2e2;
 }
-/* line 525, ../sass/includes/_theme.scss */
+/* line 526, ../sass/includes/_theme.scss */
 .place .googlemap #gmap .customInfoWindow a:hover, .place .googlemap #gmap .customInfoWindow a:focus, .place .googlemap #gmap .customInfoWindow a.active {
   text-decoration: none;
 }
-/* line 530, ../sass/includes/_theme.scss */
+/* line 531, ../sass/includes/_theme.scss */
 .place .googlemap #gmap .customInfoWindow .closeBtn {
   position: absolute;
   top: 0px;
@@ -3116,51 +3117,51 @@ aside.highlight .social .twitter {
   font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   cursor: pointer;
 }
-/* line 539, ../sass/includes/_theme.scss */
+/* line 540, ../sass/includes/_theme.scss */
 .place .googlemap #gmap .customInfoWindow .padding {
   padding: 20px;
 }
-/* line 543, ../sass/includes/_theme.scss */
+/* line 544, ../sass/includes/_theme.scss */
 .place .googlemap #gmap .customInfoWindow .address {
   display: none;
   float: left;
   margin-bottom: 20px;
   margin-right: 200px;
 }
-/* line 549, ../sass/includes/_theme.scss */
+/* line 550, ../sass/includes/_theme.scss */
 .place .googlemap #gmap .customInfoWindow .address a {
   text-decoration: none;
   color: #1886b8;
 }
-/* line 552, ../sass/includes/_theme.scss */
+/* line 553, ../sass/includes/_theme.scss */
 .place .googlemap #gmap .customInfoWindow .address a span {
   display: block;
   margin-bottom: 6px;
   font-size: 1.2em;
 }
-/* line 556, ../sass/includes/_theme.scss */
+/* line 557, ../sass/includes/_theme.scss */
 .place .googlemap #gmap .customInfoWindow .address a span.name {
   font-weight: bold;
   color: black;
 }
-/* line 563, ../sass/includes/_theme.scss */
+/* line 564, ../sass/includes/_theme.scss */
 .place .googlemap #gmap .customInfoWindow .address a:hover, .place .googlemap #gmap .customInfoWindow .address a:focus, .place .googlemap #gmap .customInfoWindow .address a.active {
   text-decoration: underline;
 }
 @media only screen and (min-width: 72.938em) {
-  /* line 568, ../sass/includes/_theme.scss */
+  /* line 569, ../sass/includes/_theme.scss */
   .not-zoomed .place .googlemap #gmap .customInfoWindow .address {
     display: block;
   }
 }
-/* line 574, ../sass/includes/_theme.scss */
+/* line 575, ../sass/includes/_theme.scss */
 .place .googlemap #gmap .customInfoWindow img {
   padding: 20px;
   padding-bottom: 0;
   pointer-events: none;
 }
 @media only screen and (min-width: 72.938em) {
-  /* line 579, ../sass/includes/_theme.scss */
+  /* line 580, ../sass/includes/_theme.scss */
   .not-zoomed .place .googlemap #gmap .customInfoWindow img {
     position: absolute;
     right: 20px;
@@ -3168,7 +3169,7 @@ aside.highlight .social .twitter {
     padding: 0;
   }
 }
-/* line 588, ../sass/includes/_theme.scss */
+/* line 589, ../sass/includes/_theme.scss */
 .place .googlemap #gmap .customInfoWindow:after, .place .googlemap #gmap .customInfoWindow:before {
   top: 100%;
   border: solid transparent;
@@ -3178,7 +3179,7 @@ aside.highlight .social .twitter {
   position: absolute;
   pointer-events: none;
 }
-/* line 598, ../sass/includes/_theme.scss */
+/* line 599, ../sass/includes/_theme.scss */
 .place .googlemap #gmap .customInfoWindow:after {
   border-color: rgba(255, 255, 255, 0);
   border-top-color: #fff;
@@ -3186,7 +3187,7 @@ aside.highlight .social .twitter {
   left: 50%;
   margin-left: -30px;
 }
-/* line 605, ../sass/includes/_theme.scss */
+/* line 606, ../sass/includes/_theme.scss */
 .place .googlemap #gmap .customInfoWindow:before {
   border-color: rgba(226, 226, 226, 0);
   border-top-color: #e2e2e2;
@@ -3195,18 +3196,18 @@ aside.highlight .social .twitter {
   margin-left: -31px;
 }
 @media only screen and (min-width: 72.938em) {
-  /* line 615, ../sass/includes/_theme.scss */
+  /* line 616, ../sass/includes/_theme.scss */
   .not-zoomed .place .googlemap {
     min-height: 520px;
     position: static;
   }
-  /* line 622, ../sass/includes/_theme.scss */
+  /* line 623, ../sass/includes/_theme.scss */
   .not-zoomed .place .googlemap #gmap {
     min-height: 520px;
   }
 }
 
-/* line 629, ../sass/includes/_theme.scss */
+/* line 630, ../sass/includes/_theme.scss */
 .blog {
   background-color: #333f47;
   background-image: url("../img/bg-strip-dark.png");
@@ -3215,12 +3216,12 @@ aside.highlight .social .twitter {
   border-bottom: 13px solid #2a343b;
 }
 @media only screen and (min-width: 72.938em) {
-  /* line 636, ../sass/includes/_theme.scss */
+  /* line 637, ../sass/includes/_theme.scss */
   .not-zoomed .blog {
     background-position: 33% 21%;
   }
 }
-/* line 641, ../sass/includes/_theme.scss */
+/* line 642, ../sass/includes/_theme.scss */
 .blog h2 {
   color: white;
   font: 300 2.25em / 1.11111em "Roboto Condensed", sans-serif;
@@ -3228,13 +3229,13 @@ aside.highlight .social .twitter {
   text-transform: uppercase;
 }
 @media only screen and (min-width: 72.938em) {
-  /* line 647, ../sass/includes/_theme.scss */
+  /* line 648, ../sass/includes/_theme.scss */
   .not-zoomed .blog h2 {
     font-size: 4.5em;
   }
 }
 
-/* line 657, ../sass/includes/_theme.scss */
+/* line 658, ../sass/includes/_theme.scss */
 .sponsors h2 {
   margin: 5px 0 25px;
   color: #056797;
@@ -3242,14 +3243,14 @@ aside.highlight .social .twitter {
   text-transform: uppercase;
 }
 @media only screen and (min-width: 72.938em) {
-  /* line 663, ../sass/includes/_theme.scss */
+  /* line 664, ../sass/includes/_theme.scss */
   .not-zoomed .sponsors h2 {
     font-size: 4.5em;
     margin: 15px 0 25px;
   }
 }
 
-/* line 672, ../sass/includes/_theme.scss */
+/* line 673, ../sass/includes/_theme.scss */
 .about {
   background-color: #2a343b;
   background-image: url("../img/bg-strip-light.png");
@@ -3257,7 +3258,7 @@ aside.highlight .social .twitter {
   border-top: 13px solid #333f47;
   border-bottom: 13px solid #333f47;
 }
-/* line 679, ../sass/includes/_theme.scss */
+/* line 680, ../sass/includes/_theme.scss */
 .about h2 {
   margin: 10px 0;
   color: white;
@@ -3265,55 +3266,55 @@ aside.highlight .social .twitter {
   text-transform: uppercase;
 }
 @media only screen and (min-width: 72.938em) {
-  /* line 685, ../sass/includes/_theme.scss */
+  /* line 686, ../sass/includes/_theme.scss */
   .not-zoomed .about h2 {
     margin: 20px 0 10px;
     font-size: 4.5em;
   }
 }
-/* line 692, ../sass/includes/_theme.scss */
+/* line 693, ../sass/includes/_theme.scss */
 .about p {
   color: #a4adb3;
   font: 300 1em / 1.125em "Roboto", sans-serif;
 }
 @media only screen and (min-width: 72.938em) {
-  /* line 696, ../sass/includes/_theme.scss */
+  /* line 697, ../sass/includes/_theme.scss */
   .not-zoomed .about p {
     font-size: 1.25em;
     line-height: 1.2em;
   }
 }
-/* line 703, ../sass/includes/_theme.scss */
+/* line 704, ../sass/includes/_theme.scss */
 .about p.strong {
   font: 700 1.25em / 1.2em "Roboto Condensed", sans-serif;
 }
 @media only screen and (min-width: 72.938em) {
-  /* line 706, ../sass/includes/_theme.scss */
+  /* line 707, ../sass/includes/_theme.scss */
   .not-zoomed .about p.strong {
     font-size: 1.25em;
   }
 }
-/* line 712, ../sass/includes/_theme.scss */
+/* line 713, ../sass/includes/_theme.scss */
 .about .highlight {
   padding: 15px;
   background-color: #1d272d;
 }
-/* line 716, ../sass/includes/_theme.scss */
+/* line 717, ../sass/includes/_theme.scss */
 .about .highlight p {
   font: 300 1.25em / 1.2em "Roboto", sans-serif;
 }
-/* line 720, ../sass/includes/_theme.scss */
+/* line 721, ../sass/includes/_theme.scss */
 .about .highlight p.strong {
   text-transform: uppercase;
   font: 700 1.25em / 1.2em "Roboto Condensed", sans-serif;
 }
 @media only screen and (min-width: 72.938em) {
-  /* line 729, ../sass/includes/_theme.scss */
+  /* line 730, ../sass/includes/_theme.scss */
   .not-zoomed .about .l-col {
     float: left;
     width: 777px;
   }
-  /* line 734, ../sass/includes/_theme.scss */
+  /* line 735, ../sass/includes/_theme.scss */
   .not-zoomed .about .l-col + .l-col {
     width: 315px;
     margin-left: 15px;
@@ -3321,43 +3322,43 @@ aside.highlight .social .twitter {
 }
 
 @media only screen and (min-width: 72.938em) {
-  /* line 744, ../sass/includes/_theme.scss */
+  /* line 745, ../sass/includes/_theme.scss */
   .not-zoomed .single-page .page-content {
     margin-top: 40px;
   }
 }
 @media only screen and (min-width: 72.938em) {
-  /* line 751, ../sass/includes/_theme.scss */
+  /* line 752, ../sass/includes/_theme.scss */
   .not-zoomed .single-page .page-content .l-col {
     float: left;
     width: 710px;
   }
 }
-/* line 758, ../sass/includes/_theme.scss */
+/* line 759, ../sass/includes/_theme.scss */
 .single-page .page-content .sidebar {
   margin-top: 1em;
 }
 @media only screen and (min-width: 72.938em) {
-  /* line 761, ../sass/includes/_theme.scss */
+  /* line 762, ../sass/includes/_theme.scss */
   .not-zoomed .single-page .page-content .sidebar {
     float: left;
     width: 380px;
     margin: 0 0 0 17px;
   }
 }
-/* line 769, ../sass/includes/_theme.scss */
+/* line 770, ../sass/includes/_theme.scss */
 .single-page .page-content .content-header {
   position: relative;
   padding-top: 85px;
   margin: 10px 0 0;
 }
 @media only screen and (min-width: 48em) {
-  /* line 774, ../sass/includes/_theme.scss */
+  /* line 775, ../sass/includes/_theme.scss */
   .not-zoomed .single-page .page-content .content-header {
     padding-top: 4.375em;
   }
 }
-/* line 779, ../sass/includes/_theme.scss */
+/* line 780, ../sass/includes/_theme.scss */
 .single-page .page-content .content-header h1 {
   color: #333f47;
   font: 300 3em / 1.08333em "Roboto Condensed", sans-serif;
@@ -3365,12 +3366,12 @@ aside.highlight .social .twitter {
   text-transform: uppercase;
 }
 @media only screen and (min-width: 48em) {
-  /* line 785, ../sass/includes/_theme.scss */
+  /* line 786, ../sass/includes/_theme.scss */
   .not-zoomed .single-page .page-content .content-header h1 {
     font-size: 3em;
   }
 }
-/* line 791, ../sass/includes/_theme.scss */
+/* line 792, ../sass/includes/_theme.scss */
 .single-page .page-content .content-header .session-speaker {
   position: absolute;
   top: 0;
@@ -3378,7 +3379,7 @@ aside.highlight .social .twitter {
   font: 700 1.875em / 1.13333em "Roboto Condensed", sans-serif;
   text-transform: uppercase;
 }
-/* line 799, ../sass/includes/_theme.scss */
+/* line 800, ../sass/includes/_theme.scss */
 .single-page .page-content .content-header .session-meta {
   position: absolute;
   top: 2.1875em;
@@ -3386,29 +3387,29 @@ aside.highlight .social .twitter {
   color: #333f47;
   font: 400 1.125em / 1.11111em "Roboto Condensed", sans-serif;
 }
-/* line 806, ../sass/includes/_theme.scss */
+/* line 807, ../sass/includes/_theme.scss */
 .single-page .page-content .content-header .session-meta .date {
   display: block;
 }
-/* line 810, ../sass/includes/_theme.scss */
+/* line 811, ../sass/includes/_theme.scss */
 .single-page .page-content .content-header .session-meta .location:before {
   content: "/";
 }
 @media only screen and (min-width: 48em) {
-  /* line 814, ../sass/includes/_theme.scss */
+  /* line 815, ../sass/includes/_theme.scss */
   .not-zoomed .single-page .page-content .content-header .session-meta {
     top: 2.8125em;
   }
-  /* line 818, ../sass/includes/_theme.scss */
+  /* line 819, ../sass/includes/_theme.scss */
   .not-zoomed .single-page .page-content .content-header .session-meta .date {
     display: inline;
   }
-  /* line 822, ../sass/includes/_theme.scss */
+  /* line 823, ../sass/includes/_theme.scss */
   .not-zoomed .single-page .page-content .content-header .session-meta .time:before {
     content: "/";
   }
 }
-/* line 828, ../sass/includes/_theme.scss */
+/* line 829, ../sass/includes/_theme.scss */
 .single-page .page-content .content-header .language {
   display: -moz-inline-stack;
   display: inline-block;
@@ -3423,18 +3424,18 @@ aside.highlight .social .twitter {
   font-weight: bold;
   background-color: #e6f3fa;
 }
-/* line 841, ../sass/includes/_theme.scss */
+/* line 842, ../sass/includes/_theme.scss */
 .single-page .page-content .content h2 {
   margin: 1em 0 0.5em;
   color: #333f47;
   font: 300 1.875em / 1.13333em "Roboto Condensed", sans-serif;
   text-transform: uppercase;
 }
-/* line 848, ../sass/includes/_theme.scss */
+/* line 849, ../sass/includes/_theme.scss */
 .single-page .page-content .content .questions {
   font-size: 16px;
 }
-/* line 851, ../sass/includes/_theme.scss */
+/* line 852, ../sass/includes/_theme.scss */
 .single-page .page-content .content .questions li {
   margin: 10px 0;
   padding: 0 0 0 25px;
@@ -3446,13 +3447,13 @@ aside.highlight .social .twitter {
   background-position: center left;
 }
 @media only screen and (min-width: 48em) {
-  /* line 861, ../sass/includes/_theme.scss */
+  /* line 862, ../sass/includes/_theme.scss */
   .not-zoomed .single-page .page-content .content .questions li {
     margin: 20px 0;
     font-size: 1.125em;
   }
 }
-/* line 869, ../sass/includes/_theme.scss */
+/* line 870, ../sass/includes/_theme.scss */
 .single-page .page-content .content .tags {
   zoom: 1;
   margin-bottom: 20px;
@@ -3469,12 +3470,12 @@ aside.highlight .social .twitter {
 .single-page .page-content .content .tags:after {
   clear: both;
 }
-/* line 874, ../sass/includes/_theme.scss */
+/* line 875, ../sass/includes/_theme.scss */
 .single-page .page-content .content .tags li {
   float: left;
   margin: 0 5px 5px 0;
 }
-/* line 878, ../sass/includes/_theme.scss */
+/* line 879, ../sass/includes/_theme.scss */
 .single-page .page-content .content .tags li a, .single-page .page-content .content .tags li span {
   display: block;
   padding: 0 10px;
@@ -3484,7 +3485,7 @@ aside.highlight .social .twitter {
   text-transform: uppercase;
   background-color: #333f47;
 }
-/* line 891, ../sass/includes/_theme.scss */
+/* line 892, ../sass/includes/_theme.scss */
 .single-page .page-content p {
   color: #333f47;
   font: 400 1.125em / 1.33333em "Roboto", sans-serif;
@@ -3492,40 +3493,40 @@ aside.highlight .social .twitter {
   margin: 1em 0;
 }
 @media only screen and (min-width: 48em) {
-  /* line 897, ../sass/includes/_theme.scss */
+  /* line 898, ../sass/includes/_theme.scss */
   .not-zoomed .single-page .page-content p {
     font-size: 1.125em;
   }
 }
-/* line 903, ../sass/includes/_theme.scss */
+/* line 904, ../sass/includes/_theme.scss */
 .single-page .page-content .back-link {
   width: auto;
   float: left;
   display: none;
 }
-/* line 909, ../sass/includes/_theme.scss */
+/* line 910, ../sass/includes/_theme.scss */
 .single-page .page-content .back-link a {
   height: 40px;
 }
 @media only screen and (min-width: 72.938em) {
-  /* line 913, ../sass/includes/_theme.scss */
+  /* line 914, ../sass/includes/_theme.scss */
   .not-zoomed .single-page .page-content .back-link {
     display: block;
     margin: 20px 0 0;
   }
 }
-/* line 922, ../sass/includes/_theme.scss */
+/* line 923, ../sass/includes/_theme.scss */
 .single-page .page-content .sidebar h2 {
   color: #333f47;
   font: 700 1.375em / 1.09091em "Roboto Condensed", sans-serif;
   text-transform: uppercase;
 }
-/* line 930, ../sass/includes/_theme.scss */
+/* line 931, ../sass/includes/_theme.scss */
 .single-page .page-content .sidebar ul.subevents li {
   margin: 1em 0;
 }
 @media only screen and (min-width: 560px) {
-  /* line 933, ../sass/includes/_theme.scss */
+  /* line 934, ../sass/includes/_theme.scss */
   .not-zoomed .single-page .page-content .sidebar ul.subevents li {
     float: left;
     width: 48%;
@@ -3533,57 +3534,57 @@ aside.highlight .social .twitter {
   }
 }
 @media only screen and (min-width: 72.938em) {
-  /* line 940, ../sass/includes/_theme.scss */
+  /* line 941, ../sass/includes/_theme.scss */
   .not-zoomed .single-page .page-content .sidebar ul.subevents li {
     float: none;
     width: auto;
   }
 }
-/* line 947, ../sass/includes/_theme.scss */
+/* line 948, ../sass/includes/_theme.scss */
 .single-page .page-content .sidebar ul.subevents li .session-title a {
   color: #006b9f;
   font: 400 1.375em / 1.09091em "Roboto Condensed", sans-serif;
   text-decoration: none;
 }
-/* line 952, ../sass/includes/_theme.scss */
+/* line 953, ../sass/includes/_theme.scss */
 .single-page .page-content .sidebar ul.subevents li .session-title a:hover {
   text-decoration: underline;
 }
-/* line 958, ../sass/includes/_theme.scss */
+/* line 959, ../sass/includes/_theme.scss */
 .single-page .page-content .sidebar ul.subevents li .session-speaker {
   display: block;
   margin: 6px 0 4px;
   color: #333f47;
   font: 400 1.25em / 1.1em "Lusitana", sans-serif;
 }
-/* line 965, ../sass/includes/_theme.scss */
+/* line 966, ../sass/includes/_theme.scss */
 .single-page .page-content .sidebar ul.subevents li .session-meta {
   display: block;
   color: #333f47;
   font: 700 0.875em / 1.14286em "Roboto Condensed", sans-serif;
   text-transform: uppercase;
 }
-/* line 973, ../sass/includes/_theme.scss */
+/* line 974, ../sass/includes/_theme.scss */
 .single-page .page-content .sidebar ul.subevents li .session-time-slot:before,
 .single-page .page-content .sidebar ul.subevents li .session-room:before {
   content: "/";
 }
 
 @media only screen and (min-width: 1167px) {
-  /* line 985, ../sass/includes/_theme.scss */
+  /* line 986, ../sass/includes/_theme.scss */
   .not-zoomed .footer .footer-infos {
     padding: 20px 0;
   }
 }
 @media only screen and (min-width: 700px) {
-  /* line 992, ../sass/includes/_theme.scss */
+  /* line 993, ../sass/includes/_theme.scss */
   .not-zoomed .footer .l-col {
     float: left;
     width: 33.3333%;
   }
 }
 @media only screen and (min-width: 72.938em) {
-  /* line 997, ../sass/includes/_theme.scss */
+  /* line 998, ../sass/includes/_theme.scss */
   .not-zoomed .footer .l-col {
     float: left;
     width: 248px;
@@ -3591,7 +3592,7 @@ aside.highlight .social .twitter {
   }
 }
 @media only screen and (min-width: 700px) {
-  /* line 1006, ../sass/includes/_theme.scss */
+  /* line 1007, ../sass/includes/_theme.scss */
   .not-zoomed .footer .l-col.large {
     float: none;
     width: 100%;
@@ -3600,7 +3601,7 @@ aside.highlight .social .twitter {
   }
 }
 @media only screen and (min-width: 72.938em) {
-  /* line 1013, ../sass/includes/_theme.scss */
+  /* line 1014, ../sass/includes/_theme.scss */
   .not-zoomed .footer .l-col.large {
     float: left;
     width: 315px;
@@ -3610,7 +3611,7 @@ aside.highlight .social .twitter {
   }
 }
 @media only screen and (min-width: 560px) {
-  /* line 1024, ../sass/includes/_theme.scss */
+  /* line 1025, ../sass/includes/_theme.scss */
   .not-zoomed .footer .l-col.two-elements {
     float: right;
     width: 50%;
@@ -3618,7 +3619,7 @@ aside.highlight .social .twitter {
   }
 }
 @media only screen and (min-width: 700px) {
-  /* line 1030, ../sass/includes/_theme.scss */
+  /* line 1031, ../sass/includes/_theme.scss */
   .not-zoomed .footer .l-col.two-elements {
     float: left;
     width: 33.3333%;
@@ -3626,82 +3627,82 @@ aside.highlight .social .twitter {
   }
 }
 @media only screen and (min-width: 72.938em) {
-  /* line 1036, ../sass/includes/_theme.scss */
+  /* line 1037, ../sass/includes/_theme.scss */
   .not-zoomed .footer .l-col.two-elements {
     float: left;
     width: 248px;
     margin-top: 0;
   }
 }
-/* line 1044, ../sass/includes/_theme.scss */
+/* line 1045, ../sass/includes/_theme.scss */
 .footer .contact-element {
   margin: 5px 0 15px;
 }
-/* line 1047, ../sass/includes/_theme.scss */
+/* line 1048, ../sass/includes/_theme.scss */
 .footer .contact-element span {
   font-size: 1em;
 }
-/* line 1051, ../sass/includes/_theme.scss */
+/* line 1052, ../sass/includes/_theme.scss */
 .footer .contact-element .name {
   font-weight: 700;
 }
-/* line 1056, ../sass/includes/_theme.scss */
+/* line 1057, ../sass/includes/_theme.scss */
 .footer .contact-element .addressLocality,
 .footer .contact-element .postalCode {
   display: inline;
 }
-/* line 1061, ../sass/includes/_theme.scss */
+/* line 1062, ../sass/includes/_theme.scss */
 .footer .contact-element .link,
 .footer .contact-element .link a {
   text-transform: none;
 }
-/* line 1066, ../sass/includes/_theme.scss */
+/* line 1067, ../sass/includes/_theme.scss */
 .footer .social-medias {
   margin: 5px 0 10px;
 }
-/* line 1069, ../sass/includes/_theme.scss */
+/* line 1070, ../sass/includes/_theme.scss */
 .footer .social-medias a {
   display: block;
   float: left;
   margin-right: 5px;
   line-height: 0;
 }
-/* line 1078, ../sass/includes/_theme.scss */
+/* line 1079, ../sass/includes/_theme.scss */
 .footer h3,
 .footer .strong {
   color: #333f47;
   font: 700 1em / 1.25em "Roboto Condensed", sans-serif;
   text-transform: uppercase;
 }
-/* line 1084, ../sass/includes/_theme.scss */
+/* line 1085, ../sass/includes/_theme.scss */
 .footer a {
   color: #006b9f;
   font: 300 1em / 1.25em "Roboto Condensed", sans-serif;
   text-transform: uppercase;
   text-decoration: none;
 }
-/* line 1090, ../sass/includes/_theme.scss */
+/* line 1091, ../sass/includes/_theme.scss */
 .footer a:hover {
   text-decoration: underline;
 }
-/* line 1095, ../sass/includes/_theme.scss */
+/* line 1096, ../sass/includes/_theme.scss */
 .footer .footer-bar {
   margin: 5px -15px 0;
   padding: 15px 15px 0;
   border-top: 1px solid #333f47;
 }
-/* line 1100, ../sass/includes/_theme.scss */
+/* line 1101, ../sass/includes/_theme.scss */
 .footer .footer-bar .l-col > div {
   margin: 8px 0 0;
 }
 @media only screen and (min-width: 560px) {
-  /* line 1103, ../sass/includes/_theme.scss */
+  /* line 1104, ../sass/includes/_theme.scss */
   .not-zoomed .footer .footer-bar .l-col > div {
     margin: 0;
   }
 }
 @media only screen and (min-width: 72.938em) {
-  /* line 1108, ../sass/includes/_theme.scss */
+  /* line 1109, ../sass/includes/_theme.scss */
   .not-zoomed .footer .footer-bar .l-col > div {
     display: -moz-inline-stack;
     display: inline-block;
@@ -3710,26 +3711,26 @@ aside.highlight .social .twitter {
     zoom: 1;
     *display: inline;
   }
-  /* line 1112, ../sass/includes/_theme.scss */
+  /* line 1113, ../sass/includes/_theme.scss */
   .not-zoomed .footer .footer-bar .l-col > div + div {
     margin-left: 35px;
   }
 }
 @media only screen and (min-width: 560px) {
-  /* line 1119, ../sass/includes/_theme.scss */
+  /* line 1120, ../sass/includes/_theme.scss */
   .not-zoomed .footer .footer-bar .l-col {
     width: 50%;
     margin: 0;
   }
 }
 @media only screen and (min-width: 72.938em) {
-  /* line 1129, ../sass/includes/_theme.scss */
+  /* line 1130, ../sass/includes/_theme.scss */
   .not-zoomed .footer .footer-bar .archives h3 {
     float: left;
     margin-right: 20px;
   }
 }
-/* line 1136, ../sass/includes/_theme.scss */
+/* line 1137, ../sass/includes/_theme.scss */
 .footer .footer-bar .archives ul {
   zoom: 1;
 }
@@ -3744,36 +3745,36 @@ aside.highlight .social .twitter {
 .footer .footer-bar .archives ul:after {
   clear: both;
 }
-/* line 1139, ../sass/includes/_theme.scss */
+/* line 1140, ../sass/includes/_theme.scss */
 .footer .footer-bar .archives ul li {
   float: left;
 }
-/* line 1143, ../sass/includes/_theme.scss */
+/* line 1144, ../sass/includes/_theme.scss */
 .footer .footer-bar .archives ul li + li:before {
   content: "/";
   color: #006b9f;
   margin: 0 8px;
 }
 @media only screen and (min-width: 560px) {
-  /* line 1150, ../sass/includes/_theme.scss */
+  /* line 1151, ../sass/includes/_theme.scss */
   .not-zoomed .footer .footer-bar .archives {
     float: left;
   }
 }
 @media only screen and (min-width: 560px) {
-  /* line 1157, ../sass/includes/_theme.scss */
+  /* line 1158, ../sass/includes/_theme.scss */
   .not-zoomed .footer .footer-bar .right {
     float: right;
     text-align: right;
   }
 }
 
-/* line 1167, ../sass/includes/_theme.scss */
+/* line 1168, ../sass/includes/_theme.scss */
 .single-page .footer .l-section-wrapper {
   border-top: 1px solid #333f47;
 }
 @media only screen and (min-width: 72.938em) {
-  /* line 1170, ../sass/includes/_theme.scss */
+  /* line 1171, ../sass/includes/_theme.scss */
   .not-zoomed .single-page .footer .l-section-wrapper {
     margin-top: 30px;
   }
