@@ -101,8 +101,9 @@ class Conferencer_Shortcode_Session_Meta extends Conferencer_Shortcode {
 				  
 				  $terms = wp_get_post_terms($post->ID, 'theme', array("fields" => "slugs"));
 				  
+				  $output .= ' filter-all';
 				  if(!empty($terms)){
-  				  $output .= ' filter-all filter-'.implode(' filter-', $terms);
+  				  $output .= ' filter-'.implode(' filter-', $terms);
 				  }
 				  
 				  if($user_session_selected){
@@ -231,7 +232,7 @@ class Conferencer_Shortcode_Session_Meta extends Conferencer_Shortcode {
 						  
 						  if($image){
   					    $output_session .= '<span class="session-speaker-thumb"><!-- position: absolute -->';
-  						    $output_session .= '<img src="'.$image.'">';
+  						    $output_session .= '<img src="'.$image.'" alt="">';
   					    $output_session .= '</span>';
 					    }
 					    
