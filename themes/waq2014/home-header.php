@@ -168,9 +168,6 @@ foreach($feat_speakers as $feat_speaker){
                 $image = $img_url;
               }
             }
-            else{
-              $image = $img_url;
-            }
           }
           else{
             $image = $img_url;
