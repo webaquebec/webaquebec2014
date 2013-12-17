@@ -17,8 +17,6 @@ $sponsors_levels = get_posts( $sponsors_levels_args );
 
 $sponsors_output = "";
 foreach($sponsors_levels as $sponsors_level){
-  $sponsors_output .= '<section class="sponsors-group">';
-  $sponsors_output .= '<header><h3><span>'.$sponsors_level->post_title.'</span></h3></header>';
   
   $sponsors_args = array(
     	'posts_per_page'   => -1,
@@ -39,6 +37,8 @@ foreach($sponsors_levels as $sponsors_level){
   $sponsors = get_posts( $sponsors_args );
   
   if(!empty($sponsors)){
+    $sponsors_output .= '<section class="sponsors-group">';
+    $sponsors_output .= '<header><h3><span>'.$sponsors_level->post_title.'</span></h3></header>';
     $sponsors_output .= '<ul class="sponsors-list">';
     foreach($sponsors as $sponsor){
       $sponsors_output .= '<li itemscope itemtype="http://schema.org/Organization">';
@@ -66,10 +66,9 @@ foreach($sponsors_levels as $sponsors_level){
           $sponsors_output .= '</a>';
       $sponsors_output .= '</li>';
     }
-    $sponsors_output .= '</ul>';    
+    $sponsors_output .= '</ul>'; 
+    $sponsors_output .= '</section>';   
   }
-      
-  $sponsors_output .= '</section>';
 }
 ?>
 <!-- Partners section -->
