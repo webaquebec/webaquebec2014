@@ -206,7 +206,51 @@
 	}
 
 	.days-buttons{
-		display: none;
+		@include clearfix;
+		margin: 0;
+		padding: 20px 15px 0;
+		font-size: 0;
+		background-color: $c-bg-schedule-highlight;
+
+		@include respond-to( 1024px ){
+			padding: 0;
+			background-color: transparent;
+		}
+
+		button{
+			@include inline-block;
+			@include border-radius(3px);
+			@include box-sizing("border-box");
+			width: 32%;
+			width: calc(33.3333% - 2px);
+			padding: 7px 5px;
+			border: none;
+			margin: 8px 1px;
+			font-size: 16px;
+			cursor: pointer;
+			color: $c-schedule-days-buttons;
+			background-color: $c-bg-schedule-days-buttons;
+
+			@include respond-to( 768px ){
+				padding: 15px 5px;
+			}
+
+			span{
+				font: $font-schedule-days-buttons;
+			}
+		}
+
+		button.isActive{
+			margin: 0 1px 0;
+			padding: 15px 5px 13px;
+			font-weight: bold;
+			background-color: $c-bg-schedule-days-buttons-active;
+
+			@include respond-to( 768px ){
+				margin: 0 1px 2px;
+				padding: 23px 5px 21px;
+			}
+		}
 	}
 
 	.time-slot{
@@ -470,12 +514,7 @@
 		}
 
 		.session-bookmark.isActive{
-			@include imgReplacement("icon-bookmark-small-active.png");
-
-			.not-zoomed & {
-			@include respond-to( 72.938em ){
-				@include imgReplacement("icon-bookmark-big-active.png");
-			}}
+			@include imgReplacement("icon-bookmark-big-active.png");
 		}
 
 		&.no-speaker .session-content{
