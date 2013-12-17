@@ -14,6 +14,16 @@ $questions_email = get_field('questions_email',$footerHomePage->ID);
 $medias_name = get_field('medias_name',$footerHomePage->ID);
 $medias_telephone = get_field('medias_telephone',$footerHomePage->ID);
 $medias_email = get_field('medias_email',$footerHomePage->ID);
+
+
+
+$waq_place_name = get_field('waq_place_name',$footerHomePage->ID);
+$waq_place_address = get_field('waq_place_address',$footerHomePage->ID);
+$waq_place_city = get_field('waq_place_city',$footerHomePage->ID);
+$waq_place_state = get_field('waq_place_state',$footerHomePage->ID);
+
+$waq_google_maps = $waq_place_name.' '.$waq_place_address.' '.$waq_place_city.', '.$waq_place_state;
+$waq_google_maps = urlencode(str_replace(' ', '+', $waq_google_maps));
 ?>
 <!-- Place section -->
 <section id="<?php echo $post->post_name; ?>" class="place">
@@ -21,7 +31,7 @@ $medias_email = get_field('medias_email',$footerHomePage->ID);
         <div>
             <header>
                 <h2><span>Lieu de</span> <span>l'événement</span></h2>
-                <a href="https://maps.google.ca/maps?q=ESPACE+400E+BELL+100,+QUAI+SAINT-ANDR%C3%89+QU%C3%89BEC,+QC&hl=fr&ie=UTF8&hq=ESPACE+400E+BELL+100,+QUAI+SAINT-ANDR%C3%89+QU%C3%89BEC,+QC&t=m&z=16&iwloc=A" class="route">Obtenir l'itinéraire</a>
+                <a href="https://maps.google.ca/maps?q=<?php echo $waq_google_maps; ?>&hl=fr&ie=UTF8&hq=<?php echo $waq_google_maps; ?>&t=m&z=16&iwloc=A" class="route">Obtenir l'itinéraire</a>
             </header>
     
             <div class="place-wrapper">

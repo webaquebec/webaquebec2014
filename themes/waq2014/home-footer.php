@@ -10,8 +10,8 @@ $waq_place_city = get_field('waq_place_city',$post->ID);
 $waq_place_state = get_field('waq_place_state',$post->ID);
 $waq_place_postal_code = get_field('waq_place_postal_code',$post->ID);
 
-$waq_google_maps = $waq_place_address.', '.$waq_place_city.', '.$waq_place_state.', '.$waq_place_postal_code.', Canada';
-$waq_google_maps = str_replace(' ', '+', $waq_google_maps);
+$waq_google_maps = $waq_place_name.' '.$waq_place_address.' '.$waq_place_city.', '.$waq_place_state;
+$waq_google_maps = urlencode(str_replace(' ', '+', $waq_google_maps));
 
 $questions_name = get_field('questions_name',$post->ID);
 $questions_telephone = get_field('questions_telephone',$post->ID);
@@ -72,7 +72,7 @@ foreach ($archives as $archive) {
                         <span class="streetAddress" itemprop="streetAddress"><?php echo $waq_place_address; ?></span>
                         <span class="addressLocality" itemprop="addressLocality"><?php echo $waq_place_city; ?></span> (<?php echo $waq_place_state; ?>) <span class="postalCode" itemprop="postalCode"><?php echo $waq_place_postal_code; ?></span>
                     </span>
-                    <span class="link"><a href="https://maps.google.com/maps?output=classic&f=d&daddr=<?php echo $waq_google_maps; ?>">Comment s'y rendre</a></span>
+                    <span class="link"><a href="https://maps.google.ca/maps?q=<?php echo $waq_google_maps; ?>&hl=fr&ie=UTF8&hq=<?php echo $waq_google_maps; ?>&t=m&z=16&iwloc=A">Comment s'y rendre</a></span>
                 </div>
             </div>
 
