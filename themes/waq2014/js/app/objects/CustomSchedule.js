@@ -92,9 +92,7 @@ var CustomSchedule = (function($, window, document, undefined) {
               }
             }
 
-            if(fb_conf.appId != 'XXXXXXXXXXXXXXXX'){
-                self.bindEvents();
-            }
+            self.bindEvents();
         },
 
         bindEvents: function(){
