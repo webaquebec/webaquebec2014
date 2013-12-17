@@ -243,7 +243,7 @@
                             <button class="btn-toggle-filters"><span class="visuallyhidden">Ouvrir les filtres</span></button>
                         </div>
                         <ul>
-                            <li><button data-slug="all">Tous</button></li><li><button data-slug="analytics">Analytics</button></li><li><button data-slug="contenu">Contenu</button></li><li><button data-slug="design">Design</button></li><li><button data-slug="entreprise">Entreprise</button></li><li><button data-slug="medias-sociaux">Médias Sociaux</button></li><li><button data-slug="mobile">Mobile</button></li><li><button data-slug="programmation">Programmation</button></li><li><button data-slug="ux">UX</button></li>
+                            <li><button data-slug="filter-all">Tous</button></li><li><button data-slug="filter-analytics">Analytics</button></li><li><button data-slug="filter-contenu">Contenu</button></li><li><button data-slug="filter-design">Design</button></li><li><button data-slug="filter-entreprise">Entreprise</button></li><li><button data-slug="filter-medias-sociaux">Médias Sociaux</button></li><li><button data-slug="filter-mobile">Mobile</button></li><li><button data-slug="filter-programmation">Programmation</button></li><li><button data-slug="filter-ux">UX</button></li>
                         </ul>
                     </div>
                 </header>

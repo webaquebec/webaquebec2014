@@ -191,8 +191,8 @@ var Schedule = ( function( $, window, document, undefined ) {
         // Filter sessions
         filterSessions: function( tag ){
             var self = this,
-                filteredSessions = self.sessions.filter( '.filter-' + tag + ':not(.break)' ),
-                unfilteredSessions = self.sessions.filter( ':not(.filter-' + tag + '):not(.break)' );
+                filteredSessions = self.sessions.filter( '.' + tag + ':not(.break)' ),
+                unfilteredSessions = self.sessions.filter( ':not(.' + tag + '):not(.break)' );
 
             unfilteredSessions.removeClass('filtered');
             filteredSessions.addClass('filtered');
