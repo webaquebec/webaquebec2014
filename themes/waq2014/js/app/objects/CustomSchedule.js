@@ -132,7 +132,7 @@ var CustomSchedule = (function($, window, document, undefined) {
 
         },
 
-        facebookConnect: function(){
+        facebookConnect: function(callback){
             var self = this;
 
             FB.getLoginStatus(function(response) {
