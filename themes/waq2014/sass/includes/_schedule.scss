@@ -98,6 +98,18 @@
 		}}
 	}
 
+	caption{
+		display: none;
+
+		.no-js &{
+			display: table-caption;
+			color: $c-schedule-rooms;
+			font: $font-schedule-rooms;
+			font-size: emify(30px);
+			padding-bottom: 20px;
+		}
+	}
+
 	thead{
 		display: none;
 
