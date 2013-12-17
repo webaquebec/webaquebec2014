@@ -80,6 +80,22 @@ var LIBEO;
             });
         });
 
+        // Retour en haut du site
+        $('.snapmenu-logo').on('click', function(e){
+            var self = this,
+                offset = 0;
+
+            $('html, body').animate({
+                scrollTop: offset
+            }, function(){
+                window.location.hash = '';
+                $( '.home' ).find('h1').eq(0).attr('tabindex', '-1').focus();
+            });
+
+            e.preventDefault();
+            return false;
+        });
+
     });
 
 })(jQuery, window, document);

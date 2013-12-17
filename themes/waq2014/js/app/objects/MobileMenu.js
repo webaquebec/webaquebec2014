@@ -74,7 +74,7 @@ var MobileMenu = ( function( $, window, document, undefined ) {
 
             if( $( window ).width() < 1167 ){
 
-                //self.adjustMenuHeight();
+                self.adjustMenuHeight();
 
                 self.mobilemenu.addClass( WAQ.Constants.isOpenClass );
 

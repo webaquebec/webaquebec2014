@@ -136,10 +136,14 @@
 		font: $font-navmain-subscribe-big;
 		text-decoration: none;
 		background-color: $c-bg-navmain-subscribe;
+
+		&:hover{
+			background-color: #e0440e;
+		}
 	}}
 
 	&:focus{
-		outline-color: $c-navmain-subscribe;
+		outline-color: $c-navmain-subscribe !important;
 	}
 }
 
@@ -364,6 +368,10 @@
 		display: block;
 		text-transform: uppercase;
 		color: $c-event-subscribe;
+
+		&:hover span{
+			background-color: #e0440e;
+		}
 	}
 
 	span{
@@ -411,8 +419,13 @@
 		}
 
 		a{
+			color: $c-event-speakers-job;
 			display: block;
 			text-decoration: none;
+
+			&:hover .name{
+				text-decoration: underline;
+			}
 		}
 
 		.not-zoomed & {
@@ -541,6 +554,15 @@
 		.not-zoomed & {
 		@include respond-to( 48.000em ){
 			display: block !important;
+
+			&:hover .article-thumb:after{
+				display: none;
+			}
+
+			/* &:hover .article-title a{
+				color: white;
+				text-decoration: underline;
+			} */
 		}}
 	}
 
@@ -565,6 +587,7 @@
 			text-decoration: none;
 
 			&:hover{
+				color: white;
 				text-decoration: underline;
 			}
 		}
