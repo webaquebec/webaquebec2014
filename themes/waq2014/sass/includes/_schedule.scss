@@ -1,6 +1,44 @@
 // Schedule
 // ------------------------------------
 
+.facebook-connect{
+	@include clearfix;
+	width: 100%;
+	clear: both;
+	margin: 0 0 30px;
+	position: relative;
+	top: -5px;
+	font: 400 emify(15px, 17px, 16px) 'Roboto', sans-serif;
+
+	em{
+		font-style: italic;
+	}
+
+	p{
+		padding: 5px 0 0 20px;
+		float: left;
+	}
+
+	button{
+		float: left;
+		border: none;
+		padding: 8px 15px;
+		margin: 2px 0 0;
+		font: $font-newsletter-input-submit;
+		color: $c-newsletter-input-submit;
+		background-color: $c-linkblue;
+		font-weight: 400;
+		cursor: pointer;
+
+		&:hover{
+			padding: 5px 12px;
+			background-color: $c-newsletter-input-submit;
+			color: $c-linkblue;
+			border: 3px solid $c-linkblue;
+		}
+	}
+}
+
 .js .schedule-wrapper .js-slider{
 	$width 				: 100%;
 	$margin 			: 0;

@@ -1649,6 +1649,56 @@ aside.highlight .social .twitter {
 }
 
 /* line 4, ../sass/includes/_schedule.scss */
+.facebook-connect {
+  zoom: 1;
+  width: 100%;
+  clear: both;
+  margin: 0 0 30px;
+  position: relative;
+  top: -5px;
+  font: 400 0.9375em / 1.13333em "Roboto", sans-serif;
+}
+/* line 46, ../sass/config/_mixins.scss */
+.facebook-connect:before, .facebook-connect:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+/* line 52, ../sass/config/_mixins.scss */
+.facebook-connect:after {
+  clear: both;
+}
+/* line 13, ../sass/includes/_schedule.scss */
+.facebook-connect em {
+  font-style: italic;
+}
+/* line 17, ../sass/includes/_schedule.scss */
+.facebook-connect p {
+  padding: 5px 0 0 20px;
+  float: left;
+}
+/* line 22, ../sass/includes/_schedule.scss */
+.facebook-connect button {
+  float: left;
+  border: none;
+  padding: 8px 15px;
+  margin: 2px 0 0;
+  font: 700 1em / 1.5em "Roboto Condensed", sans-serif;
+  color: white;
+  background-color: #006b9f;
+  font-weight: 400;
+  cursor: pointer;
+}
+/* line 33, ../sass/includes/_schedule.scss */
+.facebook-connect button:hover {
+  padding: 5px 12px;
+  background-color: white;
+  color: #006b9f;
+  border: 3px solid #006b9f;
+}
+
+/* line 42, ../sass/includes/_schedule.scss */
 .js .schedule-wrapper .js-slider {
   width: 100%;
 }
@@ -1680,12 +1730,12 @@ aside.highlight .social .twitter {
   float: left;
   position: relative;
 }
-/* line 11, ../sass/includes/_schedule.scss */
+/* line 49, ../sass/includes/_schedule.scss */
 .js .schedule-wrapper .js-slider .slide {
   width: 33.3333%;
 }
 
-/* line 16, ../sass/includes/_schedule.scss */
+/* line 54, ../sass/includes/_schedule.scss */
 .js .schedule-wrapper .days-buttons {
   zoom: 1;
   display: block;
@@ -1704,13 +1754,13 @@ aside.highlight .social .twitter {
   clear: both;
 }
 @media only screen and (min-width: 64em) {
-  /* line 24, ../sass/includes/_schedule.scss */
+  /* line 62, ../sass/includes/_schedule.scss */
   .not-zoomed .js .schedule-wrapper .days-buttons {
     padding: 0;
     background-color: transparent;
   }
 }
-/* line 30, ../sass/includes/_schedule.scss */
+/* line 68, ../sass/includes/_schedule.scss */
 .js .schedule-wrapper .days-buttons button {
   display: -moz-inline-stack;
   display: inline-block;
@@ -1738,22 +1788,22 @@ aside.highlight .social .twitter {
   background-color: #006b9f;
 }
 @media only screen and (min-width: 48em) {
-  /* line 45, ../sass/includes/_schedule.scss */
+  /* line 83, ../sass/includes/_schedule.scss */
   .not-zoomed .js .schedule-wrapper .days-buttons button {
     padding: 15px 5px;
   }
 }
 @media only screen and (min-width: 72.938em) {
-  /* line 50, ../sass/includes/_schedule.scss */
+  /* line 88, ../sass/includes/_schedule.scss */
   .not-zoomed .js .schedule-wrapper .days-buttons button {
     width: 377px;
   }
 }
-/* line 55, ../sass/includes/_schedule.scss */
+/* line 93, ../sass/includes/_schedule.scss */
 .js .schedule-wrapper .days-buttons button span {
   font: 400 1em / 1.125em "Roboto", sans-serif;
 }
-/* line 60, ../sass/includes/_schedule.scss */
+/* line 98, ../sass/includes/_schedule.scss */
 .js .schedule-wrapper .days-buttons button.isActive {
   position: relative;
   margin: 0 1px 0;
@@ -1774,33 +1824,33 @@ aside.highlight .social .twitter {
   } */
 }
 @media only screen and (min-width: 48em) {
-  /* line 67, ../sass/includes/_schedule.scss */
+  /* line 105, ../sass/includes/_schedule.scss */
   .not-zoomed .js .schedule-wrapper .days-buttons button.isActive {
     margin: 0 1px 2px;
     padding: 23px 5px 21px;
   }
 }
 
-/* line 88, ../sass/includes/_schedule.scss */
+/* line 126, ../sass/includes/_schedule.scss */
 .schedule-wrapper {
   margin: 0 -15px 40px;
 }
-/* line 91, ../sass/includes/_schedule.scss */
+/* line 129, ../sass/includes/_schedule.scss */
 .schedule-wrapper table {
   display: block;
 }
 @media only screen and (min-width: 64em) {
-  /* line 94, ../sass/includes/_schedule.scss */
+  /* line 132, ../sass/includes/_schedule.scss */
   .not-zoomed .schedule-wrapper table {
     display: table;
     width: 100%;
   }
 }
-/* line 101, ../sass/includes/_schedule.scss */
+/* line 139, ../sass/includes/_schedule.scss */
 .schedule-wrapper caption {
   display: none;
 }
-/* line 104, ../sass/includes/_schedule.scss */
+/* line 142, ../sass/includes/_schedule.scss */
 .no-js .schedule-wrapper caption {
   display: table-caption;
   color: #333f47;
@@ -1808,59 +1858,59 @@ aside.highlight .social .twitter {
   font-size: 1.875em;
   padding-bottom: 20px;
 }
-/* line 113, ../sass/includes/_schedule.scss */
+/* line 151, ../sass/includes/_schedule.scss */
 .schedule-wrapper thead {
   display: none;
 }
 @media only screen and (min-width: 64em) {
-  /* line 116, ../sass/includes/_schedule.scss */
+  /* line 154, ../sass/includes/_schedule.scss */
   .not-zoomed .schedule-wrapper thead {
     display: table-header-group;
   }
 }
-/* line 122, ../sass/includes/_schedule.scss */
+/* line 160, ../sass/includes/_schedule.scss */
 .schedule-wrapper tbody {
   display: block;
 }
 @media only screen and (min-width: 64em) {
-  /* line 125, ../sass/includes/_schedule.scss */
+  /* line 163, ../sass/includes/_schedule.scss */
   .not-zoomed .schedule-wrapper tbody {
     display: table-row-group;
   }
 }
-/* line 131, ../sass/includes/_schedule.scss */
+/* line 169, ../sass/includes/_schedule.scss */
 .schedule-wrapper tr {
   display: block;
 }
 @media only screen and (min-width: 64em) {
-  /* line 134, ../sass/includes/_schedule.scss */
+  /* line 172, ../sass/includes/_schedule.scss */
   .not-zoomed .schedule-wrapper tr {
     display: table-row;
   }
 }
-/* line 140, ../sass/includes/_schedule.scss */
+/* line 178, ../sass/includes/_schedule.scss */
 .schedule-wrapper th {
   display: block;
 }
 @media only screen and (min-width: 64em) {
-  /* line 143, ../sass/includes/_schedule.scss */
+  /* line 181, ../sass/includes/_schedule.scss */
   .not-zoomed .schedule-wrapper th {
     display: table-cell;
   }
 }
-/* line 149, ../sass/includes/_schedule.scss */
+/* line 187, ../sass/includes/_schedule.scss */
 .schedule-wrapper td {
   display: block;
   border-bottom: 1px solid #dfe5e8;
 }
 @media only screen and (min-width: 64em) {
-  /* line 153, ../sass/includes/_schedule.scss */
+  /* line 191, ../sass/includes/_schedule.scss */
   .not-zoomed .schedule-wrapper td {
     display: table-cell;
     vertical-align: middle;
   }
 }
-/* line 161, ../sass/includes/_schedule.scss */
+/* line 199, ../sass/includes/_schedule.scss */
 .schedule-wrapper .slide:first-child,
 .schedule-wrapper .slide:first-child th {
   position: relative;
@@ -1868,13 +1918,13 @@ aside.highlight .social .twitter {
   background-color: white;
 }
 @media only screen and (min-width: 64em) {
-  /* line 170, ../sass/includes/_schedule.scss */
+  /* line 208, ../sass/includes/_schedule.scss */
   .not-zoomed .schedule-wrapper .day-wrapper {
     padding-top: 30px;
     background-color: white;
   }
 }
-/* line 177, ../sass/includes/_schedule.scss */
+/* line 215, ../sass/includes/_schedule.scss */
 .schedule-wrapper th {
   color: #333f47;
   font: 700 1.125em / 1.11111em "Roboto Condensed", sans-serif;
@@ -1885,27 +1935,27 @@ aside.highlight .social .twitter {
   background-position: 0;
   border-bottom: 1px solid #dfe5e8;
 }
-/* line 188, ../sass/includes/_schedule.scss */
+/* line 226, ../sass/includes/_schedule.scss */
 .schedule-wrapper th.column_salle-libeo {
   background-image: url("../img/bg-schedule-libeo.png");
 }
-/* line 192, ../sass/includes/_schedule.scss */
+/* line 230, ../sass/includes/_schedule.scss */
 .schedule-wrapper th.column_salle-ixmedia {
   background-image: url("../img/bg-schedule-ixmedia.png");
 }
-/* line 196, ../sass/includes/_schedule.scss */
+/* line 234, ../sass/includes/_schedule.scss */
 .schedule-wrapper th.column_salle-bell {
   background-image: url("../img/bg-schedule-bell.png");
 }
-/* line 200, ../sass/includes/_schedule.scss */
+/* line 238, ../sass/includes/_schedule.scss */
 .schedule-wrapper th.column_salle-deloitte {
   background-image: url("../img/bg-schedule-deloitte.png");
 }
-/* line 204, ../sass/includes/_schedule.scss */
+/* line 242, ../sass/includes/_schedule.scss */
 .schedule-wrapper th:first-child {
   background: none;
 }
-/* line 208, ../sass/includes/_schedule.scss */
+/* line 246, ../sass/includes/_schedule.scss */
 .schedule-wrapper .days-buttons {
   zoom: 1;
   margin: 0;
@@ -1925,13 +1975,13 @@ aside.highlight .social .twitter {
   clear: both;
 }
 @media only screen and (min-width: 1024px) {
-  /* line 208, ../sass/includes/_schedule.scss */
+  /* line 246, ../sass/includes/_schedule.scss */
   .schedule-wrapper .days-buttons {
     padding: 0;
     background-color: transparent;
   }
 }
-/* line 220, ../sass/includes/_schedule.scss */
+/* line 258, ../sass/includes/_schedule.scss */
 .schedule-wrapper .days-buttons button {
   display: -moz-inline-stack;
   display: inline-block;
@@ -1958,16 +2008,16 @@ aside.highlight .social .twitter {
   background-color: #006b9f;
 }
 @media only screen and (min-width: 768px) {
-  /* line 220, ../sass/includes/_schedule.scss */
+  /* line 258, ../sass/includes/_schedule.scss */
   .schedule-wrapper .days-buttons button {
     padding: 15px 5px;
   }
 }
-/* line 238, ../sass/includes/_schedule.scss */
+/* line 276, ../sass/includes/_schedule.scss */
 .schedule-wrapper .days-buttons button span {
   font: 400 1em / 1.125em "Roboto", sans-serif;
 }
-/* line 243, ../sass/includes/_schedule.scss */
+/* line 281, ../sass/includes/_schedule.scss */
 .schedule-wrapper .days-buttons button.isActive {
   margin: 0 1px 0;
   padding: 15px 5px 13px;
@@ -1975,13 +2025,13 @@ aside.highlight .social .twitter {
   background-color: #333f47;
 }
 @media only screen and (min-width: 768px) {
-  /* line 243, ../sass/includes/_schedule.scss */
+  /* line 281, ../sass/includes/_schedule.scss */
   .schedule-wrapper .days-buttons button.isActive {
     margin: 0 1px 2px;
     padding: 23px 5px 21px;
   }
 }
-/* line 256, ../sass/includes/_schedule.scss */
+/* line 294, ../sass/includes/_schedule.scss */
 .schedule-wrapper .time-slot {
   position: relative;
   padding: 20px 15px 8px;
@@ -1992,7 +2042,7 @@ aside.highlight .social .twitter {
   vertical-align: top;
 }
 @media only screen and (min-width: 64em) {
-  /* line 265, ../sass/includes/_schedule.scss */
+  /* line 303, ../sass/includes/_schedule.scss */
   .not-zoomed .schedule-wrapper .time-slot {
     width: 7%;
     text-align: center;
@@ -2001,12 +2051,12 @@ aside.highlight .social .twitter {
   }
 }
 @media only screen and (min-width: 64em) {
-  /* line 274, ../sass/includes/_schedule.scss */
+  /* line 312, ../sass/includes/_schedule.scss */
   .not-zoomed .schedule-wrapper .time-slot .time-slot-end {
     display: none;
   }
 }
-/* line 281, ../sass/includes/_schedule.scss */
+/* line 319, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session {
   background-color: white;
   background-image: url("../img/bg-schedule-default.png");
@@ -2018,23 +2068,23 @@ aside.highlight .social .twitter {
   transition: opacity, 0.3s;
 }
 @media only screen and (min-width: 64em) {
-  /* line 288, ../sass/includes/_schedule.scss */
+  /* line 326, ../sass/includes/_schedule.scss */
   .not-zoomed .schedule-wrapper .session {
     width: 23.25%;
   }
 }
-/* line 294, ../sass/includes/_schedule.scss */
+/* line 332, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session .session-wrapper {
   position: relative;
 }
-/* line 298, ../sass/includes/_schedule.scss */
+/* line 336, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session .session-content {
   padding: 1.875em 2.1875em 0.75em 1.5625em;
   background-repeat: repeat-y;
   background-position: center left;
 }
 @media only screen and (min-width: 64em) {
-  /* line 303, ../sass/includes/_schedule.scss */
+  /* line 341, ../sass/includes/_schedule.scss */
   .not-zoomed .schedule-wrapper .session .session-content {
     padding: 1.25em 2.1875em 0em 1.5625em;
     display: table-cell;
@@ -2043,57 +2093,57 @@ aside.highlight .social .twitter {
     width: 25em;
   }
 }
-/* line 313, ../sass/includes/_schedule.scss */
+/* line 351, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session .session-content-wrapper {
   position: relative;
 }
-/* line 317, ../sass/includes/_schedule.scss */
+/* line 355, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session .session-title {
   font: 400 1.125em / 1.11111em "Roboto Condensed", sans-serif;
 }
-/* line 320, ../sass/includes/_schedule.scss */
+/* line 358, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session .session-title a {
   text-decoration: none;
   color: #006b9f;
 }
-/* line 324, ../sass/includes/_schedule.scss */
+/* line 362, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session .session-title a:hover {
   text-decoration: underline;
 }
-/* line 328, ../sass/includes/_schedule.scss */
+/* line 366, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session .session-title a:focus {
   display: block;
 }
-/* line 335, ../sass/includes/_schedule.scss */
+/* line 373, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session .session-speaker,
 .schedule-wrapper .session .session-description {
   display: block;
   color: #333f47;
   font: 400 1em / 1.25em "Lusitana", sans-serif;
 }
-/* line 343, ../sass/includes/_schedule.scss */
+/* line 381, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session span.session-speaker,
 .schedule-wrapper .session .session-description,
 .schedule-wrapper .session .session-speaker figcaption {
   position: absolute;
   top: -1.25em;
 }
-/* line 348, ../sass/includes/_schedule.scss */
+/* line 386, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session.no-speaker .session-content {
   padding: 0.75em 4.0625em 0.75em 1.5625em;
 }
 @media only screen and (min-width: 64em) {
-  /* line 351, ../sass/includes/_schedule.scss */
+  /* line 389, ../sass/includes/_schedule.scss */
   .not-zoomed .schedule-wrapper .session.no-speaker .session-content {
     padding: 0em 2.5em 0em 1.5625em;
     height: 6.875em;
   }
 }
-/* line 358, ../sass/includes/_schedule.scss */
+/* line 396, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session .session-speaker-thumb {
   display: none;
 }
-/* line 362, ../sass/includes/_schedule.scss */
+/* line 400, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session .session-room {
   display: block;
   padding: 0.5em 0em 0em;
@@ -2103,18 +2153,18 @@ aside.highlight .social .twitter {
   text-transform: uppercase;
 }
 @media only screen and (min-width: 64em) {
-  /* line 370, ../sass/includes/_schedule.scss */
+  /* line 408, ../sass/includes/_schedule.scss */
   .not-zoomed .schedule-wrapper .session .session-room {
     display: none;
     padding: 0;
   }
 }
-/* line 377, ../sass/includes/_schedule.scss */
+/* line 415, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session .session-time-slot {
   display: none;
 }
 @media only screen and (min-width: 64em) {
-  /* line 380, ../sass/includes/_schedule.scss */
+  /* line 418, ../sass/includes/_schedule.scss */
   .not-zoomed .schedule-wrapper .session .session-time-slot {
     display: -moz-inline-stack;
     display: inline-block;
@@ -2126,7 +2176,7 @@ aside.highlight .social .twitter {
     font: 400 1.125em / 1.33333em "Roboto Condensed", sans-serif;
   }
 }
-/* line 388, ../sass/includes/_schedule.scss */
+/* line 426, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session .session-bookmark {
   position: absolute;
   top: 0;
@@ -2141,7 +2191,7 @@ aside.highlight .social .twitter {
   height: 31px;
   width: 21px;
 }
-/* line 398, ../sass/includes/_schedule.scss */
+/* line 436, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session .session-bookmark.isActive {
   background-image: url("../img/icon-bookmark-small-active.png");
   background-repeat: no-repeat;
@@ -2151,29 +2201,29 @@ aside.highlight .social .twitter {
   width: 21px;
 }
 @media only screen and (min-width: 64em) {
-  /* line 405, ../sass/includes/_schedule.scss */
+  /* line 443, ../sass/includes/_schedule.scss */
   .not-zoomed .schedule-wrapper .session[rowspan="2"] .session-content {
     height: 12.5625em;
   }
 }
 @media only screen and (min-width: 64em) {
-  /* line 412, ../sass/includes/_schedule.scss */
+  /* line 450, ../sass/includes/_schedule.scss */
   .not-zoomed .schedule-wrapper .session[rowspan="3"] .session-content {
     height: 18.875em;
   }
 }
 @media only screen and (min-width: 64em) {
-  /* line 419, ../sass/includes/_schedule.scss */
+  /* line 457, ../sass/includes/_schedule.scss */
   .not-zoomed .schedule-wrapper .session[rowspan="4"] .session-content {
     height: 25.1875em;
   }
 }
-/* line 425, ../sass/includes/_schedule.scss */
+/* line 463, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session.keynote {
   background-color: #e6f3fa;
 }
 @media only screen and (min-width: 64em) {
-  /* line 428, ../sass/includes/_schedule.scss */
+  /* line 466, ../sass/includes/_schedule.scss */
   .not-zoomed .schedule-wrapper .session.keynote {
     padding: 15px;
     background-color: white;
@@ -2181,12 +2231,12 @@ aside.highlight .social .twitter {
     border-left: 1px solid #dfe5e8;
   }
 }
-/* line 436, ../sass/includes/_schedule.scss */
+/* line 474, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session.keynote .session-content {
   padding: 30px 35px 12px 25px;
 }
 @media only screen and (min-width: 64em) {
-  /* line 439, ../sass/includes/_schedule.scss */
+  /* line 477, ../sass/includes/_schedule.scss */
   .not-zoomed .schedule-wrapper .session.keynote .session-content {
     width: 2000px;
     height: 8.25em;
@@ -2194,40 +2244,40 @@ aside.highlight .social .twitter {
     background-color: #e6f3fa;
   }
 }
-/* line 448, ../sass/includes/_schedule.scss */
+/* line 486, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session.keynote.speaker-thumb .session-content {
   padding: 1.875em 35px 0.75em 120px;
 }
 @media only screen and (min-width: 48em) {
-  /* line 451, ../sass/includes/_schedule.scss */
+  /* line 489, ../sass/includes/_schedule.scss */
   .not-zoomed .schedule-wrapper .session.keynote.speaker-thumb .session-content {
     padding: 1.875em 35px 0.75em 130px;
   }
 }
 @media only screen and (min-width: 64em) {
-  /* line 456, ../sass/includes/_schedule.scss */
+  /* line 494, ../sass/includes/_schedule.scss */
   .not-zoomed .schedule-wrapper .session.keynote.speaker-thumb .session-content {
     padding: 1.75em 65px 0em 230px;
   }
 }
-/* line 462, ../sass/includes/_schedule.scss */
+/* line 500, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session.keynote .session-title {
   display: block;
   font: 400 1.375em / 1.09091em "Roboto Condensed", sans-serif;
 }
 @media only screen and (min-width: 64em) {
-  /* line 466, ../sass/includes/_schedule.scss */
+  /* line 504, ../sass/includes/_schedule.scss */
   .not-zoomed .schedule-wrapper .session.keynote .session-title {
     font-size: 1.875em;
   }
 }
-/* line 472, ../sass/includes/_schedule.scss */
+/* line 510, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session.keynote .session-speaker {
   top: -1.75em;
   font: 400 1.125em / 2em "Lusitana", sans-serif;
 }
 @media only screen and (min-width: 64em) {
-  /* line 478, ../sass/includes/_schedule.scss */
+  /* line 516, ../sass/includes/_schedule.scss */
   .not-zoomed .schedule-wrapper .session.keynote .session-room {
     display: -moz-inline-stack;
     display: inline-block;
@@ -2238,7 +2288,7 @@ aside.highlight .social .twitter {
     font: 700 1.125em / 1.33333em "Roboto Condensed", sans-serif;
   }
 }
-/* line 485, ../sass/includes/_schedule.scss */
+/* line 523, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session.keynote .session-speaker-thumb {
   display: block;
   position: absolute;
@@ -2248,7 +2298,7 @@ aside.highlight .social .twitter {
   max-height: 92px;
 }
 @media only screen and (min-width: 48em) {
-  /* line 492, ../sass/includes/_schedule.scss */
+  /* line 530, ../sass/includes/_schedule.scss */
   .not-zoomed .schedule-wrapper .session.keynote .session-speaker-thumb {
     top: 0;
     max-width: 100px;
@@ -2256,14 +2306,14 @@ aside.highlight .social .twitter {
   }
 }
 @media only screen and (min-width: 64em) {
-  /* line 499, ../sass/includes/_schedule.scss */
+  /* line 537, ../sass/includes/_schedule.scss */
   .not-zoomed .schedule-wrapper .session.keynote .session-speaker-thumb {
     top: 0;
     max-width: 187px;
     max-height: 160px;
   }
 }
-/* line 507, ../sass/includes/_schedule.scss */
+/* line 545, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session.keynote .session-bookmark {
   background-image: url("../img/icon-bookmark-small.png");
   background-repeat: no-repeat;
@@ -2273,7 +2323,7 @@ aside.highlight .social .twitter {
   width: 21px;
 }
 @media only screen and (min-width: 72.938em) {
-  /* line 510, ../sass/includes/_schedule.scss */
+  /* line 548, ../sass/includes/_schedule.scss */
   .not-zoomed .schedule-wrapper .session.keynote .session-bookmark {
     background-image: url("../img/icon-bookmark-big.png");
     background-repeat: no-repeat;
@@ -2283,7 +2333,7 @@ aside.highlight .social .twitter {
     width: 38px;
   }
 }
-/* line 516, ../sass/includes/_schedule.scss */
+/* line 554, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session.keynote .session-bookmark.isActive {
   background-image: url("../img/icon-bookmark-big-active.png");
   background-repeat: no-repeat;
@@ -2293,12 +2343,12 @@ aside.highlight .social .twitter {
   width: 38px;
 }
 @media only screen and (min-width: 64em) {
-  /* line 522, ../sass/includes/_schedule.scss */
+  /* line 560, ../sass/includes/_schedule.scss */
   .not-zoomed .schedule-wrapper .session.keynote.no-speaker .session-content {
     padding: 0 65px 0 50px;
   }
 }
-/* line 531, ../sass/includes/_schedule.scss */
+/* line 569, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session.break {
   height: auto;
   padding: 0;
@@ -2306,50 +2356,50 @@ aside.highlight .social .twitter {
   text-align: center;
 }
 @media only screen and (min-width: 64em) {
-  /* line 537, ../sass/includes/_schedule.scss */
+  /* line 575, ../sass/includes/_schedule.scss */
   .not-zoomed .schedule-wrapper .session.break {
     padding: 15px;
     border-left: 1px solid #dfe5e8;
   }
 }
 @media only screen and (min-width: 64em) {
-  /* line 544, ../sass/includes/_schedule.scss */
+  /* line 582, ../sass/includes/_schedule.scss */
   .not-zoomed .schedule-wrapper .session.break .session-content {
     width: 2000px;
     height: 140px;
     background-color: #e6f3fa;
   }
 }
-/* line 552, ../sass/includes/_schedule.scss */
+/* line 590, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session.break .session-title {
   font: 400 1.125em / 2em "Lusitana", sans-serif;
 }
-/* line 555, ../sass/includes/_schedule.scss */
+/* line 593, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session.break .session-title, .schedule-wrapper .session.break .session-title a {
   color: #333f47;
 }
-/* line 560, ../sass/includes/_schedule.scss */
+/* line 598, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session.break button {
   display: none;
 }
 @media only screen and (min-width: 64em) {
-  /* line 567, ../sass/includes/_schedule.scss */
+  /* line 605, ../sass/includes/_schedule.scss */
   .not-zoomed .schedule-wrapper .session.break.small {
     padding: 0;
   }
 }
 @media only screen and (min-width: 64em) {
-  /* line 573, ../sass/includes/_schedule.scss */
+  /* line 611, ../sass/includes/_schedule.scss */
   .not-zoomed .schedule-wrapper .session.break.small .session-content {
     height: 75px;
     background-color: transparent;
   }
 }
-/* line 583, ../sass/includes/_schedule.scss */
+/* line 621, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session.bookmarked .session-content {
   background-color: #333f47 !important;
 }
-/* line 592, ../sass/includes/_schedule.scss */
+/* line 630, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session.bookmarked .session-title a,
 .schedule-wrapper .session.bookmarked .session-speaker,
 .schedule-wrapper .session.bookmarked .session-content,
@@ -2358,7 +2408,7 @@ aside.highlight .social .twitter {
 .schedule-wrapper .session.bookmarked .session-room {
   color: white;
 }
-/* line 596, ../sass/includes/_schedule.scss */
+/* line 634, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session.bookmarked .session-bookmark {
   background-image: url("../img/icon-bookmark-small-active.png");
   background-repeat: no-repeat;
@@ -2368,7 +2418,7 @@ aside.highlight .social .twitter {
   width: 21px;
 }
 @media only screen and (min-width: 48em) {
-  /* line 602, ../sass/includes/_schedule.scss */
+  /* line 640, ../sass/includes/_schedule.scss */
   .not-zoomed .schedule-wrapper .session.bookmarked.keynote .session-bookmark {
     background-image: url("../img/icon-bookmark-big-active.png");
     background-repeat: no-repeat;
@@ -2378,34 +2428,34 @@ aside.highlight .social .twitter {
     width: 38px;
   }
 }
-/* line 612, ../sass/includes/_schedule.scss */
+/* line 650, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session:hover,
 .schedule-wrapper .session:focus,
 .schedule-wrapper .session.isHover,
 .schedule-wrapper .session.isFocus {
   opacity: 1 !important;
 }
-/* line 616, ../sass/includes/_schedule.scss */
+/* line 654, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session.salle-grand-hall .session-content {
   background-image: url("../img/bg-schedule-default.png");
 }
-/* line 620, ../sass/includes/_schedule.scss */
+/* line 658, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session.salle-libeo .session-content {
   background-image: url("../img/bg-schedule-libeo.png");
 }
-/* line 624, ../sass/includes/_schedule.scss */
+/* line 662, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session.salle-ixmedia .session-content {
   background-image: url("../img/bg-schedule-ixmedia.png");
 }
-/* line 628, ../sass/includes/_schedule.scss */
+/* line 666, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session.salle-bell .session-content {
   background-image: url("../img/bg-schedule-bell.png");
 }
-/* line 632, ../sass/includes/_schedule.scss */
+/* line 670, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session.salle-deloitte .session-content {
   background-image: url("../img/bg-schedule-deloitte.png");
 }
-/* line 636, ../sass/includes/_schedule.scss */
+/* line 674, ../sass/includes/_schedule.scss */
 .schedule-wrapper td.empty {
   border-left: 1px solid #dfe5e8;
 }
@@ -2781,7 +2831,7 @@ aside.highlight .social .twitter {
   /* line 155, ../sass/includes/_theme.scss */
   .not-zoomed .schedule:before {
     display: block;
-    height: 208px;
+    height: 268px;
     width: 100%;
     position: absolute;
     left: 0;
@@ -3151,9 +3201,17 @@ aside.highlight .social .twitter {
   font: 700 1em / 1.5em "Roboto Condensed", sans-serif;
   color: white;
   background-color: #005b87;
+  cursor: pointer;
+}
+/* line 469, ../sass/includes/_theme.scss */
+.place .place-wrapper .newsletter .input-submit:hover {
+  padding: 5px 12px;
+  background-color: white;
+  color: #005b87;
+  border: 3px solid #005b87;
 }
 @media only screen and (min-width: 560px) {
-  /* line 470, ../sass/includes/_theme.scss */
+  /* line 478, ../sass/includes/_theme.scss */
   .not-zoomed .place .place-wrapper .newsletter .field {
     display: -moz-inline-stack;
     display: inline-block;
@@ -3167,13 +3225,13 @@ aside.highlight .social .twitter {
   }
 }
 @media only screen and (min-width: 1137px) {
-  /* line 477, ../sass/includes/_theme.scss */
+  /* line 485, ../sass/includes/_theme.scss */
   .not-zoomed .place .place-wrapper .newsletter .field {
     width: 255px;
   }
 }
 @media only screen and (min-width: 560px) {
-  /* line 484, ../sass/includes/_theme.scss */
+  /* line 492, ../sass/includes/_theme.scss */
   .not-zoomed .place .place-wrapper .newsletter .buttons {
     display: -moz-inline-stack;
     display: inline-block;
@@ -3185,17 +3243,17 @@ aside.highlight .social .twitter {
   }
 }
 @media only screen and (min-width: 72.938em) {
-  /* line 494, ../sass/includes/_theme.scss */
+  /* line 502, ../sass/includes/_theme.scss */
   .not-zoomed .place .place-wrapper .contact, .not-zoomed
   .place .place-wrapper .newsletter {
     margin: 0;
   }
 }
-/* line 500, ../sass/includes/_theme.scss */
+/* line 508, ../sass/includes/_theme.scss */
 .place .place-wrapper .contact-element {
   margin: 15px 0;
 }
-/* line 505, ../sass/includes/_theme.scss */
+/* line 513, ../sass/includes/_theme.scss */
 .place .googlemap {
   width: 100%;
   min-height: 320px;
@@ -3203,15 +3261,15 @@ aside.highlight .social .twitter {
   top: 0;
   z-index: -1;
 }
-/* line 515, ../sass/includes/_theme.scss */
+/* line 523, ../sass/includes/_theme.scss */
 .place .googlemap #gmap {
   min-height: 320px;
 }
-/* line 517, ../sass/includes/_theme.scss */
+/* line 525, ../sass/includes/_theme.scss */
 .place .googlemap #gmap img {
   max-width: none;
 }
-/* line 520, ../sass/includes/_theme.scss */
+/* line 528, ../sass/includes/_theme.scss */
 .place .googlemap #gmap .customInfoWindow {
   display: block;
   color: #005674;
@@ -3219,11 +3277,11 @@ aside.highlight .social .twitter {
   text-transform: uppercase;
   border: 1px solid #e2e2e2;
 }
-/* line 530, ../sass/includes/_theme.scss */
+/* line 538, ../sass/includes/_theme.scss */
 .place .googlemap #gmap .customInfoWindow a:hover, .place .googlemap #gmap .customInfoWindow a:focus, .place .googlemap #gmap .customInfoWindow a.active {
   text-decoration: none;
 }
-/* line 535, ../sass/includes/_theme.scss */
+/* line 543, ../sass/includes/_theme.scss */
 .place .googlemap #gmap .customInfoWindow .closeBtn {
   position: absolute;
   top: 0px;
@@ -3233,51 +3291,51 @@ aside.highlight .social .twitter {
   font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   cursor: pointer;
 }
-/* line 544, ../sass/includes/_theme.scss */
+/* line 552, ../sass/includes/_theme.scss */
 .place .googlemap #gmap .customInfoWindow .padding {
   padding: 20px;
 }
-/* line 548, ../sass/includes/_theme.scss */
+/* line 556, ../sass/includes/_theme.scss */
 .place .googlemap #gmap .customInfoWindow .address {
   display: none;
   float: left;
   margin-bottom: 20px;
   margin-right: 200px;
 }
-/* line 554, ../sass/includes/_theme.scss */
+/* line 562, ../sass/includes/_theme.scss */
 .place .googlemap #gmap .customInfoWindow .address a {
   text-decoration: none;
   color: #1886b8;
 }
-/* line 557, ../sass/includes/_theme.scss */
+/* line 565, ../sass/includes/_theme.scss */
 .place .googlemap #gmap .customInfoWindow .address a span {
   display: block;
   margin-bottom: 6px;
   font-size: 1.2em;
 }
-/* line 561, ../sass/includes/_theme.scss */
+/* line 569, ../sass/includes/_theme.scss */
 .place .googlemap #gmap .customInfoWindow .address a span.name {
   font-weight: bold;
   color: black;
 }
-/* line 568, ../sass/includes/_theme.scss */
+/* line 576, ../sass/includes/_theme.scss */
 .place .googlemap #gmap .customInfoWindow .address a:hover, .place .googlemap #gmap .customInfoWindow .address a:focus, .place .googlemap #gmap .customInfoWindow .address a.active {
   text-decoration: underline;
 }
 @media only screen and (min-width: 72.938em) {
-  /* line 573, ../sass/includes/_theme.scss */
+  /* line 581, ../sass/includes/_theme.scss */
   .not-zoomed .place .googlemap #gmap .customInfoWindow .address {
     display: block;
   }
 }
-/* line 579, ../sass/includes/_theme.scss */
+/* line 587, ../sass/includes/_theme.scss */
 .place .googlemap #gmap .customInfoWindow img {
   padding: 20px;
   padding-bottom: 0;
   pointer-events: none;
 }
 @media only screen and (min-width: 72.938em) {
-  /* line 584, ../sass/includes/_theme.scss */
+  /* line 592, ../sass/includes/_theme.scss */
   .not-zoomed .place .googlemap #gmap .customInfoWindow img {
     position: absolute;
     right: 20px;
@@ -3285,7 +3343,7 @@ aside.highlight .social .twitter {
     padding: 0;
   }
 }
-/* line 593, ../sass/includes/_theme.scss */
+/* line 601, ../sass/includes/_theme.scss */
 .place .googlemap #gmap .customInfoWindow:after, .place .googlemap #gmap .customInfoWindow:before {
   top: 100%;
   border: solid transparent;
@@ -3295,7 +3353,7 @@ aside.highlight .social .twitter {
   position: absolute;
   pointer-events: none;
 }
-/* line 603, ../sass/includes/_theme.scss */
+/* line 611, ../sass/includes/_theme.scss */
 .place .googlemap #gmap .customInfoWindow:after {
   border-color: rgba(255, 255, 255, 0);
   border-top-color: #fff;
@@ -3303,7 +3361,7 @@ aside.highlight .social .twitter {
   left: 50%;
   margin-left: -30px;
 }
-/* line 610, ../sass/includes/_theme.scss */
+/* line 618, ../sass/includes/_theme.scss */
 .place .googlemap #gmap .customInfoWindow:before {
   border-color: rgba(226, 226, 226, 0);
   border-top-color: #e2e2e2;
@@ -3312,18 +3370,18 @@ aside.highlight .social .twitter {
   margin-left: -31px;
 }
 @media only screen and (min-width: 72.938em) {
-  /* line 620, ../sass/includes/_theme.scss */
+  /* line 628, ../sass/includes/_theme.scss */
   .not-zoomed .place .googlemap {
     min-height: 520px;
     position: static;
   }
-  /* line 627, ../sass/includes/_theme.scss */
+  /* line 635, ../sass/includes/_theme.scss */
   .not-zoomed .place .googlemap #gmap {
     min-height: 520px;
   }
 }
 
-/* line 634, ../sass/includes/_theme.scss */
+/* line 642, ../sass/includes/_theme.scss */
 .blog {
   background-color: #333f47;
   background-image: url("../img/bg-strip-dark.png");
@@ -3331,17 +3389,17 @@ aside.highlight .social .twitter {
   border-top: 13px solid #2a343b;
   border-bottom: 13px solid #2a343b;
 }
-/* line 641, ../sass/includes/_theme.scss */
+/* line 649, ../sass/includes/_theme.scss */
 .no-js .blog {
   background-image: none;
 }
 @media only screen and (min-width: 72.938em) {
-  /* line 645, ../sass/includes/_theme.scss */
+  /* line 653, ../sass/includes/_theme.scss */
   .not-zoomed .blog {
     background-position: 33% 21%;
   }
 }
-/* line 650, ../sass/includes/_theme.scss */
+/* line 658, ../sass/includes/_theme.scss */
 .blog h2 {
   color: white;
   font: 300 2.25em / 1.11111em "Roboto Condensed", sans-serif;
@@ -3349,13 +3407,13 @@ aside.highlight .social .twitter {
   text-transform: uppercase;
 }
 @media only screen and (min-width: 72.938em) {
-  /* line 656, ../sass/includes/_theme.scss */
+  /* line 664, ../sass/includes/_theme.scss */
   .not-zoomed .blog h2 {
     font-size: 4.5em;
   }
 }
 
-/* line 666, ../sass/includes/_theme.scss */
+/* line 674, ../sass/includes/_theme.scss */
 .sponsors h2 {
   margin: 5px 0 25px;
   color: #056797;
@@ -3363,14 +3421,14 @@ aside.highlight .social .twitter {
   text-transform: uppercase;
 }
 @media only screen and (min-width: 72.938em) {
-  /* line 672, ../sass/includes/_theme.scss */
+  /* line 680, ../sass/includes/_theme.scss */
   .not-zoomed .sponsors h2 {
     font-size: 4.5em;
     margin: 15px 0 25px;
   }
 }
 
-/* line 681, ../sass/includes/_theme.scss */
+/* line 689, ../sass/includes/_theme.scss */
 .about {
   background-color: #2a343b;
   background-image: url("../img/bg-strip-light.png");
@@ -3378,7 +3436,7 @@ aside.highlight .social .twitter {
   border-top: 13px solid #333f47;
   border-bottom: 13px solid #333f47;
 }
-/* line 688, ../sass/includes/_theme.scss */
+/* line 696, ../sass/includes/_theme.scss */
 .about h2 {
   margin: 10px 0;
   color: white;
@@ -3386,55 +3444,55 @@ aside.highlight .social .twitter {
   text-transform: uppercase;
 }
 @media only screen and (min-width: 72.938em) {
-  /* line 694, ../sass/includes/_theme.scss */
+  /* line 702, ../sass/includes/_theme.scss */
   .not-zoomed .about h2 {
     margin: 20px 0 10px;
     font-size: 4.5em;
   }
 }
-/* line 701, ../sass/includes/_theme.scss */
+/* line 709, ../sass/includes/_theme.scss */
 .about p {
   color: #a4adb3;
   font: 300 1em / 1.125em "Roboto", sans-serif;
 }
 @media only screen and (min-width: 72.938em) {
-  /* line 705, ../sass/includes/_theme.scss */
+  /* line 713, ../sass/includes/_theme.scss */
   .not-zoomed .about p {
     font-size: 1.25em;
     line-height: 1.2em;
   }
 }
-/* line 712, ../sass/includes/_theme.scss */
+/* line 720, ../sass/includes/_theme.scss */
 .about p.strong {
   font: 700 1.25em / 1.2em "Roboto Condensed", sans-serif;
 }
 @media only screen and (min-width: 72.938em) {
-  /* line 715, ../sass/includes/_theme.scss */
+  /* line 723, ../sass/includes/_theme.scss */
   .not-zoomed .about p.strong {
     font-size: 1.25em;
   }
 }
-/* line 721, ../sass/includes/_theme.scss */
+/* line 729, ../sass/includes/_theme.scss */
 .about .highlight {
   padding: 15px;
   background-color: #1d272d;
 }
-/* line 725, ../sass/includes/_theme.scss */
+/* line 733, ../sass/includes/_theme.scss */
 .about .highlight p {
   font: 300 1.25em / 1.2em "Roboto", sans-serif;
 }
-/* line 729, ../sass/includes/_theme.scss */
+/* line 737, ../sass/includes/_theme.scss */
 .about .highlight p.strong {
   text-transform: uppercase;
   font: 700 1.25em / 1.2em "Roboto Condensed", sans-serif;
 }
 @media only screen and (min-width: 72.938em) {
-  /* line 738, ../sass/includes/_theme.scss */
+  /* line 746, ../sass/includes/_theme.scss */
   .not-zoomed .about .l-col {
     float: left;
     width: 777px;
   }
-  /* line 743, ../sass/includes/_theme.scss */
+  /* line 751, ../sass/includes/_theme.scss */
   .not-zoomed .about .l-col + .l-col {
     width: 315px;
     margin-left: 15px;
@@ -3442,43 +3500,43 @@ aside.highlight .social .twitter {
 }
 
 @media only screen and (min-width: 72.938em) {
-  /* line 753, ../sass/includes/_theme.scss */
+  /* line 761, ../sass/includes/_theme.scss */
   .not-zoomed .single-page .page-content {
     margin-top: 40px;
   }
 }
 @media only screen and (min-width: 72.938em) {
-  /* line 760, ../sass/includes/_theme.scss */
+  /* line 768, ../sass/includes/_theme.scss */
   .not-zoomed .single-page .page-content .l-col {
     float: left;
     width: 710px;
   }
 }
-/* line 767, ../sass/includes/_theme.scss */
+/* line 775, ../sass/includes/_theme.scss */
 .single-page .page-content .sidebar {
   margin-top: 1em;
 }
 @media only screen and (min-width: 72.938em) {
-  /* line 770, ../sass/includes/_theme.scss */
+  /* line 778, ../sass/includes/_theme.scss */
   .not-zoomed .single-page .page-content .sidebar {
     float: left;
     width: 380px;
     margin: 0 0 0 17px;
   }
 }
-/* line 778, ../sass/includes/_theme.scss */
+/* line 786, ../sass/includes/_theme.scss */
 .single-page .page-content .content-header {
   position: relative;
   padding-top: 85px;
   margin: 10px 0 0;
 }
 @media only screen and (min-width: 48em) {
-  /* line 783, ../sass/includes/_theme.scss */
+  /* line 791, ../sass/includes/_theme.scss */
   .not-zoomed .single-page .page-content .content-header {
     padding-top: 4.375em;
   }
 }
-/* line 788, ../sass/includes/_theme.scss */
+/* line 796, ../sass/includes/_theme.scss */
 .single-page .page-content .content-header h1 {
   color: #333f47;
   font: 300 3em / 1.08333em "Roboto Condensed", sans-serif;
@@ -3486,12 +3544,12 @@ aside.highlight .social .twitter {
   text-transform: uppercase;
 }
 @media only screen and (min-width: 48em) {
-  /* line 794, ../sass/includes/_theme.scss */
+  /* line 802, ../sass/includes/_theme.scss */
   .not-zoomed .single-page .page-content .content-header h1 {
     font-size: 3em;
   }
 }
-/* line 800, ../sass/includes/_theme.scss */
+/* line 808, ../sass/includes/_theme.scss */
 .single-page .page-content .content-header .session-speaker {
   position: absolute;
   top: 0;
@@ -3499,7 +3557,7 @@ aside.highlight .social .twitter {
   font: 700 1.875em / 1.13333em "Roboto Condensed", sans-serif;
   text-transform: uppercase;
 }
-/* line 808, ../sass/includes/_theme.scss */
+/* line 816, ../sass/includes/_theme.scss */
 .single-page .page-content .content-header .session-meta {
   position: absolute;
   top: 2.1875em;
@@ -3507,29 +3565,29 @@ aside.highlight .social .twitter {
   color: #333f47;
   font: 400 1.125em / 1.11111em "Roboto Condensed", sans-serif;
 }
-/* line 815, ../sass/includes/_theme.scss */
+/* line 823, ../sass/includes/_theme.scss */
 .single-page .page-content .content-header .session-meta .date {
   display: block;
 }
-/* line 819, ../sass/includes/_theme.scss */
+/* line 827, ../sass/includes/_theme.scss */
 .single-page .page-content .content-header .session-meta .location:before {
   content: "/";
 }
 @media only screen and (min-width: 48em) {
-  /* line 823, ../sass/includes/_theme.scss */
+  /* line 831, ../sass/includes/_theme.scss */
   .not-zoomed .single-page .page-content .content-header .session-meta {
     top: 2.8125em;
   }
-  /* line 827, ../sass/includes/_theme.scss */
+  /* line 835, ../sass/includes/_theme.scss */
   .not-zoomed .single-page .page-content .content-header .session-meta .date {
     display: inline;
   }
-  /* line 831, ../sass/includes/_theme.scss */
+  /* line 839, ../sass/includes/_theme.scss */
   .not-zoomed .single-page .page-content .content-header .session-meta .time:before {
     content: "/";
   }
 }
-/* line 837, ../sass/includes/_theme.scss */
+/* line 845, ../sass/includes/_theme.scss */
 .single-page .page-content .content-header .language {
   display: -moz-inline-stack;
   display: inline-block;
@@ -3544,18 +3602,18 @@ aside.highlight .social .twitter {
   font-weight: bold;
   background-color: #e6f3fa;
 }
-/* line 850, ../sass/includes/_theme.scss */
+/* line 858, ../sass/includes/_theme.scss */
 .single-page .page-content .content h2 {
   margin: 1em 0 0.5em;
   color: #333f47;
   font: 300 1.875em / 1.13333em "Roboto Condensed", sans-serif;
   text-transform: uppercase;
 }
-/* line 857, ../sass/includes/_theme.scss */
+/* line 865, ../sass/includes/_theme.scss */
 .single-page .page-content .content .questions {
   font-size: 16px;
 }
-/* line 860, ../sass/includes/_theme.scss */
+/* line 868, ../sass/includes/_theme.scss */
 .single-page .page-content .content .questions li {
   margin: 10px 0;
   padding: 0 0 0 25px;
@@ -3567,13 +3625,13 @@ aside.highlight .social .twitter {
   background-position: center left;
 }
 @media only screen and (min-width: 48em) {
-  /* line 870, ../sass/includes/_theme.scss */
+  /* line 878, ../sass/includes/_theme.scss */
   .not-zoomed .single-page .page-content .content .questions li {
     margin: 20px 0;
     font-size: 1.125em;
   }
 }
-/* line 878, ../sass/includes/_theme.scss */
+/* line 886, ../sass/includes/_theme.scss */
 .single-page .page-content .content .tags {
   zoom: 1;
   margin-bottom: 20px;
@@ -3590,12 +3648,12 @@ aside.highlight .social .twitter {
 .single-page .page-content .content .tags:after {
   clear: both;
 }
-/* line 883, ../sass/includes/_theme.scss */
+/* line 891, ../sass/includes/_theme.scss */
 .single-page .page-content .content .tags li {
   float: left;
   margin: 0 5px 5px 0;
 }
-/* line 887, ../sass/includes/_theme.scss */
+/* line 895, ../sass/includes/_theme.scss */
 .single-page .page-content .content .tags li a, .single-page .page-content .content .tags li span {
   display: block;
   padding: 0 10px;
@@ -3605,7 +3663,7 @@ aside.highlight .social .twitter {
   text-transform: uppercase;
   background-color: #333f47;
 }
-/* line 900, ../sass/includes/_theme.scss */
+/* line 908, ../sass/includes/_theme.scss */
 .single-page .page-content p {
   color: #333f47;
   font: 400 1.125em / 1.33333em "Roboto", sans-serif;
@@ -3613,40 +3671,40 @@ aside.highlight .social .twitter {
   margin: 1em 0;
 }
 @media only screen and (min-width: 48em) {
-  /* line 906, ../sass/includes/_theme.scss */
+  /* line 914, ../sass/includes/_theme.scss */
   .not-zoomed .single-page .page-content p {
     font-size: 1.125em;
   }
 }
-/* line 912, ../sass/includes/_theme.scss */
+/* line 920, ../sass/includes/_theme.scss */
 .single-page .page-content .back-link {
   width: auto;
   float: left;
   display: none;
 }
-/* line 918, ../sass/includes/_theme.scss */
+/* line 926, ../sass/includes/_theme.scss */
 .single-page .page-content .back-link a {
   height: 40px;
 }
 @media only screen and (min-width: 72.938em) {
-  /* line 922, ../sass/includes/_theme.scss */
+  /* line 930, ../sass/includes/_theme.scss */
   .not-zoomed .single-page .page-content .back-link {
     display: block;
     margin: 20px 0 0;
   }
 }
-/* line 931, ../sass/includes/_theme.scss */
+/* line 939, ../sass/includes/_theme.scss */
 .single-page .page-content .sidebar h2 {
   color: #333f47;
   font: 700 1.375em / 1.09091em "Roboto Condensed", sans-serif;
   text-transform: uppercase;
 }
-/* line 939, ../sass/includes/_theme.scss */
+/* line 947, ../sass/includes/_theme.scss */
 .single-page .page-content .sidebar ul.subevents li {
   margin: 1em 0;
 }
 @media only screen and (min-width: 560px) {
-  /* line 942, ../sass/includes/_theme.scss */
+  /* line 950, ../sass/includes/_theme.scss */
   .not-zoomed .single-page .page-content .sidebar ul.subevents li {
     float: left;
     width: 48%;
@@ -3654,47 +3712,47 @@ aside.highlight .social .twitter {
   }
 }
 @media only screen and (min-width: 72.938em) {
-  /* line 949, ../sass/includes/_theme.scss */
+  /* line 957, ../sass/includes/_theme.scss */
   .not-zoomed .single-page .page-content .sidebar ul.subevents li {
     float: none;
     width: auto;
   }
 }
-/* line 956, ../sass/includes/_theme.scss */
+/* line 964, ../sass/includes/_theme.scss */
 .single-page .page-content .sidebar ul.subevents li .session-title a {
   color: #006b9f;
   font: 400 1.375em / 1.09091em "Roboto Condensed", sans-serif;
   text-decoration: none;
 }
-/* line 961, ../sass/includes/_theme.scss */
+/* line 969, ../sass/includes/_theme.scss */
 .single-page .page-content .sidebar ul.subevents li .session-title a:hover {
   text-decoration: underline;
 }
-/* line 967, ../sass/includes/_theme.scss */
+/* line 975, ../sass/includes/_theme.scss */
 .single-page .page-content .sidebar ul.subevents li .session-speaker {
   display: block;
   margin: 6px 0 4px;
   color: #333f47;
   font: 400 1.25em / 1.1em "Lusitana", sans-serif;
 }
-/* line 974, ../sass/includes/_theme.scss */
+/* line 982, ../sass/includes/_theme.scss */
 .single-page .page-content .sidebar ul.subevents li .session-meta {
   display: block;
   color: #333f47;
   font: 700 0.875em / 1.14286em "Roboto Condensed", sans-serif;
   text-transform: uppercase;
 }
-/* line 982, ../sass/includes/_theme.scss */
+/* line 990, ../sass/includes/_theme.scss */
 .single-page .page-content .sidebar ul.subevents li .session-time-slot:before,
 .single-page .page-content .sidebar ul.subevents li .session-room:before {
   content: "/";
 }
 
-/* line 993, ../sass/includes/_theme.scss */
+/* line 1001, ../sass/includes/_theme.scss */
 .footer .social-medias {
   margin: 5px 0 10px;
 }
-/* line 997, ../sass/includes/_theme.scss */
+/* line 1005, ../sass/includes/_theme.scss */
 .social-medias a {
   display: -moz-inline-stack;
   display: inline-block;
@@ -3705,26 +3763,26 @@ aside.highlight .social .twitter {
   margin-right: 5px;
   line-height: 0;
 }
-/* line 1003, ../sass/includes/_theme.scss */
+/* line 1011, ../sass/includes/_theme.scss */
 .social-medias img {
   position: relative !important;
 }
 
 @media only screen and (min-width: 1167px) {
-  /* line 1011, ../sass/includes/_theme.scss */
+  /* line 1019, ../sass/includes/_theme.scss */
   .not-zoomed .footer .footer-infos {
     padding: 20px 0;
   }
 }
 @media only screen and (min-width: 700px) {
-  /* line 1018, ../sass/includes/_theme.scss */
+  /* line 1026, ../sass/includes/_theme.scss */
   .not-zoomed .footer .l-col {
     float: left;
     width: 33.3333%;
   }
 }
 @media only screen and (min-width: 72.938em) {
-  /* line 1023, ../sass/includes/_theme.scss */
+  /* line 1031, ../sass/includes/_theme.scss */
   .not-zoomed .footer .l-col {
     float: left;
     width: 248px;
@@ -3732,7 +3790,7 @@ aside.highlight .social .twitter {
   }
 }
 @media only screen and (min-width: 700px) {
-  /* line 1032, ../sass/includes/_theme.scss */
+  /* line 1040, ../sass/includes/_theme.scss */
   .not-zoomed .footer .l-col.large {
     float: none;
     width: 100%;
@@ -3741,7 +3799,7 @@ aside.highlight .social .twitter {
   }
 }
 @media only screen and (min-width: 72.938em) {
-  /* line 1039, ../sass/includes/_theme.scss */
+  /* line 1047, ../sass/includes/_theme.scss */
   .not-zoomed .footer .l-col.large {
     float: left;
     width: 315px;
@@ -3751,7 +3809,7 @@ aside.highlight .social .twitter {
   }
 }
 @media only screen and (min-width: 560px) {
-  /* line 1050, ../sass/includes/_theme.scss */
+  /* line 1058, ../sass/includes/_theme.scss */
   .not-zoomed .footer .l-col.two-elements {
     float: right;
     width: 50%;
@@ -3759,7 +3817,7 @@ aside.highlight .social .twitter {
   }
 }
 @media only screen and (min-width: 700px) {
-  /* line 1056, ../sass/includes/_theme.scss */
+  /* line 1064, ../sass/includes/_theme.scss */
   .not-zoomed .footer .l-col.two-elements {
     float: left;
     width: 33.3333%;
@@ -3767,71 +3825,71 @@ aside.highlight .social .twitter {
   }
 }
 @media only screen and (min-width: 72.938em) {
-  /* line 1062, ../sass/includes/_theme.scss */
+  /* line 1070, ../sass/includes/_theme.scss */
   .not-zoomed .footer .l-col.two-elements {
     float: left;
     width: 248px;
     margin-top: 0;
   }
 }
-/* line 1070, ../sass/includes/_theme.scss */
+/* line 1078, ../sass/includes/_theme.scss */
 .footer .contact-element {
   margin: 5px 0 15px;
 }
-/* line 1073, ../sass/includes/_theme.scss */
+/* line 1081, ../sass/includes/_theme.scss */
 .footer .contact-element span {
   font-size: 1em;
 }
-/* line 1077, ../sass/includes/_theme.scss */
+/* line 1085, ../sass/includes/_theme.scss */
 .footer .contact-element .name {
   font-weight: 700;
 }
-/* line 1082, ../sass/includes/_theme.scss */
+/* line 1090, ../sass/includes/_theme.scss */
 .footer .contact-element .addressLocality,
 .footer .contact-element .postalCode {
   display: inline;
 }
-/* line 1087, ../sass/includes/_theme.scss */
+/* line 1095, ../sass/includes/_theme.scss */
 .footer .contact-element .link,
 .footer .contact-element .link a {
   text-transform: none;
 }
-/* line 1093, ../sass/includes/_theme.scss */
+/* line 1101, ../sass/includes/_theme.scss */
 .footer h3,
 .footer .strong {
   color: #333f47;
   font: 700 1em / 1.25em "Roboto Condensed", sans-serif;
   text-transform: uppercase;
 }
-/* line 1099, ../sass/includes/_theme.scss */
+/* line 1107, ../sass/includes/_theme.scss */
 .footer a {
   color: #006b9f;
   font: 300 1em / 1.25em "Roboto Condensed", sans-serif;
   text-transform: uppercase;
   text-decoration: none;
 }
-/* line 1105, ../sass/includes/_theme.scss */
+/* line 1113, ../sass/includes/_theme.scss */
 .footer a:hover {
   text-decoration: underline;
 }
-/* line 1110, ../sass/includes/_theme.scss */
+/* line 1118, ../sass/includes/_theme.scss */
 .footer .footer-bar {
   margin: 5px -15px 0;
   padding: 15px 15px 0;
   border-top: 1px solid #333f47;
 }
-/* line 1115, ../sass/includes/_theme.scss */
+/* line 1123, ../sass/includes/_theme.scss */
 .footer .footer-bar .l-col > div {
   margin: 8px 0 0;
 }
 @media only screen and (min-width: 560px) {
-  /* line 1118, ../sass/includes/_theme.scss */
+  /* line 1126, ../sass/includes/_theme.scss */
   .not-zoomed .footer .footer-bar .l-col > div {
     margin: 0;
   }
 }
 @media only screen and (min-width: 72.938em) {
-  /* line 1123, ../sass/includes/_theme.scss */
+  /* line 1131, ../sass/includes/_theme.scss */
   .not-zoomed .footer .footer-bar .l-col > div {
     display: -moz-inline-stack;
     display: inline-block;
@@ -3840,26 +3898,26 @@ aside.highlight .social .twitter {
     zoom: 1;
     *display: inline;
   }
-  /* line 1127, ../sass/includes/_theme.scss */
+  /* line 1135, ../sass/includes/_theme.scss */
   .not-zoomed .footer .footer-bar .l-col > div + div {
     margin-left: 35px;
   }
 }
 @media only screen and (min-width: 560px) {
-  /* line 1134, ../sass/includes/_theme.scss */
+  /* line 1142, ../sass/includes/_theme.scss */
   .not-zoomed .footer .footer-bar .l-col {
     width: 50%;
     margin: 0;
   }
 }
 @media only screen and (min-width: 72.938em) {
-  /* line 1144, ../sass/includes/_theme.scss */
+  /* line 1152, ../sass/includes/_theme.scss */
   .not-zoomed .footer .footer-bar .archives h3 {
     float: left;
     margin-right: 20px;
   }
 }
-/* line 1151, ../sass/includes/_theme.scss */
+/* line 1159, ../sass/includes/_theme.scss */
 .footer .footer-bar .archives ul {
   zoom: 1;
 }
@@ -3874,36 +3932,36 @@ aside.highlight .social .twitter {
 .footer .footer-bar .archives ul:after {
   clear: both;
 }
-/* line 1154, ../sass/includes/_theme.scss */
+/* line 1162, ../sass/includes/_theme.scss */
 .footer .footer-bar .archives ul li {
   float: left;
 }
-/* line 1158, ../sass/includes/_theme.scss */
+/* line 1166, ../sass/includes/_theme.scss */
 .footer .footer-bar .archives ul li + li:before {
   content: "/";
   color: #006b9f;
   margin: 0 8px;
 }
 @media only screen and (min-width: 560px) {
-  /* line 1165, ../sass/includes/_theme.scss */
+  /* line 1173, ../sass/includes/_theme.scss */
   .not-zoomed .footer .footer-bar .archives {
     float: left;
   }
 }
 @media only screen and (min-width: 560px) {
-  /* line 1172, ../sass/includes/_theme.scss */
+  /* line 1180, ../sass/includes/_theme.scss */
   .not-zoomed .footer .footer-bar .right {
     float: right;
     text-align: right;
   }
 }
 
-/* line 1182, ../sass/includes/_theme.scss */
+/* line 1190, ../sass/includes/_theme.scss */
 .single-page .footer .l-section-wrapper {
   border-top: 1px solid #333f47;
 }
 @media only screen and (min-width: 72.938em) {
-  /* line 1185, ../sass/includes/_theme.scss */
+  /* line 1193, ../sass/includes/_theme.scss */
   .not-zoomed .single-page .footer .l-section-wrapper {
     margin-top: 30px;
   }
