@@ -59,9 +59,9 @@ foreach ($archives as $archive) {
 <footer class="footer">
     <div class="l-section-wrapper">
 
-        <header class="visuallyhidden">
+        <div class="visuallyhidden">
             <h2>Informations générales</h2>
-        </header>
+        </div>
 
         <div class="l-row footer-infos">
 
