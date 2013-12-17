@@ -3475,7 +3475,7 @@ aside.highlight .social .twitter {
   margin: 0 5px 5px 0;
 }
 /* line 878, ../sass/includes/_theme.scss */
-.single-page .page-content .content .tags li a {
+.single-page .page-content .content .tags li a, .single-page .page-content .content .tags li span {
   display: block;
   padding: 0 10px;
   color: white;
