@@ -27,7 +27,7 @@
       	  $speakers_output .= '<ul class="social">';
       	  $speaker_website = addhttp(get_post_meta($speaker_post->ID, 'website', true));
       	  $speaker_website_clean = rtrim(str_replace('www.', '', str_replace('https://', '', str_replace('http://', '', $speaker_website))), '/');
-      	  if(!empty($speaker_website) && $speaker_website == 'http://' ){
+      	  if(!empty($speaker_website) && $speaker_website != 'http://' ){
       	    $speakers_output .= '<li class="website"><a href="'.$speaker_website.'">'.$speaker_website_clean.'</a></li>';
       	  }
       	  
@@ -52,7 +52,7 @@
   	  
   	  $speaker_website = addhttp(get_post_meta($speaker_post->ID, 'website', true));
   	  $speaker_website_clean = rtrim(str_replace('www.', '', str_replace('https://', '', str_replace('http://', '', $speaker_website))), '/');
-  	  if(!empty($speaker_website) && $speaker_website == 'http://' ){
+  	  if(!empty($speaker_website) && $speaker_website != 'http://' ){
   	    $speakers_output .= '<li class="website"><a href="'.$speaker_website.'">'.$speaker_website_clean.'</a></li>';
   	  }
   	  
