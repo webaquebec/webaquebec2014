@@ -356,11 +356,9 @@ function metas_facebook_og(){
   setlocale(LC_ALL, 'fr_CA.utf-8');
 
   $names = array(
-    'title' => get_bloginfo('name'),
-    'DC.title' => get_bloginfo('name'),
+    'dcterms.title' => get_bloginfo('name'),
     'description' => "Le Web à Québec c'est trois jours de rencontres par et pour les gens qui imaginent le web.",
-    'DC.description' => "Le Web à Québec c'est trois jours de rencontres par et pour les gens qui imaginent le web.",
-    'image_src'=>get_bloginfo('template_directory')."/img/fb-image.png"
+    'dcterms.description' => "Le Web à Québec c'est trois jours de rencontres par et pour les gens qui imaginent le web."
   );
   
   $properties = array(
@@ -420,12 +418,11 @@ function metas_facebook_og(){
     
     
   
-    $names['title'] = get_the_title( $post->ID );
-    $names['DC.title'] = get_the_title( $post->ID );
+    $names['dcterms.title'] = get_the_title( $post->ID );
     //$names['description'] = strip_tags(get_excerpt_by_id( $post->ID ));
     //$names['DC.description'] = strip_tags(get_excerpt_by_id( $post->ID ));
     $names['description'] = $session_desc;
-    $names['DC.description'] = $session_desc;
+    $names['dcterms.description'] = $session_desc;
     
     
     $properties['og:url'] = get_permalink( $post->ID );
