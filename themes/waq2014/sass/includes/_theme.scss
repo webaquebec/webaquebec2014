@@ -297,7 +297,7 @@
 	}}
 
 	.l-section-wrapper{
-
+	
 		padding-bottom: 10px;
 
 		.not-zoomed & {
@@ -508,6 +508,104 @@
 		    img{
 		        max-width: none;
 		    }
+	      .customInfoWindow {
+	        display: block;
+	        color: #005674;
+	        background: white;
+	        text-transform: uppercase;
+	        border: 1px solid #e2e2e2;
+	    
+	        a {
+	          &:hover,
+	          &:focus,
+	          &.active {
+	            text-decoration: none;
+	          }
+	        }
+	    
+	        .closeBtn { 
+	          position: absolute;
+	          top: 0px;
+	          right: 2px;
+	          font-size: 18px; font-size: 1.8rem;
+	          font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	          cursor: pointer;
+	        }
+	    
+	        .padding {
+	          padding: 20px;
+	        }
+	    
+	        .address {
+	          display: none;
+	          float: left;
+	          margin-bottom: 20px;
+	          margin-right: 200px;
+                
+                a{
+                    text-decoration: none;
+                    color: #1886b8;
+                    span{
+                        display: block;
+                        margin-bottom: 6px;
+                        font-size: 1.2em;
+                        &.name{
+                            font-weight: bold;
+                            color: black;
+                        }
+                    }
+                    &:hover,
+                    &:focus,
+                    &.active {
+                      text-decoration: underline;
+                    }
+                }
+                
+        		.not-zoomed & {
+        		@include respond-to( 72.938em ){
+        			display: block;
+        		}}
+	        }
+	    
+	        img {
+	          padding: 20px;
+	          padding-bottom: 0;
+	          pointer-events: none;
+	          
+	          .not-zoomed & {
+	          @include respond-to( 72.938em ){
+	            position: absolute;
+	            right: 20px;
+	            float: right;
+	            padding: 0;
+	          }}
+	        }
+	    
+	        &:after, &:before {
+	                top: 100%;
+	                border: solid transparent;
+	                content: " ";
+	                height: 0;
+	                width: 0;
+	                position: absolute;
+	                pointer-events: none;
+	        }
+	    
+	        &:after {
+	          border-color: rgba(255, 255, 255, 0);
+	          border-top-color: #fff;
+	          border-width: 30px;
+	          left: 50%;
+	          margin-left: -30px;
+	        }
+	        &:before {
+	                border-color: rgba(226, 226, 226, 0);
+	                border-top-color: #e2e2e2;
+	                border-width: 31px;
+	                left: 50%;
+	                margin-left: -31px;
+	        }
+	      }
 		}
 
 		.not-zoomed & {

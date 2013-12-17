@@ -57,9 +57,9 @@ if($blog_posts){
         $blog_output .= '<div class="article-content" itemprop="description"><!-- extrait? -->';
             $blog_output .= get_excerpt_by_id($blog_post->ID);
         $blog_output .= '</div>';
-        $blog_output .= '<div class="article-readmore">';
-            $blog_output .= '<a href="'.get_permalink($blog_post->ID).'">Lire la suite <span class="visuallyhidden">de l\'article « '.$blog_post->post_title.' ».</span></a>';
-        $blog_output .= '</div>';
+        //$blog_output .= '<div class="article-readmore">';
+            //$blog_output .= '<a href="'.get_permalink($blog_post->ID).'">Lire la suite <span class="visuallyhidden">de l\'article « '.$blog_post->post_title.' ».</span></a>';
+        //$blog_output .= '</div>';
     $blog_output .= '</article>';
   }
   

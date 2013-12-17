@@ -7,13 +7,13 @@
 (function() {
   window.CustomGmap = (function() {
     CustomGmap.prototype.settings = {
-      markers: [/*
+      markers: [
         {
           coord: [46.817682, -71.2065922],
           isWaq: true,
-          content: '<a href="https://maps.google.ca/maps?q=ESPACE+400E+BELL+100,+QUAI+SAINT-ANDR%C3%89+QU%C3%89BEC,+QC&hl=fr&ie=UTF8&hq=ESPACE+400E+BELL+100,+QUAI+SAINT-ANDR%C3%89+QU%C3%89BEC,+QC&t=m&z=16&iwloc=A" target="_blank">\nEspace 400e Bell<br>\n100, Quai Saint-André<br>\nQuébec, QC\n</a>',
-          image: template_url+"/img/logo-waq-gray.png"
-        }, {
+          content: '<a href="https://maps.google.ca/maps?q=ESPACE+400E+BELL+100,+QUAI+SAINT-ANDR%C3%89+QU%C3%89BEC,+QC&hl=fr&ie=UTF8&hq=ESPACE+400E+BELL+100,+QUAI+SAINT-ANDR%C3%89+QU%C3%89BEC,+QC&t=m&z=16&iwloc=A" target="_blank"><span class="name">Espace 400e Bell</span><span class="road">100, Quai Saint-André</span><span class="city">Québec, QC</span></a>',
+          image: template_url+"/img/logo-waq-gmap.png"
+        }/*, {
           coord: [46.815988, -71.203190],
           icon: {
             src: template_url+"/img/germain_dominion.png",
@@ -39,11 +39,11 @@
           zoomControlChoice = true;
       }
       else if($( window ).width() > 640){
-          coord = new google.maps.LatLng(46.817682, -71.2065922);
+          coord = new google.maps.LatLng(46.818682, -71.208175);
           zoomControlChoice = false;
       }
       else{
-          coord = new google.maps.LatLng(46.818432, -71.2065922);
+          coord = new google.maps.LatLng(46.819129, -71.2065922);
           zoomControlChoice = false;
       }
 
@@ -123,6 +123,7 @@
           marker = null;
       for (var i = 0; i < length; i++) {
         marker = _ref[i];
+        key = i;
         //marker = _ref[key];
         //console.log(marker);
         markerCoord = new google.maps.LatLng(marker["coord"][0], marker["coord"][1]);
@@ -290,11 +291,18 @@ $( window ).resize(function() {
         WAQ.GoogleMap.map.set('zoomControl', true);
     }
     else if($( window ).width() > 640){
-        WAQ.GoogleMap.map.setCenter(new google.maps.LatLng(46.817682, -71.2065922));
+        WAQ.GoogleMap.map.setCenter(new google.maps.LatLng(46.818682, -71.208175));
         WAQ.GoogleMap.map.set('zoomControl', false);
     }
     else{
-        WAQ.GoogleMap.map.setCenter(new google.maps.LatLng(46.818432, -71.2065922));
+        WAQ.GoogleMap.map.setCenter(new google.maps.LatLng(46.819129, -71.2065922));
         WAQ.GoogleMap.map.set('zoomControl', false);
+    }
+    
+    var length = WAQ.GoogleMap.marker.length,
+        marker = null;
+    for (var i = 0; i < length; i++) {
+      marker = WAQ.GoogleMap.marker[i];
+      marker.infoWindow.draw();
     }
 });
