@@ -56,9 +56,13 @@ var Countdown = (function($, window, document, undefined) {
             }
             
             self.stats.find('.days .stat-number').text(days);
+            if(days == 1){self.stats.find('.days .stat-caption').text('jour');}else{self.stats.find('.days .stat-caption').text('jours');}
             self.stats.find('.hours .stat-number').text(hours);
+            if(hours == 1){self.stats.find('.hours .stat-caption').text('heure');}else{self.stats.find('.hours .stat-caption').text('heures');}
             self.stats.find('.minutes .stat-number').text(minutes);
+            if(minutes == 1){self.stats.find('.minutes .stat-caption').text('minute');}else{self.stats.find('.minutes .stat-caption').text('minutes');}
             self.stats.find('.seconds .stat-number').text(secs);
+            if(secs == 1){self.stats.find('.seconds .stat-caption').text('seconde');}else{self.stats.find('.seconds .stat-caption').text('secondes');}
         }
     };
 

@@ -39,12 +39,14 @@
   		 echo 'var get_user_sessions_ajax = "'.admin_url('admin-ajax.php?action=get_user_sessions&nonce='.$get_nonce).'"'."\n";
   		 echo 'var fb_init_ajax = "'.admin_url('admin-ajax.php?action=fb_init&nonce='.$init_nonce).'"'."\n";
   		 echo 'var user_sessions = '.json_encode(get_user_sessions()).''."\n";
+  		 echo 'var base_url = "'.get_bloginfo('url').'"'."\n";
+  		 echo 'var template_url = "'.get_bloginfo('template_directory').'"'."\n";
   		 
   	?>
 	</script>
 
 </head>
-<body class="<?php custom_body_classes();?>">
+<body class="not-zoomed">
 
 <div id="fb-root"></div>
 <script>
@@ -59,7 +61,7 @@
 </script>
 
 <!-- Page wrapper -->
-<div class="l-page-wrapper" itemscope itemtype="http://schema.org/Event">
+<div class="l-page-wrapper<?php echo custom_wrapper_classes() ?>" itemscope itemtype="http://schema.org/Event">
 
   <?php 
     if(is_front_page()){

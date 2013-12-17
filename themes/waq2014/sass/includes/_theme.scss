@@ -297,11 +297,23 @@
 	}}
 
 	.l-section-wrapper{
+	    
 		padding-bottom: 10px;
 
 		.not-zoomed & {
 		@include respond-to( 72.938em ){
 			padding: 50px 15px 0;
+			
+		    position: absolute;
+		    top: 0;
+		    z-index: 100;
+		    pointer-events: none;
+		    width: 100%;
+		    
+		    & > div{
+		        margin: 0 auto;
+		        max-width: 1137px;
+		    }
 		}}
 	}
 
@@ -364,6 +376,8 @@
 	}
 
 	.place-wrapper{
+	    
+	    pointer-events: auto;
 
 		.not-zoomed & {
 		@include respond-to( 72.938em ){
@@ -484,14 +498,28 @@
 		min-height: 320px;
 		position: absolute;
 		top: 0;
-		background-image: url( '#{$img-path}bg-map.png' );
-		background-position: center center;
-		background-size: cover;
+		//background-image: url( '#{$img-path}bg-map.png' );
+		//background-position: center center;
+		//background-size: cover;
 		z-index: -1;
+		
+		#gmap{
+		    min-height: 320px;
+		    img{
+		        max-width: none;
+		    }
+		}
 
 		.not-zoomed & {
 		@include respond-to( 72.938em ){
 			min-height: 520px;
+			
+			position: static;
+            
+            			
+			#gmap{
+			    min-height: 520px;
+			}
 		}}
 	}
 } // place

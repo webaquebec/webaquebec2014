@@ -50,6 +50,7 @@ function add_my_scripts() {
 	wp_enqueue_script( 'modernizr', get_template_directory_uri() . '/js/vendor/modernizr-2.6.2.min.js', array(), '2.6.2', false );
 	
 	wp_enqueue_script( 'jquery', '//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js', array(), '1.10.2', true );
+	wp_enqueue_script( 'googlemaps', 'http://maps.googleapis.com/maps/api/js?sensor=false&language=fr', array(), null, true );
 	wp_enqueue_script( 'waq-moment', get_template_directory_uri() . '/js/vendor/moment.min.js', array(), null, true );
 	wp_enqueue_script( 'waq-underscore', get_template_directory_uri() . '/js/vendor/underscore-min.js', array(), null, true );
 	
@@ -60,6 +61,10 @@ function add_my_scripts() {
 	wp_enqueue_script( 'waq-schedules', get_template_directory_uri() . '/js/app/objects/Schedule.js', array(), null, true );
 	wp_enqueue_script( 'waq-usersessions', get_template_directory_uri() . '/js/app/objects/CustomSchedule.js', array(), null, true );
 	wp_enqueue_script( 'waq-countdown', get_template_directory_uri() . '/js/app/objects/Countdown.js', array(), null, true );
+	wp_enqueue_script( 'waq-snapmenu', get_template_directory_uri() . '/js/app/objects/SnapMenu.js', array(), null, true );
+	wp_enqueue_script( 'waq-mobilemenu', get_template_directory_uri() . '/js/app/objects/MobileMenu.js', array(), null, true );
+	wp_enqueue_script( 'waq-slideshow', get_template_directory_uri() . '/js/app/objects/Slideshow.js', array(), null, true );
+	wp_enqueue_script( 'waq-googlemaps', get_template_directory_uri() . '/js/app/objects/GoogleMaps.js', array(), null, true );
 	
 	wp_enqueue_script( 'waq-common', get_template_directory_uri() . '/js/app/WAQ.Common.js', array(), null, true );
 	wp_enqueue_script( 'waq-main', get_template_directory_uri() . '/js/main.js', array(), null, true );
@@ -459,7 +464,7 @@ function displayMetas( $names = array(), $properties = array() )
     }
 }
 
-function custom_body_classes(){
+function custom_wrapper_classes(){
     if(is_front_page()){
       echo ' homepage';
     }
@@ -469,5 +474,4 @@ function custom_body_classes(){
     else{
       echo ' single-page';
     }
-
 }

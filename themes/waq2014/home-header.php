@@ -144,7 +144,15 @@ $feat_speakers_output = "";
 
 foreach($feat_speakers as $feat_speaker){
   $feat_speakers_output .= '<figure itemprop="performer" itemscope itemtype="http://schema.org/Person">';
-      $feat_speakers_output .= '<a href="#">';
+      $feat_speakers_sessions = Conferencer::get_sessions($feat_speaker->ID);
+      if(!empty($feat_speakers_sessions)){
+          $feat_speakers_sessions = array_shift($feat_speakers_sessions);
+      }
+      
+      
+      
+  
+      $feat_speakers_output .= (!empty($feat_speakers_sessions) ? '<a href="'. get_permalink($feat_speakers_sessions->ID).'">' : '<a href="">');
           $feat_speakers_output .= '<figcaption>';
               $feat_speakers_output .= '<span class="name" itemprop="name">'.$feat_speaker->post_title.'</span>';
               $feat_speakers_output .= '<span class="job" itemprop="jobTitle">'.get_post_meta( $feat_speaker->ID, '_conferencer_title', true ).'</span>';
@@ -176,20 +184,32 @@ foreach($feat_speakers as $feat_speaker){
         <a href="#" class="visuallyhidden focusable">Passer au contenu</a>
 
         <h1 itemprop="name" class="visuallyhidden">Le Web à Québec</h1>
-
-        <div class="event-logo">
-            <a href="<?php echo get_bloginfo('url'); ?>">
-                <img src="<?php bloginfo('template_directory'); ?>/img/logo.png" alt="">
-            </a>
-        </div>
         
-        <nav role="navigation" id="nav-main">
-            <ul class="nav-main-wrapper" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-                <?php echo $main_menu_output; ?>
-            </ul>
-        </nav>
-
-        <a href="<?php echo get_field('eventbrite_link', $post->ID); ?>" class="event-subscribe event-subscribe-menu">Achetez vos billets</a>
+        <div id="nav-main">
+            <div class="snapmenu-wrapper">
+    
+                <div class="snapmenu-logo">
+                    <a href="<?php echo get_bloginfo('url'); ?>">
+                        <img src="<?php bloginfo('template_directory'); ?>/img/logo.png" alt="">
+                    </a>
+                </div>
+    
+                <div class="snapmenu-mobile-buttons">
+                    <a href="#horaire">Horaire</a>
+                    <button class="btn-toggle-menu">
+                        <span class="visuallyhidden">Ouvrir le menu</span>
+                    </button>
+                </div>
+    
+                <nav role="navigation" class="nav-main-wrapper">
+                    <ul itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+                        <?php echo $main_menu_output; ?>
+                    </ul>
+                </nav>
+    
+                <a href="<?php echo get_field('eventbrite_link', $post->ID); ?>" class="event-subscribe event-subscribe-menu">Achetez vos billets</a>
+            </div>
+        </div>
 
         <div class="event-description">
             <p>Web à Québec</p>
@@ -233,14 +253,6 @@ foreach($feat_speakers as $feat_speaker){
             </div>
         </div>
 
-        <div class="event-speakers">
-        
-        <?php
-          
-          echo $feat_speakers_output;  
-        ?>
-        </div>
-
         <div class="event-subscribe event-subscribe-big">
           <a href="<?php echo get_field('eventbrite_link', $post->ID); ?>">
               <span>Achetez</span>
@@ -250,5 +262,15 @@ foreach($feat_speakers as $feat_speaker){
           </a>
         </div>
 
+        <div class="event-speakers">
+            <?php echo $feat_speakers_output;  ?>
+        </div>
+
     </div>
+        
+    <video id="video_background" preload="auto" autoplay="true" loop="loop" muted="muted" volume="0">
+        <source src="<?php bloginfo('template_directory'); ?>/video/loop.webm" type="video/webm">
+        <source src="<?php bloginfo('template_directory'); ?>/video/loop.mp4" type="video/mp4">
+        Video not supported
+    </video>
 </header><!-- end of Home section -->
