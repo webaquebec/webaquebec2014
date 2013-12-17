@@ -7,7 +7,7 @@
 (function() {
   window.CustomGmap = (function() {
     CustomGmap.prototype.settings = {
-      markers: [
+      markers: [/*
         {
           coord: [46.817682, -71.2065922],
           isWaq: true,
@@ -27,13 +27,13 @@
           },
           content: '<a href="https://maps.google.ca/maps?q=ESPACE+400E+BELL+100,+QUAI+SAINT-ANDR%C3%89+QU%C3%89BEC,+QC&hl=fr&ie=UTF8&hq=ESPACE+400E+BELL+100,+QUAI+SAINT-ANDR%C3%89+QU%C3%89BEC,+QC&t=m&z=16&iwloc=A" target="_blank">\nHôtel Le Germain-Dominion<br>126 Rue Saint-Pierre</a><br>\n<span class="small">1-888-833-5253<br><a href="mailto:reservations@germaindominion.com">reservations@germaindominion.com</a><br>\nMentionnez le groupe : Web à Québec</span>',
           image: template_url+"/img/germain_dominion_full.png"
-        }
+        }*/
       ]
     };
 
     function CustomGmap(elementId) {
       var coord, gMapOptions, isMobile, mapStyle, styledMap, zoomControlChoice;
-      
+
       if($( window ).width() > 1166){
           coord = new google.maps.LatLng(46.818814, -71.201094);
           zoomControlChoice = true;
@@ -46,7 +46,7 @@
           coord = new google.maps.LatLng(46.818432, -71.2065922);
           zoomControlChoice = false;
       }
-      
+
       isMobile = $('body').hasClass('mobile') ? true : false;
       gMapOptions = {
         zoom: 16,
@@ -124,7 +124,7 @@
       for (var i = 0; i < length; i++) {
         marker = _ref[i];
         //marker = _ref[key];
-        console.log(marker);
+        //console.log(marker);
         markerCoord = new google.maps.LatLng(marker["coord"][0], marker["coord"][1]);
         this.marker[key] = {};
         opts = {

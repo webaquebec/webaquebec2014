@@ -54,7 +54,7 @@
 	}}
 }
 
-.video .home{
+.home{
 	.not-zoomed & {
 	@include respond-to( 72.938em ){
 		background-position: center -15px;
@@ -63,7 +63,7 @@
 	}}
 }
 
-.video .home #video_background{
+.home #video_background{
 	.not-zoomed & {
 	@include respond-to( 72.938em ){
 		display: block;
@@ -297,19 +297,19 @@
 	}}
 
 	.l-section-wrapper{
-	    
+
 		padding-bottom: 10px;
 
 		.not-zoomed & {
 		@include respond-to( 72.938em ){
 			padding: 50px 15px 0;
-			
+
 		    position: absolute;
 		    top: 0;
 		    z-index: 100;
 		    pointer-events: none;
 		    width: 100%;
-		    
+
 		    & > div{
 		        margin: 0 auto;
 		        max-width: 1137px;
@@ -376,7 +376,7 @@
 	}
 
 	.place-wrapper{
-	    
+
 	    pointer-events: auto;
 
 		.not-zoomed & {
@@ -502,7 +502,7 @@
 		//background-position: center center;
 		//background-size: cover;
 		z-index: -1;
-		
+
 		#gmap{
 		    min-height: 320px;
 		    img{
@@ -513,10 +513,10 @@
 		.not-zoomed & {
 		@include respond-to( 72.938em ){
 			min-height: 520px;
-			
+
 			position: static;
-            
-            			
+
+
 			#gmap{
 			    min-height: 520px;
 			}

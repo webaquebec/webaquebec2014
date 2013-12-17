@@ -2490,7 +2490,7 @@ aside.highlight .social .twitter {
 
 @media only screen and (min-width: 72.938em) {
   /* line 58, ../sass/includes/_theme.scss */
-  .not-zoomed .video .home {
+  .not-zoomed .home {
     background-position: center -15px;
     background-size: auto auto;
     background-image: url("../img/bg-home-video.png");
@@ -2499,7 +2499,7 @@ aside.highlight .social .twitter {
 
 @media only screen and (min-width: 72.938em) {
   /* line 67, ../sass/includes/_theme.scss */
-  .not-zoomed .video .home #video_background {
+  .not-zoomed .home #video_background {
     display: block;
     position: absolute;
     bottom: 0px;

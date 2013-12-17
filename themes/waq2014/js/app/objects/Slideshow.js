@@ -64,7 +64,7 @@ var Slideshow = ( function( $, window, document, undefined ) {
 
 			self.changeSlide();
 
-			if( $( document ).width() < 1024 ) {
+			/*if( $( document ).width() < 1024 ) {
 				self.displayedSlides = 1;
 				fixLayout = true;
 			}
@@ -100,7 +100,7 @@ var Slideshow = ( function( $, window, document, undefined ) {
 					}
 					fixLayout = false;
 				}
-			});
+			});*/
 
 			self.arrowButtons.eq(0).hide();
 			if( self.nbSlides < 4 ){
