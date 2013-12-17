@@ -163,6 +163,15 @@ foreach($feat_speakers as $feat_speaker){
           
           if(function_exists('aq_resize')){
             $image = aq_resize( $img_url, 227, 190, true );
+            if(empty($image)){
+              $image = aq_resize( $img_url, 227, 190, false );
+              if(empty($image)){
+                $image = $img_url;
+              }
+            }
+            else{
+              $image = $img_url;
+            }
           }
           else{
             $image = $img_url;
