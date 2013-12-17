@@ -107,7 +107,7 @@ if(!empty($volunteers)){
 
 ?>
 <!-- About section -->
-<section id="apropos" class="about">
+<section id="<?php echo $post->post_name; ?>" class="about">
     <div class="l-section-wrapper">
 
         <header>
