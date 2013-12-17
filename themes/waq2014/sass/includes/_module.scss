@@ -561,10 +561,13 @@
 				display: none;
 			}
 
-			/* &:hover .article-title a{
+			&:hover .article-title a{
 				color: white;
-				text-decoration: underline;
-			} */
+			}
+
+			&:hover .article-content{
+				color: white;
+			}
 		}}
 	}
 
@@ -748,6 +751,18 @@
 		$nbSlides 			: 5;
 		$displayedSlides 	: 3;
 		@include js-slider ( $width, $margin, $nbSlides, $displayedSlides );
+
+		article{
+			.article-thumb{
+				float: none;
+				width: auto;
+			}
+			.article-thumb + .article-content{
+				float: none;
+				width: auto;
+				margin-left: 0;
+			}
+		}
 	}
 
 	@include respond-to( 72.938em ){
