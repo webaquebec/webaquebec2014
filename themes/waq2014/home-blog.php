@@ -50,7 +50,9 @@ if($blog_posts){
         
         if(!empty($image)){
           $blog_output .= '<div class="article-thumb">';
-              $blog_output .= '<img src="'.$image.'" alt="">';
+              $blog_output .= '<a href="'.get_permalink($blog_post->ID).'">';
+                  $blog_output .= '<img src="'.$image.'" alt="">';
+              $blog_output .= '</a>';
           $blog_output .= '</div>';
         }
         
