@@ -18,7 +18,7 @@ $blog_nav = "";
 if($blog_posts){
 
   $blog_output .= '<div class="blog-wrapper"><div class="js-slider">
-      <div class="blog-container" itemscope itemtype="http://schema.org/Blog">';
+      <div class="blog-container js-slider-container" itemscope itemtype="http://schema.org/Blog">';
 
   foreach($blog_posts as $blog_post){
   
@@ -67,8 +67,8 @@ if($blog_posts){
   
   if(count($blog_posts) > 3){
     $blog_nav .= '<div class="blog-nav">';
-      $blog_nav .= '<button class="button-arrow prev"><span class="visuallyhidden">Articles précédents</span></button>';
-      $blog_nav .= '<button class="button-arrow next"><span class="visuallyhidden">Articles suivants</span></button>';
+      $blog_nav .= '<button class="button prev"><span class="visuallyhidden">Articles précédents</span></button>';
+      $blog_nav .= '<button class="button next"><span class="visuallyhidden">Articles suivants</span></button>';
       
       for($i = 1; $i <= ceil(count($blog_posts)/3); $i++){
         $blog_nav .= '<button class="button-page"><span class="visuallyhidden">Page </span>'.$i.'</button>';
