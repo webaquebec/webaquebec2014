@@ -788,12 +788,9 @@ Mentionnez le groupe : Web à Québec</span>        </span><img src="http://waq2
                                         </figcaption>
                                         <img itemprop="image" src="../img/51x51/jason_lemay.png" alt="">
                                     </figure>
-                                    <ul class="overlay social-medias reversed">
-                                        <li><a href="#" class="Facebook"><img src="#" alt="Facebook"></a></li>
-                                        <li><a href="#" class="Twitter"><img src="#" alt="Twitter"></a></li>
-                                        <li><a href="#" class="LinkedIn"><img src="#" alt="LinkedIn"></a></li>
-                                        <li><a href="#" class="Google+"><img src="#" alt="Google+"></a></li>
-                                    </ul>
+                                    <div class="overlay social-medias reversed">
+                                        <a href="#" class="Facebook"><img src="../img/icon-social-white-facebook.png" alt="Facebook"></a><a href="#" class="Twitter"><img src="../img/icon-social-white-twitter.png" alt="Twitter"></a><a href="#" class="LinkedIn"><img src="../img/icon-social-white-linkedin.png" alt="LinkedIn"></a><a href="#" class="Google+"><img src="../img/icon-social-white-googleplus.png" alt="Google+"></a>
+                                    </div>
                                 </li>
                                 <li class="last-2" itemscope itemtype="http://schema.org/Person">
                                     <figure itemscope itemtype="http://schema.org/Person">
@@ -802,12 +799,9 @@ Mentionnez le groupe : Web à Québec</span>        </span><img src="http://waq2
                                         </figcaption>
                                         <img itemprop="image" src="../img/51x51/eric_letarte.png" alt="">
                                     </figure>
-                                    <ul class="overlay social-medias reversed">
-                                        <li><a href="#" class="Facebook"><img src="#" alt="Facebook"></a></li>
-                                        <li><a href="#" class="Twitter"><img src="#" alt="Twitter"></a></li>
-                                        <li><a href="#" class="LinkedIn"><img src="#" alt="LinkedIn"></a></li>
-                                        <li><a href="#" class="Google+"><img src="#" alt="Google+"></a></li>
-                                    </ul>
+                                    <div class="overlay social-medias reversed">
+                                        <a href="#" class="Facebook"><img src="../img/icon-social-white-facebook.png" alt="Facebook"></a><a href="#" class="Twitter"><img src="../img/icon-social-white-twitter.png" alt="Twitter"></a><a href="#" class="LinkedIn"><img src="../img/icon-social-white-linkedin.png" alt="LinkedIn"></a><a href="#" class="Google+"><img src="../img/icon-social-white-googleplus.png" alt="Google+"></a>
+                                    </div>
                                 </li>
                                 <li class="last-3" itemscope itemtype="http://schema.org/Person">
                                     <figure itemscope itemtype="http://schema.org/Person">
@@ -816,12 +810,9 @@ Mentionnez le groupe : Web à Québec</span>        </span><img src="http://waq2
                                         </figcaption>
                                         <img itemprop="image" src="../img/51x51/default.png" alt="">
                                     </figure>
-                                    <ul class="overlay social-medias reversed">
-                                        <li><a href="#" class="Facebook"><img src="#" alt="Facebook"></a></li>
-                                        <li><a href="#" class="Twitter"><img src="#" alt="Twitter"></a></li>
-                                        <li><a href="#" class="LinkedIn"><img src="#" alt="LinkedIn"></a></li>
-                                        <li><a href="#" class="Google+"><img src="#" alt="Google+"></a></li>
-                                    </ul>
+                                    <div class="overlay social-medias reversed">
+                                        <a href="#" class="Facebook"><img src="../img/icon-social-white-facebook.png" alt="Facebook"></a><a href="#" class="Twitter"><img src="../img/icon-social-white-twitter.png" alt="Twitter"></a><a href="#" class="LinkedIn"><img src="../img/icon-social-white-linkedin.png" alt="LinkedIn"></a><a href="#" class="Google+"><img src="../img/icon-social-white-googleplus.png" alt="Google+"></a>
+                                    </div>
                                 </li>
                                 <li class="last-2 last-4" itemscope itemtype="http://schema.org/Person">
                                     <figure itemscope itemtype="http://schema.org/Person">
@@ -830,12 +821,9 @@ Mentionnez le groupe : Web à Québec</span>        </span><img src="http://waq2
                                         </figcaption>
                                         <img itemprop="image" src="../img/51x51/felix_begin.png" alt="">
                                     </figure>
-                                    <ul class="overlay social-medias reversed">
-                                        <li><a href="#" class="Facebook"><img src="#" alt="Facebook"></a></li>
-                                        <li><a href="#" class="Twitter"><img src="#" alt="Twitter"></a></li>
-                                        <li><a href="#" class="LinkedIn"><img src="#" alt="LinkedIn"></a></li>
-                                        <li><a href="#" class="Google+"><img src="#" alt="Google+"></a></li>
-                                    </ul>
+                                    <div class="overlay social-medias reversed">
+                                        <a href="#" class="Facebook"><img src="../img/icon-social-white-facebook.png" alt="Facebook"></a><a href="#" class="Twitter"><img src="../img/icon-social-white-twitter.png" alt="Twitter"></a><a href="#" class="LinkedIn"><img src="../img/icon-social-white-linkedin.png" alt="LinkedIn"></a><a href="#" class="Google+"><img src="../img/icon-social-white-googleplus.png" alt="Google+"></a>
+                                    </div>
                                 </li>
                             </ul>
                         </section>
@@ -853,12 +841,9 @@ Mentionnez le groupe : Web à Québec</span>        </span><img src="http://waq2
                                         </figcaption>
                                         <img itemprop="image" src="../img/51x51/eric_letarte.png" alt="">
                                     </figure>
-                                    <ul class="overlay social-medias reversed">
-                                        <li><a href="#" class="Facebook"><img src="#" alt="Facebook"></a></li>
-                                        <li><a href="#" class="Twitter"><img src="#" alt="Twitter"></a></li>
-                                        <li><a href="#" class="LinkedIn"><img src="#" alt="LinkedIn"></a></li>
-                                        <li><a href="#" class="Google+"><img src="#" alt="Google+"></a></li>
-                                    </ul>
+                                    <div class="overlay social-medias reversed">
+                                        <a href="#" class="Facebook"><img src="../img/icon-social-white-facebook.png" alt="Facebook"></a><a href="#" class="Twitter"><img src="../img/icon-social-white-twitter.png" alt="Twitter"></a><a href="#" class="LinkedIn"><img src="../img/icon-social-white-linkedin.png" alt="LinkedIn"></a><a href="#" class="Google+"><img src="../img/icon-social-white-googleplus.png" alt="Google+"></a>
+                                    </div>
                                 </li>
                                 <li class="last-2" itemscope itemtype="http://schema.org/Person">
                                     <figure itemscope itemtype="http://schema.org/Person">
@@ -867,12 +852,9 @@ Mentionnez le groupe : Web à Québec</span>        </span><img src="http://waq2
                                         </figcaption>
                                         <img itemprop="image" src="../img/51x51/felix_begin.png" alt="">
                                     </figure>
-                                    <ul class="overlay social-medias reversed">
-                                        <li><a href="#" class="Facebook"><img src="#" alt="Facebook"></a></li>
-                                        <li><a href="#" class="Twitter"><img src="#" alt="Twitter"></a></li>
-                                        <li><a href="#" class="LinkedIn"><img src="#" alt="LinkedIn"></a></li>
-                                        <li><a href="#" class="Google+"><img src="#" alt="Google+"></a></li>
-                                    </ul>
+                                    <div class="overlay social-medias reversed">
+                                        <a href="#" class="Facebook"><img src="../img/icon-social-white-facebook.png" alt="Facebook"></a><a href="#" class="Twitter"><img src="../img/icon-social-white-twitter.png" alt="Twitter"></a><a href="#" class="LinkedIn"><img src="../img/icon-social-white-linkedin.png" alt="LinkedIn"></a><a href="#" class="Google+"><img src="../img/icon-social-white-googleplus.png" alt="Google+"></a>
+                                    </div>
                                 </li>
                             </ul>
                         </section>
@@ -890,12 +872,9 @@ Mentionnez le groupe : Web à Québec</span>        </span><img src="http://waq2
                                         </figcaption>
                                         <img itemprop="image" src="../img/51x51/carl-frederic_de_celles.png" alt="">
                                     </figure>
-                                    <ul class="overlay social-medias reversed">
-                                        <li><a href="#" class="Facebook"><img src="#" alt="Facebook"></a></li>
-                                        <li><a href="#" class="Twitter"><img src="#" alt="Twitter"></a></li>
-                                        <li><a href="#" class="LinkedIn"><img src="#" alt="LinkedIn"></a></li>
-                                        <li><a href="#" class="Google+"><img src="#" alt="Google+"></a></li>
-                                    </ul>
+                                    <div class="overlay social-medias reversed">
+                                        <a href="#" class="Facebook"><img src="../img/icon-social-white-facebook.png" alt="Facebook"></a><a href="#" class="Twitter"><img src="../img/icon-social-white-twitter.png" alt="Twitter"></a><a href="#" class="LinkedIn"><img src="../img/icon-social-white-linkedin.png" alt="LinkedIn"></a><a href="#" class="Google+"><img src="../img/icon-social-white-googleplus.png" alt="Google+"></a>
+                                    </div>
                                 </li>
                                 <li class="last-2" itemscope itemtype="http://schema.org/Person">
                                     <figure itemscope itemtype="http://schema.org/Person">
@@ -904,12 +883,9 @@ Mentionnez le groupe : Web à Québec</span>        </span><img src="http://waq2
                                         </figcaption>
                                         <img itemprop="image" src="../img/51x51/jonathan_parent.png" alt="">
                                     </figure>
-                                    <ul class="overlay social-medias reversed">
-                                        <li><a href="#" class="Facebook"><img src="#" alt="Facebook"></a></li>
-                                        <li><a href="#" class="Twitter"><img src="#" alt="Twitter"></a></li>
-                                        <li><a href="#" class="LinkedIn"><img src="#" alt="LinkedIn"></a></li>
-                                        <li><a href="#" class="Google+"><img src="#" alt="Google+"></a></li>
-                                    </ul>
+                                    <div class="overlay social-medias reversed">
+                                        <a href="#" class="Facebook"><img src="../img/icon-social-white-facebook.png" alt="Facebook"></a><a href="#" class="Twitter"><img src="../img/icon-social-white-twitter.png" alt="Twitter"></a><a href="#" class="LinkedIn"><img src="../img/icon-social-white-linkedin.png" alt="LinkedIn"></a><a href="#" class="Google+"><img src="../img/icon-social-white-googleplus.png" alt="Google+"></a>
+                                    </div>
                                 </li>
                                 <li class="last-3" itemscope itemtype="http://schema.org/Person">
                                     <figure itemscope itemtype="http://schema.org/Person">
@@ -918,12 +894,9 @@ Mentionnez le groupe : Web à Québec</span>        </span><img src="http://waq2
                                         </figcaption>
                                         <img itemprop="image" src="../img/51x51/martin_huard.png" alt="">
                                     </figure>
-                                    <ul class="overlay social-medias reversed">
-                                        <li><a href="#" class="Facebook"><img src="#" alt="Facebook"></a></li>
-                                        <li><a href="#" class="Twitter"><img src="#" alt="Twitter"></a></li>
-                                        <li><a href="#" class="LinkedIn"><img src="#" alt="LinkedIn"></a></li>
-                                        <li><a href="#" class="Google+"><img src="#" alt="Google+"></a></li>
-                                    </ul>
+                                    <div class="overlay social-medias reversed">
+                                        <a href="#" class="Facebook"><img src="../img/icon-social-white-facebook.png" alt="Facebook"></a><a href="#" class="Twitter"><img src="../img/icon-social-white-twitter.png" alt="Twitter"></a><a href="#" class="LinkedIn"><img src="../img/icon-social-white-linkedin.png" alt="LinkedIn"></a><a href="#" class="Google+"><img src="../img/icon-social-white-googleplus.png" alt="Google+"></a>
+                                    </div>
                                 </li>
                                 <li class="last-2 last-4" itemscope itemtype="http://schema.org/Person">
                                     <figure itemscope itemtype="http://schema.org/Person">
@@ -932,12 +905,9 @@ Mentionnez le groupe : Web à Québec</span>        </span><img src="http://waq2
                                         </figcaption>
                                         <img itemprop="image" src="../img/51x51/jean-philippe_doyle.png" alt="">
                                     </figure>
-                                    <ul class="overlay social-medias reversed">
-                                        <li><a href="#" class="Facebook"><img src="#" alt="Facebook"></a></li>
-                                        <li><a href="#" class="Twitter"><img src="#" alt="Twitter"></a></li>
-                                        <li><a href="#" class="LinkedIn"><img src="#" alt="LinkedIn"></a></li>
-                                        <li><a href="#" class="Google+"><img src="#" alt="Google+"></a></li>
-                                    </ul>
+                                    <div class="overlay social-medias reversed">
+                                        <a href="#" class="Facebook"><img src="../img/icon-social-white-facebook.png" alt="Facebook"></a><a href="#" class="Twitter"><img src="../img/icon-social-white-twitter.png" alt="Twitter"></a><a href="#" class="LinkedIn"><img src="../img/icon-social-white-linkedin.png" alt="LinkedIn"></a><a href="#" class="Google+"><img src="../img/icon-social-white-googleplus.png" alt="Google+"></a>
+                                    </div>
                                 </li>
                                 <li class="" itemscope itemtype="http://schema.org/Person">
                                     <figure itemscope itemtype="http://schema.org/Person">
@@ -946,12 +916,9 @@ Mentionnez le groupe : Web à Québec</span>        </span><img src="http://waq2
                                         </figcaption>
                                         <img itemprop="image" src="../img/51x51/joe_bussiere.png" alt="">
                                     </figure>
-                                    <ul class="overlay social-medias reversed">
-                                        <li><a href="#" class="Facebook"><img src="#" alt="Facebook"></a></li>
-                                        <li><a href="#" class="Twitter"><img src="#" alt="Twitter"></a></li>
-                                        <li><a href="#" class="LinkedIn"><img src="#" alt="LinkedIn"></a></li>
-                                        <li><a href="#" class="Google+"><img src="#" alt="Google+"></a></li>
-                                    </ul>
+                                    <div class="overlay social-medias reversed">
+                                        <a href="#" class="Facebook"><img src="../img/icon-social-white-facebook.png" alt="Facebook"></a><a href="#" class="Twitter"><img src="../img/icon-social-white-twitter.png" alt="Twitter"></a><a href="#" class="LinkedIn"><img src="../img/icon-social-white-linkedin.png" alt="LinkedIn"></a><a href="#" class="Google+"><img src="../img/icon-social-white-googleplus.png" alt="Google+"></a>
+                                    </div>
                                 </li>
                                 <li class="last-3" itemscope itemtype="http://schema.org/Person">
                                     <figure itemscope itemtype="http://schema.org/Person">
@@ -960,12 +927,9 @@ Mentionnez le groupe : Web à Québec</span>        </span><img src="http://waq2
                                         </figcaption>
                                         <img itemprop="image" src="../img/51x51/jason_lemay.png" alt="">
                                     </figure>
-                                    <ul class="overlay social-medias reversed">
-                                        <li><a href="#" class="Facebook"><img src="#" alt="Facebook"></a></li>
-                                        <li><a href="#" class="Twitter"><img src="#" alt="Twitter"></a></li>
-                                        <li><a href="#" class="LinkedIn"><img src="#" alt="LinkedIn"></a></li>
-                                        <li><a href="#" class="Google+"><img src="#" alt="Google+"></a></li>
-                                    </ul>
+                                    <div class="overlay social-medias reversed">
+                                        <a href="#" class="Facebook"><img src="../img/icon-social-white-facebook.png" alt="Facebook"></a><a href="#" class="Twitter"><img src="../img/icon-social-white-twitter.png" alt="Twitter"></a><a href="#" class="LinkedIn"><img src="../img/icon-social-white-linkedin.png" alt="LinkedIn"></a><a href="#" class="Google+"><img src="../img/icon-social-white-googleplus.png" alt="Google+"></a>
+                                    </div>
                                 </li>
                             </ul>
                         </section>

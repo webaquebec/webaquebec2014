@@ -984,6 +984,23 @@
 
 } // page-content
 
+.social-medias{
+
+	.footer & {
+		margin: 5px 0 10px;
+	}
+
+	a{
+		@include inline-block;
+		margin-right: 5px;
+		line-height: 0;
+	}
+
+	img{
+		position: relative !important;
+	}
+}
+
 .footer{
 
 	.footer-infos{
@@ -1065,17 +1082,6 @@
 		.link,
 		.link a{
 			text-transform: none;
-		}
-	}
-
-	.social-medias{
-		margin: 5px 0 10px;
-
-		a{
-			display: block;
-			float: left;
-			margin-right: 5px;
-			line-height: 0;
 		}
 	}
 
