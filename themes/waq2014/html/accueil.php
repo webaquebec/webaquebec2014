@@ -283,7 +283,7 @@
                         <div class="errors"></div>
                         <div class="field email">
                             <label for="email"><span class="visuallyhidden">Courriel</span></label>
-                            <input type="text" id="email" class="input-email" value="" placeholder="Courriel">
+                            <input type="text" id="email" class="input-email" value="" title="Courriel" placeholder="Courriel">
                         </div>
                         <div class="buttons">
                             <input type="submit" value="Envoyer" class="input-submit">

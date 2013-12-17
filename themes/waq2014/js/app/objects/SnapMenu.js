@@ -76,11 +76,14 @@ var SnapMenu = ( function( $, window, document, undefined ) {
 
                 self.customNavigation( $(this).attr('href') );
 
+                e.preventDefault();
                 return false;
             });
 
             self.menuItems.on( 'mousedown', function( e ) {
                 $( $(this).attr('href') ).find('h2').eq(0).addClass( WAQ.Constants.onClickClass );
+
+                e.preventDefault();
                 return false;
             });
         },
@@ -104,13 +107,17 @@ var SnapMenu = ( function( $, window, document, undefined ) {
 
         // Custom navigation
         customNavigation: function( anchor ) {
-            var self = this;
+            var self = this,
+                offset = $( anchor ).offset().top - 64 + 15;
 
             if ( self.config.customNavigation ) {
-
-                window.location.hash = anchor;
-                $( window ).scrollTop( $( anchor ).offset().top - 64 + 15 );
-                $( anchor ).find('h2').eq(0).attr('tabindex', '-1').focus();
+                //$( window ).scrollTop( $( anchor ).offset().top - 64 + 15 );
+                $('html, body').animate({
+                    scrollTop: offset
+                }, function(){
+                    window.location.hash = anchor;
+                    $( anchor ).find('h2').eq(0).attr('tabindex', '-1').focus();
+                });
 
             }
         },
