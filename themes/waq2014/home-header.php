@@ -154,7 +154,7 @@ foreach($feat_speakers as $feat_speaker){
 
           $feat_speakers_output .= '<figcaption>';
               $feat_speakers_output .= '<span class="name" itemprop="name">'.$feat_speaker->post_title.'</span>';
-              $feat_speakers_output .= '<span class="job" itemprop="jobTitle">'.get_post_meta( $feat_speaker->ID, '_conferencer_title', true ).'</span>';
+              $feat_speakers_output .= '<span class="job" itemprop="jobTitle">'.(get_post_meta( $feat_speaker->ID, '_conferencer_title', true )?get_post_meta( $feat_speaker->ID, '_conferencer_title', true ):'Conférencier').'</span>';
           $feat_speakers_output .= '</figcaption>';
           
           $thumb = get_post_thumbnail_id($feat_speaker->ID);
