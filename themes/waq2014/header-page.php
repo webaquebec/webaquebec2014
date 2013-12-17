@@ -20,7 +20,7 @@ $headerHomePage= $headerHomePage[0];
         </div>
 
         <div class="event-subscribe event-subscribe-menu"><a href="<?php echo get_field('eventbrite_link',$headerHomePage->ID); ?>">Achetez vos billets</a></div>
-        <div class="event-back-link"><a href="<?php echo get_bloginfo('url'); ?>">Retour à l'horaire</a></div>
+        <div class="event-back-link"><a href="<?php echo get_bloginfo('url'); ?>">Retour à <?php echo (is_singular('session')?"l'horaire":"l'accueil") ?></a></div>
 
     </div>
 </header><!-- end of Home section -->
