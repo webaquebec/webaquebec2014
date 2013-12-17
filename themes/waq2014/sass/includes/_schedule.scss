@@ -10,6 +10,10 @@
 	top: -5px;
 	font: 400 emify(15px, 17px, 16px) 'Roboto', sans-serif;
 
+	.no-js &{
+		display: none;
+	}
+
 	em{
 		font-style: italic;
 	}
@@ -249,6 +253,10 @@
 		padding: 20px 15px 0;
 		font-size: 0;
 		background-color: $c-bg-schedule-highlight;
+
+		.no-js &{
+			display: none;
+		}
 
 		@include respond-to( 1024px ){
 			padding: 0;
