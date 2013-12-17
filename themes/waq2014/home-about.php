@@ -52,16 +52,20 @@ foreach($organizers_groups as $organizers_group){
               $organizers_output .= '<img itemprop="image" src="'.$image.'" alt="">';
           $organizers_output .= '</figure>';
           
-          $organizers_output .= '<div class="overlay social-medias reversed">';
-              if($fb_url = get_field('facebook_link',$organizer->ID))
-                $organizers_output .= '<a href="'.$fb_url.'" class="Facebook"><img src="'.get_bloginfo('template_directory').'/img/icon-social-white-facebook.png" alt="Facebook"></a>';
-              if($tw_url = get_field('twitter_link',$organizer->ID))
-                $organizers_output .= '<a href="'.$tw_url.'" class="Twitter"><img src="'.get_bloginfo('template_directory').'/img/icon-social-white-twitter.png" alt="Twitter"></a>';
-              if($ln_url = get_field('linkedin_link',$organizer->ID))
-                $organizers_output .= '<a href="'.$ln_url.'" class="LinkedIn"><img src="'.get_bloginfo('template_directory').'/img/icon-social-white-linkedin.png" alt="LinkedIn"></a>';
-              if($gp_url = get_field('google_link',$organizer->ID))
-                $organizers_output .= '<a href="'.$gp_url.'" class="Google+"><img src="'.get_bloginfo('template_directory').'/img/icon-social-white-googleplus.png" alt="Google+"></a>';
-          $organizers_output .= '</div>';
+          $organizers_social_output = "";
+          
+          if($fb_url = get_field('facebook_link',$organizer->ID))
+            $organizers_social_output .= '<a href="'.$fb_url.'" class="Facebook"><img src="'.get_bloginfo('template_directory').'/img/icon-social-white-facebook.png" alt="Facebook"></a>';
+          if($tw_url = get_field('twitter_link',$organizer->ID))
+            $organizers_social_output .= '<a href="'.$tw_url.'" class="Twitter"><img src="'.get_bloginfo('template_directory').'/img/icon-social-white-twitter.png" alt="Twitter"></a>';
+          if($ln_url = get_field('linkedin_link',$organizer->ID))
+            $organizers_social_output .= '<a href="'.$ln_url.'" class="LinkedIn"><img src="'.get_bloginfo('template_directory').'/img/icon-social-white-linkedin.png" alt="LinkedIn"></a>';
+          if($gp_url = get_field('google_link',$organizer->ID))
+            $organizers_social_output .= '<a href="'.$gp_url.'" class="Google+"><img src="'.get_bloginfo('template_directory').'/img/icon-social-white-googleplus.png" alt="Google+"></a>';
+                
+          if(!empty($organizers_social_output)){
+              $organizers_output .= '<div class="overlay social-medias reversed">'.$organizers_social_output.'</div>';
+          }
           
       $organizers_output .= '</li>';
     }
