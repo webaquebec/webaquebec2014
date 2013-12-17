@@ -3,6 +3,7 @@
 
 // Formule magique pour empêcher des bugs sur les images à causes des transitions d'opacité.
 img, a{ @include experimental(transform, translateZ(0)); }
+#nav-main{ @include experimental(transform, translateZ(0)); }
 
 body{
 	background-color: $c-bg-body;
