@@ -72,7 +72,7 @@ foreach ($archives as $archive) {
                         <span class="streetAddress" itemprop="streetAddress"><?php echo $waq_place_address; ?></span>
                         <span class="addressLocality" itemprop="addressLocality"><?php echo $waq_place_city; ?></span> (<?php echo $waq_place_state; ?>) <span class="postalCode" itemprop="postalCode"><?php echo $waq_place_postal_code; ?></span>
                     </span>
-                    <span class="link"><a href="https://maps.google.ca/maps?q=<?php echo $waq_google_maps; ?>&hl=fr&ie=UTF8&hq=<?php echo $waq_google_maps; ?>&t=m&z=16&iwloc=A">Comment s'y rendre</a></span>
+                    <span class="link"><a href="https://maps.google.ca/maps?q=<?php echo $waq_google_maps; ?>&amp;hl=fr&amp;ie=UTF8&amp;hq=<?php echo $waq_google_maps; ?>&amp;t=m&amp;z=16&amp;iwloc=A">Comment s'y rendre</a></span>
                 </div>
             </div>
 
@@ -102,7 +102,7 @@ foreach ($archives as $archive) {
 
             <div class="l-col large">
                 <p class="strong">Suivez-nous sur le réseaux sociaux et collaborez avec nous</p>
-                <p class="strong hashtag"><a href="https://twitter.com/search?q=<?php echo urlencode($social_hashtag); ?>&src=typd"><?php echo $social_hashtag; ?></a></p>
+                <p class="strong hashtag"><a href="https://twitter.com/search?q=<?php echo urlencode($social_hashtag); ?>&amp;src=typd"><?php echo $social_hashtag; ?></a></p>
                 <div class="social-medias">
                     <?php echo $output_social; ?>
                 </div>
