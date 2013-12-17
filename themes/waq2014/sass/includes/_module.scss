@@ -683,28 +683,25 @@
 	}
 }
 
-.js .blog-wrapper .js-slider{
+.not-zoomed.js .blog-wrapper .js-slider{
 	margin: 15px auto;
 
-	.not-zoomed & {
 	@include respond-to( 48.000em ){
 		$width 				: 600px;
 		$margin 			: 20px;
 		$nbSlides 			: 5;
 		$displayedSlides 	: 1;
 		@include js-slider ( $width, $margin, $nbSlides, $displayedSlides );
-	}}
+	}
 
-	.not-zoomed & {
 	@include respond-to( 64.000em ){
 		$width 				: 850px;
 		$margin 			: 20px;
 		$nbSlides 			: 5;
 		$displayedSlides 	: 3;
 		@include js-slider ( $width, $margin, $nbSlides, $displayedSlides );
-	}}
+	}
 
-	.not-zoomed & {
 	@include respond-to( 72.938em ){
 		$width 				: 975px;
 		$margin 			: 20px;
@@ -713,10 +710,9 @@
 		@include js-slider ( $width, $margin, $nbSlides, $displayedSlides );
 
 		padding: 10px 0;
-	}}
+	}
 
 	& + .blog-nav{
-		.not-zoomed & {
 		@include respond-to( 48.000em ){
 			display: block;
 
@@ -725,13 +721,12 @@
 			}
 
 			.button-page{
-				.not-zoomed & {
 				@include respond-to( 64.000em ){
 					@include inline-block;
 					margin: 2px;
-				}}
+				}
 			}
-		}}
+		}
 	}
 }
 

@@ -117,13 +117,16 @@ var Slideshow = ( function( $, window, document, undefined ) {
 		changeSlide: function(){
 			var self = this;
 
+			self.slideWidth = self.slides.eq(0).outerWidth( true );
+
 			self.pageButtons.on('click', function(){
 				$this = $(this);
 
 				var index  = $this.index() - 2,
 					offset = self.slideWidth * index * -self.displayedSlides;
 
-				self.activePage = index;
+				self.slideWidth = self.slides.eq(0).outerWidth( true );
+				offset = self.slideWidth * index * -self.displayedSlides;
 
 				self.pageButtons.removeClass( WAQ.Constants.isActiveClass );
 				$this.addClass( WAQ.Constants.isActiveClass );
@@ -155,7 +158,6 @@ var Slideshow = ( function( $, window, document, undefined ) {
 					activePage = self.activePage,
 					newActivePage = activePage;
 
-
 				if( $this.hasClass('prev') ){
 					newActivePage--;
 				}
@@ -165,6 +167,7 @@ var Slideshow = ( function( $, window, document, undefined ) {
 				}
 
 				self.activePage = newActivePage;
+				self.slideWidth = self.slides.eq(0).outerWidth( true );
 				offset = self.slideWidth * newActivePage * -self.displayedSlides;
 
 				if( newActivePage > 0 ){

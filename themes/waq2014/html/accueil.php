@@ -121,7 +121,7 @@
                 </div>
 
                 <div class="event-stats">
-                    <div class="event-stats-group days large">
+                    <div class="event-stats-group days">
                         <div class="stat days">
                             <span class="stat-number">98</span>
                             <span class="stat-caption">jours</span>
