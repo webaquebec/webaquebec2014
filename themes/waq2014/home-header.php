@@ -268,7 +268,7 @@ foreach($feat_speakers as $feat_speaker){
 
     </div>
         
-    <video id="video_background" preload="auto" autoplay="true" loop="loop" muted="muted" volume="0">
+    <video id="video_background" poster="<?php bloginfo('template_directory'); ?>/img/video-poster.png" preload="auto" autoplay="true" loop="loop" muted="muted" volume="0">
         <source src="<?php bloginfo('template_directory'); ?>/video/loop.webm" type="video/webm">
         <source src="<?php bloginfo('template_directory'); ?>/video/loop.mp4" type="video/mp4">
         Video not supported

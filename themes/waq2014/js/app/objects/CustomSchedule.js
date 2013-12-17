@@ -53,7 +53,7 @@ var CustomSchedule = (function($, window, document, undefined) {
 
 
 
-            if(typeof FB != undefined){
+            if(typeof FB != undefined && fb_conf.appId != 'XXXXXXXXXXXXXXXX'){
                 FB.init(fb_conf);
 
                 FB.getLoginStatus(function(response) {
@@ -92,7 +92,9 @@ var CustomSchedule = (function($, window, document, undefined) {
               }
             }
 
-            self.bindEvents();
+            if(fb_conf.appId != 'XXXXXXXXXXXXXXXX'){
+                self.bindEvents();
+            }
         },
 
         bindEvents: function(){
@@ -202,27 +204,29 @@ var CustomSchedule = (function($, window, document, undefined) {
 
         fbInitPhp: function(callback){
             var self = this;
-
-            jQuery.ajax({
-                type : "post",
-                dataType : "json",
-                url : fb_init_ajax,
-                success: function(response) {
-                    if(typeof callback === 'function')
-                        callback();
-                    else if(typeof callback === 'string'){
-                        var func = new Function(callback);
-                        func();
+                
+            if(typeof fb_init_ajax != 'undefined' && fb_init_ajax != ''){
+                jQuery.ajax({
+                    type : "post",
+                    dataType : "json",
+                    url : fb_init_ajax,
+                    success: function(response) {
+                        if(typeof callback === 'function')
+                            callback();
+                        else if(typeof callback === 'string'){
+                            var func = new Function(callback);
+                            func();
+                        }
                     }
-                }
-            });
+                });
+            }
 
         },
 
         saveUserSessions: function(){
             var self = this;
 
-            if(self.facebookConnected){
+            if(self.facebookConnected && typeof save_user_sessions_ajax != 'undefined' && save_user_sessions_ajax != ''){
                 jQuery.ajax({
                     type : "post",
                     dataType : "json",
@@ -241,7 +245,7 @@ var CustomSchedule = (function($, window, document, undefined) {
         getUserSessions: function(callback){
             var self = this;
 
-            if(self.facebookConnected){
+            if(self.facebookConnected && typeof get_user_sessions_ajax != 'undefined' && get_user_sessions_ajax != ''){
                 jQuery.ajax({
                     type : "post",
                     dataType : "json",

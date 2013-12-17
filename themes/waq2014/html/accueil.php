@@ -30,13 +30,13 @@
     <div id="fb-root"></div>
     <script>
     // Load the SDK asynchronously
-    /*(function(d, s, id){
+    (function(d, s, id){
         var js, fjs = d.getElementsByTagName(s)[0];
         if (d.getElementById(id)) {return;}
         js = d.createElement(s); js.id = id;
         js.src = "//connect.facebook.net/en_US/all.js";
         fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));*/
+    }(document, 'script', 'facebook-jssdk'));
     </script>
 
     <!-- Page wrapper -->
@@ -221,7 +221,7 @@
 
             </div>
 
-            <video id="video_background" preload="auto" autoplay="true" loop="loop" muted="muted" volume="0">
+            <video id="video_background" poster="../img/video-poster.png" preload="auto" autoplay="true" loop="loop" muted="muted" volume="0">
                 <source src="../video/loop.webm" type="video/webm">
                 <source src="../video/loop.mp4" type="video/mp4">
                 Video not supported
@@ -1134,8 +1134,8 @@ Mentionnez le groupe : Web à Québec</span>        </span><img src="http://waq2
     <script src="../js/app/objects/Slideshow.js"></script>
     <script src="../js/app/objects/MobileMenu.js"></script>
     <script src="../js/app/objects/GoogleMaps.js"></script>
-    <!--<script src="../js/app/objects/CustomSchedule.js"></script>-->
-    <!--<script src="../js/app/objects/Countdown.js"></script>-->
+    <script src="../js/app/objects/CustomSchedule.js"></script>
+    <script src="../js/app/objects/Countdown.js"></script>
 
     <script src="../js/app/WAQ.Common.js"></script>
     <script src="../js/main.js"></script>
