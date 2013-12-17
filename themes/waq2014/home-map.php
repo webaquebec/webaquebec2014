@@ -4,13 +4,16 @@ Template Name: Lieu
 */
 global $post;
 
-$questions_name = get_field('questions_name',$post->ID);
-$questions_telephone = get_field('questions_telephone',$post->ID);
-$questions_email = get_field('questions_email',$post->ID);
+$footerHomePage = get_posts(array('post_type' => 'page','meta_key' => '_wp_page_template','meta_value' => 'home-footer.php'));
+$footerHomePage= $footerHomePage[0];
 
-$medias_name = get_field('medias_name',$post->ID);
-$medias_telephone = get_field('medias_telephone',$post->ID);
-$medias_email = get_field('medias_email',$post->ID);
+$questions_name = get_field('questions_name',$footerHomePage->ID);
+$questions_telephone = get_field('questions_telephone',$footerHomePage->ID);
+$questions_email = get_field('questions_email',$footerHomePage->ID);
+
+$medias_name = get_field('medias_name',$footerHomePage->ID);
+$medias_telephone = get_field('medias_telephone',$footerHomePage->ID);
+$medias_email = get_field('medias_email',$footerHomePage->ID);
 ?>
 <!-- Place section -->
 <section id="<?php echo $post->post_name; ?>" class="place">

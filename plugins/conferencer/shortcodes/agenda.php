@@ -283,6 +283,7 @@ class Conferencer_Shortcode_Agenda extends Conferencer_Shortcode {
 							  //$output .= '<div id="conferencer_agenda_tab_'.get_day($row_starts).'">';
 							  $output .= '<div class="day-wrapper slide">';
   							  $output .= '<table class="grid">';
+  							  $output .= '<caption>Événements pour le <time datetime="'.strftime($tab_day_dt_strf, $row_starts).'"><span>'.lcfirst(strftime($tab_day_strf, $row_starts)).'</span></time></caption>';
   								if ($column_type)
   								  $output .= $this->display_headers($column_headers);
   								$output .= '<tbody>';
