@@ -18,7 +18,7 @@ $medias_email = get_field('medias_email',$post->ID);
         <div>
             <header>
                 <h2><span>Lieu de</span> <span>l'événement</span></h2>
-                <a href="#" class="route">Obtenir l'itinéraire</a>
+                <a href="https://maps.google.ca/maps?q=ESPACE+400E+BELL+100,+QUAI+SAINT-ANDR%C3%89+QU%C3%89BEC,+QC&hl=fr&ie=UTF8&hq=ESPACE+400E+BELL+100,+QUAI+SAINT-ANDR%C3%89+QU%C3%89BEC,+QC&t=m&z=16&iwloc=A" class="route">Obtenir l'itinéraire</a>
             </header>
     
             <div class="place-wrapper">
@@ -51,7 +51,8 @@ $medias_email = get_field('medias_email',$post->ID);
             </div>
         </div>
     </div>
-    <div class="googlemap">
+    <p class="visuallyhidden">Le contenu Google Maps qui suit n'est pas accessible. <a href="https://maps.google.ca/maps?q=ESPACE+400E+BELL+100,+QUAI+SAINT-ANDR%C3%89+QU%C3%89BEC,+QC&hl=fr&ie=UTF8&hq=ESPACE+400E+BELL+100,+QUAI+SAINT-ANDR%C3%89+QU%C3%89BEC,+QC&t=m&z=16&iwloc=A">Accéder la carte Google Maps sur le site externe</a> </p>
+    <div class="googlemap" tabindex="-1">
         <div id="gmap"></div>
     </div>
 </section><!-- end of Place section -->
