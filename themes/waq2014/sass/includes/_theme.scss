@@ -5,7 +5,7 @@
 	border-width: 5px;
 	border-style: solid;
 	border-color: $c-bg-pagewrapper;
-	//@include transition(border-color, 0.5s);
+	@include transition(border-color, 0.5s);
 
 	.not-zoomed & {
 	@include respond-to(768px){
@@ -46,7 +46,7 @@
 	@include respond-to( 72.938em ){
 		background-repeat: no-repeat;
 		background-position: center top;
-		background-size: 100% 100%;
+		background-size: auto auto;
 
 		.l-section-wrapper{
 			padding-top: 170px;
@@ -90,7 +90,11 @@
 		}
 		.event-logo{
 			float: left;
-			margin: 11px 15px;
+			margin: 9px 15px 8px;
+			max-width: 123px;
+		}
+		.event-back-link{
+			float: right;
 		}
 	}}
 
@@ -671,7 +675,7 @@
 
 		.not-zoomed & {
 		@include respond-to( 48.000em ){
-			padding-top: 70px;
+			padding-top: emify(70px);
 		}}
 
 		h1{
@@ -696,7 +700,7 @@
 
 		.session-meta{
 			position: absolute;
-			top: 35px;
+			top: emify(35px);
 			display: block;
 			color: $c-single-meta;
 			font: $font-single-meta;
@@ -711,7 +715,7 @@
 
 			.not-zoomed & {
 			@include respond-to( 48.000em ){
-				top: 45px;
+				top: emify(45px);
 
 				.date{
 					display: inline;

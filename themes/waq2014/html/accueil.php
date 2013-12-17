@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="fr_CA"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang="fr_CA"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9" lang="fr_CA"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="fr_CA"> <!--<![endif]-->
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="fr"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang="fr"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang="fr"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="fr"> <!--<![endif]-->
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -222,8 +222,9 @@
             </div>
 
             <video id="video_background" poster="../img/video-poster.png" preload="auto" autoplay="true" loop="loop" muted="muted" volume="0">
-                <source src="../video/loop.webm" type="video/webm">
-                <source src="../video/loop.mp4" type="video/mp4">
+                <source src="../video/loop.webm" type="video/webm" />
+                <source src="../video/loop.mp4" type="video/mp4" />
+                <source src="../video/loop.ogv" type="video/ogg" />
                 Video not supported
             </video>
 
@@ -254,7 +255,7 @@
 
 
         <!-- Place section -->
-        <section id="lieu-et-coordonnees" class="place">
+        <section id="lieu" class="place">
     <div class="l-section-wrapper">
         <div>
             <header>

@@ -171,7 +171,6 @@
 	.not-zoomed & {
 	@include respond-to( 560px ){
 		width: calc( 200px + 0px );
-		float: right;
 		margin-right: 10px;
 
 		a{
@@ -486,8 +485,12 @@
 
 	.email,
 	.link{
-		text-transform: uppercase;
+		text-transform: none;
 		font: $font-contactelement-email;
+
+		a{
+			text-transform: none;
+		}
 	}
 }
 
@@ -556,6 +559,10 @@
 		a{
 			color: $c-blog-title;
 			text-decoration: none;
+
+			&:hover{
+				text-decoration: underline;
+			}
 		}
 	}
 
@@ -683,7 +690,7 @@
 	}
 }
 
-.not-zoomed.js .blog-wrapper .js-slider{
+.not-zoomed .blog-wrapper .js-slider{
 	margin: 15px auto;
 
 	@include respond-to( 48.000em ){
@@ -727,6 +734,23 @@
 				}
 			}
 		}
+	}
+}
+
+.no-js .not-zoomed .blog-wrapper .js-slider{
+	margin: 15px auto;
+
+	.js-slider-container{
+		width: auto !important;
+	}
+
+	.slide{
+		left: 0 !important;
+		width: auto !important;
+	}
+
+	& + .blog-nav{
+		display: none;
 	}
 }
 
