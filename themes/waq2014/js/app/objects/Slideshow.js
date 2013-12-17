@@ -108,6 +108,8 @@ var Slideshow = ( function( $, window, document, undefined ) {
 			}
 
 			self.pageButtons.eq(0).addClass( WAQ.Constants.isActiveClass );
+			self.pageButtons.find('.pagecourante').remove();
+			self.pageButtons.eq(0).append(' <span class="pagecourante visuallyhidden">Page courante</span>');
 			self.container.width( self.slideWidth * self.nbSlides );
 
             self.slides.find('a, button').attr('tabindex', '-1');
@@ -131,6 +133,8 @@ var Slideshow = ( function( $, window, document, undefined ) {
 
 				self.pageButtons.removeClass( WAQ.Constants.isActiveClass );
 				$this.addClass( WAQ.Constants.isActiveClass );
+				self.pageButtons.find('.pagecourante').remove();
+				$this.append(' <span class="pagecourante visuallyhidden">Page courante</span>');
 
 				if( index > 0 ){
 					self.arrowButtons.eq(0).show();
@@ -185,6 +189,8 @@ var Slideshow = ( function( $, window, document, undefined ) {
 
 				self.pageButtons.removeClass( WAQ.Constants.isActiveClass );
 				self.pageButtons.eq( newActivePage ).addClass( WAQ.Constants.isActiveClass );
+				self.pageButtons.find('.pagecourante').remove();
+				self.pageButtons.eq( newActivePage ).append(' <span class="pagecourante visuallyhidden">Page courante</span>');
 
 				self.slides.animate({
 					left: offset

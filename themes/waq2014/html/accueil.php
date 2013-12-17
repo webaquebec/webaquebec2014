@@ -188,40 +188,40 @@
                 </div>
 
                 <div class="event-speakers">
-                    <figure itemprop="performer" itemscope itemtype="http://schema.org/Person">
-                        <a href="#">
-                            <figcaption>
-                                <span class="name" itemprop="name">John Barker</span>
-                                <span class="job" itemprop="jobTitle">Président KOREL</span>
-                            </figcaption>
-                            <span class="img-crop"><img class="speaker-thumb" src="../img/dummy-speaker-1.png" alt="" itemprop="image" /></span>
-                        </a>
-                    </figure>
+                    <a href="#">
+                        <figure itemprop="performer" itemscope itemtype="http://schema.org/Person">
+                                <figcaption>
+                                    <span class="name" itemprop="name">John Barker</span>
+                                    <span class="job" itemprop="jobTitle">Président KOREL</span>
+                                </figcaption>
+                                <span class="img-crop"><img class="speaker-thumb" src="../img/dummy-speaker-1.png" alt="" itemprop="image" /></span>
+                        </figure>
+                    </a>
 
-                    <figure itemprop="performer" itemscope itemtype="http://schema.org/Person">
-                        <a href="#">
-                            <figcaption>
-                                <span class="name" itemprop="name">John Barker</span>
-                                <span class="job" itemprop="jobTitle">Président KOREL</span>
-                            </figcaption>
-                            <span class="img-crop"><img class="speaker-thumb" src="../img/dummy-speaker-2.png" alt="" itemprop="image" /></span>
-                        </a>
-                    </figure>
+                    <a href="#">
+                        <figure itemprop="performer" itemscope itemtype="http://schema.org/Person">
+                                <figcaption>
+                                    <span class="name" itemprop="name">John Barker</span>
+                                    <span class="job" itemprop="jobTitle">Président KOREL</span>
+                                </figcaption>
+                                <span class="img-crop"><img class="speaker-thumb" src="../img/dummy-speaker-2.png" alt="" itemprop="image" /></span>
+                        </figure>
+                    </a>
 
-                    <figure itemprop="performer" itemscope itemtype="http://schema.org/Person">
-                        <a href="#">
-                            <figcaption>
-                                <span class="name" itemprop="name">John Barker</span>
-                                <span class="job" itemprop="jobTitle">Président KOREL</span>
-                            </figcaption>
-                            <span class="img-crop"><img class="speaker-thumb" src="../img/dummy-speaker-3.png" alt="" itemprop="image" /></span>
-                        </a>
-                    </figure>
+                    <a href="#">
+                        <figure itemprop="performer" itemscope itemtype="http://schema.org/Person">
+                                <figcaption>
+                                    <span class="name" itemprop="name">John Barker</span>
+                                    <span class="job" itemprop="jobTitle">Président KOREL</span>
+                                </figcaption>
+                                <span class="img-crop"><img class="speaker-thumb" src="../img/dummy-speaker-3.png" alt="" itemprop="image" /></span>
+                        </figure>
+                    </a>
                 </div>
 
             </div>
 
-            <video id="video_background" poster="../img/video-poster.png" preload="auto" autoplay="true" loop="loop" muted="muted" volume="0">
+            <video id="video_background" poster="../img/video-poster.png" preload="auto" autoplay="autoplay" loop="loop" muted="muted">
                 <source src="../video/loop.webm" type="video/webm" />
                 <source src="../video/loop.mp4" type="video/mp4" />
                 <source src="../video/loop.ogv" type="video/ogg" />
