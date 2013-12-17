@@ -284,7 +284,7 @@
 
 }).call(this);
 
-$( window ).resize(function() {
+function GoogleMapResize(){
     google.maps.event.trigger(WAQ.GoogleMap.map, 'resize');
     if($( window ).width() > 1166){
         WAQ.GoogleMap.map.setCenter(new google.maps.LatLng(46.818814, -71.201094));
@@ -305,4 +305,8 @@ $( window ).resize(function() {
       marker = WAQ.GoogleMap.marker[i];
       marker.infoWindow.draw();
     }
+}
+
+$( window ).resize(function() {
+    GoogleMapResize();
 });

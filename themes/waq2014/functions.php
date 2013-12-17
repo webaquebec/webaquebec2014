@@ -50,7 +50,7 @@ function add_my_scripts() {
 	wp_enqueue_script( 'modernizr', get_template_directory_uri() . '/js/vendor/modernizr-2.6.2.min.js', array(), '2.6.2', false );
 	
 	wp_enqueue_script( 'jquery', '//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js', array(), '1.10.2', true );
-	wp_enqueue_script( 'googlemaps', 'http://maps.googleapis.com/maps/api/js?sensor=false&language=fr', array(), null, true );
+	wp_enqueue_script( 'googlemaps', 'http://maps.googleapis.com/maps/api/js?sensor=false&libraries=drawing&language=fr', array(), null, true );
 	wp_enqueue_script( 'waq-moment', get_template_directory_uri() . '/js/vendor/moment.min.js', array(), null, true );
 	wp_enqueue_script( 'waq-underscore', get_template_directory_uri() . '/js/vendor/underscore-min.js', array(), null, true );
 	
