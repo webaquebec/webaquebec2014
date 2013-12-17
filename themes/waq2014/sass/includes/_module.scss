@@ -137,6 +137,10 @@
 		text-decoration: none;
 		background-color: $c-bg-navmain-subscribe;
 	}}
+
+	&:focus{
+		outline-color: $c-navmain-subscribe;
+	}
 }
 
 .single-page .event-back-link,
