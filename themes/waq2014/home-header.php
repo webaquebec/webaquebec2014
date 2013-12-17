@@ -143,16 +143,15 @@ $feat_speakers = get_posts( $feat_speakers_args );
 $feat_speakers_output = "";
 
 foreach($feat_speakers as $feat_speaker){
-  $feat_speakers_output .= '<figure itemprop="performer" itemscope itemtype="http://schema.org/Person">';
-      $feat_speakers_sessions = Conferencer::get_sessions($feat_speaker->ID);
-      if(!empty($feat_speakers_sessions)){
-          $feat_speakers_sessions = array_shift($feat_speakers_sessions);
-      }
+
+  $feat_speakers_sessions = Conferencer::get_sessions($feat_speaker->ID);
+  if(!empty($feat_speakers_sessions)){
+      $feat_speakers_sessions = array_shift($feat_speakers_sessions);
+  }
+  $feat_speakers_output .= (!empty($feat_speakers_sessions) ? '<a href="'. get_permalink($feat_speakers_sessions->ID).'">' : '<a href="">');
       
-      
-      
-  
-      $feat_speakers_output .= (!empty($feat_speakers_sessions) ? '<a href="'. get_permalink($feat_speakers_sessions->ID).'">' : '<a href="">');
+      $feat_speakers_output .= '<figure itemprop="performer" itemscope itemtype="http://schema.org/Person">';
+
           $feat_speakers_output .= '<figcaption>';
               $feat_speakers_output .= '<span class="name" itemprop="name">'.$feat_speaker->post_title.'</span>';
               $feat_speakers_output .= '<span class="job" itemprop="jobTitle">'.get_post_meta( $feat_speaker->ID, '_conferencer_title', true ).'</span>';
@@ -180,8 +179,8 @@ foreach($feat_speakers as $feat_speaker){
           if($image){
             $feat_speakers_output .= '<span class="img-crop"><img class="speaker-thumb" src="'.$image.'" alt="" itemprop="image" /></span>';
           }
-      $feat_speakers_output .= '</a>';
-  $feat_speakers_output .= '</figure>';
+      $feat_speakers_output .= '</figure>';
+  $feat_speakers_output .= '</a>';
 }
 
 
