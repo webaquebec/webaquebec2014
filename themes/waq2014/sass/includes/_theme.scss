@@ -154,7 +154,7 @@
 
 		&:before{
 			display: block;
-			height: 208px;
+			height: 268px;
 			width: 100%;
 			position: absolute;
 			left: 0; top: 0;
@@ -464,6 +464,14 @@
 				font: $font-newsletter-input-submit;
 				color: $c-newsletter-input-submit;
 				background-color: $c-newsletter-border;
+				cursor: pointer;
+
+				&:hover{
+					padding: 5px 12px;
+					background-color: $c-newsletter-input-submit;
+					color: $c-newsletter-border;
+					border: 3px solid $c-newsletter-border;
+				}
 			}
 
 			.field{

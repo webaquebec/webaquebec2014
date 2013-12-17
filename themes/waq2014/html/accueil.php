@@ -246,6 +246,11 @@
                             <li><button data-slug="filter-all">Tous</button></li><li><button data-slug="filter-analytics">Analytics</button></li><li><button data-slug="filter-contenu">Contenu</button></li><li><button data-slug="filter-design">Design</button></li><li><button data-slug="filter-entreprise">Entreprise</button></li><li><button data-slug="filter-medias-sociaux">Médias Sociaux</button></li><li><button data-slug="filter-mobile">Mobile</button></li><li><button data-slug="filter-programmation">Programmation</button></li><li><button data-slug="filter-ux">UX</button></li>
                         </ul>
                     </div>
+                    <div class="facebook-connect">
+                        <button>Activez <em>Facebook Connect</em></button>
+                        <p>Activez la fonction <em>Facebook Connect</em> et  enregistrez votre horaire pour le WAQ.</br>
+                            Vous aurez accès à la fonction sur tous vos périphériques.</p>
+                    </div>
                 </header>
 
                 <?php include('schedule.php');?>
