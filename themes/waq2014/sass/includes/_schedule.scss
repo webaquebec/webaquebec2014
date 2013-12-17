@@ -17,9 +17,9 @@
 	@include clearfix;
 	display: block;
 	margin: 0;
-	padding: 20px 15px 5px;
+	//padding: 20px 15px 5px;
 	font-size: 0;
-	background-color: $c-bg-schedule-highlight;
+	//background-color: $c-bg-schedule-highlight;
 
 	.not-zoomed & {
 	@include respond-to( 64.000em ){

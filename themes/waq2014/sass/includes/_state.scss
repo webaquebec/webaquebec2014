@@ -95,7 +95,7 @@
 .not-zoomed {
 @include respond-to( 72.938em ){
 
-	.js .schedule-wrapper .days-buttons.isSnap{
+	.schedule-wrapper .days-buttons.isSnap{
 		display: block;
 		position: fixed;
 		top: 64px;
@@ -103,7 +103,7 @@
 		z-index: 110;
 		width: 1137px;
 		padding: 5px 0;
-		margin-left: ceil( 1137px / 2 * - 1 );
+		margin-left: floor( 1137px / 2 * - 1 );
 		background-color: $c-bg-schedule-highlight;
 
 		button{

@@ -64,7 +64,7 @@ var Slideshow = ( function( $, window, document, undefined ) {
 
 			self.changeSlide();
 
-			/*if( $( document ).width() < 1024 ) {
+			if( $( document ).width() < 1024 ) {
 				self.displayedSlides = 1;
 				fixLayout = true;
 			}
@@ -100,7 +100,7 @@ var Slideshow = ( function( $, window, document, undefined ) {
 					}
 					fixLayout = false;
 				}
-			});*/
+			});
 
 			self.arrowButtons.eq(0).hide();
 			if( self.nbSlides < 4 ){
@@ -125,6 +125,7 @@ var Slideshow = ( function( $, window, document, undefined ) {
 				var index  = $this.index() - 2,
 					offset = self.slideWidth * index * -self.displayedSlides;
 
+				self.activePage = index;
 				self.slideWidth = self.slides.eq(0).outerWidth( true );
 				offset = self.slideWidth * index * -self.displayedSlides;
 
