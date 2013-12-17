@@ -212,17 +212,17 @@ foreach($feat_speakers as $feat_speaker){
         </div>
 
         <div class="event-description">
-            <p>Web à Québec</p>
-            <p>
+            <p class="strong">Web à Québec</p>
+            <p class="date">
                 Du <?php echo $start_time_text ?>
                 au <?php echo $end_time_text ?>
             </p>
-            <p itemprop="location" itemscope itemtype="http://schema.org/Place">
+            <p class="location" itemprop="location" itemscope itemtype="http://schema.org/Place">
                 <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
                     <span itemprop="name">Espace 400<sup>e</sup> Bell</span>,
                     <span itemprop="addressRegion">Québec</span>
                 </span>
-            </p>
+            </p> 
         </div>
 
         <div class="event-stats">
