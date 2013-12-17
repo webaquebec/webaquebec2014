@@ -336,9 +336,6 @@ Mentionnez le groupe : Web à Québec</span>        </span><img src="http://waq2
                                         Donec ac posuere massa, at egestas tortor. Sed porta lacus id nunc adipiscing.
                                     </p>
                                 </div>
-                                <div class="article-readmore">
-                                    <a href="#">Lire la suite <span class="visuallyhidden">de l'article « Dolor sit amet curabitur it sut dolor ».</span></a>
-                                </div>
                             </article>
 
                             <article class="slide" itemscope itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
@@ -359,9 +356,6 @@ Mentionnez le groupe : Web à Québec</span>        </span><img src="http://waq2
                                         Donec ac posuere massa, at egestas tortor. Sed porta lacus id nunc adipiscing.
                                     </p>
                                 </div>
-                                <div class="article-readmore">
-                                    <a href="#">Lire la suite <span class="visuallyhidden">de l'article « Dolor sit amet curabitur it sut dolor ».</span></a>
-                                </div>
                             </article>
 
                             <article class="slide" itemscope itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
@@ -378,9 +372,6 @@ Mentionnez le groupe : Web à Québec</span>        </span><img src="http://waq2
                                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ac lacinia turpis.
                                         Donec ac posuere massa, at egestas tortor. Sed porta lacus id nunc adipiscing.
                                     </p>
-                                </div>
-                                <div class="article-readmore">
-                                    <a href="#">Lire la suite <span class="visuallyhidden">de l'article « Dolor sit amet curabitur it sut dolor ».</span></a>
                                 </div>
                             </article>
 
@@ -399,9 +390,6 @@ Mentionnez le groupe : Web à Québec</span>        </span><img src="http://waq2
                                         Donec ac posuere massa, at egestas tortor. Sed porta lacus id nunc adipiscing.
                                     </p>
                                 </div>
-                                <div class="article-readmore">
-                                    <a href="#">Lire la suite <span class="visuallyhidden">de l'article « Dolor sit amet curabitur it sut dolor ».</span></a>
-                                </div>
                             </article>
 
                             <article class="slide" itemscope itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
@@ -418,9 +406,6 @@ Mentionnez le groupe : Web à Québec</span>        </span><img src="http://waq2
                                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ac lacinia turpis.
                                         Donec ac posuere massa, at egestas tortor. Sed porta lacus id nunc adipiscing.
                                     </p>
-                                </div>
-                                <div class="article-readmore">
-                                    <a href="#">Lire la suite <span class="visuallyhidden">de l'article « Dolor sit amet curabitur it sut dolor ».</span></a>
                                 </div>
                             </article>
 
@@ -439,9 +424,6 @@ Mentionnez le groupe : Web à Québec</span>        </span><img src="http://waq2
                                         Donec ac posuere massa, at egestas tortor. Sed porta lacus id nunc adipiscing.
                                     </p>
                                 </div>
-                                <div class="article-readmore">
-                                    <a href="#">Lire la suite <span class="visuallyhidden">de l'article « Dolor sit amet curabitur it sut dolor ».</span></a>
-                                </div>
                             </article>
 
                             <article class="slide" itemscope itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
@@ -458,9 +440,6 @@ Mentionnez le groupe : Web à Québec</span>        </span><img src="http://waq2
                                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ac lacinia turpis.
                                         Donec ac posuere massa, at egestas tortor. Sed porta lacus id nunc adipiscing.
                                     </p>
-                                </div>
-                                <div class="article-readmore">
-                                    <a href="#">Lire la suite <span class="visuallyhidden">de l'article « Dolor sit amet curabitur it sut dolor ».</span></a>
                                 </div>
                             </article>
 
@@ -479,9 +458,6 @@ Mentionnez le groupe : Web à Québec</span>        </span><img src="http://waq2
                                         Donec ac posuere massa, at egestas tortor. Sed porta lacus id nunc adipiscing.
                                     </p>
                                 </div>
-                                <div class="article-readmore">
-                                    <a href="#">Lire la suite <span class="visuallyhidden">de l'article « Dolor sit amet curabitur it sut dolor ».</span></a>
-                                </div>
                             </article>
 
                             <article class="slide" itemscope itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
@@ -498,9 +474,6 @@ Mentionnez le groupe : Web à Québec</span>        </span><img src="http://waq2
                                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ac lacinia turpis.
                                         Donec ac posuere massa, at egestas tortor. Sed porta lacus id nunc adipiscing.
                                     </p>
-                                </div>
-                                <div class="article-readmore">
-                                    <a href="#">Lire la suite <span class="visuallyhidden">de l'article « Dolor sit amet curabitur it sut dolor ».</span></a>
                                 </div>
                             </article>
 
@@ -519,9 +492,6 @@ Mentionnez le groupe : Web à Québec</span>        </span><img src="http://waq2
                                         Donec ac posuere massa, at egestas tortor. Sed porta lacus id nunc adipiscing.
                                     </p>
                                 </div>
-                                <div class="article-readmore">
-                                    <a href="#">Lire la suite <span class="visuallyhidden">de l'article « Dolor sit amet curabitur it sut dolor ».</span></a>
-                                </div>
                             </article>
 
                             <article class="slide" itemscope itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
@@ -538,9 +508,6 @@ Mentionnez le groupe : Web à Québec</span>        </span><img src="http://waq2
                                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ac lacinia turpis.
                                         Donec ac posuere massa, at egestas tortor. Sed porta lacus id nunc adipiscing.
                                     </p>
-                                </div>
-                                <div class="article-readmore">
-                                    <a href="#">Lire la suite <span class="visuallyhidden">de l'article « Dolor sit amet curabitur it sut dolor ».</span></a>
                                 </div>
                             </article>
 
@@ -559,9 +526,6 @@ Mentionnez le groupe : Web à Québec</span>        </span><img src="http://waq2
                                         Donec ac posuere massa, at egestas tortor. Sed porta lacus id nunc adipiscing.
                                     </p>
                                 </div>
-                                <div class="article-readmore">
-                                    <a href="#">Lire la suite <span class="visuallyhidden">de l'article « Dolor sit amet curabitur it sut dolor ».</span></a>
-                                </div>
                             </article>
 
                             <article class="slide" itemscope itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
@@ -578,9 +542,6 @@ Mentionnez le groupe : Web à Québec</span>        </span><img src="http://waq2
                                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ac lacinia turpis.
                                         Donec ac posuere massa, at egestas tortor. Sed porta lacus id nunc adipiscing.
                                     </p>
-                                </div>
-                                <div class="article-readmore">
-                                    <a href="#">Lire la suite <span class="visuallyhidden">de l'article « Dolor sit amet curabitur it sut dolor ».</span></a>
                                 </div>
                             </article>
 
@@ -599,9 +560,6 @@ Mentionnez le groupe : Web à Québec</span>        </span><img src="http://waq2
                                         Donec ac posuere massa, at egestas tortor. Sed porta lacus id nunc adipiscing.
                                     </p>
                                 </div>
-                                <div class="article-readmore">
-                                    <a href="#">Lire la suite <span class="visuallyhidden">de l'article « Dolor sit amet curabitur it sut dolor ».</span></a>
-                                </div>
                             </article>
 
                             <article class="slide" itemscope itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
@@ -618,9 +576,6 @@ Mentionnez le groupe : Web à Québec</span>        </span><img src="http://waq2
                                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ac lacinia turpis.
                                         Donec ac posuere massa, at egestas tortor. Sed porta lacus id nunc adipiscing.
                                     </p>
-                                </div>
-                                <div class="article-readmore">
-                                    <a href="#">Lire la suite <span class="visuallyhidden">de l'article « Dolor sit amet curabitur it sut dolor ».</span></a>
                                 </div>
                             </article>
 

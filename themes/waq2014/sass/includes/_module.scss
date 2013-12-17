@@ -728,6 +728,18 @@
 		$nbSlides 			: 5;
 		$displayedSlides 	: 1;
 		@include js-slider ( $width, $margin, $nbSlides, $displayedSlides );
+
+		article{
+			.article-thumb{
+				float: left;
+				width: 48%;
+			}
+			.article-thumb + .article-content{
+				float: left;
+				width: 50%;
+				margin-left: 2%;
+			}
+		}
 	}
 
 	@include respond-to( 64.000em ){
