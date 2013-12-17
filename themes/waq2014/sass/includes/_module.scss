@@ -962,6 +962,21 @@
 					margin-right: 0;
 				}
 			}}
+
+			.not-zoomed &:hover {
+			@include respond-to( 72.938em ){
+
+				.overlay{
+					display: block;
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					text-align: center;
+					padding: 9px 0;
+	         		background-color: rgba($c-linkblue, 0.9);
+				}
+			}}
 		}
 	}
 

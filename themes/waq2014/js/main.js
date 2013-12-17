@@ -96,6 +96,20 @@ var LIBEO;
             return false;
         });
 
+        // Hover sur les liens sociaux des comités
+        $('.about .social-medias a').hover(
+            function(){
+                var url    = $(this).find('img').attr('src'),
+                    newUrl = url.replace('icon-social-white', 'icon-social-white-hover');
+                $(this).find('img').attr('src', newUrl);
+            },
+            function(){
+                var url    = $(this).find('img').attr('src'),
+                    newUrl = url.replace('icon-social-white-hover', 'icon-social-white');
+                $(this).find('img').attr('src', newUrl);
+            }
+        );
+
     });
 
 })(jQuery, window, document);
