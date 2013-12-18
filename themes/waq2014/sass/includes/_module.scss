@@ -593,7 +593,7 @@
 		}}
 
 		a{
-			color: $c-blog-title; 
+			color: $c-blog-title;
 			text-decoration: none;
 
 			&:hover{
@@ -1056,6 +1056,10 @@ aside.highlight{
 		margin: 0.75em 0;
 		color: $c-single-aside-content;
 		font: $font-single-aside-content;
+	}
+
+	ul{
+		list-style-type: none;
 	}
 
 	.social{
