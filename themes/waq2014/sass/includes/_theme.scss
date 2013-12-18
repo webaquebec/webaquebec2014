@@ -487,7 +487,7 @@
 				}
 			}
 
-			.field{
+			.mc_merge_var{
 				.not-zoomed & {
 				@include respond-to( 560px ){
 					@include inline-block;
@@ -501,7 +501,7 @@
 				}}
 			}
 
-			.buttons{
+			.mc_signup_submit{
 				.not-zoomed & {
 				@include respond-to( 560px ){
 					@include inline-block;

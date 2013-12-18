@@ -3237,7 +3237,7 @@ aside.highlight .social .twitter {
 }
 @media only screen and (min-width: 560px) {
   /* line 491, ../sass/includes/_theme.scss */
-  .not-zoomed .place .place-wrapper .newsletter .field {
+  .not-zoomed .place .place-wrapper .newsletter .mc_merge_var {
     display: -moz-inline-stack;
     display: inline-block;
     vertical-align: middle;
@@ -3251,13 +3251,13 @@ aside.highlight .social .twitter {
 }
 @media only screen and (min-width: 1137px) {
   /* line 498, ../sass/includes/_theme.scss */
-  .not-zoomed .place .place-wrapper .newsletter .field {
+  .not-zoomed .place .place-wrapper .newsletter .mc_merge_var {
     width: 255px;
   }
 }
 @media only screen and (min-width: 560px) {
   /* line 505, ../sass/includes/_theme.scss */
-  .not-zoomed .place .place-wrapper .newsletter .buttons {
+  .not-zoomed .place .place-wrapper .newsletter .mc_signup_submit {
     display: -moz-inline-stack;
     display: inline-block;
     vertical-align: middle;
