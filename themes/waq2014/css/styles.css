@@ -3768,45 +3768,49 @@ aside.highlight .social .twitter {
   list-style-position: inside;
 }
 /* line 972, ../sass/includes/_theme.scss */
+.single-page .page-content ul.subevents {
+  list-style-type: none;
+}
+/* line 976, ../sass/includes/_theme.scss */
 .single-page .page-content li {
   color: #333f47;
   font: 400 1.125em / 1.33333em "Roboto", sans-serif;
 }
 @media only screen and (min-width: 48em) {
-  /* line 976, ../sass/includes/_theme.scss */
+  /* line 980, ../sass/includes/_theme.scss */
   .not-zoomed .single-page .page-content li {
     font-size: 1.125em;
   }
 }
-/* line 982, ../sass/includes/_theme.scss */
+/* line 986, ../sass/includes/_theme.scss */
 .single-page .page-content .back-link {
   width: auto;
   float: left;
   display: none;
 }
-/* line 988, ../sass/includes/_theme.scss */
+/* line 992, ../sass/includes/_theme.scss */
 .single-page .page-content .back-link a {
   height: 40px;
 }
 @media only screen and (min-width: 72.938em) {
-  /* line 992, ../sass/includes/_theme.scss */
+  /* line 996, ../sass/includes/_theme.scss */
   .not-zoomed .single-page .page-content .back-link {
     display: block;
     margin: 20px 0 0;
   }
 }
-/* line 1001, ../sass/includes/_theme.scss */
+/* line 1005, ../sass/includes/_theme.scss */
 .single-page .page-content .sidebar h2 {
   color: #333f47;
   font: 700 1.375em / 1.09091em "Roboto Condensed", sans-serif;
   text-transform: uppercase;
 }
-/* line 1009, ../sass/includes/_theme.scss */
+/* line 1013, ../sass/includes/_theme.scss */
 .single-page .page-content .sidebar ul.subevents li {
   margin: 1em 0;
 }
 @media only screen and (min-width: 560px) {
-  /* line 1012, ../sass/includes/_theme.scss */
+  /* line 1016, ../sass/includes/_theme.scss */
   .not-zoomed .single-page .page-content .sidebar ul.subevents li {
     float: left;
     width: 48%;
@@ -3814,47 +3818,47 @@ aside.highlight .social .twitter {
   }
 }
 @media only screen and (min-width: 72.938em) {
-  /* line 1019, ../sass/includes/_theme.scss */
+  /* line 1023, ../sass/includes/_theme.scss */
   .not-zoomed .single-page .page-content .sidebar ul.subevents li {
     float: none;
     width: auto;
   }
 }
-/* line 1026, ../sass/includes/_theme.scss */
+/* line 1030, ../sass/includes/_theme.scss */
 .single-page .page-content .sidebar ul.subevents li .session-title a {
   color: #006b9f;
   font: 400 1.375em / 1.09091em "Roboto Condensed", sans-serif;
   text-decoration: none;
 }
-/* line 1031, ../sass/includes/_theme.scss */
+/* line 1035, ../sass/includes/_theme.scss */
 .single-page .page-content .sidebar ul.subevents li .session-title a:hover {
   text-decoration: underline;
 }
-/* line 1037, ../sass/includes/_theme.scss */
+/* line 1041, ../sass/includes/_theme.scss */
 .single-page .page-content .sidebar ul.subevents li .session-speaker {
   display: block;
   margin: 6px 0 4px;
   color: #333f47;
   font: 400 1.25em / 1.1em "Lusitana", sans-serif;
 }
-/* line 1044, ../sass/includes/_theme.scss */
+/* line 1048, ../sass/includes/_theme.scss */
 .single-page .page-content .sidebar ul.subevents li .session-meta {
   display: block;
   color: #333f47;
   font: 700 0.875em / 1.14286em "Roboto Condensed", sans-serif;
   text-transform: uppercase;
 }
-/* line 1052, ../sass/includes/_theme.scss */
+/* line 1056, ../sass/includes/_theme.scss */
 .single-page .page-content .sidebar ul.subevents li .session-time-slot:before,
 .single-page .page-content .sidebar ul.subevents li .session-room:before {
   content: "/";
 }
 
-/* line 1063, ../sass/includes/_theme.scss */
+/* line 1067, ../sass/includes/_theme.scss */
 .footer .social-medias {
   margin: 5px 0 10px;
 }
-/* line 1067, ../sass/includes/_theme.scss */
+/* line 1071, ../sass/includes/_theme.scss */
 .social-medias a {
   display: -moz-inline-stack;
   display: inline-block;
@@ -3865,26 +3869,26 @@ aside.highlight .social .twitter {
   margin-right: 5px;
   line-height: 0;
 }
-/* line 1073, ../sass/includes/_theme.scss */
+/* line 1077, ../sass/includes/_theme.scss */
 .social-medias img {
   position: relative !important;
 }
 
 @media only screen and (min-width: 1167px) {
-  /* line 1081, ../sass/includes/_theme.scss */
+  /* line 1085, ../sass/includes/_theme.scss */
   .not-zoomed .footer .footer-infos {
     padding: 20px 0;
   }
 }
 @media only screen and (min-width: 700px) {
-  /* line 1088, ../sass/includes/_theme.scss */
+  /* line 1092, ../sass/includes/_theme.scss */
   .not-zoomed .footer .l-col {
     float: left;
     width: 33.3333%;
   }
 }
 @media only screen and (min-width: 72.938em) {
-  /* line 1093, ../sass/includes/_theme.scss */
+  /* line 1097, ../sass/includes/_theme.scss */
   .not-zoomed .footer .l-col {
     float: left;
     width: 248px;
@@ -3892,7 +3896,7 @@ aside.highlight .social .twitter {
   }
 }
 @media only screen and (min-width: 700px) {
-  /* line 1102, ../sass/includes/_theme.scss */
+  /* line 1106, ../sass/includes/_theme.scss */
   .not-zoomed .footer .l-col.large {
     float: none;
     width: 100%;
@@ -3901,7 +3905,7 @@ aside.highlight .social .twitter {
   }
 }
 @media only screen and (min-width: 72.938em) {
-  /* line 1109, ../sass/includes/_theme.scss */
+  /* line 1113, ../sass/includes/_theme.scss */
   .not-zoomed .footer .l-col.large {
     float: left;
     width: 315px;
@@ -3911,7 +3915,7 @@ aside.highlight .social .twitter {
   }
 }
 @media only screen and (min-width: 560px) {
-  /* line 1120, ../sass/includes/_theme.scss */
+  /* line 1124, ../sass/includes/_theme.scss */
   .not-zoomed .footer .l-col.two-elements {
     float: right;
     width: 50%;
@@ -3919,7 +3923,7 @@ aside.highlight .social .twitter {
   }
 }
 @media only screen and (min-width: 700px) {
-  /* line 1126, ../sass/includes/_theme.scss */
+  /* line 1130, ../sass/includes/_theme.scss */
   .not-zoomed .footer .l-col.two-elements {
     float: left;
     width: 33.3333%;
@@ -3927,71 +3931,71 @@ aside.highlight .social .twitter {
   }
 }
 @media only screen and (min-width: 72.938em) {
-  /* line 1132, ../sass/includes/_theme.scss */
+  /* line 1136, ../sass/includes/_theme.scss */
   .not-zoomed .footer .l-col.two-elements {
     float: left;
     width: 248px;
     margin-top: 0;
   }
 }
-/* line 1140, ../sass/includes/_theme.scss */
+/* line 1144, ../sass/includes/_theme.scss */
 .footer .contact-element {
   margin: 5px 0 15px;
 }
-/* line 1143, ../sass/includes/_theme.scss */
+/* line 1147, ../sass/includes/_theme.scss */
 .footer .contact-element span {
   font-size: 1em;
 }
-/* line 1147, ../sass/includes/_theme.scss */
+/* line 1151, ../sass/includes/_theme.scss */
 .footer .contact-element .name {
   font-weight: 700;
 }
-/* line 1152, ../sass/includes/_theme.scss */
+/* line 1156, ../sass/includes/_theme.scss */
 .footer .contact-element .addressLocality,
 .footer .contact-element .postalCode {
   display: inline;
 }
-/* line 1157, ../sass/includes/_theme.scss */
+/* line 1161, ../sass/includes/_theme.scss */
 .footer .contact-element .link,
 .footer .contact-element .link a {
   text-transform: none;
 }
-/* line 1163, ../sass/includes/_theme.scss */
+/* line 1167, ../sass/includes/_theme.scss */
 .footer h3,
 .footer .strong {
   color: #333f47;
   font: 700 1em / 1.25em "Roboto Condensed", sans-serif;
   text-transform: uppercase;
 }
-/* line 1169, ../sass/includes/_theme.scss */
+/* line 1173, ../sass/includes/_theme.scss */
 .footer a {
   color: #006b9f;
   font: 300 1em / 1.25em "Roboto Condensed", sans-serif;
   text-transform: uppercase;
   text-decoration: none;
 }
-/* line 1175, ../sass/includes/_theme.scss */
+/* line 1179, ../sass/includes/_theme.scss */
 .footer a:hover {
   text-decoration: underline;
 }
-/* line 1180, ../sass/includes/_theme.scss */
+/* line 1184, ../sass/includes/_theme.scss */
 .footer .footer-bar {
   margin: 5px -15px 0;
   padding: 15px 15px 0;
   border-top: 1px solid #333f47;
 }
-/* line 1185, ../sass/includes/_theme.scss */
+/* line 1189, ../sass/includes/_theme.scss */
 .footer .footer-bar .l-col > div {
   margin: 8px 0 0;
 }
 @media only screen and (min-width: 560px) {
-  /* line 1188, ../sass/includes/_theme.scss */
+  /* line 1192, ../sass/includes/_theme.scss */
   .not-zoomed .footer .footer-bar .l-col > div {
     margin: 0;
   }
 }
 @media only screen and (min-width: 72.938em) {
-  /* line 1193, ../sass/includes/_theme.scss */
+  /* line 1197, ../sass/includes/_theme.scss */
   .not-zoomed .footer .footer-bar .l-col > div {
     display: -moz-inline-stack;
     display: inline-block;
@@ -4000,26 +4004,26 @@ aside.highlight .social .twitter {
     zoom: 1;
     *display: inline;
   }
-  /* line 1197, ../sass/includes/_theme.scss */
+  /* line 1201, ../sass/includes/_theme.scss */
   .not-zoomed .footer .footer-bar .l-col > div + div {
     margin-left: 35px;
   }
 }
 @media only screen and (min-width: 560px) {
-  /* line 1204, ../sass/includes/_theme.scss */
+  /* line 1208, ../sass/includes/_theme.scss */
   .not-zoomed .footer .footer-bar .l-col {
     width: 50%;
     margin: 0;
   }
 }
 @media only screen and (min-width: 72.938em) {
-  /* line 1214, ../sass/includes/_theme.scss */
+  /* line 1218, ../sass/includes/_theme.scss */
   .not-zoomed .footer .footer-bar .archives h3 {
     float: left;
     margin-right: 20px;
   }
 }
-/* line 1221, ../sass/includes/_theme.scss */
+/* line 1225, ../sass/includes/_theme.scss */
 .footer .footer-bar .archives ul {
   zoom: 1;
 }
@@ -4034,36 +4038,36 @@ aside.highlight .social .twitter {
 .footer .footer-bar .archives ul:after {
   clear: both;
 }
-/* line 1224, ../sass/includes/_theme.scss */
+/* line 1228, ../sass/includes/_theme.scss */
 .footer .footer-bar .archives ul li {
   float: left;
 }
-/* line 1228, ../sass/includes/_theme.scss */
+/* line 1232, ../sass/includes/_theme.scss */
 .footer .footer-bar .archives ul li + li:before {
   content: "/";
   color: #006b9f;
   margin: 0 8px;
 }
 @media only screen and (min-width: 560px) {
-  /* line 1235, ../sass/includes/_theme.scss */
+  /* line 1239, ../sass/includes/_theme.scss */
   .not-zoomed .footer .footer-bar .archives {
     float: left;
   }
 }
 @media only screen and (min-width: 560px) {
-  /* line 1242, ../sass/includes/_theme.scss */
+  /* line 1246, ../sass/includes/_theme.scss */
   .not-zoomed .footer .footer-bar .right {
     float: right;
     text-align: right;
   }
 }
 
-/* line 1252, ../sass/includes/_theme.scss */
+/* line 1256, ../sass/includes/_theme.scss */
 .single-page .footer .l-section-wrapper {
   border-top: 1px solid #333f47;
 }
 @media only screen and (min-width: 72.938em) {
-  /* line 1255, ../sass/includes/_theme.scss */
+  /* line 1259, ../sass/includes/_theme.scss */
   .not-zoomed .single-page .footer .l-section-wrapper {
     margin-top: 30px;
   }

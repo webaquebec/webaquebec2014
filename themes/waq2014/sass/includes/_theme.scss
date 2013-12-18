@@ -969,6 +969,10 @@
 		list-style-position: inside;
 	}
 
+	ul.subevents{
+		list-style-type: none;
+	}
+
 	li{
 		color: $c-single-content;
 		font: $font-single-content;
