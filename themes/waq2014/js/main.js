@@ -40,9 +40,12 @@ var LIBEO;
             WAQ.CustomSchedule = WAQ.Common.createObjects($('.schedule-wrapper'), CustomSchedule);
             WAQ.Countdown = WAQ.Common.createObjects($('.event-stats'), Countdown);
             WAQ.GoogleMap = new CustomGmap('#gmap');
-            google.maps.event.addListenerOnce(WAQ.GoogleMap.map, 'idle', function() {
-                GoogleMapResize();
-            });
+            
+            if($('#gmap').length > 0){
+                google.maps.event.addListenerOnce(WAQ.GoogleMap.map, 'idle', function() {
+                    GoogleMapResize();
+                });
+            }
 
             // Common functions
             WAQ.Common.goToContent($('.l-a11y'));

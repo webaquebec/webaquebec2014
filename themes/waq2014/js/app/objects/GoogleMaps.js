@@ -32,85 +32,88 @@
     };
 
     function CustomGmap(elementId) {
-      var coord, gMapOptions, isMobile, mapStyle, styledMap, zoomControlChoice;
-
-      if($( window ).width() > 1166){
-          coord = new google.maps.LatLng(46.818814, -71.201094);
-          zoomControlChoice = true;
-      }
-      else if($( window ).width() > 640){
-          coord = new google.maps.LatLng(46.818682, -71.208175);
-          zoomControlChoice = false;
-      }
-      else{
-          coord = new google.maps.LatLng(46.819129, -71.2065922);
-          zoomControlChoice = false;
-      }
-
-      isMobile = $('body').hasClass('mobile') ? true : false;
-      gMapOptions = {
-        zoom: 16,
-        center: coord,
-        mapTypeControl: false,
-        streetViewControl: false,
-        panControl: false,
-        scrollwheel: false,
-        zoomControl: zoomControlChoice,
-        mapTypeId: google.maps.MapTypeId.ROADMAP
-      };
-      if (isMobile) {
-        gMapOptions.draggable = false;
-      }
-      mapStyle = [
-        {
-          "featureType": "poi",
-          "stylers": [
+      
+      if($(elementId).length > 0){
+          var coord, gMapOptions, isMobile, mapStyle, styledMap, zoomControlChoice;
+    
+          if($( window ).width() > 1166){
+              coord = new google.maps.LatLng(46.818814, -71.201094);
+              zoomControlChoice = true;
+          }
+          else if($( window ).width() > 640){
+              coord = new google.maps.LatLng(46.818682, -71.208175);
+              zoomControlChoice = false;
+          }
+          else{
+              coord = new google.maps.LatLng(46.819129, -71.2065922);
+              zoomControlChoice = false;
+          }
+    
+          isMobile = $('body').hasClass('mobile') ? true : false;
+          gMapOptions = {
+            zoom: 16,
+            center: coord,
+            mapTypeControl: false,
+            streetViewControl: false,
+            panControl: false,
+            scrollwheel: false,
+            zoomControl: zoomControlChoice,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+          };
+          if (isMobile) {
+            gMapOptions.draggable = false;
+          }
+          mapStyle = [
             {
-              "hue": "#005eff"
+              "featureType": "poi",
+              "stylers": [
+                {
+                  "hue": "#005eff"
+                }, {
+                  "lightness": -6
+                }, {
+                  "saturation": -100
+                }
+              ]
             }, {
-              "lightness": -6
+              "featureType": "water",
+              "stylers": [
+                {
+                  "invert_lightness": true
+                }, {
+                  "visibility": "on"
+                }, {
+                  "color": "#0086b8"
+                }
+              ]
             }, {
-              "saturation": -100
+              "featureType": "road",
+              "stylers": [
+                {
+                  "visibility": "on"
+                }, {
+                  "hue": "#0099ff"
+                }, {
+                  "gamma": 1.13
+                }
+              ]
+            }, {
+              "featureType": "landscape",
+              "stylers": [
+                {
+                  "saturation": -100
+                }
+              ]
             }
-          ]
-        }, {
-          "featureType": "water",
-          "stylers": [
-            {
-              "invert_lightness": true
-            }, {
-              "visibility": "on"
-            }, {
-              "color": "#0086b8"
-            }
-          ]
-        }, {
-          "featureType": "road",
-          "stylers": [
-            {
-              "visibility": "on"
-            }, {
-              "hue": "#0099ff"
-            }, {
-              "gamma": 1.13
-            }
-          ]
-        }, {
-          "featureType": "landscape",
-          "stylers": [
-            {
-              "saturation": -100
-            }
-          ]
-        }
-      ];
-      this.map = new google.maps.Map($(elementId)[0], gMapOptions);
-      styledMap = new google.maps.StyledMapType(mapStyle, {
-        name: "Styled Map"
-      });
-      this.map.mapTypes.set('map_style', styledMap);
-      this.map.setMapTypeId('map_style');
-      this.addMarker();
+          ];
+          this.map = new google.maps.Map($(elementId)[0], gMapOptions);
+          styledMap = new google.maps.StyledMapType(mapStyle, {
+            name: "Styled Map"
+          });
+          this.map.mapTypes.set('map_style', styledMap);
+          this.map.setMapTypeId('map_style');
+          this.addMarker();
+      }
     }
 
     CustomGmap.prototype.addMarker = function() {
