@@ -515,10 +515,8 @@
 			
 			#mc_message{
 			    color: white;
-			    display: block;
     			.not-zoomed & {
     			@include respond-to( 560px ){
-    				@include inline-block;
     				width: 75%;
     				margin-right: 5px;
     				vertical-align: bottom;
