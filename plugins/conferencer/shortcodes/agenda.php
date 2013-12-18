@@ -389,7 +389,7 @@ class Conferencer_Shortcode_Agenda extends Conferencer_Shortcode {
                       }
                       //$output .= '<td class="session' . (empty($cell_sessions) ? ' no-sessions':'') . '" '.(($ends-$starts) > 3600 ? ' rowspan="2"' : '').'>';
                     
-                      $output .= $this->display_session($session,(empty($cell_sessions) ? 'no-session,':'session,').'title,speakers,room');
+                      $output .= $this->display_session($session,(empty($cell_sessions) ? 'no-session,':'session,').'title,speakers,room,time');
                   
                       //$output .= '</td>';
                     }

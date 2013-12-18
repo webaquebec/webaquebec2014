@@ -182,7 +182,7 @@ class Conferencer_Shortcode_Session_Meta extends Conferencer_Shortcode {
 					break;
 				
 				case 'time':
-					if ($post->time_slot && $post->room) {
+					if ($post->time_slot && $type_rendered == 'keynote') {
 						$starts = get_post_meta($post->time_slot, '_conferencer_starts', true);
 						$ends = get_post_meta($post->time_slot, '_conferencer_ends', true);
 						//$html = date($date_format, $starts).", ".date($time_format, $starts).$time_separator.date($time_format, $ends);
@@ -190,6 +190,33 @@ class Conferencer_Shortcode_Session_Meta extends Conferencer_Shortcode {
 						$html .= '<span class="session-time-slot" itemprop="subEvent">';
   						$html .= '<span><time itemprop="startDate" datetime="'.date("c",$starts).'">'.date("G:i",$starts).'</time></span> à ';
   						$html .= '<span><time itemprop="endDate" datetime="'.date("c",$ends).'">'.date("G:i",$ends).'</time></span>';
+						$html .= '</span>';
+						$output_content .= $time_prefix.$html.$time_suffix;
+					}
+					else{
+						$starts = get_post_meta($post->time_slot, '_conferencer_starts', true);
+						$ends = get_post_meta($post->time_slot, '_conferencer_ends', true);
+						$date_a = new DateTime();
+						$date_a->setTimestamp($starts);
+						$date_b = new DateTime();
+						$date_b->setTimestamp($ends);
+						
+						
+						
+						$interval = $date_a->diff($date_b);
+						//$html = date($date_format, $starts).", ".date($time_format, $starts).$time_separator.date($time_format, $ends);
+						$html = "";
+						$html .= '<span class="visuallyhidden">Durée : ';
+						
+						if($interval->h > 0){
+					        $html .= $interval->h.' heure'.($interval->h>1?'s':'').' ';
+						}
+						
+						var_dump($interval->i);
+						if($interval->i > 0){
+						    $html .= $interval->i.' minute'.($interval->i>1?'s':'');
+						}
+						
 						$html .= '</span>';
 						$output_content .= $time_prefix.$html.$time_suffix;
 					}
