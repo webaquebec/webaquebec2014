@@ -462,6 +462,7 @@
 			.mc_var_label{
 			    @extend .visuallyhidden;
 			}
+			
 
 			.input-email,
 			.mc_input{
@@ -495,6 +496,7 @@
 				}
 			}
 
+			.field,
 			.mc_merge_var{
 			    margin-bottom: 0 !important;
 			    
@@ -510,7 +512,23 @@
 					width: 255px;
 				}}
 			}
+			
+			#mc_message{
+			    color: white;
+    			.not-zoomed & {
+    			@include respond-to( 560px ){
+    				@include inline-block;
+    				width: 75%;
+    				margin-right: 5px;
+    				vertical-align: bottom;
+    			}}
+    			.not-zoomed & {
+    			@include respond-to( 1137px ){
+    				width: 255px;
+    			}}
+			}
 
+			.buttons,
 			.mc_signup_submit{
 				.not-zoomed & {
 				@include respond-to( 560px ){
