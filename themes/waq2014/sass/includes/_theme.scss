@@ -515,6 +515,10 @@
 			
 			#mc_message{
 			    color: white;
+			    margin-top: 10px;
+			    font: $font-place-h2-newsletter;
+			    font-size: 1em;
+			    line-height: 1.1em;
     			.not-zoomed & {
     			@include respond-to( 560px ){
     				width: 75%;
