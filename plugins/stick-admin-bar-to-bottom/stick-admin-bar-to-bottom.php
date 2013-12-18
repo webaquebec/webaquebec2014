@@ -7,15 +7,56 @@ Version: 1.2
 Author URI: http://coenjacobs.me
 */
 
-function stick_admin_bar_to_bottom_css() {
-	$version = get_bloginfo( 'version' );
+// Prevent accidental update of this plugin as the Libéo team modified it
+add_filter( 'http_request_args', 'sm_prevent_update_check', 10, 2 );
+function sm_prevent_update_check( $r, $url ) {
+    if ( ! preg_match( '#://api\.wordpress\.org/plugins/update-check/(?P<version>[0-9.]+)/#', $url, $matches ) )
+            return $r; // Not a plugin update request. Bail immediately.
+            
+    switch ( $matches['version'] ) {
+            case '1.0':
+                    $plugins = unserialize( $r[ 'body' ][ 'plugins' ] );
+                    break;
+            case '1.1':
+                    $plugins = json_decode( $r[ 'body' ][ 'plugins' ] , true);
+                    break;
+            default:
+                    return $r;
+                    break;
+    }
 
-	if ( version_compare( $version, '3.3', '<' ) ) {
-		$css_file = 'wordpress-3-1.css';
-	} else {
-		$css_file = 'wordpress-3-3.css';
+    if($matches['version'] == '1.1'){
+        unset( $plugins['plugins'][plugin_basename( __FILE__ )] );
+        unset( $plugins['active'][ array_search( plugin_basename( __FILE__ ), $plugins['active']) ] );
+    }
+    else{
+        unset( $plugins->plugins[plugin_basename( __FILE__ )] );
+        unset( $plugins->active[ array_search( plugin_basename( __FILE__ ), $plugins->active ) ] );
+    }
+    
+    switch ( $matches['version'] ) {
+            case '1.0':
+                    $r[ 'body' ][ 'plugins' ] = serialize( $plugins );
+                    break;
+            case '1.1':
+                    $r[ 'body' ][ 'plugins' ] = json_encode( $plugins );
+                    break;
+    }
+
+    return $r;
+}
+
+function stick_admin_bar_to_bottom_css() {
+    if(!is_admin() && is_user_logged_in()){
+    	$version = get_bloginfo( 'version' );
+    
+    	if ( version_compare( $version, '3.3', '<' ) ) {
+    		$css_file = 'wordpress-3-1.css';
+    	} else {
+    		$css_file = 'wordpress-3-3.css';
+    	}
+    	wp_enqueue_style( 'stick-admin-bar-to-bottom', plugins_url( 'css/' . $css_file, __FILE__ ) );
 	}
-	wp_enqueue_style( 'stick-admin-bar-to-bottom', plugins_url( 'css/' . $css_file, __FILE__ ) );
 }
 
 add_action( 'admin_init', 'stick_admin_bar_to_bottom_css' );

@@ -458,8 +458,13 @@
 					font-size: 16px;
 				}
 			}
+			
+			.mc_var_label{
+			    display: none;
+			}
 
-			.input-email{
+			.input-email,
+			.mc_input{
 				@include box-sizing("border-box");
 				width: 100%;
 				padding: 4px;
@@ -470,7 +475,8 @@
 				border: 3px solid $c-newsletter-border;
 			}
 
-			.input-submit{
+			.input-submit,
+			.button{
 				border: none;
 				padding: 8px 15px;
 				margin: 2px 0 0;
@@ -488,7 +494,7 @@
 				}
 			}
 
-			.field{
+			.mc_merge_var{
 				.not-zoomed & {
 				@include respond-to( 560px ){
 					@include inline-block;
@@ -502,7 +508,7 @@
 				}}
 			}
 
-			.buttons{
+			.mc_signup_submit{
 				.not-zoomed & {
 				@include respond-to( 560px ){
 					@include inline-block;
