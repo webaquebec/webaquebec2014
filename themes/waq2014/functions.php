@@ -76,6 +76,9 @@ function add_my_styles() {
 	// http://codex.wordpress.org/Function_Reference/wp_enqueue_style
 	wp_enqueue_style( 'fonts', 'http://fonts.googleapis.com/css?family=Lusitana:400,700|Roboto:400,300,500,700,900|Roboto+Condensed:400,700,300' );
 	wp_enqueue_style( 'styles', get_template_directory_uri() . '/css/styles.css' );
+	wp_dequeue_style('mailchimpSF_main_css');
+	wp_dequeue_style('mailchimpSF_ie_css');
+	
 }
 
 
