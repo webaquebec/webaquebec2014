@@ -9,7 +9,7 @@ $headerHomePage= $headerHomePage[0];
 <header class="home">
     <div class="l-section-wrapper">
 
-        <a href="#" class="visuallyhidden focusable l-a11y">Passer au contenu</a>
+        <a href="#contenu" class="visuallyhidden focusable l-a11y">Passer au contenu</a>
 
         <h1 itemprop="name" class="visuallyhidden">Le Web à Québec</h1>
 
