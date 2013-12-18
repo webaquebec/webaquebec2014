@@ -475,13 +475,15 @@ function custom_wrapper_classes(){
 
 
 function fb_move_admin_bar() {
-    echo '
-    <style type="text/css">
-    body { 
-        margin-top: -28px;
-        padding-bottom: 28px;
+    if(!is_admin()){
+        echo '
+        <style type="text/css">
+        body { 
+            margin-top: -28px;
+            padding-bottom: 28px;
+        }
+        </style>';
     }
-    </style>';
 }
 // on backend area
 add_action( 'admin_head', 'fb_move_admin_bar' );
