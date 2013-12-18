@@ -1,4 +1,5 @@
 a:focus,
+h1:focus,
 h2:focus,
 button:focus,
 input:focus{
@@ -6,6 +7,7 @@ input:focus{
 }
 
 a:focus:not(.isHover):not(.isClicked),
+h1:focus:not(.isHover):not(.isClicked),
 h2:focus:not(.isHover):not(.isClicked),
 button:focus:not(.isHover):not(.isClicked),
 input:focus:not(.isHover):not(.isClicked){

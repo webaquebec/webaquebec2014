@@ -21,6 +21,7 @@
     <script src="../js/vendor/jquery.onfontresize.js"></script>
     <script src="../js/vendor/modernizr-2.6.2.min.js"></script>
     <script src="../js/vendor/respond.js"></script>
+    <script>var template_url = "http://waq2014.job.lefoy.ca/wp-content/themes/waq2014"</script>
 
 </head>
 <body class="not-zoomed">
@@ -28,11 +29,11 @@
     <!-- Page wrapper -->
     <div class="l-page-wrapper single-page" itemscope itemtype="http://schema.org/Event">
 
+        <a href="#" class="l-a11y visuallyhidden focusable">Passer au contenu</a>
+
         <!-- Home section -->
         <header class="home">
             <div class="l-section-wrapper">
-
-                <a href="#" class="visuallyhidden focusable">Passer au contenu</a>
 
                 <h1 itemprop="name" class="visuallyhidden">Le Web à Québec</h1>
 
@@ -283,11 +284,14 @@
     <script src="../js/plugins/buttonize.jquery.js"></script>
     <script src="../js/plugins/eminize.jquery.js"></script>
     <script src="../js/plugins/onfontresize.jquery.js"></script>
+    <script src="http://maps.googleapis.com/maps/api/js?sensor=false&language=fr"></script>
 
     <script src="../js/app/objects/Schedule.js"></script>
-    <script src="../js/app/objects/CustomSchedule.js"></script>
     <script src="../js/app/objects/SnapMenu.js"></script>
+    <script src="../js/app/objects/Slideshow.js"></script>
     <script src="../js/app/objects/MobileMenu.js"></script>
+    <script src="../js/app/objects/GoogleMaps.js"></script>
+    <script src="../js/app/objects/CustomSchedule.js"></script>
     <script src="../js/app/objects/Countdown.js"></script>
 
     <script src="../js/app/WAQ.Common.js"></script>
