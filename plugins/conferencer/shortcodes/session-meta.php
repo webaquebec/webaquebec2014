@@ -103,7 +103,7 @@ class Conferencer_Shortcode_Session_Meta extends Conferencer_Shortcode {
 				    $output .= ' headers=""';
 				  }
 				  
-				  $output .= 'class="session';
+				  $output .= ' class="session';
 				  
 				  $terms = wp_get_post_terms($post->ID, 'theme', array("fields" => "slugs"));
 				  
