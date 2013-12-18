@@ -59,12 +59,12 @@ var CustomSchedule = (function($, window, document, undefined) {
                 FB.getLoginStatus(function(response) {
                     if (response.status === 'connected') {
                         self.facebookConnected = true;
-                        $('.facebook-connect').css('display','none');
+                        $('.facebook-login').css('display','none');
                         $('.facebook-logout').css('display','block');
                         self.fbInitPhp(function(){self.getUserSessions();});
                     }
                     else{
-                        $('.facebook-connect').css('display','block');
+                        $('.facebook-login').css('display','block');
                         $('.facebook-logout').css('display','none');
                         self.getUserSessions();
                         self.loadSessions();
@@ -78,12 +78,12 @@ var CustomSchedule = (function($, window, document, undefined) {
                 FB.getLoginStatus(function(response) {
                     if (response.status === 'connected') {
                         self.facebookConnected = true;
-                        $('.facebook-connect').css('display','none');
+                        $('.facebook-login').css('display','none');
                         $('.facebook-logout').css('display','block');
                         self.fbInitPhp(function(){self.getUserSessions();});
                     }
                     else{
-                        $('.facebook-connect').css('display','block');
+                        $('.facebook-login').css('display','block');
                         $('.facebook-logout').css('display','none');
                         self.getUserSessions();
                         self.loadSessions();
@@ -118,14 +118,14 @@ var CustomSchedule = (function($, window, document, undefined) {
                 }
             });
 
-            $(document.body).on('click', '.facebook-connect', function(){
+            $(document.body).on('click', '.facebook-login', function(){
                 self.facebookConnect(function(){self.getUserSessions(function(){self.saveUserSessions();});});
             });
 
             $(document.body).on('click', '.facebook-logout', function(){
                 self.facebookConnected = null;
                 FB.logout(function(response) {
-                    $('.facebook-connect').css('display','block');
+                    $('.facebook-login').css('display','block');
                     $('.facebook-logout').css('display','none');
                 });
             });
@@ -138,7 +138,7 @@ var CustomSchedule = (function($, window, document, undefined) {
             FB.getLoginStatus(function(response) {
                 if (response.status === 'connected') {
                     self.facebookConnected = true;
-                    $('.facebook-connect').css('display','none');
+                    $('.facebook-login').css('display','none');
                     $('.facebook-logout').css('display','block');
                     self.fbInitPhp(callback);
                 }
@@ -149,7 +149,7 @@ var CustomSchedule = (function($, window, document, undefined) {
                     FB.login(function(response) {
                         if (response.authResponse) {
                             self.facebookConnected = true;
-                            $('.facebook-connect').css('display','none');
+                            $('.facebook-login').css('display','none');
                             $('.facebook-logout').css('display','block');
                             self.fbInitPhp(callback);
                         }
