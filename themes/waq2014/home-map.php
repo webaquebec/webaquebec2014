@@ -53,7 +53,6 @@ $waq_google_maps = urlencode(str_replace(' ', '+', $waq_google_maps));
                     <form method="post" action="#">
                         <div class="errors"></div>
                         <div class="field email">
-                            <label for="email"><span class="visuallyhidden">Courriel</span></label>
                             <input type="text" id="email" class="input-email" value="" title="Courriel" placeholder="Courriel">
                         </div>
                         <div class="buttons">
