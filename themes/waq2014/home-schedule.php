@@ -29,7 +29,11 @@ foreach ($schedule_categories as $schedule_categories) {
             </div>
         </header>
 
-        <button class="facebook-connect">Facebook Connect</button>
+        <div class="facebook-connect">
+            <button>Activez <em>Facebook Connect</em></button>
+            <p>Activez la fonction <em>Facebook Connect</em> et  enregistrez votre horaire pour le WAQ.</br>
+                Vous aurez accès à la fonction sur tous vos périphériques.</p>
+        </div>
         <button class="facebook-logout">Facebook Logout</button>
       
         <?php 
