@@ -469,7 +469,7 @@
 				width: 100%;
 				padding: 4px;
 				margin: 10px 0 0;
-				text-transform: uppercase;
+				// text-transform: uppercase; // Not a good idea on an email input
 				font: $font-newsletter-input-text;
 				color: $c-newsletter-input-text;
 				border: 3px solid $c-newsletter-border;
