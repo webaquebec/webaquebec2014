@@ -100,7 +100,7 @@ class Conferencer_Shortcode_Session_Meta extends Conferencer_Shortcode {
 				  $output .= '<td data-session-id="'.$post->ID.'"';
 				  
 				  if($type == 'keynote'){
-				    $output .= ' headers=""';
+				    $output .= ' headers="vide"';
 				  }
 				  
 				  $output .= ' class="session';

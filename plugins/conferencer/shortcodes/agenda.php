@@ -435,7 +435,7 @@ class Conferencer_Shortcode_Agenda extends Conferencer_Shortcode {
 	  $output = "";
 		$output .= '<thead>';
 			$output .= '<tr>';
-				$output .= '<th class="column-time-slot"></th>';
+				$output .= '<th id="vide" class="column-time-slot"></th>';
 				foreach ($column_headers as $column_header) { 
 					$output .= '<th class="'.$column_header['class'].'">';
 					$html = $column_header['title'];
