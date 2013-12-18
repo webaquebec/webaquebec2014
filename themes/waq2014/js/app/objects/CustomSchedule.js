@@ -124,7 +124,9 @@ var CustomSchedule = (function($, window, document, undefined) {
 
             $(document.body).on('click', '.facebook-logout', function(){
                 self.facebookConnected = null;
-                FB.logout(function(response) {
+                FB.api({
+                    method: 'Auth.revokeAuthorization'
+                }, function(response) {
                     $('.facebook-login').css('display','block');
                     $('.facebook-logout').css('display','none');
                 });
