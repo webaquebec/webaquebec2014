@@ -6,6 +6,7 @@ class Conferencer_Speaker extends Conferencer_CustomPostType {
 	var $archive_slug = 'speakers';
 	var $singular = "Speaker";
 	var $plural = "Speakers";
+	var $menu_icon = "dashicons-businessman";
 	
 	var $speaker_cache = false;
 	

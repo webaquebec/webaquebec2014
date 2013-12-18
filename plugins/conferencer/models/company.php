@@ -8,4 +8,5 @@ class Conferencer_Company extends Conferencer_CustomPostType {
 	var $archive_slug = 'companies';
 	var $singular = "Company";
 	var $plural = "Companies";
+	var $menu_icon = "dashicons-groups";
 }

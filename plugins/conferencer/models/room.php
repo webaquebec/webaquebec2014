@@ -6,6 +6,7 @@ class Conferencer_Room extends Conferencer_CustomPostType {
 	var $archive_slug = 'rooms';
 	var $singular = "Room";
 	var $plural = "Rooms";
+	var $menu_icon = "dashicons-admin-home";
 	
 	function columns($columns) {
 		$columns['conferencer_room_session_count'] = "Sessions";

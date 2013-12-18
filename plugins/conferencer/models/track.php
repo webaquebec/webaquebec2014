@@ -6,6 +6,7 @@ class Conferencer_Track extends Conferencer_CustomPostType {
 	var $archive_slug = 'tracks';
 	var $singular = "Track";
 	var $plural = "Tracks";
+	var $menu_icon = "dashicons-editor-justify";
 	
 	function columns($columns) {
 		$columns = parent::columns($columns);

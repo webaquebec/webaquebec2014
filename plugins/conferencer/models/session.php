@@ -6,6 +6,7 @@ class Conferencer_Session extends Conferencer_CustomPostType {
 	var $archive_slug = 'sessions';
 	var $singular = "Session";
 	var $plural = "Sessions";
+	var $menu_icon = "dashicons-calendar";
 	
 	function set_options() {
 		parent::set_options();

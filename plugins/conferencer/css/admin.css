@@ -2,7 +2,7 @@
 
 #toplevel_page_conferencer .wp-menu-image img { display: none; }
 
-#toplevel_page_conferencer .wp-menu-image,
+/*#toplevel_page_conferencer .wp-menu-image,
 #menu-posts-session .wp-menu-image,
 #menu-posts-speaker .wp-menu-image,
 #menu-posts-room .wp-menu-image,
@@ -48,7 +48,7 @@
 
 #menu-posts-company .wp-menu-image { background-position: -224px -18px !important; }
 #menu-posts-company:hover .wp-menu-image,
-#menu-posts-company.wp-has-current-submenu .wp-menu-image {	background-position: -224px 6px !important; }
+#menu-posts-company.wp-has-current-submenu .wp-menu-image {	background-position: -224px 6px !important; }*/
 
 /* Post edit page options */
 

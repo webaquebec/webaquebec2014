@@ -15,6 +15,45 @@ Author URI: http://conferencer.louddog.com/
 
 session_start();
 
+// Prevent accidental update of this plugin as the Libéo team modified it
+add_filter( 'http_request_args', 'cf_prevent_update_check', 10, 2 );
+function cf_prevent_update_check( $r, $url ) {
+    if ( ! preg_match( '#://api\.wordpress\.org/plugins/update-check/(?P<version>[0-9.]+)/#', $url, $matches ) )
+            return $r; // Not a plugin update request. Bail immediately.
+            
+    switch ( $matches['version'] ) {
+            case '1.0':
+                    $plugins = unserialize( $r[ 'body' ][ 'plugins' ] );
+                    break;
+            case '1.1':
+                    $plugins = json_decode( $r[ 'body' ][ 'plugins' ] , true);
+                    break;
+            default:
+                    return $r;
+                    break;
+    }
+
+    if($matches['version'] == '1.1'){
+        unset( $plugins['plugins'][plugin_basename( __FILE__ )] );
+        unset( $plugins['active'][ array_search( plugin_basename( __FILE__ ), $plugins['active']) ] );
+    }
+    else{
+        unset( $plugins->plugins[plugin_basename( __FILE__ )] );
+        unset( $plugins->active[ array_search( plugin_basename( __FILE__ ), $plugins->active ) ] );
+    }
+    
+    switch ( $matches['version'] ) {
+            case '1.0':
+                    $r[ 'body' ][ 'plugins' ] = serialize( $plugins );
+                    break;
+            case '1.1':
+                    $r[ 'body' ][ 'plugins' ] = json_encode( $plugins );
+                    break;
+    }
+
+    return $r;
+}
+
 define('CONFERENCER_VERSION', '0.3');
 define('CONFERENCER_PATH', dirname(__FILE__));
 define('CONFERENCER_URL', plugin_dir_url(__FILE__));

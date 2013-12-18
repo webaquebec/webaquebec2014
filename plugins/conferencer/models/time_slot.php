@@ -6,6 +6,7 @@ class Conferencer_TimeSlot extends Conferencer_CustomPostType {
 	var $archive_slug = 'time-slots';
 	var $singular = "Time Slot";
 	var $plural = "Time Slots";
+	var $menu_icon = "dashicons-editor-insertmore";
 	
 	function set_options() {
 		parent::set_options();
