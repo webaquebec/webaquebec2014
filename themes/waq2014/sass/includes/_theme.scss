@@ -237,7 +237,7 @@
 				background-color: transparent;
 				background-image: url( '#{$img-path}icon-more.png' );
 				background-repeat: no-repeat;
-				background-position: emify(210px) center;
+				background-position: 18em center;
 
 				.not-zoomed & {
 				@include respond-to( 64.000em ){
@@ -458,7 +458,7 @@
 					font-size: 16px;
 				}
 			}
-			
+
 			.mc_var_label{
 			    @extend .visuallyhidden;
 			}

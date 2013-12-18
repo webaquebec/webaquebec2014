@@ -5,9 +5,7 @@
 	@include clearfix;
 	width: 100%;
 	clear: both;
-	margin: 0 0 30px;
-	position: relative;
-	top: -5px;
+	margin: 20px 0 30px;
 	font: 400 emify(15px, 17px, 16px) 'Roboto', sans-serif;
 
 	.no-js &{
@@ -19,12 +17,28 @@
 	}
 
 	p{
-		padding: 5px 0 0 20px;
-		float: left;
+		color: $c-darkblue;
+		padding: 10px 0 0;
 	}
 
+	.not-zoomed & {
+	@include respond-to( 64.000em ){
+		margin: 0 0 30px;
+		position: relative;
+		top: -5px;
+
+		p{
+			float: left;
+			padding: 5px 0 0 20px;
+		}
+
+		button{
+			float: left;
+		}
+
+	}}
+
 	button{
-		float: left;
 		border: none;
 		padding: 8px 15px;
 		margin: 2px 0 0;
@@ -480,7 +494,7 @@
 		}}
 
 		.session-content{
-			padding: 30px 35px 12px 25px;
+			padding: emify(30px) 35px 12px 25px;
 
 			.not-zoomed & {
 			@include respond-to( 64.000em ){
