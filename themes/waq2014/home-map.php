@@ -50,7 +50,7 @@ $waq_google_maps = urlencode(str_replace(' ', '+', $waq_google_maps));
                 </div>
                 <div class="newsletter">
                     <h2>Abonnez-vous à l'infolettre du <abbr title="Web à Québec">WAQ</abbr></h2>
-                    <?php do_shortcode('[mailchimpsf_form]'); ?>
+                    <?php echo do_shortcode('[mailchimpsf_form]'); ?>
                 </div>
             </div>
         </div>
