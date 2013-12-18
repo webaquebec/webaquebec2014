@@ -472,7 +472,7 @@
 		}}
 	}
 
-	.speaker-thumb{
+	.not-zoomed & .speaker-thumb{
 		max-height: 100%;
 		max-width: none;
 	}
@@ -536,11 +536,11 @@
 		color: $c-newsletter-input-submit;
 		background-color: $c-newsletter-border;
 		cursor: pointer;
-		width: 216px;
+		width: emify(216px);
 		text-align: center;
 		position: relative;
 		left: 50%;
-		margin-left: -108px;
+		margin-left: emify(-108px);
 
 		.not-zoomed & {
 		@include respond-to( 48.000em ){

@@ -887,7 +887,7 @@ img {
   }
 }
 /* line 475, ../sass/includes/_module.scss */
-.event-speakers .speaker-thumb {
+.not-zoomed .event-speakers .speaker-thumb {
   max-height: 100%;
   max-width: none;
 }
@@ -952,11 +952,11 @@ img {
   color: white;
   background-color: #005b87;
   cursor: pointer;
-  width: 216px;
+  width: 13.5em;
   text-align: center;
   position: relative;
   left: 50%;
-  margin-left: -108px;
+  margin-left: -6.75em;
 }
 @media only screen and (min-width: 48em) {
   /* line 545, ../sass/includes/_module.scss */
@@ -1661,9 +1661,7 @@ aside.highlight .social .twitter {
   zoom: 1;
   width: 100%;
   clear: both;
-  margin: 0 0 30px;
-  position: relative;
-  top: -5px;
+  margin: 20px 0 30px;
   font: 400 0.9375em / 1.13333em "Roboto", sans-serif;
 }
 /* line 46, ../sass/config/_mixins.scss */
@@ -1677,22 +1675,38 @@ aside.highlight .social .twitter {
 .facebook-connect:after {
   clear: both;
 }
-/* line 13, ../sass/includes/_schedule.scss */
+/* line 11, ../sass/includes/_schedule.scss */
 .no-js .facebook-connect {
   display: none;
 }
-/* line 17, ../sass/includes/_schedule.scss */
+/* line 15, ../sass/includes/_schedule.scss */
 .facebook-connect em {
   font-style: italic;
 }
-/* line 21, ../sass/includes/_schedule.scss */
+/* line 19, ../sass/includes/_schedule.scss */
 .facebook-connect p {
-  padding: 5px 0 0 20px;
-  float: left;
+  color: #333f47;
+  padding: 10px 0 0;
 }
-/* line 26, ../sass/includes/_schedule.scss */
+@media only screen and (min-width: 64em) {
+  /* line 24, ../sass/includes/_schedule.scss */
+  .not-zoomed .facebook-connect {
+    margin: 0 0 30px;
+    position: relative;
+    top: -5px;
+  }
+  /* line 30, ../sass/includes/_schedule.scss */
+  .not-zoomed .facebook-connect p {
+    float: left;
+    padding: 5px 0 0 20px;
+  }
+  /* line 35, ../sass/includes/_schedule.scss */
+  .not-zoomed .facebook-connect button {
+    float: left;
+  }
+}
+/* line 41, ../sass/includes/_schedule.scss */
 .facebook-connect button {
-  float: left;
   border: none;
   padding: 8px 15px;
   margin: 2px 0 0;
@@ -1702,7 +1716,7 @@ aside.highlight .social .twitter {
   font-weight: 400;
   cursor: pointer;
 }
-/* line 37, ../sass/includes/_schedule.scss */
+/* line 51, ../sass/includes/_schedule.scss */
 .facebook-connect button:hover {
   padding: 5px 12px;
   background-color: white;
@@ -1710,7 +1724,7 @@ aside.highlight .social .twitter {
   border: 3px solid #006b9f;
 }
 
-/* line 46, ../sass/includes/_schedule.scss */
+/* line 60, ../sass/includes/_schedule.scss */
 .js .schedule-wrapper .js-slider {
   width: 100%;
 }
@@ -1742,12 +1756,12 @@ aside.highlight .social .twitter {
   float: left;
   position: relative;
 }
-/* line 53, ../sass/includes/_schedule.scss */
+/* line 67, ../sass/includes/_schedule.scss */
 .js .schedule-wrapper .js-slider .slide {
   width: 33.3333%;
 }
 
-/* line 58, ../sass/includes/_schedule.scss */
+/* line 72, ../sass/includes/_schedule.scss */
 .js .schedule-wrapper .days-buttons {
   zoom: 1;
   display: block;
@@ -1766,13 +1780,13 @@ aside.highlight .social .twitter {
   clear: both;
 }
 @media only screen and (min-width: 64em) {
-  /* line 66, ../sass/includes/_schedule.scss */
+  /* line 80, ../sass/includes/_schedule.scss */
   .not-zoomed .js .schedule-wrapper .days-buttons {
     padding: 0;
     background-color: transparent;
   }
 }
-/* line 72, ../sass/includes/_schedule.scss */
+/* line 86, ../sass/includes/_schedule.scss */
 .js .schedule-wrapper .days-buttons button {
   display: -moz-inline-stack;
   display: inline-block;
@@ -1800,22 +1814,22 @@ aside.highlight .social .twitter {
   background-color: #006b9f;
 }
 @media only screen and (min-width: 48em) {
-  /* line 87, ../sass/includes/_schedule.scss */
+  /* line 101, ../sass/includes/_schedule.scss */
   .not-zoomed .js .schedule-wrapper .days-buttons button {
     padding: 15px 5px;
   }
 }
 @media only screen and (min-width: 72.938em) {
-  /* line 92, ../sass/includes/_schedule.scss */
+  /* line 106, ../sass/includes/_schedule.scss */
   .not-zoomed .js .schedule-wrapper .days-buttons button {
     width: 377px;
   }
 }
-/* line 97, ../sass/includes/_schedule.scss */
+/* line 111, ../sass/includes/_schedule.scss */
 .js .schedule-wrapper .days-buttons button span {
   font: 400 1em / 1.125em "Roboto", sans-serif;
 }
-/* line 102, ../sass/includes/_schedule.scss */
+/* line 116, ../sass/includes/_schedule.scss */
 .js .schedule-wrapper .days-buttons button.isActive {
   position: relative;
   margin: 0 1px 0;
@@ -1836,33 +1850,33 @@ aside.highlight .social .twitter {
   } */
 }
 @media only screen and (min-width: 48em) {
-  /* line 109, ../sass/includes/_schedule.scss */
+  /* line 123, ../sass/includes/_schedule.scss */
   .not-zoomed .js .schedule-wrapper .days-buttons button.isActive {
     margin: 0 1px 2px;
     padding: 23px 5px 21px;
   }
 }
 
-/* line 130, ../sass/includes/_schedule.scss */
+/* line 144, ../sass/includes/_schedule.scss */
 .schedule-wrapper {
   margin: 0 -15px 40px;
 }
-/* line 133, ../sass/includes/_schedule.scss */
+/* line 147, ../sass/includes/_schedule.scss */
 .schedule-wrapper table {
   display: block;
 }
 @media only screen and (min-width: 64em) {
-  /* line 136, ../sass/includes/_schedule.scss */
+  /* line 150, ../sass/includes/_schedule.scss */
   .not-zoomed .schedule-wrapper table {
     display: table;
     width: 100%;
   }
 }
-/* line 143, ../sass/includes/_schedule.scss */
+/* line 157, ../sass/includes/_schedule.scss */
 .schedule-wrapper caption {
   display: none;
 }
-/* line 146, ../sass/includes/_schedule.scss */
+/* line 160, ../sass/includes/_schedule.scss */
 .no-js .schedule-wrapper caption {
   display: table-caption;
   color: #333f47;
@@ -1870,59 +1884,59 @@ aside.highlight .social .twitter {
   font-size: 1.875em;
   padding-bottom: 20px;
 }
-/* line 155, ../sass/includes/_schedule.scss */
+/* line 169, ../sass/includes/_schedule.scss */
 .schedule-wrapper thead {
   display: none;
 }
 @media only screen and (min-width: 64em) {
-  /* line 158, ../sass/includes/_schedule.scss */
+  /* line 172, ../sass/includes/_schedule.scss */
   .not-zoomed .schedule-wrapper thead {
     display: table-header-group;
   }
 }
-/* line 164, ../sass/includes/_schedule.scss */
+/* line 178, ../sass/includes/_schedule.scss */
 .schedule-wrapper tbody {
   display: block;
 }
 @media only screen and (min-width: 64em) {
-  /* line 167, ../sass/includes/_schedule.scss */
+  /* line 181, ../sass/includes/_schedule.scss */
   .not-zoomed .schedule-wrapper tbody {
     display: table-row-group;
   }
 }
-/* line 173, ../sass/includes/_schedule.scss */
+/* line 187, ../sass/includes/_schedule.scss */
 .schedule-wrapper tr {
   display: block;
 }
 @media only screen and (min-width: 64em) {
-  /* line 176, ../sass/includes/_schedule.scss */
+  /* line 190, ../sass/includes/_schedule.scss */
   .not-zoomed .schedule-wrapper tr {
     display: table-row;
   }
 }
-/* line 182, ../sass/includes/_schedule.scss */
+/* line 196, ../sass/includes/_schedule.scss */
 .schedule-wrapper th {
   display: block;
 }
 @media only screen and (min-width: 64em) {
-  /* line 185, ../sass/includes/_schedule.scss */
+  /* line 199, ../sass/includes/_schedule.scss */
   .not-zoomed .schedule-wrapper th {
     display: table-cell;
   }
 }
-/* line 191, ../sass/includes/_schedule.scss */
+/* line 205, ../sass/includes/_schedule.scss */
 .schedule-wrapper td {
   display: block;
   border-bottom: 1px solid #dfe5e8;
 }
 @media only screen and (min-width: 64em) {
-  /* line 195, ../sass/includes/_schedule.scss */
+  /* line 209, ../sass/includes/_schedule.scss */
   .not-zoomed .schedule-wrapper td {
     display: table-cell;
     vertical-align: middle;
   }
 }
-/* line 203, ../sass/includes/_schedule.scss */
+/* line 217, ../sass/includes/_schedule.scss */
 .schedule-wrapper .slide:first-child,
 .schedule-wrapper .slide:first-child th {
   position: relative;
@@ -1930,13 +1944,13 @@ aside.highlight .social .twitter {
   background-color: white;
 }
 @media only screen and (min-width: 64em) {
-  /* line 212, ../sass/includes/_schedule.scss */
+  /* line 226, ../sass/includes/_schedule.scss */
   .not-zoomed .schedule-wrapper .day-wrapper {
     padding-top: 30px;
     background-color: white;
   }
 }
-/* line 219, ../sass/includes/_schedule.scss */
+/* line 233, ../sass/includes/_schedule.scss */
 .schedule-wrapper th {
   color: #333f47;
   font: 700 1.125em / 1.11111em "Roboto Condensed", sans-serif;
@@ -1947,27 +1961,27 @@ aside.highlight .social .twitter {
   background-position: 0;
   border-bottom: 1px solid #dfe5e8;
 }
-/* line 230, ../sass/includes/_schedule.scss */
+/* line 244, ../sass/includes/_schedule.scss */
 .schedule-wrapper th.column_salle-libeo {
   background-image: url("../img/bg-schedule-libeo.png");
 }
-/* line 234, ../sass/includes/_schedule.scss */
+/* line 248, ../sass/includes/_schedule.scss */
 .schedule-wrapper th.column_salle-ixmedia {
   background-image: url("../img/bg-schedule-ixmedia.png");
 }
-/* line 238, ../sass/includes/_schedule.scss */
+/* line 252, ../sass/includes/_schedule.scss */
 .schedule-wrapper th.column_salle-bell {
   background-image: url("../img/bg-schedule-bell.png");
 }
-/* line 242, ../sass/includes/_schedule.scss */
+/* line 256, ../sass/includes/_schedule.scss */
 .schedule-wrapper th.column_salle-deloitte {
   background-image: url("../img/bg-schedule-deloitte.png");
 }
-/* line 246, ../sass/includes/_schedule.scss */
+/* line 260, ../sass/includes/_schedule.scss */
 .schedule-wrapper th:first-child {
   background: none;
 }
-/* line 250, ../sass/includes/_schedule.scss */
+/* line 264, ../sass/includes/_schedule.scss */
 .schedule-wrapper .days-buttons {
   zoom: 1;
   margin: 0;
@@ -1986,18 +2000,18 @@ aside.highlight .social .twitter {
 .schedule-wrapper .days-buttons:after {
   clear: both;
 }
-/* line 257, ../sass/includes/_schedule.scss */
+/* line 271, ../sass/includes/_schedule.scss */
 .no-js .schedule-wrapper .days-buttons {
   display: none;
 }
 @media only screen and (min-width: 1024px) {
-  /* line 250, ../sass/includes/_schedule.scss */
+  /* line 264, ../sass/includes/_schedule.scss */
   .schedule-wrapper .days-buttons {
     padding: 0;
     background-color: transparent;
   }
 }
-/* line 266, ../sass/includes/_schedule.scss */
+/* line 280, ../sass/includes/_schedule.scss */
 .schedule-wrapper .days-buttons button {
   display: -moz-inline-stack;
   display: inline-block;
@@ -2024,16 +2038,16 @@ aside.highlight .social .twitter {
   background-color: #006b9f;
 }
 @media only screen and (min-width: 768px) {
-  /* line 266, ../sass/includes/_schedule.scss */
+  /* line 280, ../sass/includes/_schedule.scss */
   .schedule-wrapper .days-buttons button {
     padding: 15px 5px;
   }
 }
-/* line 284, ../sass/includes/_schedule.scss */
+/* line 298, ../sass/includes/_schedule.scss */
 .schedule-wrapper .days-buttons button span {
   font: 400 1em / 1.125em "Roboto", sans-serif;
 }
-/* line 289, ../sass/includes/_schedule.scss */
+/* line 303, ../sass/includes/_schedule.scss */
 .schedule-wrapper .days-buttons button.isActive {
   margin: 0 1px 0;
   padding: 15px 5px 13px;
@@ -2041,13 +2055,13 @@ aside.highlight .social .twitter {
   background-color: #333f47;
 }
 @media only screen and (min-width: 768px) {
-  /* line 289, ../sass/includes/_schedule.scss */
+  /* line 303, ../sass/includes/_schedule.scss */
   .schedule-wrapper .days-buttons button.isActive {
     margin: 0 1px 2px;
     padding: 23px 5px 21px;
   }
 }
-/* line 302, ../sass/includes/_schedule.scss */
+/* line 316, ../sass/includes/_schedule.scss */
 .schedule-wrapper .time-slot {
   position: relative;
   padding: 20px 15px 8px;
@@ -2058,7 +2072,7 @@ aside.highlight .social .twitter {
   vertical-align: top;
 }
 @media only screen and (min-width: 64em) {
-  /* line 311, ../sass/includes/_schedule.scss */
+  /* line 325, ../sass/includes/_schedule.scss */
   .not-zoomed .schedule-wrapper .time-slot {
     width: 7%;
     text-align: center;
@@ -2067,12 +2081,12 @@ aside.highlight .social .twitter {
   }
 }
 @media only screen and (min-width: 64em) {
-  /* line 320, ../sass/includes/_schedule.scss */
+  /* line 334, ../sass/includes/_schedule.scss */
   .not-zoomed .schedule-wrapper .time-slot .time-slot-end {
     display: none;
   }
 }
-/* line 327, ../sass/includes/_schedule.scss */
+/* line 341, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session {
   background-color: white;
   background-image: url("../img/bg-schedule-default.png");
@@ -2084,23 +2098,23 @@ aside.highlight .social .twitter {
   transition: opacity, 0.3s;
 }
 @media only screen and (min-width: 64em) {
-  /* line 334, ../sass/includes/_schedule.scss */
+  /* line 348, ../sass/includes/_schedule.scss */
   .not-zoomed .schedule-wrapper .session {
     width: 23.25%;
   }
 }
-/* line 340, ../sass/includes/_schedule.scss */
+/* line 354, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session .session-wrapper {
   position: relative;
 }
-/* line 344, ../sass/includes/_schedule.scss */
+/* line 358, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session .session-content {
   padding: 1.875em 2.1875em 0.75em 1.5625em;
   background-repeat: repeat-y;
   background-position: center left;
 }
 @media only screen and (min-width: 64em) {
-  /* line 349, ../sass/includes/_schedule.scss */
+  /* line 363, ../sass/includes/_schedule.scss */
   .not-zoomed .schedule-wrapper .session .session-content {
     padding: 1.25em 2.1875em 0em 1.5625em;
     display: table-cell;
@@ -2109,57 +2123,57 @@ aside.highlight .social .twitter {
     width: 25em;
   }
 }
-/* line 359, ../sass/includes/_schedule.scss */
+/* line 373, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session .session-content-wrapper {
   position: relative;
 }
-/* line 363, ../sass/includes/_schedule.scss */
+/* line 377, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session .session-title {
   font: 400 1.125em / 1.11111em "Roboto Condensed", sans-serif;
 }
-/* line 366, ../sass/includes/_schedule.scss */
+/* line 380, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session .session-title a {
   text-decoration: none;
   color: #006b9f;
 }
-/* line 370, ../sass/includes/_schedule.scss */
+/* line 384, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session .session-title a:hover {
   text-decoration: underline;
 }
-/* line 374, ../sass/includes/_schedule.scss */
+/* line 388, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session .session-title a:focus {
   display: block;
 }
-/* line 381, ../sass/includes/_schedule.scss */
+/* line 395, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session .session-speaker,
 .schedule-wrapper .session .session-description {
   display: block;
   color: #333f47;
   font: 400 1em / 1.25em "Lusitana", sans-serif;
 }
-/* line 389, ../sass/includes/_schedule.scss */
+/* line 403, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session span.session-speaker,
 .schedule-wrapper .session .session-description,
 .schedule-wrapper .session .session-speaker figcaption {
   position: absolute;
   top: -1.25em;
 }
-/* line 394, ../sass/includes/_schedule.scss */
+/* line 408, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session.no-speaker .session-content {
   padding: 0.75em 4.0625em 0.75em 1.5625em;
 }
 @media only screen and (min-width: 64em) {
-  /* line 397, ../sass/includes/_schedule.scss */
+  /* line 411, ../sass/includes/_schedule.scss */
   .not-zoomed .schedule-wrapper .session.no-speaker .session-content {
     padding: 0em 2.5em 0em 1.5625em;
     height: 6.875em;
   }
 }
-/* line 404, ../sass/includes/_schedule.scss */
+/* line 418, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session .session-speaker-thumb {
   display: none;
 }
-/* line 408, ../sass/includes/_schedule.scss */
+/* line 422, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session .session-room {
   display: block;
   padding: 0.5em 0em 0em;
@@ -2169,18 +2183,18 @@ aside.highlight .social .twitter {
   text-transform: uppercase;
 }
 @media only screen and (min-width: 64em) {
-  /* line 416, ../sass/includes/_schedule.scss */
+  /* line 430, ../sass/includes/_schedule.scss */
   .not-zoomed .schedule-wrapper .session .session-room {
     display: none;
     padding: 0;
   }
 }
-/* line 423, ../sass/includes/_schedule.scss */
+/* line 437, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session .session-time-slot {
   display: none;
 }
 @media only screen and (min-width: 64em) {
-  /* line 426, ../sass/includes/_schedule.scss */
+  /* line 440, ../sass/includes/_schedule.scss */
   .not-zoomed .schedule-wrapper .session .session-time-slot {
     display: -moz-inline-stack;
     display: inline-block;
@@ -2192,7 +2206,7 @@ aside.highlight .social .twitter {
     font: 400 1.125em / 1.33333em "Roboto Condensed", sans-serif;
   }
 }
-/* line 434, ../sass/includes/_schedule.scss */
+/* line 448, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session .session-bookmark {
   position: absolute;
   top: 0;
@@ -2207,7 +2221,7 @@ aside.highlight .social .twitter {
   height: 31px;
   width: 21px;
 }
-/* line 444, ../sass/includes/_schedule.scss */
+/* line 458, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session .session-bookmark.isActive {
   background-image: url("../img/icon-bookmark-small-active.png");
   background-repeat: no-repeat;
@@ -2217,29 +2231,29 @@ aside.highlight .social .twitter {
   width: 21px;
 }
 @media only screen and (min-width: 64em) {
-  /* line 451, ../sass/includes/_schedule.scss */
+  /* line 465, ../sass/includes/_schedule.scss */
   .not-zoomed .schedule-wrapper .session[rowspan="2"] .session-content {
     height: 12.5625em;
   }
 }
 @media only screen and (min-width: 64em) {
-  /* line 458, ../sass/includes/_schedule.scss */
+  /* line 472, ../sass/includes/_schedule.scss */
   .not-zoomed .schedule-wrapper .session[rowspan="3"] .session-content {
     height: 18.875em;
   }
 }
 @media only screen and (min-width: 64em) {
-  /* line 465, ../sass/includes/_schedule.scss */
+  /* line 479, ../sass/includes/_schedule.scss */
   .not-zoomed .schedule-wrapper .session[rowspan="4"] .session-content {
     height: 25.1875em;
   }
 }
-/* line 471, ../sass/includes/_schedule.scss */
+/* line 485, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session.keynote {
   background-color: #e6f3fa;
 }
 @media only screen and (min-width: 64em) {
-  /* line 474, ../sass/includes/_schedule.scss */
+  /* line 488, ../sass/includes/_schedule.scss */
   .not-zoomed .schedule-wrapper .session.keynote {
     padding: 15px;
     background-color: white;
@@ -2247,12 +2261,12 @@ aside.highlight .social .twitter {
     border-left: 1px solid #dfe5e8;
   }
 }
-/* line 482, ../sass/includes/_schedule.scss */
+/* line 496, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session.keynote .session-content {
-  padding: 30px 35px 12px 25px;
+  padding: 1.875em 35px 12px 25px;
 }
 @media only screen and (min-width: 64em) {
-  /* line 485, ../sass/includes/_schedule.scss */
+  /* line 499, ../sass/includes/_schedule.scss */
   .not-zoomed .schedule-wrapper .session.keynote .session-content {
     width: 2000px;
     height: 8.25em;
@@ -2260,40 +2274,40 @@ aside.highlight .social .twitter {
     background-color: #e6f3fa;
   }
 }
-/* line 494, ../sass/includes/_schedule.scss */
+/* line 508, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session.keynote.speaker-thumb .session-content {
   padding: 1.875em 35px 0.75em 120px;
 }
 @media only screen and (min-width: 48em) {
-  /* line 497, ../sass/includes/_schedule.scss */
+  /* line 511, ../sass/includes/_schedule.scss */
   .not-zoomed .schedule-wrapper .session.keynote.speaker-thumb .session-content {
     padding: 1.875em 35px 0.75em 130px;
   }
 }
 @media only screen and (min-width: 64em) {
-  /* line 502, ../sass/includes/_schedule.scss */
+  /* line 516, ../sass/includes/_schedule.scss */
   .not-zoomed .schedule-wrapper .session.keynote.speaker-thumb .session-content {
     padding: 1.75em 65px 0em 230px;
   }
 }
-/* line 508, ../sass/includes/_schedule.scss */
+/* line 522, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session.keynote .session-title {
   display: block;
   font: 400 1.375em / 1.09091em "Roboto Condensed", sans-serif;
 }
 @media only screen and (min-width: 64em) {
-  /* line 512, ../sass/includes/_schedule.scss */
+  /* line 526, ../sass/includes/_schedule.scss */
   .not-zoomed .schedule-wrapper .session.keynote .session-title {
     font-size: 1.875em;
   }
 }
-/* line 518, ../sass/includes/_schedule.scss */
+/* line 532, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session.keynote .session-speaker {
   top: -1.75em;
   font: 400 1.125em / 2em "Lusitana", sans-serif;
 }
 @media only screen and (min-width: 64em) {
-  /* line 524, ../sass/includes/_schedule.scss */
+  /* line 538, ../sass/includes/_schedule.scss */
   .not-zoomed .schedule-wrapper .session.keynote .session-room {
     display: -moz-inline-stack;
     display: inline-block;
@@ -2304,7 +2318,7 @@ aside.highlight .social .twitter {
     font: 700 1.125em / 1.33333em "Roboto Condensed", sans-serif;
   }
 }
-/* line 531, ../sass/includes/_schedule.scss */
+/* line 545, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session.keynote .session-speaker-thumb {
   display: block;
   position: absolute;
@@ -2314,7 +2328,7 @@ aside.highlight .social .twitter {
   max-height: 92px;
 }
 @media only screen and (min-width: 48em) {
-  /* line 538, ../sass/includes/_schedule.scss */
+  /* line 552, ../sass/includes/_schedule.scss */
   .not-zoomed .schedule-wrapper .session.keynote .session-speaker-thumb {
     top: 0;
     max-width: 100px;
@@ -2322,14 +2336,14 @@ aside.highlight .social .twitter {
   }
 }
 @media only screen and (min-width: 64em) {
-  /* line 545, ../sass/includes/_schedule.scss */
+  /* line 559, ../sass/includes/_schedule.scss */
   .not-zoomed .schedule-wrapper .session.keynote .session-speaker-thumb {
     top: 0;
     max-width: 187px;
     max-height: 160px;
   }
 }
-/* line 553, ../sass/includes/_schedule.scss */
+/* line 567, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session.keynote .session-bookmark {
   background-image: url("../img/icon-bookmark-small.png");
   background-repeat: no-repeat;
@@ -2339,7 +2353,7 @@ aside.highlight .social .twitter {
   width: 21px;
 }
 @media only screen and (min-width: 72.938em) {
-  /* line 556, ../sass/includes/_schedule.scss */
+  /* line 570, ../sass/includes/_schedule.scss */
   .not-zoomed .schedule-wrapper .session.keynote .session-bookmark {
     background-image: url("../img/icon-bookmark-big.png");
     background-repeat: no-repeat;
@@ -2349,7 +2363,7 @@ aside.highlight .social .twitter {
     width: 38px;
   }
 }
-/* line 562, ../sass/includes/_schedule.scss */
+/* line 576, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session.keynote .session-bookmark.isActive {
   background-image: url("../img/icon-bookmark-big-active.png");
   background-repeat: no-repeat;
@@ -2359,12 +2373,12 @@ aside.highlight .social .twitter {
   width: 38px;
 }
 @media only screen and (min-width: 64em) {
-  /* line 568, ../sass/includes/_schedule.scss */
+  /* line 582, ../sass/includes/_schedule.scss */
   .not-zoomed .schedule-wrapper .session.keynote.no-speaker .session-content {
     padding: 0 65px 0 50px;
   }
 }
-/* line 577, ../sass/includes/_schedule.scss */
+/* line 591, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session.break {
   height: auto;
   padding: 0;
@@ -2372,50 +2386,50 @@ aside.highlight .social .twitter {
   text-align: center;
 }
 @media only screen and (min-width: 64em) {
-  /* line 583, ../sass/includes/_schedule.scss */
+  /* line 597, ../sass/includes/_schedule.scss */
   .not-zoomed .schedule-wrapper .session.break {
     padding: 15px;
     border-left: 1px solid #dfe5e8;
   }
 }
 @media only screen and (min-width: 64em) {
-  /* line 590, ../sass/includes/_schedule.scss */
+  /* line 604, ../sass/includes/_schedule.scss */
   .not-zoomed .schedule-wrapper .session.break .session-content {
     width: 2000px;
     height: 140px;
     background-color: #e6f3fa;
   }
 }
-/* line 598, ../sass/includes/_schedule.scss */
+/* line 612, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session.break .session-title {
   font: 400 1.125em / 2em "Lusitana", sans-serif;
 }
-/* line 601, ../sass/includes/_schedule.scss */
+/* line 615, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session.break .session-title, .schedule-wrapper .session.break .session-title a {
   color: #333f47;
 }
-/* line 606, ../sass/includes/_schedule.scss */
+/* line 620, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session.break button {
   display: none;
 }
 @media only screen and (min-width: 64em) {
-  /* line 613, ../sass/includes/_schedule.scss */
+  /* line 627, ../sass/includes/_schedule.scss */
   .not-zoomed .schedule-wrapper .session.break.small {
     padding: 0;
   }
 }
 @media only screen and (min-width: 64em) {
-  /* line 619, ../sass/includes/_schedule.scss */
+  /* line 633, ../sass/includes/_schedule.scss */
   .not-zoomed .schedule-wrapper .session.break.small .session-content {
     height: 75px;
     background-color: transparent;
   }
 }
-/* line 629, ../sass/includes/_schedule.scss */
+/* line 643, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session.bookmarked .session-content {
   background-color: #333f47 !important;
 }
-/* line 638, ../sass/includes/_schedule.scss */
+/* line 652, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session.bookmarked .session-title a,
 .schedule-wrapper .session.bookmarked .session-speaker,
 .schedule-wrapper .session.bookmarked .session-content,
@@ -2424,7 +2438,7 @@ aside.highlight .social .twitter {
 .schedule-wrapper .session.bookmarked .session-room {
   color: white;
 }
-/* line 642, ../sass/includes/_schedule.scss */
+/* line 656, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session.bookmarked .session-bookmark {
   background-image: url("../img/icon-bookmark-small-active.png");
   background-repeat: no-repeat;
@@ -2434,7 +2448,7 @@ aside.highlight .social .twitter {
   width: 21px;
 }
 @media only screen and (min-width: 48em) {
-  /* line 648, ../sass/includes/_schedule.scss */
+  /* line 662, ../sass/includes/_schedule.scss */
   .not-zoomed .schedule-wrapper .session.bookmarked.keynote .session-bookmark {
     background-image: url("../img/icon-bookmark-big-active.png");
     background-repeat: no-repeat;
@@ -2444,34 +2458,34 @@ aside.highlight .social .twitter {
     width: 38px;
   }
 }
-/* line 658, ../sass/includes/_schedule.scss */
+/* line 672, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session:hover,
 .schedule-wrapper .session:focus,
 .schedule-wrapper .session.isHover,
 .schedule-wrapper .session.isFocus {
   opacity: 1 !important;
 }
-/* line 662, ../sass/includes/_schedule.scss */
+/* line 676, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session.salle-grand-hall .session-content {
   background-image: url("../img/bg-schedule-default.png");
 }
-/* line 666, ../sass/includes/_schedule.scss */
+/* line 680, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session.salle-libeo .session-content {
   background-image: url("../img/bg-schedule-libeo.png");
 }
-/* line 670, ../sass/includes/_schedule.scss */
+/* line 684, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session.salle-ixmedia .session-content {
   background-image: url("../img/bg-schedule-ixmedia.png");
 }
-/* line 674, ../sass/includes/_schedule.scss */
+/* line 688, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session.salle-bell .session-content {
   background-image: url("../img/bg-schedule-bell.png");
 }
-/* line 678, ../sass/includes/_schedule.scss */
+/* line 692, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session.salle-deloitte .session-content {
   background-image: url("../img/bg-schedule-deloitte.png");
 }
-/* line 682, ../sass/includes/_schedule.scss */
+/* line 696, ../sass/includes/_schedule.scss */
 .schedule-wrapper td.empty {
   border-left: 1px solid #dfe5e8;
 }
@@ -2943,7 +2957,7 @@ aside.highlight .social .twitter {
   background-color: transparent;
   background-image: url("../img/icon-more.png");
   background-repeat: no-repeat;
-  background-position: 13.125em center;
+  background-position: 18em center;
 }
 @media only screen and (min-width: 64em) {
   /* line 242, ../sass/includes/_theme.scss */

@@ -66,11 +66,13 @@ var Schedule = ( function( $, window, document, undefined ) {
 
             self.bindEvents();
             self.setHeight( self.currentSlide );
+            self.currentSlide.addClass( WAQ.Constants.isActiveClass );
 
             self.slides.css('left', offset + '%' );
             self.buttons.removeClass( WAQ.Constants.isActiveClass );
             self.buttons.eq( index ).addClass( WAQ.Constants.isActiveClass );
             self.slides.filter(':not(.active)').find('a, button').attr('tabindex', '-1');
+            self.currentSlide.find('a, button').removeAttr('tabindex');
         },
 
         // Bind events

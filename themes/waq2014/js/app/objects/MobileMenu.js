@@ -72,7 +72,7 @@ var MobileMenu = ( function( $, window, document, undefined ) {
         openMenu: function() {
             var self = this;
 
-            //if( $( window ).width() < 1167 ){
+            if( $( window ).width() < 1167 ){
 
                 self.adjustMenuHeight();
 
@@ -81,7 +81,7 @@ var MobileMenu = ( function( $, window, document, undefined ) {
                 $( '#nav-main li' ).hide();
                 WAQ.Common.sequentialFadeIn( '#nav-main li', 100, 'block');
 
-            //}
+            }
 
         },
 
@@ -89,13 +89,13 @@ var MobileMenu = ( function( $, window, document, undefined ) {
         closeMenu: function() {
             var self = this;
 
-            //if( $( window ).width() < 1167 ){
+            if( $( window ).width() < 1167 ){
 
                 WAQ.Common.sequentialFadeOut( '#nav-main li', 100, 'block', function(){
                     self.mobilemenu.removeClass( WAQ.Constants.isOpenClass );
                 });
 
-            //}
+            }
 
         },
 
@@ -105,13 +105,13 @@ var MobileMenu = ( function( $, window, document, undefined ) {
                 menuElements = self.mobilemenu.find( 'li' ),
                 menuElementsHeight = Math.ceil( ( windowHeight - 66 ) / menuElements.length );
 
-            //if( $( window ).width() < 1167 ){
+            if( $( window ).width() < 1167 ){
 
                 menuElements.height( menuElementsHeight );
                 menuElements.find( 'a' ).css( 'line-height', menuElementsHeight + 'px' );
                 menuElements.find( 'a' ).css( 'font-size', Math.ceil( menuElementsHeight / 5 + 10 ) + 'px' );
 
-            //}
+            }
         }
     };
 
