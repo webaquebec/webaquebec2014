@@ -106,7 +106,7 @@ html[xmlns] .clearfix {
 }
 
 /* line 41, ../sass/config/_utils.scss */
-.visuallyhidden {
+.visuallyhidden, .place .place-wrapper .newsletter .mc_var_label {
   border: 0;
   clip: rect(0 0 0 0);
   height: 1px;
@@ -118,7 +118,7 @@ html[xmlns] .clearfix {
 }
 
 /* line 42, ../sass/config/_utils.scss */
-.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus {
+.visuallyhidden.focusable:active, .place .place-wrapper .newsletter .focusable.mc_var_label:active, .visuallyhidden.focusable:focus, .place .place-wrapper .newsletter .focusable.mc_var_label:focus {
   clip: auto;
   height: auto;
   margin: 0;
@@ -161,7 +161,7 @@ input[type="submit"] {
 }
 
 /* line 17, ../sass/includes/_base.scss */
-.l-a11y.visuallyhidden.focusable:focus {
+.l-a11y.visuallyhidden.focusable:focus, .place .place-wrapper .newsletter .l-a11y.focusable.mc_var_label:focus {
   position: absolute;
   top: 2px;
   left: 2px;
@@ -3206,10 +3206,6 @@ aside.highlight .social .twitter {
 /* line 457, ../sass/includes/_theme.scss */
 .place .place-wrapper .newsletter form > div {
   font-size: 16px;
-}
-/* line 462, ../sass/includes/_theme.scss */
-.place .place-wrapper .newsletter .mc_var_label {
-  display: none;
 }
 /* line 467, ../sass/includes/_theme.scss */
 .place .place-wrapper .newsletter .input-email,
