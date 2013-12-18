@@ -6,6 +6,7 @@ class Conferencer_Sponsor extends Conferencer_CustomPostType {
 	var $archive_slug = 'sponsors';
 	var $singular = "Sponsor";
 	var $plural = "Sponsors";
+	var $menu_icon = "dashicons-awards";
 	
 	function set_options() {
 		parent::set_options();

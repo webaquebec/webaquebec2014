@@ -47,6 +47,7 @@ class Conferencer_CustomPostType {
 			'hierarchical' => false,
 			'supports' => array('title', 'editor', 'excerpt', 'thumbnail', 'custom-fields', 'comments', 'revisions'),
 			'has_archive' => $this->archive_slug,
+			'menu_icon' => $this->menu_icon,
 			'rewrite' => array(
 				'slug' => $this->archive_slug,
 				'with_front' => false,

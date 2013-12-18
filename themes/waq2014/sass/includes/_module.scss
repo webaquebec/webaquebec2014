@@ -202,6 +202,9 @@
 		text-decoration: none;
 		color: $c-navmain-subscribe;
 		font: $font-navmain-subscribe-small;
+		&:focus:not(.isHover){
+		    outline: 2px solid black;
+		}
 	}
 
 	.not-zoomed & {

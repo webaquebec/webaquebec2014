@@ -6,6 +6,7 @@ class Conferencer_Sponsor_Level extends Conferencer_CustomPostType {
 	var $archive_slug = 'sponsor-levels';
 	var $singular = "Sponsor Level";
 	var $plural = "Sponsor Levels";
+	var $menu_icon = "dashicons-awards";
 	
 	function set_options() {
 		parent::set_options();
