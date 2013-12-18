@@ -24,7 +24,7 @@ class Conferencer_Shortcode_Agenda extends Conferencer_Shortcode {
 		'tab_day_dt_strf' => '%Y-%m-%d',
 		'row_day_format' => 'l, F j, Y',
 		'row_time_format' => 'G:i',
-		'show_row_ends' => true,
+		'show_row_ends' => false,
 		'keynote_spans_tracks' => true,
 		'link_sessions' => true,
 		'link_speakers' => false,
