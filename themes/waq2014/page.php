@@ -11,7 +11,7 @@
 
                   <article>
 
-                      <header class="content-header">
+                      <header class="content-header go-to-content">
                           <h1 itemprop="name"><?php the_title() ?></h1>
                       </header>
 

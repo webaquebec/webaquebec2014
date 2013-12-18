@@ -186,7 +186,7 @@ foreach($feat_speakers as $feat_speaker){
 <header class="home">
     <div class="l-section-wrapper">
 
-        <a href="#" class="visuallyhidden focusable">Passer au contenu</a>
+        <a href="#" class="visuallyhidden focusable l-a11y">Passer au contenu</a>
 
         <h1 itemprop="name" class="visuallyhidden">Le Web à Québec</h1>
         
@@ -216,7 +216,7 @@ foreach($feat_speakers as $feat_speaker){
             </div>
         </div>
 
-        <div class="event-description">
+        <div class="event-description go-to-content">
             <p class="strong">Web à Québec</p>
             <p class="date">
                 Du <?php echo $start_time_text ?>

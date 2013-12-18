@@ -35,8 +35,8 @@ var WAQ = (function(WAQ, $, window, document, undefined) {
 		// Go straight to page main content
 		goToContent: function($obj) {
 			$obj.on('click', function(e) {
-				$('.schedule h2').eq(0).attr('tabindex', '-1').focus();
-				$( window ).scrollTop( $('.schedule h2').offset().top - 64 - 15 );
+				$('.go-to-content').eq(0).attr('tabindex', '-1').focus();
+				$( window ).scrollTop( $('.go-to-content').offset().top - 64 - 15 );
 				e.preventDefault();
 			});
 		},
