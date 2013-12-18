@@ -472,3 +472,18 @@ function custom_wrapper_classes(){
       echo ' single-page';
     }
 }
+
+
+function fb_move_admin_bar() {
+    echo '
+    <style type="text/css">
+    body { 
+        margin-top: -28px;
+        padding-bottom: 28px;
+    }
+    </style>';
+}
+// on backend area
+add_action( 'admin_head', 'fb_move_admin_bar' );
+// on frontend area
+add_action( 'wp_head', 'fb_move_admin_bar' );
