@@ -502,7 +502,7 @@ img {
 }
 /* line 205, ../sass/includes/_module.scss */
 .single-page .event-subscribe-menu a:focus:not(.isHover) {
-  outline: 2px solid white;
+  outline: 2px solid black;
 }
 @media only screen and (min-width: 560px) {
   /* line 210, ../sass/includes/_module.scss */
