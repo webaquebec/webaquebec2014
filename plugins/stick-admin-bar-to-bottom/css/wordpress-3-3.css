@@ -14,6 +14,7 @@ body.wp-admin #footer {
 #wpadminbar {
 	top: auto !important;
 	bottom: 0;
+	position: fixed !important;
 }
 
 #wpadminbar .quicklinks .ab-sub-wrapper {

@@ -482,9 +482,15 @@ function fb_move_admin_bar() {
         echo '
         <style type="text/css">
         body { 
-            margin-top: -28px;
-            padding-bottom: 28px;
+            margin-top: -32px;
+            padding-bottom: 32px;
         }
+    	@media screen and ( max-width: 782px ) {
+        	body { 
+        	    margin-top: -46px;
+        	    padding-bottom: 46px;
+        	}
+    	}
         </style>';
     }
 }
