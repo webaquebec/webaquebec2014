@@ -462,7 +462,7 @@
 			.mc_var_label{
 			    @extend .visuallyhidden;
 			}
-			
+
 
 			.input-email,
 			.mc_input{
@@ -499,7 +499,7 @@
 			.field,
 			.mc_merge_var{
 			    margin-bottom: 0 !important;
-			    
+
 				.not-zoomed & {
 				@include respond-to( 560px ){
 					@include inline-block;
@@ -512,7 +512,7 @@
 					width: 255px;
 				}}
 			}
-			
+
 			#mc_message{
 			    color: white;
 			    margin-top: 10px;
@@ -908,6 +908,7 @@
 
 		.questions{
 			font-size: 16px;
+			list-style-type: none;
 
 			li{
 				margin: 10px 0;
@@ -931,6 +932,7 @@
 			@include clearfix;
 			margin-bottom: 20px;
 			font-size: 16px;
+			list-style-type: none;
 
 			li{
 				float: left;
@@ -1000,7 +1002,7 @@
 			color: $c-single-sidebar-h2;
 			font: $font-single-sidebar-h2;
 			text-transform: uppercase;
-		} 
+		}
 
 		ul.subevents{
 
