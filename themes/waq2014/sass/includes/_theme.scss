@@ -5,7 +5,10 @@
 	border-width: 5px;
 	border-style: solid;
 	border-color: $c-bg-pagewrapper;
-	@include transition(border-color, 0.5s);
+	        transition : border 500ms;
+	     -o-transition : border 500ms;
+       -moz-transition : border 500ms;
+	-webkit-transition : border 500ms;
 
 	.not-zoomed & {
 	@include respond-to(768px){
@@ -117,6 +120,10 @@
 
 	.event-description{
 		margin-bottom: 28px;
+
+		.l-zoomed &{
+			margin: 130px 0px 30px 0px;
+		}
 
 		.not-zoomed & {
 		@include respond-to( 72.938em ){
@@ -230,7 +237,7 @@
 				background-color: transparent;
 				background-image: url( '#{$img-path}icon-more.png' );
 				background-repeat: no-repeat;
-				background-position: 210px center;
+				background-position: emify(210px) center;
 
 				.not-zoomed & {
 				@include respond-to( 64.000em ){
@@ -933,6 +940,22 @@
 		}}
 	}
 
+	ul{
+		font-size: 16px;
+		list-style-type: disc;
+		list-style-position: inside;
+	}
+
+	li{
+		color: $c-single-content;
+		font: $font-single-content;
+
+		.not-zoomed & {
+		@include respond-to( 48.000em ){
+			font-size: emify( 18px );
+		}}
+	}
+
 	.back-link{
 		@extend .event-back-link;
 		width: auto;
@@ -956,7 +979,7 @@
 			color: $c-single-sidebar-h2;
 			font: $font-single-sidebar-h2;
 			text-transform: uppercase;
-		}
+		} 
 
 		ul.subevents{
 

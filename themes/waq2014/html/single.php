@@ -295,7 +295,7 @@
     <script src="../js/app/objects/Countdown.js"></script>
 
     <script src="../js/app/WAQ.Common.js"></script>
-    <script src="../js/main.js"></script>
+    <script src="../js/main.js"></script>-->
 
 </body>
 </html>

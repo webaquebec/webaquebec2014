@@ -1,6 +1,7 @@
 a:focus,
 h1:focus,
 h2:focus,
+.go-to-content:focus,
 button:focus,
 input:focus{
 	outline: none;
@@ -9,6 +10,7 @@ input:focus{
 a:focus:not(.isHover):not(.isClicked),
 h1:focus:not(.isHover):not(.isClicked),
 h2:focus:not(.isHover):not(.isClicked),
+.go-to-content:focus:not(.isHover):not(.isClicked),
 button:focus:not(.isHover):not(.isClicked),
 input:focus:not(.isHover):not(.isClicked){
 	outline: $outline;
