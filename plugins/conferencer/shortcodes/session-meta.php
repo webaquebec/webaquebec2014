@@ -212,7 +212,6 @@ class Conferencer_Shortcode_Session_Meta extends Conferencer_Shortcode {
 					        $html .= $interval->h.' heure'.($interval->h>1?'s':'').' ';
 						}
 						
-						var_dump($interval->i);
 						if($interval->i > 0){
 						    $html .= $interval->i.' minute'.($interval->i>1?'s':'');
 						}
