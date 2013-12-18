@@ -47,7 +47,7 @@ function sm_prevent_update_check( $r, $url ) {
 }
 
 function stick_admin_bar_to_bottom_css() {
-    if(!is_admin()){
+    if(!is_admin() && is_user_logged_in()){
     	$version = get_bloginfo( 'version' );
     
     	if ( version_compare( $version, '3.3', '<' ) ) {

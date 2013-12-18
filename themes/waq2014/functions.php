@@ -478,7 +478,7 @@ function custom_wrapper_classes(){
 
 
 function fb_move_admin_bar() {
-    if(!is_admin()){
+    if(!is_admin() && is_user_logged_in()){
         echo '
         <style type="text/css">
         body { 
