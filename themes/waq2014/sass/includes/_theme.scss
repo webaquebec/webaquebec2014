@@ -472,12 +472,13 @@
 			.button{
 				border: none;
 				padding: 8px 15px;
-				margin: 2px 0 0;
+				margin: 2px 0 0 !important;
 				text-transform: uppercase;
 				font: $font-newsletter-input-submit;
 				color: $c-newsletter-input-submit;
 				background-color: $c-newsletter-border;
 				cursor: pointer;
+				width: auto !important;
 
 				&:hover{
 					padding: 5px 12px;
@@ -488,6 +489,8 @@
 			}
 
 			.mc_merge_var{
+			    margin-bottom: 0 !important;
+			    
 				.not-zoomed & {
 				@include respond-to( 560px ){
 					@include inline-block;
