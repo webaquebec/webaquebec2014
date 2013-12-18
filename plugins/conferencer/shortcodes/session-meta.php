@@ -97,7 +97,13 @@ class Conferencer_Shortcode_Session_Meta extends Conferencer_Shortcode {
 				
 				  $type_rendered = $type;
 				
-				  $output .= '<td data-session-id="'.$post->ID.'" class="session';
+				  $output .= '<td data-session-id="'.$post->ID.'"';
+				  
+				  if($type == 'keynote'){
+				    $output .= ' headers=""';
+				  }
+				  
+				  $output .= 'class="session';
 				  
 				  $terms = wp_get_post_terms($post->ID, 'theme', array("fields" => "slugs"));
 				  
