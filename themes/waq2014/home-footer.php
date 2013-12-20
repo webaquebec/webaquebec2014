@@ -129,6 +129,17 @@ foreach ($archives as $archive) {
                 </div>
             </div>
 
+            <div class="l-col right">
+                <div><a href="<?php echo get_permalink(get_page_by_path('accessibilite')); ?>">Accessibilité</a></div>
+                <div>
+                    <span class="strong">Conception et réalisation :</span>
+                    <a href="http://www.libeo.com" itemscope itemtype="http://schema.org/Organization">
+                        <span itemprop="name" class="visuallyhidden">Libéo</span>
+                        <img src="<?php echo get_bloginfo('template_directory');?>/img/logo-libeo-footer.png" alt="">
+                    </a>
+                </div>
+            </div>
+
         </div>
 
     </div>
