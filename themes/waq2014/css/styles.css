@@ -4061,13 +4061,23 @@ aside.highlight .social .twitter {
     text-align: right;
   }
 }
+/* line 1252, ../sass/includes/_theme.scss */
+.footer .footer-bar .right img {
+  margin: -6px 0;
+}
+@media only screen and (min-width: 560px) {
+  /* line 1258, ../sass/includes/_theme.scss */
+  .not-zoomed .footer .footer-bar .right img {
+    margin: -6px 0 -6px 5px;
+  }
+}
 
-/* line 1256, ../sass/includes/_theme.scss */
+/* line 1267, ../sass/includes/_theme.scss */
 .single-page .footer .l-section-wrapper {
   border-top: 1px solid #333f47;
 }
 @media only screen and (min-width: 72.938em) {
-  /* line 1259, ../sass/includes/_theme.scss */
+  /* line 1270, ../sass/includes/_theme.scss */
   .not-zoomed .single-page .footer .l-section-wrapper {
     margin-top: 30px;
   }

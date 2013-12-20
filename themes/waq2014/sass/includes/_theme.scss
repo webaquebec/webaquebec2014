@@ -1248,6 +1248,17 @@
 				float: right;
 				text-align: right;
 			}}
+
+			img{
+				margin: -6px 0;
+			}
+
+			.not-zoomed & {
+			@include respond-to( 560px ){
+				img{
+					margin: -6px 0 -6px 5px;
+				}
+			}}
 		}
 	}
 

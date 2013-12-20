@@ -1033,7 +1033,8 @@ Mentionnez le groupe : Web à Québec</span>        </span><img src="http://waq2
                         <div>
                             <span class="strong">Conception et réalisation :</span>
                             <a href="#" itemscope itemtype="http://schema.org/Organization">
-                                <span itemprop="name">Libéo</span>
+                                <span itemprop="name" class="visuallyhidden">Libéo</span>
+                                <img src="../img/logo-libeo-footer.png" alt="">
                             </a>
                         </div>
                     </div>
