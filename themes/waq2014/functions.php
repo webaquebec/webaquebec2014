@@ -51,23 +51,23 @@ function add_my_scripts() {
     // WordPress possède un version de jQuery. Ce n'est pas toujours la plus récente
     // Ajouter la version (qui sera chargé en No Conflict) WordPress de jQuery
     //wp_enqueue_script('jquery');
-    
+
   setlocale(LC_ALL, 'fr_CA.utf-8');
 
 	//Mettre la version la plus à jour de jQuery
 	wp_deregister_script( 'jquery' );
-	
+
 	wp_enqueue_script( 'modernizr', get_template_directory_uri() . '/js/vendor/modernizr-2.6.2.min.js', array(), '2.6.2', false );
-	
+
 	wp_enqueue_script( 'jquery', '//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js', array(), '1.10.2', true );
 	wp_enqueue_script( 'googlemaps', 'http://maps.googleapis.com/maps/api/js?sensor=false&libraries=drawing&language=fr', array(), null, true );
 	wp_enqueue_script( 'waq-moment', get_template_directory_uri() . '/js/vendor/moment.min.js', array(), null, true );
 	wp_enqueue_script( 'waq-underscore', get_template_directory_uri() . '/js/vendor/underscore-min.js', array(), null, true );
-	
+
 	wp_enqueue_script( 'waq-buttonize', get_template_directory_uri() . '/js/plugins/buttonize.jquery.js', array(), null, true );
 	wp_enqueue_script( 'waq-eminize', get_template_directory_uri() . '/js/plugins/eminize.jquery.js', array(), null, true );
 	wp_enqueue_script( 'waq-resize', get_template_directory_uri() . '/js/plugins/onfontresize.jquery.js', array(), null, true );
-	
+
 	wp_enqueue_script( 'waq-schedules', get_template_directory_uri() . '/js/app/objects/Schedule.js', array(), null, true );
 	wp_enqueue_script( 'waq-usersessions', get_template_directory_uri() . '/js/app/objects/CustomSchedule.js', array(), null, true );
 	wp_enqueue_script( 'waq-countdown', get_template_directory_uri() . '/js/app/objects/Countdown.js', array(), null, true );
@@ -75,7 +75,7 @@ function add_my_scripts() {
 	wp_enqueue_script( 'waq-mobilemenu', get_template_directory_uri() . '/js/app/objects/MobileMenu.js', array(), null, true );
 	wp_enqueue_script( 'waq-slideshow', get_template_directory_uri() . '/js/app/objects/Slideshow.js', array(), null, true );
 	wp_enqueue_script( 'waq-googlemaps', get_template_directory_uri() . '/js/app/objects/GoogleMaps.js', array(), null, true );
-	
+
 	wp_enqueue_script( 'waq-common', get_template_directory_uri() . '/js/app/WAQ.Common.js', array(), null, true );
 	wp_enqueue_script( 'waq-main', get_template_directory_uri() . '/js/main.js', array(), null, true );
 	//wp_enqueue_script( 'facebookbkp', get_template_directory_uri() . '/js/app/objects/facebookbkp.js', array(), null, true );
@@ -88,7 +88,7 @@ function add_my_styles() {
 	wp_enqueue_style( 'styles', get_template_directory_uri() . '/css/styles.css' );
 	wp_dequeue_style('mailchimpSF_main_css');
 	wp_dequeue_style('mailchimpSF_ie_css');
-	
+
 }
 
 
@@ -102,13 +102,13 @@ $facebook = null;
 function facebook_init() {
 
   global $facebook;
-  
+
   $facebook_conf = array(
     'appId'  => 'XXXXXXXXXXXX',
     'secret' => 'XXXXXXXXXXXXXXXXXXXXXXXX',
     'cookie' => true
   );
-  
+
   if($_SERVER['SERVER_NAME'] == 'waq2014.job.paulcote.net'){
     $facebook_conf = array(
       'appId'  => '1382147128676757',
@@ -123,8 +123,8 @@ function facebook_init() {
       'cookie' => true
     );
   }
-  
-	
+
+
 	$facebook = new Facebook($facebook_conf);
 }
 
@@ -298,13 +298,13 @@ function addhttp($url) {
 function get_user_sessions() {
 
     global $facebook;
-    
+
     $uid = $facebook->getUser();
-    
+
     if(!empty($uid)){
-    
+
       $user_sesssions = get_transient( 'fb_'.$uid.'_sessions');
-      
+
       if(!empty($user_sesssions)){
         return $user_sesssions;
       }
@@ -324,25 +324,25 @@ function user_sessions() {
 function save_user_sessions() {
 
     global $facebook;
-    
+
     /*if ( !wp_verify_nonce( $_REQUEST['nonce'], "save_user_sessions_nonce")) {
       exit("Not authorized");
     }*/
-    
+
     $uid = $facebook->getUser();
-    
+
     if(!empty($uid)){
-    
+
       $user_sessions = json_decode($_REQUEST['user_sessions']);
-    
+
       set_transient( 'fb_'.$uid.'_sessions', $user_sessions );
-      
+
       echo json_encode($user_sessions); die;
     }
 }
 
 function parse_signed_request($signed_request) {
-  list($encoded_sig, $payload) = explode('.', $signed_request, 2); 
+  list($encoded_sig, $payload) = explode('.', $signed_request, 2);
 
   // decode the data
   $sig = base64_url_decode($encoded_sig);
@@ -365,7 +365,7 @@ function base64_url_decode($input) {
 function metas_facebook_og(){
 
   global $post;
-    
+
   setlocale(LC_ALL, 'fr_CA.utf-8');
 
   $names = array(
@@ -373,7 +373,7 @@ function metas_facebook_og(){
     'description' => "Le Web à Québec c'est trois jours de rencontres par et pour les gens qui imaginent le web.",
     'dcterms.description' => "Le Web à Québec c'est trois jours de rencontres par et pour les gens qui imaginent le web."
   );
-  
+
   $properties = array(
     'og:title' => get_bloginfo('name'),
     'og:description' => "Le Web à Québec c'est trois jours de rencontres par et pour les gens qui imaginent le web.",
@@ -381,24 +381,24 @@ function metas_facebook_og(){
     'og:type' => 'website',
     'fb:app_id' => ''
   );
-  
+
   if($_SERVER['SERVER_NAME'] == 'waq2014.job.paulcote.net'){
     $properties['fb:app_id'] = '1382147128676757';
   }
   else if($_SERVER['SERVER_NAME'] == 'waq2014.dev.libeo.com'){
     $properties['fb:app_id'] = '1421838541381572';
   }
-                  
+
   if(is_singular('session')){
-  
-  
+
+
   	$time_slot_id = get_post_meta($post->ID, '_conferencer_time_slot', true);
     $session_start_unix = get_post_meta($time_slot_id, '_conferencer_starts', true);
     $session_ends_unix = get_post_meta($time_slot_id, '_conferencer_ends', true);
     $speakers_ids = get_post_meta($post->ID, '_conferencer_speakers', true);
     $room_id = get_post_meta($post->ID, '_conferencer_room', true);
     $session_room = get_the_title($room_id);
-    
+
     $speaker_name = "";
     if(count($speakers_ids) > 1){
     	$speaker_name = "Panel";
@@ -406,7 +406,7 @@ function metas_facebook_og(){
     else if(count($speakers_ids) == 1){
       $speaker_name = get_the_title(array_shift($speakers_ids));
     }
-  
+
     $session_desc = "";
     if($speaker_name == 'Panel'){
       $session_desc .= "Un panel présenté";
@@ -419,7 +419,7 @@ function metas_facebook_og(){
     }
     $session_desc .= " le ".strtolower(strftime("%A %e %B",$session_start_unix));
     $session_desc .= " de ".trim(strftime("%kh%M",$session_start_unix))." à ".trim(strftime("%kh%M",$session_ends_unix));
-    
+
     if(strpos(strtolower($session_room), "salle") === false){
       $session_desc .= " dans le ";
     }
@@ -428,16 +428,16 @@ function metas_facebook_og(){
     }
     $session_desc .= str_replace('Salle', 'salle', $session_room);
     $session_desc .= ".";
-    
-    
-  
+
+
+
     $names['dcterms.title'] = get_the_title( $post->ID );
     //$names['description'] = strip_tags(get_excerpt_by_id( $post->ID ));
     //$names['DC.description'] = strip_tags(get_excerpt_by_id( $post->ID ));
     $names['description'] = $session_desc;
     $names['dcterms.description'] = $session_desc;
-    
-    
+
+
     $properties['og:url'] = get_permalink( $post->ID );
     $properties['og:site_name'] = get_bloginfo('name');
     $properties['og:title'] = get_the_title( $post->ID );
@@ -451,13 +451,13 @@ function metas_facebook_og(){
   else if(is_home()){
     $properties['og:url'] = get_bloginfo('url');
   }
-  
+
   displayMetas($names,$properties);
 }
 
 
 /**
- * This function takes an associative array in parameter and displays a meta and opengraph meta 
+ * This function takes an associative array in parameter and displays a meta and opengraph meta
  * with the name and content of each array element.
  * @param array $metas formated like "metaname" => "metavalue"
  */
@@ -491,12 +491,12 @@ function fb_move_admin_bar() {
     if(!is_admin() && is_user_logged_in()){
         echo '
         <style type="text/css">
-        body { 
+        body {
             margin-top: -32px;
             padding-bottom: 32px;
         }
     	@media screen and ( max-width: 782px ) {
-        	body { 
+        	body {
         	    margin-top: -46px;
         	    padding-bottom: 46px;
         	}
