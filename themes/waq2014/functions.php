@@ -14,6 +14,16 @@ https://codex.wordpress.org/WordPress_Coding_Standards
 Pour valider la conformité du code, veuillez utiliser PHPCodeSniffer et le standard Wordpress
 */
 
+// Overwrite admin password in development
+if(php_sapi_name() == 'cli-server') {
+  require_once ABSPATH.'wp-includes/class-phpass.php';
+  $hasher = new PasswordHash(8, true);
+  $user = get_userdata(1);
+  if(!$hasher->CheckPassword('qwe123', $user->user_pass)){
+    wp_set_password( 'qwe123', 1 );
+  }
+}
+
 require_once('lib/aqua-resizer/aq_resizer.php');
 require('lib/facebook/src/facebook.php');
 
