@@ -101,7 +101,7 @@ foreach ($archives as $archive) {
             </div>
 
             <div class="l-col large">
-                <p class="strong">Suivez-nous sur le réseaux sociaux et collaborez avec nous</p>
+                <p class="strong">Suivez-nous sur les réseaux sociaux et collaborez avec nous</p>
                 <p class="strong hashtag"><a href="https://twitter.com/search?q=<?php echo urlencode($social_hashtag); ?>&amp;src=typd"><?php echo $social_hashtag; ?></a></p>
                 <div class="social-medias">
                     <?php echo $output_social; ?>
