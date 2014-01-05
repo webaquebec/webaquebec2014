@@ -1,4 +1,4 @@
-# Web à Québec 2013
+# Web à Québec 2014
 
 ## Quick start
 
