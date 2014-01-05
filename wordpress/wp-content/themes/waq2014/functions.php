@@ -104,8 +104,8 @@ function facebook_init() {
   global $facebook;
 
   $facebook_conf = array(
-    'appId'  => 'XXXXXXXXXXXX',
-    'secret' => 'XXXXXXXXXXXXXXXXXXXXXXXX',
+    'appId'  => FACEBOOK_APP_ID,
+    'secret' => FACEBOOK_SECRET,
     'cookie' => true
   );
 
