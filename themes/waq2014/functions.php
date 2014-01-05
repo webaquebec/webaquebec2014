@@ -25,7 +25,7 @@ if(php_sapi_name() == 'cli-server') {
 }
 
 require_once('lib/aqua-resizer/aq_resizer.php');
-require('lib/facebook/src/facebook.php');
+require('lib/facebook/facebook.php');
 
 // Bonne pratique de mettre tous les add_action et add_filter dans le haut!
 add_action( 'wp_enqueue_scripts', 'add_my_scripts' );
