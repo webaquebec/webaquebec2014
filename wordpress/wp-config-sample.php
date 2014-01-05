@@ -80,6 +80,10 @@ define('WPLANG', '');
  */
 define('WP_DEBUG', false);
 
+/* For Facebook Connect feature */
+define('FACEBOOK_APP_ID', '');
+define('FACEBOOK_SECRET', '');
+
 /* That's all, stop editing! Happy blogging. */
 
 /** Absolute path to the WordPress directory. */
