@@ -1,13 +1,15 @@
 <?php
 
+if( !class_exists('Conferencer_CustomPostType') ):
+
 class Conferencer_CustomPostType {
 	var $slug = 'custom_post_type';
 	var $archive_slug = false; // use pluralized string if you want an archive page
 	var $singular = "Item";
 	var $plural = "Items";
-	
+
 	var $options = array();
-	
+
 	function __construct() {
 		add_action('init', array(&$this, 'register_post_type'));
 		add_action('init', array(&$this, 'set_options'));
@@ -18,7 +20,7 @@ class Conferencer_CustomPostType {
 		add_action('manage_edit-'.$this->slug.'_columns', array(&$this, 'columns'));
 		add_action('manage_posts_custom_column', array(&$this, 'column'));
 		add_action('after_setup_theme', array(&$this, 'add_image_sizes'));
-		
+
 		Conferencer::$post_types[] = $this->slug;
 
 		$this->options['order'] = array(
@@ -26,7 +28,7 @@ class Conferencer_CustomPostType {
 			'label' => "Order",
 		);
 	}
-	
+
 	function register_post_type() {
 		register_post_type($this->slug, array(
 			'labels' => array(
@@ -54,13 +56,13 @@ class Conferencer_CustomPostType {
 			),
 		));
 	}
-	
+
 	function includes() {
 		if (isset($GLOBALS['post_type']) && in_array($GLOBALS['post_type'], Conferencer::$post_types)) {
 			wp_enqueue_script('conferencer-cpt');
 		}
 	}
-	
+
 	function set_options() {
 		// no action
 	}
@@ -78,28 +80,28 @@ class Conferencer_CustomPostType {
 			'side'
 		);
 	}
-	
+
 	function options($post) {
 		wp_nonce_field(plugin_basename(__FILE__), 'conferencer_nonce');
 		include CONFERENCER_PATH.'/markup/options.php';
 	}
-		
+
 	function save_post($post_id) {
 		if (get_post_type($post_id) != $this->slug) return;
 		if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) return;
 		if (isset($_POST['conferencer_nonce']) && !wp_verify_nonce($_POST['conferencer_nonce'], plugin_basename(__FILE__))) return;
 		if (!current_user_can('edit_post', $post_id)) return;
-		
+
 		foreach($this->options as $key => $option) {
 			if ($option['type'] == 'internal') continue;
-			
+
 			if(isset($_POST['conferencer_'.$key])){
 			  $value = deep_trim($_POST['conferencer_'.$key]);
 			}
 			else {
 			  $value = "";
 			}
-			
+
 			if ($option['type'] == 'int') $value = intval($value);
 			if ($option['type'] == 'money') $value = floatVal($value);
 			if ($option['type'] == 'multi-select') {
@@ -126,30 +128,32 @@ class Conferencer_CustomPostType {
   				);
 				}
 			}
-			
+
 			update_post_meta($post_id, '_conferencer_'.$key, $value);
 		}
 	}
-	
+
 	function columns($columns) {
 		unset($columns['date']);
 		return $columns;
 	}
-	
+
 	function column($column) {
 		global $post;
-		
+
 		Conferencer::add_meta($post);
-				
+
 		switch (str_replace('conferencer_'.$this->slug.'_', '', $column)) {
 			case 'session_count':
 				echo $post->non_session	? "not allowed"	: count(Conferencer::get_sessions($post->ID));
 				break;
 		}
 	}
-	
+
 	function add_image_sizes() {
 		// do nothing
 	}
-	
+
 }
+
+endif; // class_exists check

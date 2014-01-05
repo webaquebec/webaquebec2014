@@ -1,16 +1,17 @@
 <?php
 
-new Conferencer_Session();
+if( !class_exists('Conferencer_Session') ):
+
 class Conferencer_Session extends Conferencer_CustomPostType {
 	var $slug = 'session';
 	var $archive_slug = 'sessions';
 	var $singular = "Session";
 	var $plural = "Sessions";
 	var $menu_icon = "dashicons-calendar";
-	
+
 	function set_options() {
 		parent::set_options();
-	
+
 		$this->options = array_merge($this->options, array(
 			'keynote' => array(
 				'type' => 'boolean',
@@ -46,7 +47,7 @@ class Conferencer_Session extends Conferencer_CustomPostType {
 		foreach ($this->options as $key => $option) {
 			foreach (Conferencer::get_posts($key, false, 'title_sort') as $post) {
 				$text = $post->post_title;
-				
+
 				if ($key == 'time_slot') {
 					Conferencer::add_meta($post);
 					if ($post->non_session) continue;
@@ -55,7 +56,7 @@ class Conferencer_Session extends Conferencer_CustomPostType {
 						if ($post->ends) $text .= ' &ndash; '.date('g:iA', $post->ends);
 					} else $text = 'unscheduled';
 				}
-				
+
 				$this->options[$key]['options'][$post->ID] = $text;
 			}
 		}
@@ -63,7 +64,7 @@ class Conferencer_Session extends Conferencer_CustomPostType {
 
 	function detail_trash($post_id) {
 		parent::detail_trash($post_id);
-		
+
 		$post_type = get_post_type($post_id);
 		$detached = array();
 
@@ -80,12 +81,12 @@ class Conferencer_Session extends Conferencer_CustomPostType {
 				$detached[] = $session;
 			}
 		}
-		
+
 		foreach ($detached as $session) {
-			Conferencer::add_admin_notice("Removed ".get_the_title($post_id)." from <a href='post.php?post=$session->ID&action=edit' target='_blank'>$session->post_title</a>.");			
+			Conferencer::add_admin_notice("Removed ".get_the_title($post_id)." from <a href='post.php?post=$session->ID&action=edit' target='_blank'>$session->post_title</a>.");
 		}
 	}
-	
+
 	function columns($columns) {
 		$columns = parent::columns($columns);
 		$columns['conferencer_session_keynote'] = "Keynote";
@@ -96,13 +97,13 @@ class Conferencer_Session extends Conferencer_CustomPostType {
 		$columns['conferencer_session_sponsors'] = "Sponsors";
 		return $columns;
 	}
-	
+
 	var $column_session_cache = array();
 	function column($column) {
 		parent::column($column);
-		
+
 		global $post;
-		
+
 		switch (str_replace('conferencer_session_', '', $column)) {
 			case 'keynote':
 				echo $post->keynote ? "keynote" : "";
@@ -115,7 +116,7 @@ class Conferencer_Session extends Conferencer_CustomPostType {
 						str_replace(' ', '&nbsp;', $speaker->post_title).
 						"</a>";
 				}
-				
+
 				echo implode(', ', $links);
 				break;
 			case 'sponsors':
@@ -126,7 +127,7 @@ class Conferencer_Session extends Conferencer_CustomPostType {
 						str_replace(' ', '&nbsp;', $sponsor->post_title).
 						"</a>";
 				}
-				
+
 				echo implode(', ', $links);
 				break;
 			case 'track':
@@ -139,7 +140,7 @@ class Conferencer_Session extends Conferencer_CustomPostType {
 				if ($post->time_slot) {
 					$starts = floatVal(get_post_meta($post->time_slot, '_conferencer_starts', true));
 					$ends = floatVal(get_post_meta($post->time_slot, '_conferencer_ends', true));
-					
+
 					echo "<a href='post.php?action=edit&post=$post->time_slot'>";
 					echo date('n/j/y', $starts);
 					echo '<br />';
@@ -152,3 +153,5 @@ class Conferencer_Session extends Conferencer_CustomPostType {
 		}
 	}
 }
+
+endif; // class_exists check
