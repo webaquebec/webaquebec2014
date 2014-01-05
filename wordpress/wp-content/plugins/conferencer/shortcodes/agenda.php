@@ -5,10 +5,11 @@
 	You can override the session display function in your own template.
 	In your own functions.php, define:
 		conferencer_agenda_display_session($session, $options)
-	
+
 ============================================================================ */
 
-new Conferencer_Shortcode_Agenda();
+if( !class_exists('Conferencer_Shortcode_Agenda') ):
+
 class Conferencer_Shortcode_Agenda extends Conferencer_Shortcode {
 	var $shortcode = 'agenda';
 	var $defaults = array(
@@ -35,16 +36,16 @@ class Conferencer_Shortcode_Agenda extends Conferencer_Shortcode {
 		'unscheduled_row_text' => 'Unscheduled',
 		'mobile' => false,
 	);
-	
+
 	var $buttons = array('agenda');
-	
+
 	function prep_options() {
 		parent::prep_options();
-		
+
 		if (!in_array($this->options['column_type'], array('track', 'room'))) {
 			$this->options['column_type'] = false;
 		}
-		
+
 		if ($this->options['show_empty_cells'] != null) {
 			$this->options['show_empty_rows'] = $this->options['show_empty_cells'];
 			$this->options['show_empty_columns'] = $this->options['show_empty_cells'];
@@ -58,24 +59,24 @@ class Conferencer_Shortcode_Agenda extends Conferencer_Shortcode {
 		// Define main agenda variable
 
 		$agenda = array();
-	
+
 		// Fill agenda with empty time slot rows
-	
+
 		foreach (Conferencer::get_posts('time_slot', false, 'start_time_sort') as $time_slot_id => $time_slot) {
 		  $starts = get_post_meta($time_slot_id, '_conferencer_starts', true);
 			$agenda[$starts][$time_slot_id] = array();
 		}
 		$agenda[0] = array(); // for unscheduled time slots
-	
+
 		// If the agenda is split into columns, fill rows with empty "cell" arrays
-	
+
 		if ($column_type) {
 			$column_post_counts = array(
 				-1 => 0, // keynotes
 				0 => 0, // unscheduled
 			);
 			$column_posts = Conferencer::get_posts($column_type);
-		
+
 		  foreach($agenda as $time => $time_slots){
   			foreach ($time_slots as $time_slot_id => $time_slot) {
   				foreach ($column_posts as $column_post_id => $column_post) {
@@ -86,16 +87,16 @@ class Conferencer_Shortcode_Agenda extends Conferencer_Shortcode {
   			}
 			}
 		}
-	
+
 		// Get all session information
-	
+
 		$sessions = Conferencer::get_posts('session', false, 'title_sort');
 		foreach (array_keys($sessions) as $id) {
 			Conferencer::add_meta($sessions[$id]);
 		}
-	
+
 		// Put sessions into agenda variable
-	
+
 		foreach ($sessions as $session) {
 			$time_slot_id = $session->time_slot ? $session->time_slot : 0;
 		  $starts = get_post_meta($time_slot_id, '_conferencer_starts', true);
@@ -109,13 +110,13 @@ class Conferencer_Shortcode_Agenda extends Conferencer_Shortcode {
 				$agenda[$starts][$time_slot_id][$session->ID] = $session;
 			}
 		}
-		
+
 		// Remove empty unscheduled rows
-		
+
 		if (deep_empty($agenda[0])) unset($agenda[0]);
-	
+
 		// Conditionally remove empty rows and columns
-	
+
 		if (!$show_empty_rows) {
 			foreach ($agenda as $time => $time_slots) {
   			foreach ($time_slots as $time_slot_id => $cells) {
@@ -124,13 +125,13 @@ class Conferencer_Shortcode_Agenda extends Conferencer_Shortcode {
   			}
   		}
 		}
-	
+
 		if (!$show_empty_columns) {
 			$empty_column_post_ids = array();
 			foreach ($column_posts as $column_post_id => $column_post) {
 				if (!$column_post_counts[$column_post_id]) $empty_column_post_ids[] = $column_post_id;
 			}
-		
+
 			foreach ($agenda as $time => $time_slots) {
   			foreach ($time_slots as $time_slot_id => $cells) {
   				foreach ($empty_column_post_ids as $empty_column_post_id) {
@@ -141,10 +142,10 @@ class Conferencer_Shortcode_Agenda extends Conferencer_Shortcode {
 		}
 
 		// Set up tabs
-	
+
 		if ($tabs) {
 			$tab_headers = array();
-		
+
 			foreach ($agenda as $time => $time_slots) {
   			foreach ($time_slots as $time_slot_id => $cells) {
   				if ($tabs == 'days') {
@@ -154,28 +155,28 @@ class Conferencer_Shortcode_Agenda extends Conferencer_Shortcode {
   				}
 				}
 			}
-		
+
 			$tab_headers = array_unique($tab_headers);
-			
+
 			if (count($tab_headers) < 2) $tabs = false;
 		}
-		
+
 		// Set up column headers
-	
+
 		if ($column_type) {
 			$column_headers = array();
-		
+
 			// post column headers
 			foreach ($column_posts as $column_post) {
 				if (!$show_empty_columns && in_array($column_post->ID, $empty_column_post_ids)) continue;
-			
+
 				$column_headers[] = array(
 					'title' => $column_post->post_title,
 					'class' => 'column_'.$column_post->post_name,
 					'link' => $link_columns ? get_permalink($column_post->ID) : false,
 				);
 			}
-		
+
 			if ($show_unassigned_column && count($column_post_counts[0])) {
 				// extra column header for sessions not assigned to a column
 				$column_headers[] = array(
@@ -192,21 +193,21 @@ class Conferencer_Shortcode_Agenda extends Conferencer_Shortcode {
 				}
 			}
 		}
-	
+
 		// Remove unscheduled time slot, if without sessions
 		//if (deep_empty($agenda[0])) unset($agenda[0]);
 
 		// Start buffering output
-		
+
 		ob_start();
-		
+
 		//echo '<pre>'; var_dump($agenda); echo '</pre>';
-		
+
 		$output = "";
-	
+
 		$output .= '<div class="schedule-wrapper">';
-			
-			/*if (isset($conferencer_options['details_toggle']) && $conferencer_options['details_toggle']) { 
+
+			/*if (isset($conferencer_options['details_toggle']) && $conferencer_options['details_toggle']) {
 					$output .= '<a href="#" class="conferencer_session_detail_toggle">';
 						$output .= '<span class="show">display session details</span>';
 						$output .= '<span class="hide">hide session details</span>';
@@ -217,7 +218,7 @@ class Conferencer_Shortcode_Agenda extends Conferencer_Shortcode {
 			if ($tabs) {
 					$output .= '<header class="days-buttons">';
 					foreach ($tab_headers as $tab_header) {
-							if ($tabs == 'days') { 
+							if ($tabs == 'days') {
 									$output .= '<button>';
 									if($tab_header){
 									  $output .= '<time datetime="'.strftime($tab_day_dt_strf, $tab_header).'"><span>'.strftime($tab_day_strf, $tab_header).'</span></time>';
@@ -231,19 +232,19 @@ class Conferencer_Shortcode_Agenda extends Conferencer_Shortcode {
 					$output .= '<table class="grid">';
 					if ($column_type)
 					  $output .= $this->display_headers($column_headers);
-					$output .= '<tbody>'; 
+					$output .= '<tbody>';
 			}
-			
+
 			$row_starts = $last_row_starts = $second_table = false;
       $currentDayTab = -1;
       $rowspan_nosession = array();
-      
+
 			foreach ($agenda as $time => $time_slots) {
-			  
+
 				  $total_cells = array();
 				  $fake_slot_id = null;
 				  $number_of_time_slots = 0;
-				  foreach ($time_slots as $time_slot_id => $cells) { 
+				  foreach ($time_slots as $time_slot_id => $cells) {
 					  //$total_cells = array_merge($total_cells,$cells);
 					  foreach($cells as $key => $value){
 					    $total_cells[$key][] = $value;
@@ -253,23 +254,23 @@ class Conferencer_Shortcode_Agenda extends Conferencer_Shortcode {
 				  }
 				  $cells = $total_cells;
 				  $time_slot_id = $fake_slot_id;
-				  
-				  
-				  
+
+
+
 				  //echo '<pre>'; var_dump($cells); echo '</pre>';
 					// Set up row information
-			
+
 					$last_row_starts = $row_starts;
 					$row_starts = get_post_meta($time_slot_id, '_conferencer_starts', true);
 					$row_ends = get_post_meta($time_slot_id, '_conferencer_ends', true);
 					$non_session = get_post_meta($time_slot_id, '_conferencer_non_session', true);
 					$no_sessions = deep_empty($cells);
-				
+
 					// Show day seperators
 					//$show_next_day = $row_day_format !== false && date('', $row_starts) != date('w', $last_row_starts);
 					$show_next_day =  $row_day_format !== false && $currentDayTab == date('z', $row_starts) ? false : true;
 					$currentDayTab = date('z', $row_starts);
-				
+
 					if ($show_next_day) {
 						  if ($tabs) {
                   if ($second_table) {
@@ -287,7 +288,7 @@ class Conferencer_Shortcode_Agenda extends Conferencer_Shortcode {
   								if ($column_type)
   								  $output .= $this->display_headers($column_headers);
   								$output .= '<tbody>';
-						  } 
+						  }
 						  else {
 							  $output .= '<tr class="day">';
 								$output .= '<td colspan="'.($column_type ? count($column_headers) + 1 : 2).'">';
@@ -301,11 +302,11 @@ class Conferencer_Shortcode_Agenda extends Conferencer_Shortcode {
 					$classes = array();
 					if ($non_session) $classes[] = 'non-session';
 					else if ($no_sessions) $classes[] = 'no-sessions';
-		
+
 				  $output .= '<tr'.output_classes($classes,false).'>';
-			
-					// Time slot column -------------------------- 
-			
+
+					// Time slot column --------------------------
+
 					$output .= '<td class="time-slot">';
 					if ($time_slot_id) {
 						$time_slot_link = get_post_meta($time_slot_id, '_conferencer_link', true)
@@ -316,11 +317,11 @@ class Conferencer_Shortcode_Agenda extends Conferencer_Shortcode {
 						$output .= $html;
 					}
 					$output .= '</td>';
-				
-					// Display session cells --------------------- 
-					
-					$colspan = $column_type ? count($column_headers) : 1; 
-					
+
+					// Display session cells ---------------------
+
+					$colspan = $column_type ? count($column_headers) : 1;
+
 					if ($non_session) { // display a non-sessioned time slot
 					  $output .= '<td class="session" colspan="'.$colspan.'"><p>';
 						  $html = get_the_title($time_slot_id);
@@ -328,7 +329,7 @@ class Conferencer_Shortcode_Agenda extends Conferencer_Shortcode {
 						    $html = "<a href='$time_slot_link'>$html</a>";
 						  $output .= $html;
 						$output .= '</p></td>';
-					  
+
 					}
 					else if (isset($cells[-1])) {
 					  //$output .= '<td class="session keynote" colspan="'.$colspan.'">';
@@ -341,44 +342,44 @@ class Conferencer_Shortcode_Agenda extends Conferencer_Shortcode {
 					  //$output .= '</td>';
 					}
 					else if ($column_type) { // if split into columns, multiple cells
-            
+
             $smallest_duration = 999999999999;
-            foreach ($cells as $cell_sessions) { 
+            foreach ($cells as $cell_sessions) {
               foreach ($cell_sessions as $sessions) {
                 foreach ($sessions as $key => $session) {
                   $starts = get_post_meta($session->time_slot, '_conferencer_starts', true);
                   $ends = get_post_meta($session->time_slot, '_conferencer_ends', true);
                   $duration = $ends-$starts;
-                  
+
                   if($duration < $smallest_duration){
                     $smallest_duration = $duration;
                   }
                 }
               }
             }
-            
-            foreach ($cells as $track => $cell_sessions) { 
-            
+
+            foreach ($cells as $track => $cell_sessions) {
+
           		if(isset($rowspan_nosession[$track]) && $rowspan_nosession[$track] != 0){
           		  $rowspan_nosession[$track] = $rowspan_nosession[$track]-1;
           		}
-            		
-              if(!empty($cell_sessions)){ 
-              
+
+              if(!empty($cell_sessions)){
+
                 $no_sessions = true;
-              
+
                 foreach ($cell_sessions as $sessions) {
                   if(!empty($sessions)){
-                    
+
                     foreach ($sessions as $key => $session) {
-                  
+
                       $no_sessions = false;
-                  
+
                       $time_slot_id = $session->time_slot ? $session->time_slot : 0;
                       $starts = get_post_meta($time_slot_id, '_conferencer_starts', true);
                       $ends = get_post_meta($time_slot_id, '_conferencer_ends', true);
                       $duration = $ends-$starts;
-                      
+
                       if($duration > $smallest_duration){
                         $rowspan_calc = intval(ceil($duration/$smallest_duration));
                         $rowspan_nosession[$track] = $rowspan_calc;
@@ -388,23 +389,23 @@ class Conferencer_Shortcode_Agenda extends Conferencer_Shortcode {
                         $rowspan_nosession[$track] = 0;
                       }
                       //$output .= '<td class="session' . (empty($cell_sessions) ? ' no-sessions':'') . '" '.(($ends-$starts) > 3600 ? ' rowspan="2"' : '').'>';
-                    
+
                       $output .= $this->display_session($session,(empty($cell_sessions) ? 'no-session,':'session,').'title,speakers,room,time');
-                  
+
                       //$output .= '</td>';
                     }
                   }
                 }
-                
+
                 if($no_sessions && $track > 0 && empty($rowspan_nosession[$track])){
                   $output .= '<td class="empty"></td>';
                 }
               }
             }
-            
-            
+
+
 					}
-					else { 
+					else {
 					  $output .= '<td class="session ' . (empty($cells) ? 'no-sessions':'') . '">';
 					  foreach ($cells as $sessions) {
 					  	foreach ($sessions as $session) {
@@ -417,26 +418,26 @@ class Conferencer_Shortcode_Agenda extends Conferencer_Shortcode {
 			}
 		$output .= '</tbody>';
 	$output .= '</table>';
-			
+
 			if ($tabs) {
 				$output .= '</div>';
 			}
-	
+
 		$output .= '</div></div></div>';
-	
+
 		// Retrieve and return buffer
-	
+
 	  echo $output;
-	
+
 		return ob_get_clean();
 	}
-	
-	function display_headers($column_headers) { 
+
+	function display_headers($column_headers) {
 	  $output = "";
 		$output .= '<thead>';
 			$output .= '<tr>';
 				$output .= '<th id="vide" class="column-time-slot"></th>';
-				foreach ($column_headers as $column_header) { 
+				foreach ($column_headers as $column_header) {
 					$output .= '<th class="'.$column_header['class'].'">';
 					$html = $column_header['title'];
 					if ($column_header['link']) $html = "<a href='".$column_header['link']."'>$html</a>";
@@ -445,10 +446,10 @@ class Conferencer_Shortcode_Agenda extends Conferencer_Shortcode {
 				}
 			$output .= '</tr>';
 		$output .= '</thead>';
-		
+
 		return $output;
 	}
-	
+
 	function display_session($session,$show = 'title,speakers' ) {
 		if (function_exists('conferencer_agenda_display_session')) {
 			conferencer_agenda_display_session($session, $this->options);
@@ -487,7 +488,7 @@ class Conferencer_Shortcode_Agenda extends Conferencer_Shortcode {
 							link_all=false
 						]
 					");
-					
+
 					$output .= '<p class="excerpt">'.generate_excerpt($session).'</p>';
 					$output .= '<div class="arrow"></div><div class="inner-arrow"></div>';
 				$output .= '</div>';
@@ -495,5 +496,7 @@ class Conferencer_Shortcode_Agenda extends Conferencer_Shortcode {
 
     return $output;
 	 }
-	
+
 }
+
+endif; // class_exists check

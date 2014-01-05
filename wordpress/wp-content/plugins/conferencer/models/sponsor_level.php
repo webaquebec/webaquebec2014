@@ -1,16 +1,17 @@
 <?php
 
-new Conferencer_Sponsor_Level();
+if( !class_exists('Conferencer_Sponsor_Level') ):
+
 class Conferencer_Sponsor_Level extends Conferencer_CustomPostType {
 	var $slug = 'sponsor_level';
 	var $archive_slug = 'sponsor-levels';
 	var $singular = "Sponsor Level";
 	var $plural = "Sponsor Levels";
 	var $menu_icon = "dashicons-awards";
-	
+
 	function set_options() {
 		parent::set_options();
-	
+
 		$this->options = array_merge($this->options, array(
 			'logo_width' => array(
 				'type' => 'int',
@@ -22,10 +23,10 @@ class Conferencer_Sponsor_Level extends Conferencer_CustomPostType {
 			),
 		));
 	}
-	
+
 	function add_image_sizes() {
 	 	parent::add_image_sizes();
-	
+
 		foreach (get_posts(array(
 			'post_type' => $this->slug,
 			'numberposts' => -1, // get all
@@ -38,3 +39,5 @@ class Conferencer_Sponsor_Level extends Conferencer_CustomPostType {
 		}
 	}
 }
+
+endif; // class_exists check
