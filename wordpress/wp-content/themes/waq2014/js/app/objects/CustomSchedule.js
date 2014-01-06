@@ -26,9 +26,10 @@ var CustomSchedule = (function($, window, document, undefined) {
         // Initialize default functions
         init: function() {
             var self = this;
+            var appId = $('meta[property="fb:app_id"]').attr('content');
 
             var fb_conf = {
-                appId      : 'XXXXXXXXXXXXXXXX',                   // App ID from the app dashboard
+                appId      : appId,                   // App ID from the app dashboard
                 status     : true,                                 // Check Facebook Login status
                 xfbml      : true,                                  // Look for social plugins on the page
                 cookie : true
@@ -53,7 +54,7 @@ var CustomSchedule = (function($, window, document, undefined) {
 
 
 
-            if(typeof FB != undefined && fb_conf.appId != 'XXXXXXXXXXXXXXXX'){
+            if(typeof FB != undefined && fb_conf.appId != appId){
                 FB.init(fb_conf);
 
                 FB.getLoginStatus(function(response) {
@@ -204,7 +205,7 @@ var CustomSchedule = (function($, window, document, undefined) {
 
         fbInitPhp: function(callback){
             var self = this;
-                
+
             if(typeof fb_init_ajax != 'undefined' && fb_init_ajax != ''){
                 jQuery.ajax({
                     type : "post",
