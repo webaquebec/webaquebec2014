@@ -52,9 +52,7 @@ var CustomSchedule = (function($, window, document, undefined) {
                 }
             }
 
-
-
-            if(typeof FB != undefined){
+            window.fbAsyncInit = function(){
                 FB.init(fb_conf);
 
                 FB.getLoginStatus(function(response) {
@@ -71,26 +69,6 @@ var CustomSchedule = (function($, window, document, undefined) {
                         self.loadSessions();
                     }
                 });
-            }
-            else{
-              window.fbasyncinit = function(){
-                FB.init(fb_conf);
-
-                FB.getLoginStatus(function(response) {
-                    if (response.status === 'connected') {
-                        self.facebookConnected = true;
-                        $('.facebook-login').css('display','none');
-                        $('.facebook-logout').css('display','block');
-                        self.fbInitPhp(function(){self.getUserSessions();});
-                    }
-                    else{
-                        $('.facebook-login').css('display','block');
-                        $('.facebook-logout').css('display','none');
-                        self.getUserSessions();
-                        self.loadSessions();
-                    }
-                });
-              }
             }
 
             self.bindEvents();
