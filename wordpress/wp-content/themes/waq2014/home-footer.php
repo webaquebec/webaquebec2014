@@ -67,7 +67,7 @@ foreach ($archives as $archive) {
 
             <div class="l-col">
                 <div class="contact-element" itemscope itemtype="http://schema.org/Place">
-                    <span class="name" itemprop="name"><?php echo $waq_place_name; ?></span>
+                    <span class="name" itemprop="name">Espace 400<sup>e</sup> Bell</span>
                     <span class="adresse" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
                         <span class="streetAddress" itemprop="streetAddress"><?php echo $waq_place_address; ?></span>
                         <span class="addressLocality" itemprop="addressLocality"><?php echo $waq_place_city; ?></span> (<?php echo $waq_place_state; ?>) <span class="postalCode" itemprop="postalCode"><?php echo $waq_place_postal_code; ?></span>
