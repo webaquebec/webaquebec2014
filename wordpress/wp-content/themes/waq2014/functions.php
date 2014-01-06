@@ -379,7 +379,7 @@ function metas_facebook_og(){
     'og:description' => "Le Web à Québec c'est trois jours de rencontres par et pour les gens qui imaginent le web.",
     'og:image'=>get_bloginfo('template_directory')."/img/fb-image.png",
     'og:type' => 'website',
-    'fb:app_id' => ''
+    'fb:app_id' => FACEBOOK_APP_ID
   );
 
   if($_SERVER['SERVER_NAME'] == 'waq2014.job.paulcote.net'){
