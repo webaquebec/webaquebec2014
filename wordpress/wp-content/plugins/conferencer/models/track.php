@@ -17,3 +17,5 @@ class Conferencer_Track extends Conferencer_CustomPostType {
 }
 
 endif; // class_exists check
+
+new Conferencer_Track();

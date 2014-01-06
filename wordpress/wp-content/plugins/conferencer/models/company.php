@@ -13,3 +13,5 @@ class Conferencer_Company extends Conferencer_CustomPostType {
 }
 
 endif; // class_exists check
+
+new Conferencer_Company();

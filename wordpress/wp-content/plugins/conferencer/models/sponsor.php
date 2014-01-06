@@ -59,3 +59,5 @@ class Conferencer_Sponsor extends Conferencer_CustomPostType {
 }
 
 endif; // class_exists check
+
+new Conferencer_Sponsor();

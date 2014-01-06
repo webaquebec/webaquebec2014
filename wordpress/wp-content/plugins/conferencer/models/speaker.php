@@ -73,3 +73,5 @@ class Conferencer_Speaker extends Conferencer_CustomPostType {
 }
 
 endif; // class_exists check
+
+new Conferencer_Speaker();
