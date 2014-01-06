@@ -96,3 +96,5 @@ class Conferencer_Shortcode_Speaker_Meta extends Conferencer_Shortcode {
 }
 
 endif; // class_exists check
+
+new Conferencer_Shortcode_Speaker_Meta();

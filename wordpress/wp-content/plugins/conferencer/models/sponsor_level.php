@@ -41,3 +41,5 @@ class Conferencer_Sponsor_Level extends Conferencer_CustomPostType {
 }
 
 endif; // class_exists check
+
+new Conferencer_Sponsor_Level();

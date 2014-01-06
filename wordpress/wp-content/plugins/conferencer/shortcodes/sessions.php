@@ -106,3 +106,5 @@ class Conferencer_Shortcode_Sesssions extends Conferencer_Shortcode {
 }
 
 endif; // class_exists check
+
+new Conferencer_Shortcode_Sesssions();

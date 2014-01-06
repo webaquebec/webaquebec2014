@@ -500,3 +500,5 @@ class Conferencer_Shortcode_Agenda extends Conferencer_Shortcode {
 }
 
 endif; // class_exists check
+
+new Conferencer_Shortcode_Agenda();
