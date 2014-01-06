@@ -54,7 +54,7 @@ var CustomSchedule = (function($, window, document, undefined) {
 
 
 
-            if(typeof FB != undefined && fb_conf.appId != appId){
+            if(typeof FB != undefined){
                 FB.init(fb_conf);
 
                 FB.getLoginStatus(function(response) {
