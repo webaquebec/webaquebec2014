@@ -35,6 +35,10 @@ var CustomSchedule = (function($, window, document, undefined) {
                 cookie : true
             }
 
+            // Hide login/logout while loading
+            $('.facebook-login').css('display','none');
+            $('.facebook-logout').css('display','none');
+
             if(window.location.hostname == 'waq2014.dev.libeo.com'){
                 fb_conf = {
                     appId      : '1421838541381572',                   // App ID from the app dashboard
