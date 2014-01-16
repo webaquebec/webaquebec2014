@@ -17,7 +17,7 @@ $page_args = array(
       	                        'compare' => '='
       	                    )
         	                ),
-    
+
     'post_type' => 'page',
 );
 
@@ -81,39 +81,39 @@ $time_remaining = null;
 /** Événement pas commencé // Event not yet started **/
 if(time() <= $start_unixtime){
   $time_remaining = $start_datetime->diff(new DateTime());
-  
+
   $hours_remaining = ($time_remaining->days*24)+$time_remaining->h;
-  
+
   //$countdown_output .= '<span class="visuallyhidden">Il reste</span>';
-  
+
   $countdown_output .= '<div class="event-stats-group days'.($time_remaining->days > 100 ? ' large' : '').' '.($time_remaining->days > 3 ? '' : 'visuallyhidden').'"><div class="stat days">';
       $countdown_output .= '<span class="stat-number">'.$time_remaining->days.'</span>';
       $countdown_output .= '<span class="stat-caption">jours</span>';
   $countdown_output .= '</div></div>';
-  
+
   if($time_remaining->days > 3){
       $hours_remaining = $time_remaining->h;
   }
-  
+
   $countdown_output .= '<div data-from-unix-time="'.$start_unixtime.'" class="event-stats-group hours"><div class="stat hours">';
       $countdown_output .= '<span class="stat-number">'.$hours_remaining.'</span>';
       $countdown_output .= '<span class="stat-caption">heures</span>';
   $countdown_output .= '</div></div>';
-  
+
     //$countdown_output .= '<span class="visuallyhidden">et</span>';
-  
+
   $countdown_output .= '<div class="event-stats-group minutes"><div class="stat minutes">';
       $countdown_output .= '<span class="stat-number">'.$time_remaining->i.'</span>';
       $countdown_output .= '<span class="stat-caption">minutes</span>';
   $countdown_output .= '</div></div>';
-  
+
 
   $countdown_output .= '<span class="visuallyhidden">et</span>';
   $countdown_output .= '<div class="event-stats-group seconds '.($time_remaining->days > 3 ? 'visuallyhidden' : '').'"><div class="stat seconds">';
       $countdown_output .= '<span class="stat-number">'.$time_remaining->s.'</span>';
       $countdown_output .= '<span class="stat-caption">secondes</span>';
   $countdown_output .= '</div></div>';
-  
+
   //$countdown_output .= '<span class="visuallyhidden">avant l\'événement du Web à Québec.</span>';
 }
 /** Événement est commencé // Event has started **/
@@ -149,17 +149,17 @@ foreach($feat_speakers as $feat_speaker){
       $feat_speakers_sessions = array_shift($feat_speakers_sessions);
   }
   $feat_speakers_output .= (!empty($feat_speakers_sessions) ? '<a href="'. get_permalink($feat_speakers_sessions->ID).'">' : '<a href="">');
-      
+
       $feat_speakers_output .= '<figure itemprop="performer" itemscope itemtype="http://schema.org/Person">';
 
           $feat_speakers_output .= '<figcaption>';
               $feat_speakers_output .= '<span class="name" itemprop="name">'.$feat_speaker->post_title.'</span>';
               $feat_speakers_output .= '<span class="job" itemprop="jobTitle">'.(get_post_meta( $feat_speaker->ID, '_conferencer_title', true )?get_post_meta( $feat_speaker->ID, '_conferencer_title', true ):'Conférencier').'</span>';
           $feat_speakers_output .= '</figcaption>';
-          
+
           $thumb = get_post_thumbnail_id($feat_speaker->ID);
           $img_url = wp_get_attachment_url( $thumb,'full' );
-          
+
           if(function_exists('aq_resize')){
             $image = aq_resize( $img_url, 227, 190, true );
             if(empty($image)){
@@ -172,7 +172,7 @@ foreach($feat_speakers as $feat_speaker){
           else{
             $image = $img_url;
           }
-          
+
           if($image){
             $feat_speakers_output .= '<span class="img-crop"><img class="speaker-thumb" src="'.$image.'" alt="" itemprop="image" /></span>';
           }
@@ -189,29 +189,29 @@ foreach($feat_speakers as $feat_speaker){
         <a href="#infos" class="visuallyhidden focusable l-a11y">Passer au contenu</a>
 
         <h1 itemprop="name" class="visuallyhidden">Le Web à Québec</h1>
-        
+
         <div id="nav-main">
             <div class="snapmenu-wrapper">
-    
+
                 <div class="snapmenu-logo">
                     <a href="<?php echo get_bloginfo('url'); ?>">
                         <img src="<?php bloginfo('template_directory'); ?>/img/logo.png" alt="">
                     </a>
                 </div>
-    
+
                 <div class="snapmenu-mobile-buttons">
                     <a href="#horaire">Horaire</a>
                     <button class="btn-toggle-menu">
                         <span class="visuallyhidden">Ouvrir le menu</span>
                     </button>
                 </div>
-    
+
                 <nav role="navigation" class="nav-main-wrapper">
                     <ul itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
                         <?php echo $main_menu_output; ?>
                     </ul>
                 </nav>
-    
+
                 <a href="<?php echo get_field('eventbrite_link', $post->ID); ?>" class="event-subscribe event-subscribe-menu">Achetez vos billets</a>
             </div>
         </div>
@@ -227,7 +227,7 @@ foreach($feat_speakers as $feat_speaker){
                     <span itemprop="name">Espace 400<sup>e</sup> Bell</span>,
                     <span itemprop="addressRegion">Québec</span>
                 </span>
-            </p> 
+            </p>
         </div>
 
         <div class="event-stats">
@@ -241,7 +241,7 @@ foreach($feat_speakers as $feat_speaker){
             <div class="event-stats-group workshop">
                 <div class="stat workshop">
                     <span class="stat-number"><?php echo get_field('nb_workshops', $post->ID); ?></span>
-                    <span class="stat-caption">workshops</span>
+                    <span class="stat-caption">keynotes</span>
                 </div>
             </div>
             <div class="event-stats-group days-total">
@@ -272,7 +272,7 @@ foreach($feat_speakers as $feat_speaker){
         </div>
 
     </div>
-        
+
     <video id="video_background" poster="<?php bloginfo('template_directory'); ?>/img/video-poster.png" preload="auto" autoplay="autoplay" loop="loop" muted="muted">
         <source src="<?php bloginfo('template_directory'); ?>/video/loop.webm" type="video/webm">
         <source src="<?php bloginfo('template_directory'); ?>/video/loop.mp4" type="video/mp4">
