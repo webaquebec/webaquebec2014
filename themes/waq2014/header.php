@@ -48,11 +48,14 @@
 </head>
 <body class="not-zoomed">
 
-<?php var_dump( get_queried_object_id() );
-$post = get_post_meta( get_queried_object_id() );
-$post_id = $post->ID;
-$post_room = get_post( $post_id );
-$room = ' ' . $post_room->post_name;?>
+<?php $post = get_post_meta( get_queried_object_id() );
+var_dump($post);
+$room_id = $post->ID;
+var_dump($room_id);
+$room_post = get_post( $room_id );
+var_dump($room_post);
+$room_name = ' ' . $room_post->post_name;
+var_dump($room_name);?>
 
 <div id="fb-root"></div>
 <script>
@@ -67,7 +70,7 @@ $room = ' ' . $post_room->post_name;?>
 </script>
 
 <!-- Page wrapper -->
-<div class="l-page-wrapper<?php echo custom_wrapper_classes() . $room ?>" itemscope itemtype="http://schema.org/Event">
+<div class="l-page-wrapper<?php echo custom_wrapper_classes() . $room_name ?>" itemscope itemtype="http://schema.org/Event">
 
   <?php
     if(is_front_page()){
