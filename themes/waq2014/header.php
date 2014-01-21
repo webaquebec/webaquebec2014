@@ -48,7 +48,8 @@
 </head>
 <body class="not-zoomed">
 
-<?php var_dump( get_post_meta( get_the_ID() ) ); ?>
+<?php //var_dump( get_post_meta( get_the_ID() ) );
+var_dump( get_post( 301 ) ); ?>
 
 <div id="fb-root"></div>
 <script>
