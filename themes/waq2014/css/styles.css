@@ -1667,30 +1667,51 @@ aside.highlight h2 .big {
   color: #a4adb3;
   font: 700 1.63636em / 1.05556em "Roboto Condensed", sans-serif;
 }
-/* line 1070, ../sass/includes/_module.scss */
+@media only screen and (min-width: 72.938em) {
+  /* line 1069, ../sass/includes/_module.scss */
+  .not-zoomed aside.highlight h2 {
+    float: left;
+    width: 255px;
+    margin-bottom: 15px;
+  }
+}
+/* line 1077, ../sass/includes/_module.scss */
+aside.highlight .img-crop {
+  display: block;
+  margin: 20px 0;
+}
+@media only screen and (min-width: 72.938em) {
+  /* line 1081, ../sass/includes/_module.scss */
+  .not-zoomed aside.highlight .img-crop {
+    float: right;
+    width: 80px;
+    margin: 0;
+  }
+}
+/* line 1089, ../sass/includes/_module.scss */
 aside.highlight .content p {
   margin: 0.75em 0;
   color: #a4adb3;
   font: 400 1em / 1.125em "Roboto", sans-serif !important;
 }
-/* line 1075, ../sass/includes/_module.scss */
+/* line 1094, ../sass/includes/_module.scss */
 aside.highlight .content p a {
   color: #fff;
   text-decoration: none;
 }
-/* line 1079, ../sass/includes/_module.scss */
+/* line 1098, ../sass/includes/_module.scss */
 aside.highlight .content p a:hover {
   text-decoration: underline;
 }
-/* line 1085, ../sass/includes/_module.scss */
+/* line 1104, ../sass/includes/_module.scss */
 aside.highlight ul {
   list-style-type: none;
 }
-/* line 1089, ../sass/includes/_module.scss */
+/* line 1108, ../sass/includes/_module.scss */
 aside.highlight .social {
   font-size: 16px;
 }
-/* line 1092, ../sass/includes/_module.scss */
+/* line 1111, ../sass/includes/_module.scss */
 aside.highlight .social li {
   height: 25px;
   padding-left: 30px;
@@ -1698,22 +1719,22 @@ aside.highlight .social li {
   background-position: center left;
   list-style-type: none;
 }
-/* line 1099, ../sass/includes/_module.scss */
+/* line 1118, ../sass/includes/_module.scss */
 aside.highlight .social li a {
   color: #00c8ef;
   font: 400 1em / 1.125em "Roboto", sans-serif;
   line-height: 25px;
   text-decoration: none;
 }
-/* line 1105, ../sass/includes/_module.scss */
+/* line 1124, ../sass/includes/_module.scss */
 aside.highlight .social li a:hover {
   text-decoration: underline;
 }
-/* line 1111, ../sass/includes/_module.scss */
+/* line 1130, ../sass/includes/_module.scss */
 aside.highlight .social .website {
   background-image: url("../img/icon-browser.png");
 }
-/* line 1115, ../sass/includes/_module.scss */
+/* line 1134, ../sass/includes/_module.scss */
 aside.highlight .social .twitter {
   background-image: url("../img/icon-twitter.png");
 }
