@@ -51,7 +51,8 @@
 <pre>
 <?php $post = get_post_meta( get_queried_object_id() );
 var_dump($post);
-$room_id = $post->ID;
+$room = $post['_conferencer_room'];
+$room_id = $room[0];
 var_dump($room_id);
 $room_post = get_post( $room_id );
 var_dump($room_post);
