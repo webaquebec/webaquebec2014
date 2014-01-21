@@ -48,7 +48,8 @@
 </head>
 <body class="not-zoomed">
 
-<?php var_dump( get_queried_object() ); ?>
+<?php $queried_object = get_queried_object();
+var_dump( get_post_meta( $queried_object['ID'] ) ); ?>
 
 <div id="fb-root"></div>
 <script>
