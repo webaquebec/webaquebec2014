@@ -103,12 +103,12 @@ var LIBEO;
         $('.about .social-medias a').hover(
             function(){
                 var url    = $(this).find('img').attr('src'),
-                    newUrl = url.replace('icon-social-white', 'icon-social-white-hover');
+                    newUrl = url.replace('-mono', '-mono-hover');
                 $(this).find('img').attr('src', newUrl);
             },
             function(){
                 var url    = $(this).find('img').attr('src'),
-                    newUrl = url.replace('icon-social-white-hover', 'icon-social-white');
+                    newUrl = url.replace('-mono-hover', '-mono');
                 $(this).find('img').attr('src', newUrl);
             }
         );

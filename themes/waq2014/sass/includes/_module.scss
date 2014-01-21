@@ -452,6 +452,7 @@
 
 		figcaption{
 			padding: 10px 15px;
+			min-height: 69px;
 		}
 	}}
 
@@ -563,7 +564,7 @@
 			display: block !important;
 
 			&:hover .article-thumb:after{
-				display: none;
+				opacity: 0;
 			}
 
 			&:hover .article-title a{
@@ -595,6 +596,8 @@
 		a{
 			color: $c-blog-title;
 			text-decoration: none;
+			@include transition-property(color);
+			@include transition-duration(0.5s);
 
 			&:hover{
 				color: white;
@@ -629,7 +632,10 @@
 			top: 0;
 			width: 100%;
 			height: 100%;
+			opacity: 1;
 			@include rgba-background(#00baff, 0.5);
+			@include transition-property(opacity);
+			@include transition-duration(0.5s);
 		}
 	}
 
@@ -641,6 +647,8 @@
 			display: block;
 			color: $c-blog-content;
 			font: $font-blog-content;
+			@include transition-property(color);
+			@include transition-duration(0.5s);
 		}}
 	}
 
@@ -999,21 +1007,28 @@
 			@include respond-to( 72.938em ){
 
 				.overlay{
-					display: block;
-					position: absolute;
-					top: 0;
-					left: 0;
-					width: 100%;
-					text-align: center;
-					padding: 9px 0;
-	         		background-color: rgba($c-linkblue, 0.9);
+					opacity: 1;
 				}
 			}}
 		}
 	}
 
 	.overlay{
-		display: none;
+		opacity: 0;
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		text-align: center;
+		padding: 11px 0;
+ 		background-color: rgba(#fff, 0.9);
+        @include transition(opacity, 0.3s);
+        @include experimental(transform, translateZ(0));
+
+        img{
+        	@include experimental(transform, translateZ(0));
+        }
 	}
 }
 
@@ -1055,7 +1070,16 @@ aside.highlight{
 	.content p{
 		margin: 0.75em 0;
 		color: $c-single-aside-content;
-		font: $font-single-aside-content;
+		font: $font-single-aside-content !important;
+
+		a{
+			color: #fff;
+			text-decoration: none;
+
+			&:hover{
+				text-decoration: underline;
+			}
+		}
 	}
 
 	ul{
@@ -1070,7 +1094,7 @@ aside.highlight{
 			padding-left: 30px;
 			background-repeat: no-repeat;
 			background-position: center left;
-
+			list-style-type: none;
 
 			a{
 				color: $c-single-aside-social;

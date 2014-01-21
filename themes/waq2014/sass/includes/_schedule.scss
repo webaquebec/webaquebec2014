@@ -23,9 +23,9 @@
 
 	.not-zoomed & {
 	@include respond-to( 64.000em ){
-		margin: 0 0 30px;
+		margin: 0 0 60px;
 		position: relative;
-		top: -5px;
+		top: 20px;
 
 		p{
 			float: left;
@@ -325,6 +325,7 @@
 		.not-zoomed & {
 		@include respond-to( 64.000em ){
 			width: 7%;
+			max-width: emify(80px);
 			text-align: center;
 			padding: 15px 0 8px;
 			font-size: emify(16px);
@@ -348,6 +349,12 @@
 		.not-zoomed & {
 		@include respond-to( 64.000em ){
 			width: 23.25%;
+			//border-left: 1px solid transparent;
+		}}
+
+		.not-zoomed &[colspan="4"] {
+		@include respond-to( 64.000em ){
+			width: auto;
 			//border-left: 1px solid transparent;
 		}}
 

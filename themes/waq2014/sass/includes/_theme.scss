@@ -262,7 +262,7 @@
 				display: block !important;
 				margin: 0;
 				padding: 0;
-				width: emify(450px, 16px);
+				width: emify(750px, 16px);
 				background-color: transparent;
 			}}
 
@@ -285,6 +285,7 @@
 				font: $font-schedule-filters-li;
 				background-color: $c-bg-schedule-filters-li;
 				cursor: pointer;
+        		@include transition(background, 0.5s);
 			}
 
 			button:hover,

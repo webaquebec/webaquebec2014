@@ -115,7 +115,7 @@
                             </h2>
 
                             <div class="content">
-                                <p>Peter Morville est un écrivain, conférencier et consultant, connu pour avoir contribué à la création de la discipline de l’architecture d’information. Il a écrit plusieurs livres et conseille des clients tels que AT&T, Harvard, IBM, la librairie du Congrès, Microsoft, l’Institut national du cancer. On a parlé de ses travaux sur l’architecture d’information et l’expérience usager dans des médias tels que Business Week, The Economist, Fortune, NPR et The Wall Street Journal. Il tient un blog sur findability.org.</p>
+                                <p>Peter Morville est un écrivain, conférencier et consultant, connu pour avoir contribué à la création de la discipline de <a href="#">l’architecture d’information. Il a écrit plusieurs livres</a> et conseille des clients tels que AT&T, Harvard, IBM, la librairie du Congrès, Microsoft, l’Institut national du cancer. On a parlé de ses travaux sur l’architecture d’information et l’expérience usager dans des médias tels que Business Week, The Economist, Fortune, NPR et The Wall Street Journal. Il tient un blog sur findability.org.</p>
                                 <p>Peter Morville is a writer, speaker, and consultant. He is best known for helping to create the discipline of information architecture.the National Cancer Institute, Vodafone, and the Weather Channel. His work on information architecture and user experience strategy has been covered by Business Week, The Economist, Fortune, NPR, and The Wall Street Journal. Peter lives in Ann Arbor, Michigan with his wife, two daughters, and a dog named Knowsy. He blogs at findability.org.</p>
                             </div>
 
