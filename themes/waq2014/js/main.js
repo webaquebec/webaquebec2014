@@ -113,6 +113,9 @@ var LIBEO;
             }
         );
 
+        // Ajustement de la hauteur de la page
+        $('.l-page-wrapper').css('min-height', $(window).height() - 30);
+
     });
 
 })(jQuery, window, document);

@@ -16,7 +16,7 @@
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 
 	<title><?php wp_title( ' | ', true, 'right' ); ?></title>
-	
+
 	<?php metas_facebook_og(); ?>
 
 	<?php wp_head(); ?>
@@ -41,12 +41,14 @@
   		 echo 'var user_sessions = '.json_encode(get_user_sessions()).''."\n";
   		 echo 'var base_url = "'.get_bloginfo('url').'"'."\n";
   		 echo 'var template_url = "'.get_bloginfo('template_directory').'"'."\n";
-  		 
+
   	?>
 	</script>
 
 </head>
 <body class="not-zoomed">
+
+<?php var_dump('Hello'); ?>
 
 <div id="fb-root"></div>
 <script>
@@ -63,11 +65,10 @@
 <!-- Page wrapper -->
 <div class="l-page-wrapper<?php echo custom_wrapper_classes() ?>" itemscope itemtype="http://schema.org/Event">
 
-  <?php 
+  <?php
     if(is_front_page()){
     }
     else{
       get_template_part('header','page');
     }
-    
-    
+
