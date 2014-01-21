@@ -49,7 +49,11 @@
 <body class="not-zoomed">
 
 <?php //var_dump( get_post_meta( get_the_ID() ) );
-var_dump( get_post( 301 ) ); ?>
+$post = get_post_meta( get_the_ID() );
+$post_id = $post['ID'];
+$post_room = get_post( 301 );
+$post_name = $post_room['post_name'];
+var_dump($post_name); ?>
 
 <div id="fb-root"></div>
 <script>
