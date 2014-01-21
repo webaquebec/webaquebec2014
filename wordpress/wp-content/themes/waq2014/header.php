@@ -16,7 +16,7 @@
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 
 	<title><?php wp_title( ' | ', true, 'right' ); ?></title>
-	
+
 	<?php metas_facebook_og(); ?>
 
 	<?php wp_head(); ?>
@@ -41,12 +41,18 @@
   		 echo 'var user_sessions = '.json_encode(get_user_sessions()).''."\n";
   		 echo 'var base_url = "'.get_bloginfo('url').'"'."\n";
   		 echo 'var template_url = "'.get_bloginfo('template_directory').'"'."\n";
-  		 
+
   	?>
 	</script>
 
 </head>
 <body class="not-zoomed">
+
+<?php $post = get_post_meta( get_queried_object_id() );
+$room = $post['_conferencer_room'];
+$room_id = $room[0];
+$room_post = get_post( $room_id );
+$room_name = ' ' . $room_post->post_name;?>
 
 <div id="fb-root"></div>
 <script>
@@ -61,13 +67,12 @@
 </script>
 
 <!-- Page wrapper -->
-<div class="l-page-wrapper<?php echo custom_wrapper_classes() ?>" itemscope itemtype="http://schema.org/Event">
+<div class="l-page-wrapper<?php echo custom_wrapper_classes() . $room_name ?>" itemscope itemtype="http://schema.org/Event">
 
-  <?php 
+  <?php
     if(is_front_page()){
     }
     else{
       get_template_part('header','page');
     }
-    
-    
+

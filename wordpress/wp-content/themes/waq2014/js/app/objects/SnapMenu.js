@@ -143,12 +143,12 @@ var SnapMenu = ( function( $, window, document, undefined ) {
 
             if ( self.config.customNavigation ) {
 
-                if ( breakpoints['apropos'] <= offset ){
+                if ( breakpoints['a-propos'] <= offset ){
                     self.menuItems.parent().removeClass( WAQ.Constants.isActiveClass );
-                    self.menuItems.parent().find('a[href="#apropos"]').parents('li').addClass( WAQ.Constants.isActiveClass );
+                    self.menuItems.parent().find('a[href="#a-propos"]').parents('li').addClass( WAQ.Constants.isActiveClass );
                 }
 
-                else if ( breakpoints['apropos'] >= offset && offset >= breakpoints['partenaires'] ){
+                else if ( breakpoints['a-propos'] >= offset && offset >= breakpoints['partenaires'] ){
                     self.menuItems.parent().removeClass( WAQ.Constants.isActiveClass );
                     self.menuItems.parent().find('a[href="#partenaires"]').parents('li').addClass( WAQ.Constants.isActiveClass );
                 }
@@ -158,12 +158,12 @@ var SnapMenu = ( function( $, window, document, undefined ) {
                     self.menuItems.parent().find('a[href="#blogue"]').parents('li').addClass( WAQ.Constants.isActiveClass );
                 }
 
-                else if ( breakpoints['blogue'] >= offset && offset >= breakpoints['lieu'] ){
+                else if ( breakpoints['blogue'] >= offset && offset >= breakpoints['lieu-et-coordonnees'] ){
                     self.menuItems.parent().removeClass( WAQ.Constants.isActiveClass );
-                    self.menuItems.parent().find('a[href="#lieu"]').parents('li').addClass( WAQ.Constants.isActiveClass );
+                    self.menuItems.parent().find('a[href="#lieu-et-coordonnees"]').parents('li').addClass( WAQ.Constants.isActiveClass );
                 }
 
-                else if ( breakpoints['lieu'] >= offset && offset >= breakpoints['horaire'] ){
+                else if ( breakpoints['lieu-et-coordonnees'] >= offset && offset >= breakpoints['horaire'] ){
                     self.menuItems.parent().removeClass( WAQ.Constants.isActiveClass );
                     self.menuItems.parent().find('a[href="#horaire"]').parents('li').addClass( WAQ.Constants.isActiveClass );
                 }
