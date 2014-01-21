@@ -49,9 +49,9 @@
 <body class="not-zoomed">
 
 <?php //var_dump( get_post_meta( get_the_ID() ) );
-$post = get_post_meta( get_queried_object_id() );
+$post = get_post_meta( get_the_ID() );
 $post_id = $post->ID;
-$post_room = get_post( 301 );
+$post_room = get_post( $post_id );
 $room = ' ' . $post_room->post_name;?>
 
 <div id="fb-root"></div>
