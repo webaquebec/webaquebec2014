@@ -52,8 +52,7 @@
 $post = get_post_meta( get_the_ID() );
 $post_id = $post->ID;
 $post_room = get_post( 301 );
-$post_name = $post_room->post_name;
-var_dump($post_name); ?>
+$room = ' ' . $post_room->post_name;?>
 
 <div id="fb-root"></div>
 <script>
@@ -68,7 +67,7 @@ var_dump($post_name); ?>
 </script>
 
 <!-- Page wrapper -->
-<div class="l-page-wrapper<?php echo custom_wrapper_classes() ?>" itemscope itemtype="http://schema.org/Event">
+<div class="l-page-wrapper<?php echo custom_wrapper_classes() . $room ?>" itemscope itemtype="http://schema.org/Event">
 
   <?php
     if(is_front_page()){
