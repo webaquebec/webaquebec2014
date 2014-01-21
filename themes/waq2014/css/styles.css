@@ -2760,23 +2760,23 @@ aside.highlight .social .twitter {
   }
 }
 /* line 19, ../sass/includes/_theme.scss */
-.l-page-wrapper.highlight-libeo, .l-page-wrapper.salle-libeo {
+.l-page-wrapper.highlight-libeo, .l-page-wrapper.single-page.salle-libeo {
   border-color: #ba0046;
 }
 /* line 24, ../sass/includes/_theme.scss */
-.l-page-wrapper.highlight-ixmedia, .l-page-wrapper.salle-ixmedia {
+.l-page-wrapper.highlight-ixmedia, .l-page-wrapper.single-page.salle-ixmedia {
   border-color: #00d3b8;
 }
 /* line 29, ../sass/includes/_theme.scss */
-.l-page-wrapper.highlight-bell, .l-page-wrapper.salle-bell {
+.l-page-wrapper.highlight-bell, .l-page-wrapper.single-page.salle-bell {
   border-color: #ffca31;
 }
 /* line 34, ../sass/includes/_theme.scss */
-.l-page-wrapper.highlight-deloitte, .l-page-wrapper.salle-deloitte {
+.l-page-wrapper.highlight-deloitte, .l-page-wrapper.single-page.salle-deloitte {
   border-color: #64009e;
 }
 /* line 39, ../sass/includes/_theme.scss */
-.l-page-wrapper.highlight-grand-hall, .l-page-wrapper.salle-grand-hall {
+.l-page-wrapper.highlight-grand-hall, .l-page-wrapper.single-page.salle-grand-hall {
   border-color: #006b9f;
 }
 

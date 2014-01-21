@@ -16,27 +16,27 @@
 	}}
 
 	&.highlight-libeo,
-	&.salle-libeo{
+	&.single-page.salle-libeo{
 		border-color: $c-libeo;
 	}
 
 	&.highlight-ixmedia,
-	&.salle-ixmedia{
+	&.single-page.salle-ixmedia{
 		border-color: $c-ixmedia;
 	}
 
 	&.highlight-bell,
-	&.salle-bell{
+	&.single-page.salle-bell{
 		border-color: $c-bell;
 	}
 
 	&.highlight-deloitte,
-	&.salle-deloitte{
+	&.single-page.salle-deloitte{
 		border-color: $c-deloitte;
 	}
 
 	&.highlight-grand-hall,
-	&.salle-grand-hall{
+	&.single-page.salle-grand-hall{
 		border-color: $c-grandhall;
 	}
 }
