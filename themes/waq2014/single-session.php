@@ -2,7 +2,7 @@
 
 <?php if ( have_posts() ) : ?>
 	<?php while ( have_posts() ): the_post();
-	
+
   	$time_slot_id = get_post_meta(get_the_ID(), '_conferencer_time_slot', true);
   	$room_id = get_post_meta(get_the_ID(), '_conferencer_room', true);
   	$speakers_ids = get_post_meta(get_the_ID(), '_conferencer_speakers', true);
@@ -10,52 +10,72 @@
   	$session_lists = get_field('lists',get_the_ID());
   	$related_sessions_ids = get_post_meta(get_the_ID(), 'related_sessions', true);
   	$themes = wp_get_post_terms(get_the_ID(), 'theme');
-  	
+
   	$speakers_output = "";
   	$speaker_name = "";
   	if(count($speakers_ids) > 1){
       	$speaker_name = "Panel";
-      	
+
       	foreach ($speakers_ids as $speaker_id) {
       	  $speaker_post = get_post(array_shift($speakers_ids));
-      	  
+
       	  $speakers_output .= '<h2><span class="small">À propos de </span><span class="big">'.$speaker_post->post_title.'</span></h2>';
-      	  
+
       	  $speakers_output .= '<div class="content">'.(get_post_field('post_excerpt', $speaker_post->ID) ? apply_filters('the_content', get_post_field('post_excerpt', $speaker_post->ID)) : apply_filters('the_content', get_post_field('post_content', $speaker_post->ID))).'</div>';
-      	  
-      	  
+
+
       	  $speakers_output .= '<ul class="social">';
       	  $speaker_website = addhttp(get_post_meta($speaker_post->ID, 'website', true));
       	  $speaker_website_clean = rtrim(str_replace('www.', '', str_replace('https://', '', str_replace('http://', '', $speaker_website))), '/');
       	  if(!empty($speaker_website) && $speaker_website != 'http://' ){
       	    $speakers_output .= '<li class="website"><a href="'.$speaker_website.'">'.$speaker_website_clean.'</a></li>';
       	  }
-      	  
+
       	  $speaker_twitter_handle = str_replace('@', '', get_post_meta($speaker_post->ID, 'twitter_handle', true));
       	  if(!empty($speaker_twitter_handle)){
       	    $speakers_output .= '<li class="twitter"><a href="http://twitter.com/'.$speaker_twitter_handle.'">@'.$speaker_twitter_handle.'</a></li>';
       	  }
       	  $speakers_output .= '</ul>';
-      	  
+
       	  unset($speaker_post);
       	}
   	}
   	else if(count($speakers_ids) == 1){
   	  $speaker_post = get_post(array_shift($speakers_ids));
   	  $speaker_name = $speaker_post->post_title;
-  	  
+
   	  $speakers_output .= '<h2><span class="small">À propos de </span><span class="big">'.$speaker_post->post_title.'</span></h2>';
-  	  
+
+      $thumb = get_post_thumbnail_id($speaker_post->ID);
+      $img_url = wp_get_attachment_url( $thumb,'full' );
+
+      if(function_exists('aq_resize')){
+        $image = aq_resize( $img_url, 227, 190, true );
+        if(empty($image)){
+          $image = aq_resize( $img_url, 227, 190, false );
+          if(empty($image)){
+            $image = $img_url;
+          }
+        }
+      }
+      else{
+        $image = $img_url;
+      }
+
+      if($image){
+        $speakers_output .= '<span class="img-crop"><img class="speaker-thumb" src="'.$image.'" alt="" itemprop="image" /></span>';
+      }
+
   	  $speakers_output .= '<div class="content">'.(get_post_field('post_excerpt', $speaker_post->ID) ? apply_filters('the_content', get_post_field('post_excerpt', $speaker_post->ID)) : apply_filters('the_content', get_post_field('post_content', $speaker_post->ID))).'</div>';
-  	  
+
   	  $speakers_output .= '<ul class="social">';
-  	  
+
   	  $speaker_website = addhttp(get_post_meta($speaker_post->ID, 'website', true));
   	  $speaker_website_clean = rtrim(str_replace('www.', '', str_replace('https://', '', str_replace('http://', '', $speaker_website))), '/');
   	  if(!empty($speaker_website) && $speaker_website != 'http://' ){
   	    $speakers_output .= '<li class="website"><a href="'.$speaker_website.'">'.$speaker_website_clean.'</a></li>';
   	  }
-  	  
+
   	  $speaker_twitter_handle = str_replace('@', '', get_post_meta($speaker_post->ID, 'twitter_handle', true));
   	  if(!empty($speaker_twitter_handle)){
   	    $speakers_output .= '<li class="twitter"><a href="http://twitter.com/'.$speaker_twitter_handle.'">@'.$speaker_twitter_handle.'</a></li>';
@@ -63,7 +83,7 @@
   	  $speakers_output .= '</ul>';
   	  unset($speaker_post);
   	}
-  	
+
   	$related_sessions_output = "";
   	if(!empty($related_sessions_ids)){
   	  $related_sessions_output .= "<h2>Ces conférences pourraient vous intéresser : </h2>";
@@ -72,7 +92,7 @@
     	  $related_session_post = get_post($related_session_id);
     	  $related_sessions_output .= '<li itemprop="subEvent" itemscope itemtype="http://schema.org/Event">';
     	  $related_sessions_output .= '<h3 class="session-title" itemprop="name"><a href="'.get_permalink($related_session_id).'">'.$related_session_post->post_title.'</a></h3>';
-    	  
+
     	  $related_session_speakers = get_post_meta($related_session_post->ID, '_conferencer_speakers', true);
     	  if(count($related_session_speakers) > 1){
     	    $related_sessions_output .= '<span class="session-speaker">
@@ -82,7 +102,7 @@
     	    $related_sessions_output .= '<span class="session-speaker" itemprop="performer" itemscope="" itemtype="http://schema.org/Person">
     	        <span itemprop="name">'.get_the_title(array_shift($related_session_speakers)).'</span></span>';
     	  }
-    	  
+
     	  $related_session_starts = get_post_meta($time_slot_id, '_conferencer_starts', true);
     	  $related_session_ends = get_post_meta($time_slot_id, '_conferencer_ends', true);
     	  $related_sessions_output .= '<span class="session-meta">';
@@ -97,13 +117,13 @@
     	          $related_sessions_output .= '</span>';
     	      $related_sessions_output .= '</span>';
     	  $related_sessions_output .= '</span>';
-    	  
+
     	  $related_sessions_output .= '</li>';
     	  unset($related_session_post);
     	}
   	  $related_sessions_output .= "</ul>";
   	}
-  	
+
   	$themes_output = "";
   	if(!empty($themes)){
   	  $themes_output .= "<h2>Thématiques de cette conférence</h2>";
@@ -113,7 +133,7 @@
     	}
   		$themes_output .= "</ul>";
   	}
-  	
+
   	$session_start_unix = get_post_meta($time_slot_id, '_conferencer_starts', true);
   	$session_ends_unix = get_post_meta($time_slot_id, '_conferencer_ends', true);
 	  $session_room = get_the_title($room_id);
@@ -193,7 +213,7 @@
 <?php else: ?>
 	<p><?php _e( 'Aucun résultat' ); ?></p>
 <?php endif; ?>
-<?php 
+<?php
 
 $page_args = array(
     'post_type' => 'page',
@@ -201,7 +221,7 @@ $page_args = array(
   	'meta_value' => 'home-footer.php'
 );
 
-$pages = get_posts($page_args); 
+$pages = get_posts($page_args);
 global $post;
 
 foreach($pages as $post){
