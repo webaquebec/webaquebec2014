@@ -48,7 +48,7 @@
 </head>
 <body class="not-zoomed">
 
-<?php var_dump('Hello'); ?>
+<?php var_dump( get_queried_object() ); ?>
 
 <div id="fb-root"></div>
 <script>
