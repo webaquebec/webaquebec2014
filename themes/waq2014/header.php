@@ -48,7 +48,7 @@
 </head>
 <body class="not-zoomed">
 
-<?php //var_dump( get_post_meta( get_the_ID() ) );
+<?php var_dump( get_queried_object_id() );
 $post = get_post_meta( get_queried_object_id() );
 $post_id = $post->ID;
 $post_room = get_post( $post_id );
