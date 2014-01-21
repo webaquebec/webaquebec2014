@@ -80,7 +80,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a itemprop="url" href="#lieu">
+                                    <a itemprop="url" href="#lieu-et-coordonnees">
                                         <span itemprop="name">Lieu et coordonnées</span>
                                     </a>
                                 </li>
@@ -95,7 +95,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a itemprop="url" href="#apropos">
+                                    <a itemprop="url" href="#a-propos">
                                         <span itemprop="name">À propos</span>
                                     </a>
                                 </li>
@@ -260,7 +260,7 @@
 
 
         <!-- Place section -->
-        <section id="lieu" class="place">
+        <section id="lieu-et-coordonnees" class="place">
     <div class="l-section-wrapper">
         <div>
             <header>
@@ -722,7 +722,7 @@ Mentionnez le groupe : Web à Québec</span>        </span><img src="http://waq2
 
 
         <!-- About section -->
-        <section id="apropos" class="about">
+        <section id="a-propos" class="about">
             <div class="l-section-wrapper">
 
                 <header>
