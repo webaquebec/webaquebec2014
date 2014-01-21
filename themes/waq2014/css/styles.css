@@ -1742,6 +1742,10 @@ aside.highlight .social .website {
 aside.highlight .social .twitter {
   background-image: url("../img/icon-twitter.png");
 }
+/* line 1142, ../sass/includes/_module.scss */
+aside.highlight .social .linkedin {
+  background-image: url("../img/icon-linkedin.png");
+}
 
 /* line 4, ../sass/includes/_schedule.scss */
 .facebook-connect {
