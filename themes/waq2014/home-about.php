@@ -29,7 +29,7 @@ foreach($organizers_groups as $organizers_group){
 
   if(!empty($organizers)){
     $organizers_output .= '<ul class="organizers-list">';
-    $i = 0;
+    $i = 1;
     foreach($organizers as $organizer){
       $lastclass = '';
       if($i % 2 == 0){ $lastclass .= ' last-2'; }
