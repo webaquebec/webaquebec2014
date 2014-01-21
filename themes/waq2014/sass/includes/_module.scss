@@ -1086,6 +1086,10 @@ aside.highlight{
 		}}
 	}
 
+	.content{
+		clear: both;
+	}
+
 	.content p{
 		margin: 0.75em 0;
 		color: $c-single-aside-content;
