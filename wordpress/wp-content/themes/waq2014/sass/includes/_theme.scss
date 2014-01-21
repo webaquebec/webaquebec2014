@@ -15,23 +15,28 @@
 		border-width: 15px;
 	}}
 
-	&.highlight-libeo{
+	&.highlight-libeo,
+	&.single-page.salle-libeo{
 		border-color: $c-libeo;
 	}
 
-	&.highlight-ixmedia{
+	&.highlight-ixmedia,
+	&.single-page.salle-ixmedia{
 		border-color: $c-ixmedia;
 	}
 
-	&.highlight-bell{
+	&.highlight-bell,
+	&.single-page.salle-bell{
 		border-color: $c-bell;
 	}
 
-	&.highlight-deloitte{
+	&.highlight-deloitte,
+	&.single-page.salle-deloitte{
 		border-color: $c-deloitte;
 	}
 
-	&.highlight-grand-hall{
+	&.highlight-grand-hall,
+	&.single-page.salle-grand-hall{
 		border-color: $c-grandhall;
 	}
 }
@@ -168,7 +173,7 @@
 
 		&:before{
 			display: block;
-			height: 268px;
+			height: 300px;
 			width: 100%;
 			position: absolute;
 			left: 0; top: 0;
@@ -262,7 +267,7 @@
 				display: block !important;
 				margin: 0;
 				padding: 0;
-				width: emify(450px, 16px);
+				width: emify(750px, 16px);
 				background-color: transparent;
 			}}
 
@@ -285,6 +290,7 @@
 				font: $font-schedule-filters-li;
 				background-color: $c-bg-schedule-filters-li;
 				cursor: pointer;
+        		@include transition(background, 0.5s);
 			}
 
 			button:hover,
