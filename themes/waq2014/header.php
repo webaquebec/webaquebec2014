@@ -48,17 +48,11 @@
 </head>
 <body class="not-zoomed">
 
-<pre>
 <?php $post = get_post_meta( get_queried_object_id() );
-var_dump($post);
 $room = $post['_conferencer_room'];
 $room_id = $room[0];
-var_dump($room_id);
 $room_post = get_post( $room_id );
-var_dump($room_post);
-$room_name = ' ' . $room_post->post_name;
-var_dump($room_name);?>
-</pre>
+$room_name = ' ' . $room_post->post_name;?>
 
 <div id="fb-root"></div>
 <script>
