@@ -2971,7 +2971,7 @@ aside.highlight .social .linkedin {
   /* line 174, ../sass/includes/_theme.scss */
   .not-zoomed .schedule:before {
     display: block;
-    height: 268px;
+    height: 300px;
     width: 100%;
     position: absolute;
     left: 0;
