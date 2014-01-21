@@ -81,7 +81,7 @@
         $speakers_output .= '<li class="twitter"><a href="http://twitter.com/'.$speaker_twitter_handle.'">@'.$speaker_twitter_handle.'</a></li>';
       }
 
-      $speaker_linkedin_handle = get_post_meta($speaker_post->ID);
+      $speaker_linkedin_handle = get_post_meta($speaker_post->ID, 'linkedin_handle', true);
       if(!empty($speaker_linkedin_handle)){
         $speakers_output .= '<li class="linkedin"><a href="http://www.linkedin.com/in/'.$speaker_linkedin_handle.'">'.$speaker_linkedin_handle.'</a></li>';
       }
