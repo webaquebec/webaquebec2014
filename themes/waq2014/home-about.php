@@ -66,7 +66,7 @@ foreach($organizers_groups as $organizers_group){
           if($ln_url = get_field('linkedin_link',$organizer->ID))
             $organizers_social_output .= '<a href="'.$ln_url.'" class="LinkedIn"><img src="'.get_bloginfo('template_directory').'/img/icon-social-linkedin-mono.png" alt="LinkedIn"></a>';
           if($gp_url = get_field('google_link',$organizer->ID))
-            $organizers_social_output .= '<a href="'.$gp_url.'" class="Google+"><img src="'.get_bloginfo('template_directory').'/img/icon-social-googleplus-mono.png" alt="Google+"></a>';
+            $organizers_social_output .= '<a href="'.$gp_url.'" class="Google+"><img src="'.get_bloginfo('template_directory').'/img/icon-social-google-mono.png" alt="Google+"></a>';
 
           if(!empty($organizers_social_output)){
               $organizers_output .= '<div class="overlay social-medias reversed">'.$organizers_social_output.'</div>';
