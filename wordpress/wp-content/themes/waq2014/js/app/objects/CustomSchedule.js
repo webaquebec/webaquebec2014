@@ -35,9 +35,8 @@ var CustomSchedule = (function($, window, document, undefined) {
                 cookie : true
             }
 
-            // Hide login/logout while loading
-            $('.facebook-login').css('display','none');
-            $('.facebook-logout').css('display','none');
+            // Hide module while loading session info
+            $('.facebook-connect').css('display','none');
 
             if(window.location.hostname == 'waq2014.dev.libeo.com'){
                 fb_conf = {
@@ -60,6 +59,8 @@ var CustomSchedule = (function($, window, document, undefined) {
                 FB.init(fb_conf);
 
                 FB.getLoginStatus(function(response) {
+                    $('.facebook-connect').css('display','block');
+
                     if (response.status === 'connected') {
                         self.facebookConnected = true;
                         $('.facebook-login').css('display','none');
