@@ -1244,6 +1244,7 @@
 
 			.not-zoomed & {
 			@include respond-to( 560px ){
+				width: 30%;
 				float: left;
 			}}
 		}
@@ -1253,6 +1254,7 @@
 			@include respond-to( 560px ){
 				float: right;
 				text-align: right;
+				width: 70%;
 			}}
 
 			img{
