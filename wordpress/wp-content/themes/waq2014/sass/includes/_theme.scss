@@ -18,6 +18,30 @@
 	&.highlight-libeo,
 	&.single-page.salle-libeo{
 		border-color: $c-libeo;
+	}
+
+	&.highlight-ixmedia,
+	&.single-page.salle-ixmedia{
+		border-color: $c-ixmedia;
+	}
+
+	&.highlight-bell,
+	&.single-page.salle-bell{
+		border-color: $c-bell;
+	}
+
+	&.highlight-deloitte,
+	&.single-page.salle-deloitte{
+		border-color: $c-deloitte;
+	}
+
+	&.highlight-grand-hall,
+	&.single-page.salle-grand-hall{
+		border-color: $c-grandhall;
+	}
+
+	&.single-page.salle-libeo{
+		border-color: $c-libeo;
 
 		.home{
 			background-color: $c-libeo;
@@ -34,7 +58,6 @@
 		}
 	}
 
-	&.highlight-ixmedia,
 	&.single-page.salle-ixmedia{
 		border-color: $c-ixmedia;
 
@@ -53,7 +76,6 @@
 		}
 	}
 
-	&.highlight-bell,
 	&.single-page.salle-bell{
 		border-color: $c-bell;
 
@@ -72,7 +94,6 @@
 		}
 	}
 
-	&.highlight-deloitte,
 	&.single-page.salle-deloitte{
 		border-color: $c-deloitte;
 
@@ -91,7 +112,6 @@
 		}
 	}
 
-	&.highlight-grand-hall,
 	&.single-page.salle-grand-hall{
 		border-color: $c-grandhall;
 	}
