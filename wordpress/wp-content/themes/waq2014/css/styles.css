@@ -4145,33 +4145,35 @@ aside.highlight .social .linkedin {
 @media only screen and (min-width: 560px) {
   /* line 1245, ../sass/includes/_theme.scss */
   .not-zoomed .footer .footer-bar .archives {
+    width: 30%;
     float: left;
   }
 }
 @media only screen and (min-width: 560px) {
-  /* line 1252, ../sass/includes/_theme.scss */
+  /* line 1253, ../sass/includes/_theme.scss */
   .not-zoomed .footer .footer-bar .right {
     float: right;
     text-align: right;
+    width: 70%;
   }
 }
-/* line 1258, ../sass/includes/_theme.scss */
+/* line 1260, ../sass/includes/_theme.scss */
 .footer .footer-bar .right img {
   margin: -6px 0;
 }
 @media only screen and (min-width: 560px) {
-  /* line 1264, ../sass/includes/_theme.scss */
+  /* line 1266, ../sass/includes/_theme.scss */
   .not-zoomed .footer .footer-bar .right img {
     margin: -6px 0 -6px 5px;
   }
 }
 
-/* line 1273, ../sass/includes/_theme.scss */
+/* line 1275, ../sass/includes/_theme.scss */
 .single-page .footer .l-section-wrapper {
   border-top: 1px solid #333f47;
 }
 @media only screen and (min-width: 72.938em) {
-  /* line 1276, ../sass/includes/_theme.scss */
+  /* line 1278, ../sass/includes/_theme.scss */
   .not-zoomed .single-page .footer .l-section-wrapper {
     margin-top: 30px;
   }
