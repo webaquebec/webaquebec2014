@@ -54,18 +54,6 @@ $room_id = $room[0];
 $room_post = get_post( $room_id );
 $room_name = ' ' . $room_post->post_name;?>
 
-<div id="fb-root"></div>
-<script>
-  // Load the SDK asynchronously
-  (function(d, s, id){
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement(s); js.id = id;
-     js.src = "//connect.facebook.net/en_US/all.js";
-     fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));
-</script>
-
 <!-- Page wrapper -->
 <div class="l-page-wrapper<?php echo custom_wrapper_classes() . $room_name ?>" itemscope itemtype="http://schema.org/Event">
 
