@@ -25,4 +25,8 @@ Then deploy updates with capistrano
 
 ## Credits
 
-Thanks to [Libéo](http://libeo.com) for sponsoring 2014 website.
+Thanks to [Libéo](http://libeo.com) team for sponsoring 2014 website. 
+
+Thanks [@j15e](http://j15e.com) for writing a README and managing deployment.
+
+See all [contributors](https://github.com/webaquebec/webaquebec2014/graphs/contributors)
