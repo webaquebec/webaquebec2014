@@ -121,6 +121,7 @@ foreach ($archives as $archive) {
 
             <div class="l-col right">
                 <div><a href="<?php echo get_permalink(get_page_by_path('accessibilite')); ?>">Accessibilité</a></div>
+                <div><a href="https://github.com/webaquebec/webaquebec2014">Contribuez au site</a></div>
                 <div>
                     <span class="strong">Conception et réalisation :</span>
                     <a href="http://www.libeo.com" itemscope itemtype="http://schema.org/Organization">
