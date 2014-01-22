@@ -18,21 +18,77 @@
 	&.highlight-libeo,
 	&.single-page.salle-libeo{
 		border-color: $c-libeo;
+
+		.home{
+			background-color: $c-libeo;
+			background-image: none;
+		}
+
+		.event-back-link,
+		.page-content .back-link{
+			background-image: url("../img/icon-arrow-left-libeo.png");
+		}
+
+		.page-content .content .questions li{
+			background-image: url("../img/bg-single-questions-libeo.png");
+		}
 	}
 
 	&.highlight-ixmedia,
 	&.single-page.salle-ixmedia{
 		border-color: $c-ixmedia;
+
+		.home{
+			background-color: $c-ixmedia;
+			background-image: none;
+		}
+
+		.event-back-link,
+		.page-content .back-link{
+			background-image: url("../img/icon-arrow-left-ixmedia.png");
+		}
+
+		.page-content .content .questions li{
+			background-image: url("../img/bg-single-questions-ixmedia.png");
+		}
 	}
 
 	&.highlight-bell,
 	&.single-page.salle-bell{
 		border-color: $c-bell;
+
+		.home{
+			background-color: $c-bell;
+			background-image: none;
+		}
+
+		.event-back-link,
+		.page-content .back-link{
+			background-image: url("../img/icon-arrow-left-bell.png");
+		}
+
+		.page-content .content .questions li{
+			background-image: url("../img/bg-single-questions-bell.png");
+		}
 	}
 
 	&.highlight-deloitte,
 	&.single-page.salle-deloitte{
 		border-color: $c-deloitte;
+
+		.home{
+			background-color: $c-deloitte;
+			background-image: none;
+		}
+
+		.event-back-link,
+		.page-content .back-link{
+			background-image: url("../img/icon-arrow-left-deloitte.png");
+		}
+
+		.page-content .content .questions li{
+			background-image: url("../img/bg-single-questions-deloitte.png");
+		}
 	}
 
 	&.highlight-grand-hall,
