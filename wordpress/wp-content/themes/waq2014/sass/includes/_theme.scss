@@ -91,6 +91,10 @@
 .single-page .home{
 	margin: 10px 0 0;
 	background-color: $c-linkblue;
+	
+	.event-logo{
+		margin-bottom: 15px;
+	}
 
 	.not-zoomed & {
 	@include respond-to( 560px ){
@@ -835,7 +839,7 @@
 
 	.content-header{
 		position: relative;
-		padding-top: 85px;
+		padding-top: 105px;
 		margin: 10px 0 0;
 
 		.not-zoomed & {
@@ -860,12 +864,13 @@
 			top: 0;
 			color: $c-single-speaker;
 			font: $font-single-speaker;
+			line-height: 0.9em;
 			text-transform: uppercase;
 		}
 
 		.session-meta{
 			position: absolute;
-			top: emify(35px);
+			top: emify(55px);
 			display: block;
 			color: $c-single-meta;
 			font: $font-single-meta;
