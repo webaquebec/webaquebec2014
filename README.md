@@ -2,10 +2,16 @@
 
 ## Quick start
 
+Setup (install ruby dependencies & import database sample):
+
+    bundle install
     mysql -u root -e "drop database waq2014;create database waq2014;"
     mysql -u root waq2014 < dump.sql
-    sudo php -S localhost:80 -t wordpress
-    open http://waq2014.lvh.me
+
+Run the app and compile assets :
+
+    sudo php -S waq2014.lvh.me:80 -t wordpress
+    bundle exec compass watch wordpress/wp-content/themes/waq2014
 
 User `admin` password is `qwe123` in development.
 
@@ -25,7 +31,7 @@ Then deploy updates with capistrano
 
 ## Credits
 
-Thanks to [Libéo](http://libeo.com) team for sponsoring 2014 website. 
+Thanks to [Libéo](http://libeo.com) team for sponsoring 2014 website.
 
 Thanks [@j15e](http://j15e.com) for writing a README and managing deployment.
 
