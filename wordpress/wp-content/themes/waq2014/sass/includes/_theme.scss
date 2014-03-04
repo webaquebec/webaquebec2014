@@ -30,9 +30,9 @@
 		border-color: $c-bell;
 	}
 
-	&.highlight-deloitte,
-	&.single-page.salle-deloitte{
-		border-color: $c-deloitte;
+	&.highlight-o2web,
+	&.single-page.salle-o2web{
+		border-color: $c-o2web;
 	}
 
 	&.highlight-grand-hall,
@@ -94,21 +94,21 @@
 		}
 	}
 
-	&.single-page.salle-deloitte{
-		border-color: $c-deloitte;
+	&.single-page.salle-o2web{
+		border-color: $c-o2web;
 
 		.home{
-			background-color: $c-deloitte;
+			background-color: $c-o2web;
 			background-image: none;
 		}
 
 		.event-back-link,
 		.page-content .back-link{
-			background-image: url("../img/icon-arrow-left-deloitte.png");
+			background-image: url("../img/icon-arrow-left-o2web.png");
 		}
 
 		.page-content .content .questions li{
-			background-image: url("../img/bg-single-questions-deloitte.png");
+			background-image: url("../img/bg-single-questions-o2web.png");
 		}
 	}
 
@@ -167,7 +167,7 @@
 .single-page .home{
 	margin: 10px 0 0;
 	background-color: $c-linkblue;
-	
+
 	.event-logo{
 		margin-bottom: 15px;
 	}

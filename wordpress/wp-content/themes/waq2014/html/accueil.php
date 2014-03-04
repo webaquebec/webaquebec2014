@@ -626,8 +626,8 @@ Mentionnez le groupe : Web à Québec</span>        </span><img src="http://waq2
                         </li>
                         <li itemscope itemtype="http://schema.org/Organization">
                             <a href="#">
-                                <img itemprop="image" src="../img/sponsors/sponsor-deloitte.png" alt="">
-                                <span itemprop="name" class="visuallyhidden">Deloitte</span>
+                                <img itemprop="image" src="../img/sponsors/sponsor-o2web.png" alt="">
+                                <span itemprop="name" class="visuallyhidden">o2web</span>
                             </a>
                         </li>
                         <li itemscope itemtype="http://schema.org/Organization">
