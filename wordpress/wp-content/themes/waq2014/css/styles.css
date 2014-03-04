@@ -2065,8 +2065,8 @@ aside.highlight .social .linkedin {
   background-image: url("../img/bg-schedule-bell.png");
 }
 /* line 256, ../sass/includes/_schedule.scss */
-.schedule-wrapper th.column_salle-deloitte {
-  background-image: url("../img/bg-schedule-deloitte.png");
+.schedule-wrapper th.column_salle-o2web {
+  background-image: url("../img/bg-schedule-o2web.png");
 }
 /* line 260, ../sass/includes/_schedule.scss */
 .schedule-wrapper th:first-child {
@@ -2580,8 +2580,8 @@ aside.highlight .social .linkedin {
   background-image: url("../img/bg-schedule-bell.png");
 }
 /* line 699, ../sass/includes/_schedule.scss */
-.schedule-wrapper .session.salle-deloitte .session-content {
-  background-image: url("../img/bg-schedule-deloitte.png");
+.schedule-wrapper .session.salle-o2web .session-content {
+  background-image: url("../img/bg-schedule-o2web.png");
 }
 /* line 703, ../sass/includes/_schedule.scss */
 .schedule-wrapper td.empty {
@@ -2801,7 +2801,7 @@ aside.highlight .social .linkedin {
   border-color: #ffca31;
 }
 /* line 34, ../sass/includes/_theme.scss */
-.l-page-wrapper.highlight-deloitte, .l-page-wrapper.single-page.salle-deloitte {
+.l-page-wrapper.highlight-o2web, .l-page-wrapper.single-page.salle-o2web {
   border-color: #64009e;
 }
 /* line 39, ../sass/includes/_theme.scss */
@@ -2863,22 +2863,22 @@ aside.highlight .social .linkedin {
   background-image: url("../img/bg-single-questions-bell.png");
 }
 /* line 97, ../sass/includes/_theme.scss */
-.l-page-wrapper.single-page.salle-deloitte {
+.l-page-wrapper.single-page.salle-o2web {
   border-color: #64009e;
 }
 /* line 100, ../sass/includes/_theme.scss */
-.l-page-wrapper.single-page.salle-deloitte .home {
+.l-page-wrapper.single-page.salle-o2web .home {
   background-color: #64009e;
   background-image: none;
 }
 /* line 106, ../sass/includes/_theme.scss */
-.l-page-wrapper.single-page.salle-deloitte .event-back-link, .l-page-wrapper.single-page.salle-deloitte .page-content .back-link,
-.l-page-wrapper.single-page.salle-deloitte .page-content .back-link {
-  background-image: url("../img/icon-arrow-left-deloitte.png");
+.l-page-wrapper.single-page.salle-o2web .event-back-link, .l-page-wrapper.single-page.salle-o2web .page-content .back-link,
+.l-page-wrapper.single-page.salle-o2web .page-content .back-link {
+  background-image: url("../img/icon-arrow-left-o2web.png");
 }
 /* line 110, ../sass/includes/_theme.scss */
-.l-page-wrapper.single-page.salle-deloitte .page-content .content .questions li {
-  background-image: url("../img/bg-single-questions-deloitte.png");
+.l-page-wrapper.single-page.salle-o2web .page-content .content .questions li {
+  background-image: url("../img/bg-single-questions-o2web.png");
 }
 /* line 115, ../sass/includes/_theme.scss */
 .l-page-wrapper.single-page.salle-grand-hall {

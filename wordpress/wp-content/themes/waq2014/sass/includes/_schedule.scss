@@ -253,8 +253,8 @@
 		background-image: url( '#{$img-path}bg-schedule-bell.png' );
 	}
 
-	th.column_salle-deloitte{
-		background-image: url( '#{$img-path}bg-schedule-deloitte.png' );
+	th.column_salle-o2web{
+		background-image: url( '#{$img-path}bg-schedule-o2web.png' );
 	}
 
 	th:first-child{
@@ -696,8 +696,8 @@
 		background-image: url( '#{$img-path}bg-schedule-bell.png' );
 	}
 
-	.session.salle-deloitte .session-content{
-		background-image: url( '#{$img-path}bg-schedule-deloitte.png' );
+	.session.salle-o2web .session-content{
+		background-image: url( '#{$img-path}bg-schedule-o2web.png' );
 	}
 
 	td.empty{
