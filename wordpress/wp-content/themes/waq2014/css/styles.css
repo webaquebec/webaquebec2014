@@ -2402,10 +2402,16 @@ aside.highlight .social .linkedin {
 /* line 539, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session.keynote .session-speaker {
   top: -1.75em;
-  font: 400 1.125em / 2em "Lusitana", sans-serif;
+  font: 400 0.93333em / 2em "Lusitana", sans-serif;
+}
+@media only screen and (min-width: 48em) {
+  /* line 543, ../sass/includes/_schedule.scss */
+  .not-zoomed .schedule-wrapper .session.keynote .session-speaker {
+    font: 400 1.125em / 2em "Lusitana", sans-serif;
+  }
 }
 @media only screen and (min-width: 64em) {
-  /* line 545, ../sass/includes/_schedule.scss */
+  /* line 550, ../sass/includes/_schedule.scss */
   .not-zoomed .schedule-wrapper .session.keynote .session-room {
     display: -moz-inline-stack;
     display: inline-block;
@@ -2416,7 +2422,7 @@ aside.highlight .social .linkedin {
     font: 700 1.125em / 1.33333em "Roboto Condensed", sans-serif;
   }
 }
-/* line 552, ../sass/includes/_schedule.scss */
+/* line 557, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session.keynote .session-speaker-thumb {
   display: block;
   position: absolute;
@@ -2426,7 +2432,7 @@ aside.highlight .social .linkedin {
   max-height: 92px;
 }
 @media only screen and (min-width: 48em) {
-  /* line 559, ../sass/includes/_schedule.scss */
+  /* line 564, ../sass/includes/_schedule.scss */
   .not-zoomed .schedule-wrapper .session.keynote .session-speaker-thumb {
     top: 0;
     max-width: 100px;
@@ -2434,14 +2440,14 @@ aside.highlight .social .linkedin {
   }
 }
 @media only screen and (min-width: 64em) {
-  /* line 566, ../sass/includes/_schedule.scss */
+  /* line 571, ../sass/includes/_schedule.scss */
   .not-zoomed .schedule-wrapper .session.keynote .session-speaker-thumb {
     top: 0;
     max-width: 187px;
     max-height: 160px;
   }
 }
-/* line 574, ../sass/includes/_schedule.scss */
+/* line 579, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session.keynote .session-bookmark {
   background-image: url("../img/icon-bookmark-small.png");
   background-repeat: no-repeat;
@@ -2451,7 +2457,7 @@ aside.highlight .social .linkedin {
   width: 21px;
 }
 @media only screen and (min-width: 72.938em) {
-  /* line 577, ../sass/includes/_schedule.scss */
+  /* line 582, ../sass/includes/_schedule.scss */
   .not-zoomed .schedule-wrapper .session.keynote .session-bookmark {
     background-image: url("../img/icon-bookmark-big.png");
     background-repeat: no-repeat;
@@ -2461,7 +2467,7 @@ aside.highlight .social .linkedin {
     width: 38px;
   }
 }
-/* line 583, ../sass/includes/_schedule.scss */
+/* line 588, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session.keynote .session-bookmark.isActive {
   background-image: url("../img/icon-bookmark-big-active.png");
   background-repeat: no-repeat;
@@ -2471,12 +2477,12 @@ aside.highlight .social .linkedin {
   width: 38px;
 }
 @media only screen and (min-width: 64em) {
-  /* line 589, ../sass/includes/_schedule.scss */
+  /* line 594, ../sass/includes/_schedule.scss */
   .not-zoomed .schedule-wrapper .session.keynote.no-speaker .session-content {
     padding: 0 65px 0 50px;
   }
 }
-/* line 598, ../sass/includes/_schedule.scss */
+/* line 603, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session.break {
   height: auto;
   padding: 0;
@@ -2484,50 +2490,50 @@ aside.highlight .social .linkedin {
   text-align: center;
 }
 @media only screen and (min-width: 64em) {
-  /* line 604, ../sass/includes/_schedule.scss */
+  /* line 609, ../sass/includes/_schedule.scss */
   .not-zoomed .schedule-wrapper .session.break {
     padding: 15px;
     border-left: 1px solid #dfe5e8;
   }
 }
 @media only screen and (min-width: 64em) {
-  /* line 611, ../sass/includes/_schedule.scss */
+  /* line 616, ../sass/includes/_schedule.scss */
   .not-zoomed .schedule-wrapper .session.break .session-content {
     width: 2000px;
     height: 140px;
     background-color: #e6f3fa;
   }
 }
-/* line 619, ../sass/includes/_schedule.scss */
+/* line 624, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session.break .session-title {
   font: 400 1.125em / 2em "Lusitana", sans-serif;
 }
-/* line 622, ../sass/includes/_schedule.scss */
+/* line 627, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session.break .session-title, .schedule-wrapper .session.break .session-title a {
   color: #333f47;
 }
-/* line 627, ../sass/includes/_schedule.scss */
+/* line 632, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session.break button {
   display: none;
 }
 @media only screen and (min-width: 64em) {
-  /* line 634, ../sass/includes/_schedule.scss */
+  /* line 639, ../sass/includes/_schedule.scss */
   .not-zoomed .schedule-wrapper .session.break.small {
     padding: 0;
   }
 }
 @media only screen and (min-width: 64em) {
-  /* line 640, ../sass/includes/_schedule.scss */
+  /* line 645, ../sass/includes/_schedule.scss */
   .not-zoomed .schedule-wrapper .session.break.small .session-content {
     height: 75px;
     background-color: transparent;
   }
 }
-/* line 650, ../sass/includes/_schedule.scss */
+/* line 655, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session.bookmarked .session-content {
   background-color: #333f47 !important;
 }
-/* line 659, ../sass/includes/_schedule.scss */
+/* line 664, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session.bookmarked .session-title a,
 .schedule-wrapper .session.bookmarked .session-speaker,
 .schedule-wrapper .session.bookmarked .session-content,
@@ -2536,7 +2542,7 @@ aside.highlight .social .linkedin {
 .schedule-wrapper .session.bookmarked .session-room {
   color: white;
 }
-/* line 663, ../sass/includes/_schedule.scss */
+/* line 668, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session.bookmarked .session-bookmark {
   background-image: url("../img/icon-bookmark-small-active.png");
   background-repeat: no-repeat;
@@ -2546,7 +2552,7 @@ aside.highlight .social .linkedin {
   width: 21px;
 }
 @media only screen and (min-width: 48em) {
-  /* line 669, ../sass/includes/_schedule.scss */
+  /* line 674, ../sass/includes/_schedule.scss */
   .not-zoomed .schedule-wrapper .session.bookmarked.keynote .session-bookmark {
     background-image: url("../img/icon-bookmark-big-active.png");
     background-repeat: no-repeat;
@@ -2556,34 +2562,34 @@ aside.highlight .social .linkedin {
     width: 38px;
   }
 }
-/* line 679, ../sass/includes/_schedule.scss */
+/* line 684, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session:hover,
 .schedule-wrapper .session:focus,
 .schedule-wrapper .session.isHover,
 .schedule-wrapper .session.isFocus {
   opacity: 1 !important;
 }
-/* line 683, ../sass/includes/_schedule.scss */
+/* line 688, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session.salle-grand-hall .session-content {
   background-image: url("../img/bg-schedule-default.png");
 }
-/* line 687, ../sass/includes/_schedule.scss */
+/* line 692, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session.salle-libeo .session-content {
   background-image: url("../img/bg-schedule-libeo.png");
 }
-/* line 691, ../sass/includes/_schedule.scss */
+/* line 696, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session.salle-ixmedia .session-content {
   background-image: url("../img/bg-schedule-ixmedia.png");
 }
-/* line 695, ../sass/includes/_schedule.scss */
+/* line 700, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session.salle-bell .session-content {
   background-image: url("../img/bg-schedule-bell.png");
 }
-/* line 699, ../sass/includes/_schedule.scss */
+/* line 704, ../sass/includes/_schedule.scss */
 .schedule-wrapper .session.salle-o2web .session-content {
   background-image: url("../img/bg-schedule-o2web.png");
 }
-/* line 703, ../sass/includes/_schedule.scss */
+/* line 708, ../sass/includes/_schedule.scss */
 .schedule-wrapper td.empty {
   border-left: 1px solid #dfe5e8;
 }
