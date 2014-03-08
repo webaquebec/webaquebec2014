@@ -538,7 +538,12 @@
 
 		.session-speaker{
 			top: emify(-28px);
-			font: $font-schedule-keynote-speaker;
+			font: 400 emify(14px, 28px, 15px) 'Lusitana', sans-serif;
+
+			.not-zoomed & {
+			@include respond-to( 48.000em ){
+				font: $font-schedule-keynote-speaker;
+			}}
 		}
 
 		.session-room{
