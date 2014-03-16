@@ -49,7 +49,7 @@ var Countdown = (function($, window, document, undefined) {
             diff = diff-(minutes*60);
             var secs = diff;
             
-            if(days < 3){
+            if(days < 1){
               hours = hours + (days*24);
               self.stats.find('.days').addClass('visuallyhidden');
               self.stats.find('.seconds').removeClass('visuallyhidden');
