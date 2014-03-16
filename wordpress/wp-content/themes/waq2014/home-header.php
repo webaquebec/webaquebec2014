@@ -86,12 +86,12 @@ if(time() <= $start_unixtime){
 
   //$countdown_output .= '<span class="visuallyhidden">Il reste</span>';
 
-  $countdown_output .= '<div class="event-stats-group days'.($time_remaining->days > 100 ? ' large' : '').' '.($time_remaining->days > 3 ? '' : 'visuallyhidden').'"><div class="stat days">';
+  $countdown_output .= '<div class="event-stats-group days'.($time_remaining->days > 100 ? ' large' : '').' '.($time_remaining->days > 0 ? '' : 'visuallyhidden').'"><div class="stat days">';
       $countdown_output .= '<span class="stat-number">'.$time_remaining->days.'</span>';
       $countdown_output .= '<span class="stat-caption">jours</span>';
   $countdown_output .= '</div></div>';
 
-  if($time_remaining->days > 3){
+  if($time_remaining->days > 0){
       $hours_remaining = $time_remaining->h;
   }
 
@@ -109,7 +109,7 @@ if(time() <= $start_unixtime){
 
 
   $countdown_output .= '<span class="visuallyhidden">et</span>';
-  $countdown_output .= '<div class="event-stats-group seconds '.($time_remaining->days > 3 ? 'visuallyhidden' : '').'"><div class="stat seconds">';
+  $countdown_output .= '<div class="event-stats-group seconds '.($time_remaining->days > 0 ? 'visuallyhidden' : '').'"><div class="stat seconds">';
       $countdown_output .= '<span class="stat-number">'.$time_remaining->s.'</span>';
       $countdown_output .= '<span class="stat-caption">secondes</span>';
   $countdown_output .= '</div></div>';
