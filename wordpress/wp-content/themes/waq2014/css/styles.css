@@ -2796,19 +2796,19 @@ aside.highlight .social .linkedin {
 }
 /* line 19, ../sass/includes/_theme.scss */
 .l-page-wrapper.highlight-libeo, .l-page-wrapper.single-page.salle-libeo {
-  border-color: #ba0046;
+  border-color: #002d44;
 }
 /* line 24, ../sass/includes/_theme.scss */
 .l-page-wrapper.highlight-ixmedia, .l-page-wrapper.single-page.salle-ixmedia {
-  border-color: #00d3b8;
+  border-color: #1d1d1b;
 }
 /* line 29, ../sass/includes/_theme.scss */
 .l-page-wrapper.highlight-bell, .l-page-wrapper.single-page.salle-bell {
-  border-color: #ffca31;
+  border-color: #0061a1;
 }
 /* line 34, ../sass/includes/_theme.scss */
 .l-page-wrapper.highlight-o2web, .l-page-wrapper.single-page.salle-o2web {
-  border-color: #64009e;
+  border-color: #dd0d14;
 }
 /* line 39, ../sass/includes/_theme.scss */
 .l-page-wrapper.highlight-grand-hall, .l-page-wrapper.single-page.salle-grand-hall {
@@ -2816,17 +2816,17 @@ aside.highlight .social .linkedin {
 }
 /* line 43, ../sass/includes/_theme.scss */
 .l-page-wrapper.single-page.salle-libeo {
-  border-color: #ba0046;
+  border-color: #002d44;
 }
 /* line 46, ../sass/includes/_theme.scss */
 .l-page-wrapper.single-page.salle-libeo .home {
-  background-color: #ba0046;
+  background-color: #002d44;
   background-image: none;
 }
 /* line 52, ../sass/includes/_theme.scss */
 .l-page-wrapper.single-page.salle-libeo .event-back-link, .l-page-wrapper.single-page.salle-libeo .page-content .back-link,
 .l-page-wrapper.single-page.salle-libeo .page-content .back-link {
-  background-image: url("../img/icon-arrow-left-libeo.png");
+  background-image: url("../img/icon-arrow-left-white.png");
 }
 /* line 56, ../sass/includes/_theme.scss */
 .l-page-wrapper.single-page.salle-libeo .page-content .content .questions li {
@@ -2834,17 +2834,17 @@ aside.highlight .social .linkedin {
 }
 /* line 61, ../sass/includes/_theme.scss */
 .l-page-wrapper.single-page.salle-ixmedia {
-  border-color: #00d3b8;
+  border-color: #1d1d1b;
 }
 /* line 64, ../sass/includes/_theme.scss */
 .l-page-wrapper.single-page.salle-ixmedia .home {
-  background-color: #00d3b8;
+  background-color: #1d1d1b;
   background-image: none;
 }
 /* line 70, ../sass/includes/_theme.scss */
 .l-page-wrapper.single-page.salle-ixmedia .event-back-link, .l-page-wrapper.single-page.salle-ixmedia .page-content .back-link,
 .l-page-wrapper.single-page.salle-ixmedia .page-content .back-link {
-  background-image: url("../img/icon-arrow-left-ixmedia.png");
+  background-image: url("../img/icon-arrow-left-white.png");
 }
 /* line 74, ../sass/includes/_theme.scss */
 .l-page-wrapper.single-page.salle-ixmedia .page-content .content .questions li {
@@ -2852,17 +2852,17 @@ aside.highlight .social .linkedin {
 }
 /* line 79, ../sass/includes/_theme.scss */
 .l-page-wrapper.single-page.salle-bell {
-  border-color: #ffca31;
+  border-color: #0061a1;
 }
 /* line 82, ../sass/includes/_theme.scss */
 .l-page-wrapper.single-page.salle-bell .home {
-  background-color: #ffca31;
+  background-color: #0061a1;
   background-image: none;
 }
 /* line 88, ../sass/includes/_theme.scss */
 .l-page-wrapper.single-page.salle-bell .event-back-link, .l-page-wrapper.single-page.salle-bell .page-content .back-link,
 .l-page-wrapper.single-page.salle-bell .page-content .back-link {
-  background-image: url("../img/icon-arrow-left-bell.png");
+  background-image: url("../img/icon-arrow-left-white.png");
 }
 /* line 92, ../sass/includes/_theme.scss */
 .l-page-wrapper.single-page.salle-bell .page-content .content .questions li {
@@ -2870,11 +2870,11 @@ aside.highlight .social .linkedin {
 }
 /* line 97, ../sass/includes/_theme.scss */
 .l-page-wrapper.single-page.salle-o2web {
-  border-color: #64009e;
+  border-color: #dd0d14;
 }
 /* line 100, ../sass/includes/_theme.scss */
 .l-page-wrapper.single-page.salle-o2web .home {
-  background-color: #64009e;
+  background-color: #dd0d14;
   background-image: none;
 }
 /* line 106, ../sass/includes/_theme.scss */
