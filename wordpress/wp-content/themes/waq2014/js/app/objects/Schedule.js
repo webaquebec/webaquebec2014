@@ -289,7 +289,7 @@ var Schedule = ( function( $, window, document, undefined ) {
                 var $this = $(this),
                     href = $(this).attr('href'),
                     currentHash = href.lastIndexOf('#'),
-                    url = href.substring(0, currentHash);
+                    url = (currentHash == -1) ? href : href.substring(0, currentHash);
 
                 $this.attr('href', url + hash);
             });
