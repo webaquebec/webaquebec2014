@@ -60,9 +60,14 @@ var Schedule = ( function( $, window, document, undefined ) {
 
         // Initialize layout
         initLayout: function() {
-            var self = this,
-                index = self.currentSlide.index(),
-                offset = index / self.nbSlides * - 100;
+            var self        = this,
+                index       = self.currentSlide.index(),
+                offset      = index / self.nbSlides * - 100,
+                dayIndex    = 0,
+                date        = new Date(),
+                currentDay  = date.getDate(),
+                appendDay   = '',
+                day;
 
             self.bindEvents();
             self.setHeight( self.currentSlide );
@@ -73,6 +78,45 @@ var Schedule = ( function( $, window, document, undefined ) {
             self.buttons.eq( index ).addClass( WAQ.Constants.isActiveClass );
             self.slides.filter(':not(.active)').find('a, button').attr('tabindex', '-1');
             self.currentSlide.find('a, button').removeAttr('tabindex');
+
+            if( window.location.hash == "#mercredi"){
+                self.changeSlide( 0 );
+                appendDay = "#mercredi";
+            }
+            else if( window.location.hash == "#jeudi"){
+                self.changeSlide( 1 );
+                appendDay = "#jeudi";
+            }
+            else if( window.location.hash == "#vendredi"){
+                self.changeSlide( 2 );
+                appendDay = "#vendredi";
+            }
+            else if( currentDay = 19 ){
+                self.changeSlide( 0 );
+            }
+            else if( currentDay = 20 ){
+                self.changeSlide( 1 );
+            }
+            else if( currentDay = 21 ){
+                self.changeSlide( 2 );
+            }
+
+            self.buttons.each(function(){
+                switch( $(this).index() ){
+                    case 0:
+                        day = "mercredi"
+                    break;
+                    case 1:
+                        day = "jeudi"
+                    break;
+                    case 2:
+                        day = "vendredi"
+                    break;
+                }
+                $(this).attr('data-day', day);
+            });
+
+            self.appendAllDate( appendDay );
         },
 
         // Bind events
@@ -86,6 +130,9 @@ var Schedule = ( function( $, window, document, undefined ) {
                 self.scrolling = false;
 
                 self.changeSlide( index );
+
+                window.location.hash = $this.attr('data-day');
+                self.replaceAllDate( '#' + $this.attr('data-day') );
             });
 
             self.filterButtons.on( 'click', function() {
@@ -222,6 +269,30 @@ var Schedule = ( function( $, window, document, undefined ) {
             if( typeof( room ) !== 'undefined' ){
                 $pageWrapper.addClass( 'highlight-' + room );
             }
+        },
+
+        appendAllDate: function( hash ) {
+            var self = $(this);
+
+            $('.session .session-title a:not([href*="#"])').each(function(){
+                var $this = $(this),
+                    href = $(this).attr('href');
+
+                $this.attr('href', href + hash);
+            });
+        },
+
+        replaceAllDate: function( hash ) {
+            var self = $(this);
+
+            $('.session .session-title a').each(function(){
+                var $this = $(this),
+                    href = $(this).attr('href'),
+                    currentHash = href.lastIndexOf('#'),
+                    url = href.substring(0, currentHash);
+
+                $this.attr('href', url + hash);
+            });
         }
     };
 

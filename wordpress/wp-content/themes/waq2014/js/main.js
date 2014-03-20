@@ -57,7 +57,7 @@ var LIBEO;
 
         // Scroll to active hash on page load
         var hash = window.location.hash;
-        if ( hash != '' ) {
+        if ( hash != '' && hash != "#mercredi" && hash != "#jeudi" && hash != "#vendredi" ) {
 
             // Source : http://stackoverflow.com/questions/3659072/jquery-disable-anchor-jump-when-loading-a-page
             window.scrollTo(0, $( hash ).offset().top - 64);
@@ -115,6 +115,15 @@ var LIBEO;
 
         // Ajustement de la hauteur de la page
         $('.l-page-wrapper').css('min-height', $(window).height() - 30);
+
+        // Hash sur le lien de retour de la page single
+        var backlink = $('.event-back-link a'),
+            hash = window.location.hash,
+            href = backlink.attr('href'),
+            currentHash = href.lastIndexOf('#'),
+            url = href.substring(0, currentHash);
+
+        backlink.attr('href', url + hash);
 
     });
 
