@@ -91,13 +91,13 @@ var Schedule = ( function( $, window, document, undefined ) {
                 self.changeSlide( 2 );
                 appendDay = "#vendredi";
             }
-            else if( currentDay = 19 ){
+            else if( currentDay == 19 ){
                 self.changeSlide( 0 );
             }
-            else if( currentDay = 20 ){
+            else if( currentDay == 20 ){
                 self.changeSlide( 1 );
             }
-            else if( currentDay = 21 ){
+            else if( currentDay == 21 ){
                 self.changeSlide( 2 );
             }
 
