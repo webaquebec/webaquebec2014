@@ -117,7 +117,7 @@ var LIBEO;
         $('.l-page-wrapper').css('min-height', $(window).height() - 30);
 
         // Hash sur le lien de retour de la page single
-        var backlink = $('.event-back-link a'),
+        var backlink = $('.event-back-link a, .back-link a'),
             hash = window.location.hash,
             href = backlink.attr('href'),
             currentHash = href.lastIndexOf('#'),
