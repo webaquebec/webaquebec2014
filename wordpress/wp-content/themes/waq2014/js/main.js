@@ -121,7 +121,7 @@ var LIBEO;
             hash = window.location.hash,
             href = backlink.attr('href'),
             currentHash = href.lastIndexOf('#'),
-            url = href.substring(0, currentHash);
+            url = (currentHash == -1) ? href :href.substring(0, currentHash);
 
         backlink.attr('href', url + hash);
 
