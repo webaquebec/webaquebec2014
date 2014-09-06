@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<!--[if IE 7]>
+<html class="ie ie7 no-js" lang="fr">
+<![endif]-->
+<!--[if IE 8]>
+<html class="ie ie8 no-js" lang="fr">
+<![endif]-->
+<!--[if !(IE 7) | !(IE 8)  ]><!-->
+<html class="no-js" lang="fr">
+<!--<![endif]-->
+<head>
+	<meta charset="UTF-8" />
+	<!-- Set the viewport width to device width for mobile -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="profile" href="http://gmpg.org/xfn/11" />
+	<link rel="pingback" href="xmlrpc.php" />
+
+	<title>Web à Québec</title>
+
+	<meta name="dcterms.title" content="Web à Québec" />
+	<meta name="description" content="Le Web à Québec c'est trois jours de rencontres par et pour les gens qui imaginent le web." />
+	<meta name="dcterms.description" content="Le Web à Québec c'est trois jours de rencontres par et pour les gens qui imaginent le web." />
+	<meta property="og:title" content="Web à Québec" />
+	<meta property="og:description" content="Le Web à Québec c'est trois jours de rencontres par et pour les gens qui imaginent le web." />
+	<meta property="og:image" content="http://webaquebec.org/wp-content/themes/waq2014/img/fb-image.png" />
+	<meta property="og:type" content="website" />
+	<meta property="fb:app_id" content="604301956284044" />
+	<meta property="og:url" content="http://webaquebec.org" />
+	
+	<link rel='stylesheet' id='conferencer-css'  href='wp-content/plugins/conferencer/css/screen.css%3Fver=0.3.css' type='text/css' media='all' />
+<link rel='stylesheet' id='fonts-css'  href='http://fonts.googleapis.com/css?family=Lusitana%3A400%2C700%7CRoboto%3A400%2C300%2C500%2C700%2C900%7CRoboto+Condensed%3A400%2C700%2C300&#038;ver=3.8.1' type='text/css' media='all' />
+<link rel='stylesheet' id='styles-css'  href='wp-content/themes/waq2014/css/styles.css%3Fver=3.8.1.css' type='text/css' media='all' />
+<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js?ver=1.10.2'></script>
+<script type='text/javascript' src='wp-content/plugins/mailchimp/js/scrollTo.js%3Fver=1.4.1'></script>
+<script type='text/javascript' src='wp-includes/js/jquery/jquery.form.min.js%3Fver=3.37.0'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var mailchimpSF = {"ajax_url":"http:\/\/webaquebec.org\/"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='wp-content/plugins/mailchimp/js/mailchimp.js%3Fver=1.4.1'></script>
+<script type='text/javascript' src='wp-content/themes/waq2014/js/vendor/modernizr-2.6.2.min.js%3Fver=2.6.2'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="xmlrpc.php%3Frsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="wp-includes/wlwmanifest.xml" /> 
+
+
+	<!-- IE Fix for HTML5 Tags -->
+	<!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<script type="text/javascript">
+  	var save_user_sessions_ajax = "http://webaquebec.org/wp-admin/admin-ajax.php?action=save_user_sessions&nonce=3441bc6252"
+var get_user_sessions_ajax = "http://webaquebec.org/wp-admin/admin-ajax.php?action=get_user_sessions&nonce=a02e8c0472"
+var fb_init_ajax = "http://webaquebec.org/wp-admin/admin-ajax.php?action=fb_init&nonce=260d76208e"
+var user_sessions = []
+var base_url = "http://webaquebec.org"
+var template_url = "http://webaquebec.org/wp-content/themes/waq2014"
+	</script>
+
+</head>
+<body class="not-zoomed">
+
+
+<!-- Page wrapper -->
+<div class="l-page-wrapper homepage " itemscope itemtype="http://schema.org/Event">
+
+  <!-- Home section -->
+<header class="home">
+    <div class="l-section-wrapper">
+
+        <a href="index.html#infos" class="visuallyhidden focusable l-a11y">Passer au contenu</a>
+
+        <h1 itemprop="name" class="visuallyhidden">Le Web à Québec</h1>
+
+        <div id="nav-main">
+            <div class="snapmenu-wrapper">
+
+                <div class="snapmenu-logo">
+                    <a href="index.html">
+                        <img src="wp-content/themes/waq2014/img/logo.png" alt="">
+                    </a>
+                </div>
+
+                <div class="snapmenu-mobile-buttons">
+                    <a href="index.html#horaire">Horaire</a>
+                    <button class="btn-toggle-menu">
+                        <span class="visuallyhidden">Ouvrir le menu</span>
+                    </button>
+                </div>
+
+                <nav role="navigation" class="nav-main-wrapper">
+                    <ul itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+                        <li><a itemprop="url" href="index.html#horaire"><span itemprop="name">Horaire</span></a></li><li><a itemprop="url" href="index.html#lieu-et-coordonnees"><span itemprop="name">Lieu et coordonnées</span></a></li><li><a itemprop="url" href="index.html#blogue"><span itemprop="name">Blogue</span></a></li><li><a itemprop="url" href="index.html#partenaires"><span itemprop="name">Partenaires</span></a></li><li><a itemprop="url" href="index.html#a-propos"><span itemprop="name">À propos</span></a></li>                    </ul>
+                </nav>
+
+                <a href="https://www.eventbrite.com/e/billets-web-a-quebec-edition-2014-8015888739" class="event-subscribe event-subscribe-menu">Achetez vos billets</a>
+            </div>
+        </div>
+
+        <div id="infos" class="event-description go-to-content">
+            <p class="strong">Web à Québec</p>
+            <p class="date">
+                Du <time itemprop="startDate" datetime="2014-03-19T18:00:00+00:00">19</time>                au <time itemprop="endDate" datetime="2014-03-21T09:00:00+00:00">21</time> mars 2014            </p>
+            <p class="location" itemprop="location" itemscope itemtype="http://schema.org/Place">
+                <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                    <span itemprop="name">Espace 400<sup>e</sup> Bell</span>,
+                    <span itemprop="addressRegion">Québec</span>
+                </span>
+            </p>
+        </div>
+
+        <div class="event-stats">
+                        <div class="event-stats-group conference">
+                <div class="stat conference">
+                    <span class="stat-number">45</span>
+                    <span class="stat-caption">conférences</span>
+                </div>
+            </div>
+            <div class="event-stats-group workshop">
+                <div class="stat workshop">
+                    <span class="stat-number">7</span>
+                    <span class="stat-caption">keynotes</span>
+                </div>
+            </div>
+            <div class="event-stats-group days-total">
+                <div class="stat days-total">
+                    <span class="stat-number">3</span>
+                    <span class="stat-caption">jours</span>
+                </div>
+            </div>
+            <div class="event-stats-group city">
+                <div class="stat city">
+                    <span class="stat-number">1</span>
+                    <span class="stat-caption">ville</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="event-subscribe event-subscribe-big">
+          <a href="https://www.eventbrite.com/e/billets-web-a-quebec-edition-2014-8015888739">
+              <span>Achetez</span>
+              <span>vos billets</span>
+              <span>dès maintenant</span>
+              <img src="wp-content/themes/waq2014/img/logo-eventbrite.png" alt="">
+          </a>
+        </div>
+
+        <div class="event-speakers">
+            <a href="sessions/intl-de/index.html"><figure itemprop="performer" itemscope itemtype="http://schema.org/Person"><figcaption><span class="name" itemprop="name">David Eaves</span><span class="job" itemprop="jobTitle">Open Data Expert</span></figcaption><span class="img-crop"><img class="speaker-thumb" src="wp-content/uploads/2014/01/davideaves-227x190.jpg" alt="" itemprop="image" /></span></figure></a><a href="sessions/la-societe-en-reseau-a-ere-twitter/index.html"><figure itemprop="performer" itemscope itemtype="http://schema.org/Person"><figcaption><span class="name" itemprop="name">Sylvain Carle</span><span class="job" itemprop="jobTitle">Évangéliste Techno, Twitter</span></figcaption><span class="img-crop"><img class="speaker-thumb" src="wp-content/uploads/2014/01/sylvain_carle-227x190.png" alt="" itemprop="image" /></span></figure></a><a href="sessions/data-driven-future/index.html"><figure itemprop="performer" itemscope itemtype="http://schema.org/Person"><figcaption><span class="name" itemprop="name">Hilary Mason</span><span class="job" itemprop="jobTitle">Data Scientist in Residence, Accel Partners.  Former Chief Scientist, bitly.</span></figcaption><span class="img-crop"><img class="speaker-thumb" src="wp-content/uploads/2014/01/hilary_mason-227x190.jpg" alt="" itemprop="image" /></span></figure></a>        </div>
+
+    </div>
+
+    <video id="video_background" poster="http://webaquebec.org/wp-content/themes/waq2014/img/video-poster.png" preload="auto" autoplay="autoplay" loop="loop" muted="muted">
+        <source src="http://webaquebec.org/wp-content/themes/waq2014/video/loop.webm" type="video/webm">
+        <source src="http://webaquebec.org/wp-content/themes/waq2014/video/loop.mp4" type="video/mp4">
+        Video not supported
+    </video>
+</header><!-- end of Home section --><!-- Schedule section -->
+<section id="horaire" class="schedule">
+    <div class="l-section-wrapper">
+
+        <header>
+            <h2>Horaire</h2>
+            <div class="schedule-filters">
+                <h3>Filtrer par thématique</h3>
+                <ul>
+                    <li><button data-slug="filter-all">Tous</button></li><li><button data-slug="filter-accessibilite">Accessibilité</button></li><li><button data-slug="filter-analytics">Analytics</button></li><li><button data-slug="filter-commerce-electronique">Commerce électronique</button></li><li><button data-slug="filter-contenu">Contenu</button></li><li><button data-slug="filter-culture">Culture</button></li><li><button data-slug="filter-design">Design</button></li><li><button data-slug="filter-donnees">Données</button></li><li><button data-slug="filter-education">Éducation</button></li><li><button data-slug="filter-entrepreneuriat">Entrepreneuriat</button></li><li><button data-slug="filter-gouvernemental">Gouvernemental</button></li><li><button data-slug="filter-legal">Légal</button></li><li><button data-slug="filter-logiciel-libre">Logiciel libre</button></li><li><button data-slug="filter-medias-sociaux">Médias Sociaux</button></li><li><button data-slug="filter-mobilite">Mobilité</button></li><li><button data-slug="filter-programmation">Programmation</button></li><li><button data-slug="filter-ux">UX</button></li>                </ul>
+            </div>
+        </header>
+
+        <div class="facebook-connect">
+            <button class="facebook-login">Activez <em>Facebook Connect</em></button>
+            <button class="facebook-logout">Désactiver <em>Facebook Connect</em></button>
+            <p>Activez la fonction <em>Facebook Connect</em> et  enregistrez votre horaire pour le WAQ.</br>
+                Vous aurez accès à la fonction sur tous vos périphériques.</p>
+        </div>
+      
+        <div class="schedule-wrapper"><header class="days-buttons"><button><time datetime="2014-03-19"><span>mercredi 19 mars</span></time></button><button><time datetime="2014-03-20"><span>jeudi 20 mars</span></time></button><button><time datetime="2014-03-21"><span>vendredi 21 mars</span></time></button></header><div class="js-slider"><div class="js-slider-container"><div class="day-wrapper slide"><table class="grid"><caption>Événements pour le <time datetime="2014-03-19"><span>mercredi 19 mars</span></time></caption><thead><tr><th id="vide" class="column-time-slot"></th><th class="column_salle-libeo">Salle Libéo</th><th class="column_salle-ixmedia">Salle iXmédia</th><th class="column_salle-bell">Salle Bell</th><th class="column_salle-o2web">Salle O2 Web</th></tr></thead><tbody><tr><td class="time-slot">13:00</td>
+				<td data-session-id="1386" headers="vide" class="session filter-all break no-speaker" colspan="4"><div class="session-wrapper"><!-- position: relative --><div class="session-content"><!-- table-cell -->
+    	<div class="session-content-wrapper"><!-- position: relative --><span class="session-title" itemprop="name">Ouverture et accueil</span><span class="visuallyhidden">Durée : 1 heure </span></div></div><button class="session-bookmark add"><span class="visuallyhidden">Ajouter cette conférence à mon horaire</span></button></div></td>
+			</tr><tr><td class="time-slot">14:00</td>
+				<td data-session-id="752" headers="vide" class="session filter-all filter-culture filter-donnees filter-medias-sociaux keynote salle-grand-hall speaker-thumb" colspan="4" itemprop="subEvent" itemscope itemtype="http://schema.org/Event"><div class="session-wrapper"><!-- position: relative --><div class="session-content"><!-- table-cell -->
+    	<div class="session-content-wrapper"><!-- position: relative --><span class="session-title" itemprop="name"><a href='sessions/la-societe-en-reseau-a-ere-twitter/index.html'>La société en réseau (à l'ère Twitter)</a></span><span class="session-speaker" itemprop="performer" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Sylvain Carle</span></span><span class="session-room" itemprop="location" itemscope itemtype="http://schema.org/Place"><span itemprop="name">Grand Hall</span></span><span class="session-time-slot" itemprop="subEvent"><span><time itemprop="startDate" datetime="2014-03-19T14:00:00+00:00">14:00</time></span> à <span><time itemprop="endDate" datetime="2014-03-19T15:30:00+00:00">15:30</time></span></span></div></div><span class="session-speaker-thumb"><!-- position: absolute --><img src="wp-content/uploads/2014/01/sylvain_carle-187x160.png" alt=""></span><button class="session-bookmark add"><span class="visuallyhidden">Ajouter cette conférence à mon horaire</span></button></div></td>
+			</tr><tr><td class="time-slot">15:30</td>
+				<td data-session-id="754" headers="vide" class="session filter-all keynote salle-grand-hall speaker-thumb" colspan="4" itemprop="subEvent" itemscope itemtype="http://schema.org/Event"><div class="session-wrapper"><!-- position: relative --><div class="session-content"><!-- table-cell -->
+    	<div class="session-content-wrapper"><!-- position: relative --><span class="session-title" itemprop="name"><a href='sessions/sautez-sur-la-prochaine-courbe/index.html'>Sautez sur la prochaine courbe</a></span><span class="session-speaker" itemprop="performer" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Jean-Marc De Jonghe</span></span><span class="session-room" itemprop="location" itemscope itemtype="http://schema.org/Place"><span itemprop="name">Grand Hall</span></span><span class="session-time-slot" itemprop="subEvent"><span><time itemprop="startDate" datetime="2014-03-19T15:30:00+00:00">15:30</time></span> à <span><time itemprop="endDate" datetime="2014-03-19T17:00:00+00:00">17:00</time></span></span></div></div><span class="session-speaker-thumb"><!-- position: absolute --><img src="wp-content/uploads/2014/03/JeanMarcDeJonghe-187x160.jpeg" alt=""></span><button class="session-bookmark add"><span class="visuallyhidden">Ajouter cette conférence à mon horaire</span></button></div></td>
+			</tr><tr><td class="time-slot">17:00</td>
+				<td data-session-id="1358" headers="vide" class="session filter-all break no-speaker" colspan="4"><div class="session-wrapper"><!-- position: relative --><div class="session-content"><!-- table-cell -->
+    	<div class="session-content-wrapper"><!-- position: relative --><span class="session-title" itemprop="name">Cocktails et bouchées (Une gracieuseté offerte par Piranha)</span><span class="visuallyhidden">Durée : 1 heure </span></div></div><button class="session-bookmark add"><span class="visuallyhidden">Ajouter cette conférence à mon horaire</span></button></div></td>
+			</tr><tr><td class="time-slot">18:00</td>
+				<td data-session-id="756" headers="vide" class="session filter-all filter-entrepreneuriat filter-ux keynote salle-grand-hall speaker-thumb" colspan="4" itemprop="subEvent" itemscope itemtype="http://schema.org/Event"><div class="session-wrapper"><!-- position: relative --><div class="session-content"><!-- table-cell -->
+    	<div class="session-content-wrapper"><!-- position: relative --><span class="session-title" itemprop="name"><a href='sessions/industrial-case-for-3d-motion-control/index.html'>The Industrial Case for 3D Motion Control</a></span><span class="session-speaker" itemprop="performer" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Dan Gill</span></span><span class="session-room" itemprop="location" itemscope itemtype="http://schema.org/Place"><span itemprop="name">Grand Hall</span></span><span class="session-time-slot" itemprop="subEvent"><span><time itemprop="startDate" datetime="2014-03-19T18:00:00+00:00">18:00</time></span> à <span><time itemprop="endDate" datetime="2014-03-19T19:30:00+00:00">19:30</time></span></span></div></div><span class="session-speaker-thumb"><!-- position: absolute --><img src="wp-content/uploads/2014/01/Dan-Gill-e1390417844619-187x160.jpg" alt=""></span><button class="session-bookmark add"><span class="visuallyhidden">Ajouter cette conférence à mon horaire</span></button></div></td>
+			</tr></tbody></table></div><div class="day-wrapper slide"><table class="grid"><caption>Événements pour le <time datetime="2014-03-20"><span>jeudi 20 mars</span></time></caption><thead><tr><th id="vide" class="column-time-slot"></th><th class="column_salle-libeo">Salle Libéo</th><th class="column_salle-ixmedia">Salle iXmédia</th><th class="column_salle-bell">Salle Bell</th><th class="column_salle-o2web">Salle O2 Web</th></tr></thead><tbody><tr><td class="time-slot">7:30</td>
+				<td data-session-id="1396" headers="vide" class="session filter-all break no-speaker" colspan="4"><div class="session-wrapper"><!-- position: relative --><div class="session-content"><!-- table-cell -->
+    	<div class="session-content-wrapper"><!-- position: relative --><span class="session-title" itemprop="name">Ouverture et accueil</span><span class="visuallyhidden">Durée : 1 heure </span></div></div><button class="session-bookmark add"><span class="visuallyhidden">Ajouter cette conférence à mon horaire</span></button></div></td>
+			</tr><tr><td class="time-slot">8:30</td>
+				<td data-session-id="758" headers="vide" class="session filter-all filter-culture filter-donnees keynote salle-grand-hall speaker-thumb" colspan="4" itemprop="subEvent" itemscope itemtype="http://schema.org/Event"><div class="session-wrapper"><!-- position: relative --><div class="session-content"><!-- table-cell -->
+    	<div class="session-content-wrapper"><!-- position: relative --><span class="session-title" itemprop="name"><a href='sessions/data-driven-future/index.html'>Our Data-Driven Future</a></span><span class="session-speaker" itemprop="performer" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hilary Mason</span></span><span class="session-room" itemprop="location" itemscope itemtype="http://schema.org/Place"><span itemprop="name">Grand Hall</span></span><span class="session-time-slot" itemprop="subEvent"><span><time itemprop="startDate" datetime="2014-03-20T08:30:00+00:00">8:30</time></span> à <span><time itemprop="endDate" datetime="2014-03-20T10:00:00+00:00">10:00</time></span></span></div></div><span class="session-speaker-thumb"><!-- position: absolute --><img src="wp-content/uploads/2014/01/hilary_mason-187x160.jpg" alt=""></span><button class="session-bookmark add"><span class="visuallyhidden">Ajouter cette conférence à mon horaire</span></button></div></td>
+			</tr><tr><td class="time-slot">10:00</td>
+				<td data-session-id="477" headers="vide" class="session filter-all break small no-speaker" colspan="4"><div class="session-wrapper"><!-- position: relative --><div class="session-content"><!-- table-cell -->
+    	<div class="session-content-wrapper"><!-- position: relative --><span class="session-title" itemprop="name">Pause-café</span><span class="visuallyhidden">Durée : 30 minutes</span></div></div><button class="session-bookmark add"><span class="visuallyhidden">Ajouter cette conférence à mon horaire</span></button></div></td>
+			</tr><tr><td class="time-slot">10:30</td>
+				<td data-session-id="694" class="session filter-all filter-donnees filter-logiciel-libre filter-programmation salle-libeo" itemprop="subEvent" itemscope itemtype="http://schema.org/Event"><div class="session-wrapper"><!-- position: relative --><div class="session-content"><!-- table-cell -->
+    	<div class="session-content-wrapper"><!-- position: relative --><span class="session-title" itemprop="name"><a href='sessions/logiciels-libres-dans-le-web-et-les-telecoms-similaires-ou-differents/index.html'>Logiciels libres dans le Web et les télécoms: similaires ou différents ?</a></span><span class="session-speaker" itemprop="performer" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Gregory Eric Sanderson</span></span><span class="session-room" itemprop="location" itemscope itemtype="http://schema.org/Place"><span itemprop="name">Salle Libéo</span></span><span class="visuallyhidden">Durée : 45 minutes</span></div></div><button class="session-bookmark add"><span class="visuallyhidden">Ajouter cette conférence à mon horaire</span></button></div></td>
+			
+				<td data-session-id="781" class="session filter-all filter-culture filter-design filter-ux salle-ixmedia speaker-thumb" itemprop="subEvent" itemscope itemtype="http://schema.org/Event"><div class="session-wrapper"><!-- position: relative --><div class="session-content"><!-- table-cell -->
+    	<div class="session-content-wrapper"><!-- position: relative --><span class="session-title" itemprop="name"><a href='sessions/respect-authenticite-et-design/index.html'>Respect, authenticité et design</a></span><span class="session-speaker" itemprop="performer" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Cynthia Savard Saucier</span></span><span class="session-room" itemprop="location" itemscope itemtype="http://schema.org/Place"><span itemprop="name">Salle iXmédia</span></span><span class="visuallyhidden">Durée : 45 minutes</span></div></div><button class="session-bookmark add"><span class="visuallyhidden">Ajouter cette conférence à mon horaire</span></button></div></td>
+			
+				<td data-session-id="800" class="session filter-all filter-medias-sociaux salle-bell speaker-thumb" itemprop="subEvent" itemscope itemtype="http://schema.org/Event"><div class="session-wrapper"><!-- position: relative --><div class="session-content"><!-- table-cell -->
+    	<div class="session-content-wrapper"><!-- position: relative --><span class="session-title" itemprop="name"><a href='sessions/la-demesure-de-le-reputation/index.html'>La démesure de l'e-réputation?</a></span><span class="session-speaker" itemprop="performer" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Francine Charest</span></span><span class="session-room" itemprop="location" itemscope itemtype="http://schema.org/Place"><span itemprop="name">Salle Bell</span></span><span class="visuallyhidden">Durée : 45 minutes</span></div></div><button class="session-bookmark add"><span class="visuallyhidden">Ajouter cette conférence à mon horaire</span></button></div></td>
+			
+				<td data-session-id="1027" class="session filter-all filter-donnees filter-mobilite salle-o2web speaker-thumb" itemprop="subEvent" itemscope itemtype="http://schema.org/Event"><div class="session-wrapper"><!-- position: relative --><div class="session-content"><!-- table-cell -->
+    	<div class="session-content-wrapper"><!-- position: relative --><span class="session-title" itemprop="name"><a href='sessions/mobilite-connectivite-futur-aujourd-hui/index.html'>Mobilité et connectivité: le futur aujourd’hui!</a></span><span class="session-speaker" itemprop="performer" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Dominic Gagnon</span></span><span class="session-room" itemprop="location" itemscope itemtype="http://schema.org/Place"><span itemprop="name">Salle O2 Web</span></span><span class="visuallyhidden">Durée : 45 minutes</span></div></div><button class="session-bookmark add"><span class="visuallyhidden">Ajouter cette conférence à mon horaire</span></button></div></td>
+			</tr><tr><td class="time-slot">11:15</td>
+				<td data-session-id="988" class="session filter-all filter-programmation salle-libeo" itemprop="subEvent" itemscope itemtype="http://schema.org/Event"><div class="session-wrapper"><!-- position: relative --><div class="session-content"><!-- table-cell -->
+    	<div class="session-content-wrapper"><!-- position: relative --><span class="session-title" itemprop="name"><a href='sessions/modularite-css/index.html'>Modularité CSS</a></span><span class="session-speaker" itemprop="performer" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Damien Van Der Windt</span></span><span class="session-room" itemprop="location" itemscope itemtype="http://schema.org/Place"><span itemprop="name">Salle Libéo</span></span><span class="visuallyhidden">Durée : 45 minutes</span></div></div><button class="session-bookmark add"><span class="visuallyhidden">Ajouter cette conférence à mon horaire</span></button></div></td>
+			
+				<td data-session-id="783" class="session filter-all filter-commerce-electronique filter-design filter-ux salle-ixmedia speaker-thumb" itemprop="subEvent" itemscope itemtype="http://schema.org/Event"><div class="session-wrapper"><!-- position: relative --><div class="session-content"><!-- table-cell -->
+    	<div class="session-content-wrapper"><!-- position: relative --><span class="session-title" itemprop="name"><a href='sessions/publicite-en-ligne-les-ingredients-du-succes-devoiles-par-leye-tracking/index.html'>Publicité en ligne: les ingrédients du succès dévoilés par l'eye-tracking</a></span><span class="session-speaker" itemprop="performer" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Stéphanie Le Rouzic</span></span><span class="session-room" itemprop="location" itemscope itemtype="http://schema.org/Place"><span itemprop="name">Salle iXmédia</span></span><span class="visuallyhidden">Durée : 45 minutes</span></div></div><button class="session-bookmark add"><span class="visuallyhidden">Ajouter cette conférence à mon horaire</span></button></div></td>
+			
+				<td data-session-id="796" class="session filter-all filter-medias-sociaux salle-bell speaker-thumb" itemprop="subEvent" itemscope itemtype="http://schema.org/Event"><div class="session-wrapper"><!-- position: relative --><div class="session-content"><!-- table-cell -->
+    	<div class="session-content-wrapper"><!-- position: relative --><span class="session-title" itemprop="name"><a href='sessions/dessine-moi-un-lolcat/index.html'>Dessine-moi un lolcat</a></span><span class="session-speaker" itemprop="performer" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Antoine Dupin</span></span><span class="session-room" itemprop="location" itemscope itemtype="http://schema.org/Place"><span itemprop="name">Salle Bell</span></span><span class="visuallyhidden">Durée : 45 minutes</span></div></div><button class="session-bookmark add"><span class="visuallyhidden">Ajouter cette conférence à mon horaire</span></button></div></td>
+			
+				<td data-session-id="786" class="session filter-all filter-analytics filter-commerce-electronique filter-donnees salle-o2web speaker-thumb" itemprop="subEvent" itemscope itemtype="http://schema.org/Event"><div class="session-wrapper"><!-- position: relative --><div class="session-content"><!-- table-cell -->
+    	<div class="session-content-wrapper"><!-- position: relative --><span class="session-title" itemprop="name"><a href='sessions/automatisez-votre-marketing-web-une-vision-presente-et-future-du-marketing/index.html'>Automatisez votre marketing Web: une vision présente et future du marketing</a></span><span class="session-speaker" itemprop="performer" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Jean-François Renaud</span></span><span class="session-room" itemprop="location" itemscope itemtype="http://schema.org/Place"><span itemprop="name">Salle O2 Web</span></span><span class="visuallyhidden">Durée : 45 minutes</span></div></div><button class="session-bookmark add"><span class="visuallyhidden">Ajouter cette conférence à mon horaire</span></button></div></td>
+			</tr><tr><td class="time-slot">12:00</td>
+				<td data-session-id="495" headers="vide" class="session filter-all break no-speaker" colspan="4"><div class="session-wrapper"><!-- position: relative --><div class="session-content"><!-- table-cell -->
+    	<div class="session-content-wrapper"><!-- position: relative --><span class="session-title" itemprop="name">Dîner</span><span class="visuallyhidden">Durée : 1 heure 15 minutes</span></div></div><button class="session-bookmark add"><span class="visuallyhidden">Ajouter cette conférence à mon horaire</span></button></div></td>
+			</tr><tr><td class="time-slot">13:15</td>
+				<td data-session-id="772" class="session filter-all filter-analytics filter-medias-sociaux salle-libeo speaker-thumb" itemprop="subEvent" itemscope itemtype="http://schema.org/Event"><div class="session-wrapper"><!-- position: relative --><div class="session-content"><!-- table-cell -->
+    	<div class="session-content-wrapper"><!-- position: relative --><span class="session-title" itemprop="name"><a href='sessions/les-defis-du-referencement-en-2014/index.html'>Les défis du référencement en 2014</a></span><span class="session-speaker" itemprop="performer" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Aleksandra Logist</span></span><span class="session-room" itemprop="location" itemscope itemtype="http://schema.org/Place"><span itemprop="name">Salle Libéo</span></span><span class="visuallyhidden">Durée : 45 minutes</span></div></div><button class="session-bookmark add"><span class="visuallyhidden">Ajouter cette conférence à mon horaire</span></button></div></td>
+			
+				<td data-session-id="837" class="session filter-all filter-gouvernemental filter-medias-sociaux salle-ixmedia speaker-thumb" itemprop="subEvent" itemscope itemtype="http://schema.org/Event"><div class="session-wrapper"><!-- position: relative --><div class="session-content"><!-- table-cell -->
+    	<div class="session-content-wrapper"><!-- position: relative --><span class="session-title" itemprop="name"><a href='sessions/le-web-2-0-pour-reinventer-les-urgences/index.html'>Le Web 2.0 pour réinventer les urgences</a></span><span class="session-speaker" itemprop="performer" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Patrick Archambault </span></span><span class="session-room" itemprop="location" itemscope itemtype="http://schema.org/Place"><span itemprop="name">Salle iXmédia</span></span><span class="visuallyhidden">Durée : 45 minutes</span></div></div><button class="session-bookmark add"><span class="visuallyhidden">Ajouter cette conférence à mon horaire</span></button></div></td>
+			
+				<td data-session-id="1218" class="session filter-all filter-design filter-mobilite filter-ux salle-bell speaker-thumb" itemprop="subEvent" itemscope itemtype="http://schema.org/Event"><div class="session-wrapper"><!-- position: relative --><div class="session-content"><!-- table-cell -->
+    	<div class="session-content-wrapper"><!-- position: relative --><span class="session-title" itemprop="name"><a href='sessions/web-site-pattern-le-design-en-mode-solution/index.html'>Web site pattern : le design en mode solution</a></span><span class="session-speaker" itemprop="performer" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Jean-Sébastien Daigle</span></span><span class="session-room" itemprop="location" itemscope itemtype="http://schema.org/Place"><span itemprop="name">Salle Bell</span></span><span class="visuallyhidden">Durée : 45 minutes</span></div></div><button class="session-bookmark add"><span class="visuallyhidden">Ajouter cette conférence à mon horaire</span></button></div></td>
+			
+				<td data-session-id="692" class="session filter-all filter-legal salle-o2web speaker-thumb" itemprop="subEvent" itemscope itemtype="http://schema.org/Event"><div class="session-wrapper"><!-- position: relative --><div class="session-content"><!-- table-cell -->
+    	<div class="session-content-wrapper"><!-- position: relative --><span class="session-title" itemprop="name"><a href='sessions/demystifier-la-protection-du-droit-dauteur-sur-le-web/index.html'>Démystifier la protection du droit d'auteur sur le Web</a></span><span class="session-speaker" itemprop="performer" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Vincent Bergeron</span></span><span class="session-room" itemprop="location" itemscope itemtype="http://schema.org/Place"><span itemprop="name">Salle O2 Web</span></span><span class="visuallyhidden">Durée : 45 minutes</span></div></div><button class="session-bookmark add"><span class="visuallyhidden">Ajouter cette conférence à mon horaire</span></button></div></td>
+			</tr><tr><td class="time-slot">14:00</td>
+				<td data-session-id="1212" class="session filter-all filter-commerce-electronique filter-contenu filter-medias-sociaux salle-libeo speaker-thumb" itemprop="subEvent" itemscope itemtype="http://schema.org/Event"><div class="session-wrapper"><!-- position: relative --><div class="session-content"><!-- table-cell -->
+    	<div class="session-content-wrapper"><!-- position: relative --><span class="session-title" itemprop="name"><a href='sessions/quest-ce-que-vous-racontez/index.html'>Qu'est-ce que vous racontez?</a></span><span class="session-speaker" itemprop="performer" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Jeff Lee</span></span><span class="session-room" itemprop="location" itemscope itemtype="http://schema.org/Place"><span itemprop="name">Salle Libéo</span></span><span class="visuallyhidden">Durée : 45 minutes</span></div></div><button class="session-bookmark add"><span class="visuallyhidden">Ajouter cette conférence à mon horaire</span></button></div></td>
+			
+				<td data-session-id="774" class="session filter-all filter-culture filter-medias-sociaux salle-ixmedia speaker-thumb" itemprop="subEvent" itemscope itemtype="http://schema.org/Event"><div class="session-wrapper"><!-- position: relative --><div class="session-content"><!-- table-cell -->
+    	<div class="session-content-wrapper"><!-- position: relative --><span class="session-title" itemprop="name"><a href='sessions/les-defis-numeriques-dun-musee/index.html'>Les défis numériques d'un musée</a></span><span class="session-speaker" itemprop="performer" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Marie-Hélène Raymond</span></span><span class="session-room" itemprop="location" itemscope itemtype="http://schema.org/Place"><span itemprop="name">Salle iXmédia</span></span><span class="visuallyhidden">Durée : 45 minutes</span></div></div><button class="session-bookmark add"><span class="visuallyhidden">Ajouter cette conférence à mon horaire</span></button></div></td>
+			
+				<td data-session-id="1088" class="session filter-all filter-accessibilite filter-mobilite filter-programmation salle-bell" itemprop="subEvent" itemscope itemtype="http://schema.org/Event"><div class="session-wrapper"><!-- position: relative --><div class="session-content"><!-- table-cell -->
+    	<div class="session-content-wrapper"><!-- position: relative --><span class="session-title" itemprop="name"><a href='sessions/actualites-en-html-des-nouvelles-de-la-guerre-des-standards/index.html'>Actualités en HTML: des nouvelles de la guerre des standards</a></span><span class="session-speaker" itemprop="performer" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Benoit Piette</span></span><span class="session-room" itemprop="location" itemscope itemtype="http://schema.org/Place"><span itemprop="name">Salle Bell</span></span><span class="visuallyhidden">Durée : 45 minutes</span></div></div><button class="session-bookmark add"><span class="visuallyhidden">Ajouter cette conférence à mon horaire</span></button></div></td>
+			
+				<td data-session-id="807" class="session filter-all filter-legal salle-o2web speaker-thumb" itemprop="subEvent" itemscope itemtype="http://schema.org/Event"><div class="session-wrapper"><!-- position: relative --><div class="session-content"><!-- table-cell -->
+    	<div class="session-content-wrapper"><!-- position: relative --><span class="session-title" itemprop="name"><a href='sessions/gerer-les-enjeux-et-risques-juridiques-des-sites-web-2-0/index.html'>Gérer les enjeux et risques juridiques des sites Web 2.0</a></span><span class="session-speaker" itemprop="performer" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Pierre Trudel</span></span><span class="session-room" itemprop="location" itemscope itemtype="http://schema.org/Place"><span itemprop="name">Salle O2 Web</span></span><span class="visuallyhidden">Durée : 45 minutes</span></div></div><button class="session-bookmark add"><span class="visuallyhidden">Ajouter cette conférence à mon horaire</span></button></div></td>
+			</tr><tr><td class="time-slot">14:45</td>
+				<td data-session-id="519" headers="vide" class="session filter-all break small no-speaker" colspan="4"><div class="session-wrapper"><!-- position: relative --><div class="session-content"><!-- table-cell -->
+    	<div class="session-content-wrapper"><!-- position: relative --><span class="session-title" itemprop="name">Pause-café</span><span class="visuallyhidden">Durée : 30 minutes</span></div></div><button class="session-bookmark add"><span class="visuallyhidden">Ajouter cette conférence à mon horaire</span></button></div></td>
+			</tr><tr><td class="time-slot">15:15</td>
+				<td data-session-id="854" class="session filter-all filter-analytics filter-ux salle-libeo speaker-thumb" itemprop="subEvent" itemscope itemtype="http://schema.org/Event"><div class="session-wrapper"><!-- position: relative --><div class="session-content"><!-- table-cell -->
+    	<div class="session-content-wrapper"><!-- position: relative --><span class="session-title" itemprop="name"><a href='sessions/supporter-sans-se-ruiner-strategies-proactives-daide-aux-utilisateurs/index.html'>Supporter sans se ruiner: stratégies proactives d'aide aux utilisateurs</a></span><span class="session-speaker" itemprop="performer" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Jonathan Lavoie-Lévesque</span></span><span class="session-room" itemprop="location" itemscope itemtype="http://schema.org/Place"><span itemprop="name">Salle Libéo</span></span><span class="visuallyhidden">Durée : 45 minutes</span></div></div><button class="session-bookmark add"><span class="visuallyhidden">Ajouter cette conférence à mon horaire</span></button></div></td>
+			
+				<td data-session-id="1409" class="session filter-all filter-culture filter-medias-sociaux salle-ixmedia speaker-thumb" itemprop="subEvent" itemscope itemtype="http://schema.org/Event"><div class="session-wrapper"><!-- position: relative --><div class="session-content"><!-- table-cell -->
+    	<div class="session-content-wrapper"><!-- position: relative --><span class="session-title" itemprop="name"><a href='sessions/sil-te-plait-dessines-moi-une-campagne-virale/index.html'>S’il te plait, dessines moi une campagne virale</a></span><span class="session-speaker" itemprop="performer" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Sacha  Declomesnil</span></span><span class="session-room" itemprop="location" itemscope itemtype="http://schema.org/Place"><span itemprop="name">Salle iXmédia</span></span><span class="visuallyhidden">Durée : 45 minutes</span></div></div><button class="session-bookmark add"><span class="visuallyhidden">Ajouter cette conférence à mon horaire</span></button></div></td>
+			
+				<td data-session-id="803" class="session filter-all filter-culture filter-entrepreneuriat filter-medias-sociaux salle-bell speaker-thumb" itemprop="subEvent" itemscope itemtype="http://schema.org/Event"><div class="session-wrapper"><!-- position: relative --><div class="session-content"><!-- table-cell -->
+    	<div class="session-content-wrapper"><!-- position: relative --><span class="session-title" itemprop="name"><a href='sessions/communautes-web-hyperlocales-perron-deglise-2-0/index.html'>Communautés Web hyperlocales: perron d'église 2.0</a></span><span class="session-speaker" itemprop="performer" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Arnaud Bertrand</span></span><span class="session-room" itemprop="location" itemscope itemtype="http://schema.org/Place"><span itemprop="name">Salle Bell</span></span><span class="visuallyhidden">Durée : 45 minutes</span></div></div><button class="session-bookmark add"><span class="visuallyhidden">Ajouter cette conférence à mon horaire</span></button></div></td>
+			
+				<td data-session-id="1037" class="session filter-all salle-o2web speaker-thumb" itemprop="subEvent" itemscope itemtype="http://schema.org/Event"><div class="session-wrapper"><!-- position: relative --><div class="session-content"><!-- table-cell -->
+    	<div class="session-content-wrapper"><!-- position: relative --><span class="session-title" itemprop="name"><a href='sessions/titre-a-venir-2/index.html'>Le Web et le logiciel libre : le mariage parfait</a></span><span class="session-speaker" itemprop="performer" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Patrice Di Marcantonio</span></span><span class="session-room" itemprop="location" itemscope itemtype="http://schema.org/Place"><span itemprop="name">Salle O2 Web</span></span><span class="visuallyhidden">Durée : 45 minutes</span></div></div><button class="session-bookmark add"><span class="visuallyhidden">Ajouter cette conférence à mon horaire</span></button></div></td>
+			</tr><tr><td class="time-slot">16:00</td>
+				<td data-session-id="809" class="session filter-all filter-accessibilite filter-commerce-electronique filter-contenu filter-ux salle-libeo speaker-thumb" itemprop="subEvent" itemscope itemtype="http://schema.org/Event"><div class="session-wrapper"><!-- position: relative --><div class="session-content"><!-- table-cell -->
+    	<div class="session-content-wrapper"><!-- position: relative --><span class="session-title" itemprop="name"><a href='sessions/sites-web-les-contenus-a-valeur-ajoutee-pour-linternaute-et-le-referencement-naturel/index.html'>Sites Web: les contenus à valeur ajoutée pour l'internaute et le référencement naturel</a></span><span class="session-speaker" itemprop="performer" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Pascal Pelletier</span></span><span class="session-room" itemprop="location" itemscope itemtype="http://schema.org/Place"><span itemprop="name">Salle Libéo</span></span><span class="visuallyhidden">Durée : 45 minutes</span></div></div><button class="session-bookmark add"><span class="visuallyhidden">Ajouter cette conférence à mon horaire</span></button></div></td>
+			
+				<td data-session-id="794" class="session filter-all filter-mobilite salle-ixmedia speaker-thumb" itemprop="subEvent" itemscope itemtype="http://schema.org/Event"><div class="session-wrapper"><!-- position: relative --><div class="session-content"><!-- table-cell -->
+    	<div class="session-content-wrapper"><!-- position: relative --><span class="session-title" itemprop="name"><a href='sessions/le-futur-du-mobile/index.html'>Mobilité: le futur du commerce de détail</a></span><span class="session-speaker" itemprop="performer" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Pierre-Luc Simard</span></span><span class="session-room" itemprop="location" itemscope itemtype="http://schema.org/Place"><span itemprop="name">Salle iXmédia</span></span><span class="visuallyhidden">Durée : 45 minutes</span></div></div><button class="session-bookmark add"><span class="visuallyhidden">Ajouter cette conférence à mon horaire</span></button></div></td>
+			
+				<td data-session-id="858" class="session filter-all filter-accessibilite filter-culture filter-mobilite salle-bell speaker-thumb" itemprop="subEvent" itemscope itemtype="http://schema.org/Event"><div class="session-wrapper"><!-- position: relative --><div class="session-content"><!-- table-cell -->
+    	<div class="session-content-wrapper"><!-- position: relative --><span class="session-title" itemprop="name"><a href='sessions/lecran-en-fin-cinema-et-web/index.html'>L'écran en fin: le cinéma et le Web</a></span><span class="session-speaker" itemprop="performer" itemscope itemtype="http://schema.org/Person"><span itemprop="name">John Blouin</span></span><span class="session-room" itemprop="location" itemscope itemtype="http://schema.org/Place"><span itemprop="name">Salle Bell</span></span><span class="visuallyhidden">Durée : 45 minutes</span></div></div><button class="session-bookmark add"><span class="visuallyhidden">Ajouter cette conférence à mon horaire</span></button></div></td>
+			
+				<td data-session-id="867" class="session filter-all filter-donnees filter-gouvernemental salle-o2web speaker-thumb" itemprop="subEvent" itemscope itemtype="http://schema.org/Event"><div class="session-wrapper"><!-- position: relative --><div class="session-content"><!-- table-cell -->
+    	<div class="session-content-wrapper"><!-- position: relative --><span class="session-title" itemprop="name"><a href='sessions/participation-citoyenne-en-ligne-ou-en-est-le-quebec/index.html'>Des citoyens engagés pour une ville intelligente</a></span><span class="session-speaker" itemprop="performer" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Stéphane Guidoin</span></span><span class="session-room" itemprop="location" itemscope itemtype="http://schema.org/Place"><span itemprop="name">Salle O2 Web</span></span><span class="visuallyhidden">Durée : 45 minutes</span></div></div><button class="session-bookmark add"><span class="visuallyhidden">Ajouter cette conférence à mon horaire</span></button></div></td>
+			</tr><tr><td class="time-slot">16:45</td>
+				<td data-session-id="750" headers="vide" class="session filter-all break small no-speaker" colspan="4"><div class="session-wrapper"><!-- position: relative --><div class="session-content"><!-- table-cell -->
+    	<div class="session-content-wrapper"><!-- position: relative --><span class="session-title" itemprop="name">Pause</span><span class="visuallyhidden">Durée : 15 minutes</span></div></div><button class="session-bookmark add"><span class="visuallyhidden">Ajouter cette conférence à mon horaire</span></button></div></td>
+			</tr><tr><td class="time-slot">17:00</td>
+				<td data-session-id="760" headers="vide" class="session filter-all filter-commerce-electronique keynote salle-grand-hall speaker-thumb" colspan="4" itemprop="subEvent" itemscope itemtype="http://schema.org/Event"><div class="session-wrapper"><!-- position: relative --><div class="session-content"><!-- table-cell -->
+    	<div class="session-content-wrapper"><!-- position: relative --><span class="session-title" itemprop="name"><a href='sessions/making-commerce-easy/index.html'>Making Commerce Easy </a></span><span class="session-speaker" itemprop="performer" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Swati Mylavarapu</span></span><span class="session-room" itemprop="location" itemscope itemtype="http://schema.org/Place"><span itemprop="name">Grand Hall</span></span><span class="session-time-slot" itemprop="subEvent"><span><time itemprop="startDate" datetime="2014-03-20T17:00:00+00:00">17:00</time></span> à <span><time itemprop="endDate" datetime="2014-03-20T18:30:00+00:00">18:30</time></span></span></div></div><span class="session-speaker-thumb"><!-- position: absolute --><img src="wp-content/uploads/2014/01/Swati-headshot-187x160.png" alt=""></span><button class="session-bookmark add"><span class="visuallyhidden">Ajouter cette conférence à mon horaire</span></button></div></td>
+			</tr><tr><td class="time-slot">18:30</td>
+				<td data-session-id="1404" headers="vide" class="session filter-all break no-speaker" colspan="4"><div class="session-wrapper"><!-- position: relative --><div class="session-content"><!-- table-cell -->
+    	<div class="session-content-wrapper"><!-- position: relative --><span class="session-title" itemprop="name">Soirée réseautage</span><span class="visuallyhidden">Durée : 2 heures 30 minutes</span></div></div><button class="session-bookmark add"><span class="visuallyhidden">Ajouter cette conférence à mon horaire</span></button></div></td>
+			</tr></tbody></table></div><div class="day-wrapper slide"><table class="grid"><caption>Événements pour le <time datetime="2014-03-21"><span>vendredi 21 mars</span></time></caption><thead><tr><th id="vide" class="column-time-slot"></th><th class="column_salle-libeo">Salle Libéo</th><th class="column_salle-ixmedia">Salle iXmédia</th><th class="column_salle-bell">Salle Bell</th><th class="column_salle-o2web">Salle O2 Web</th></tr></thead><tbody><tr><td class="time-slot">7:30</td>
+				<td data-session-id="1400" headers="vide" class="session filter-all break no-speaker" colspan="4"><div class="session-wrapper"><!-- position: relative --><div class="session-content"><!-- table-cell -->
+    	<div class="session-content-wrapper"><!-- position: relative --><span class="session-title" itemprop="name">Ouverture et accueil</span><span class="visuallyhidden">Durée : 1 heure </span></div></div><button class="session-bookmark add"><span class="visuallyhidden">Ajouter cette conférence à mon horaire</span></button></div></td>
+			</tr><tr><td class="time-slot">8:30</td>
+				<td data-session-id="764" headers="vide" class="session filter-all filter-donnees filter-entrepreneuriat filter-gouvernemental keynote salle-grand-hall speaker-thumb" colspan="4" itemprop="subEvent" itemscope itemtype="http://schema.org/Event"><div class="session-wrapper"><!-- position: relative --><div class="session-content"><!-- table-cell -->
+    	<div class="session-content-wrapper"><!-- position: relative --><span class="session-title" itemprop="name"><a href='sessions/intl-de/index.html'>Open Data and Developers, Where Next?</a></span><span class="session-speaker" itemprop="performer" itemscope itemtype="http://schema.org/Person"><span itemprop="name">David Eaves</span></span><span class="session-room" itemprop="location" itemscope itemtype="http://schema.org/Place"><span itemprop="name">Grand Hall</span></span><span class="session-time-slot" itemprop="subEvent"><span><time itemprop="startDate" datetime="2014-03-21T08:30:00+00:00">8:30</time></span> à <span><time itemprop="endDate" datetime="2014-03-21T10:00:00+00:00">10:00</time></span></span></div></div><span class="session-speaker-thumb"><!-- position: absolute --><img src="wp-content/uploads/2014/01/davideaves-187x160.jpg" alt=""></span><button class="session-bookmark add"><span class="visuallyhidden">Ajouter cette conférence à mon horaire</span></button></div></td>
+			</tr><tr><td class="time-slot">10:00</td>
+				<td data-session-id="766" headers="vide" class="session filter-all break small no-speaker" colspan="4"><div class="session-wrapper"><!-- position: relative --><div class="session-content"><!-- table-cell -->
+    	<div class="session-content-wrapper"><!-- position: relative --><span class="session-title" itemprop="name">Pause-café</span><span class="visuallyhidden">Durée : 30 minutes</span></div></div><button class="session-bookmark add"><span class="visuallyhidden">Ajouter cette conférence à mon horaire</span></button></div></td>
+			</tr><tr><td class="time-slot">10:30</td>
+				<td data-session-id="798" class="session filter-all filter-donnees filter-gouvernemental filter-programmation salle-libeo panel" itemprop="subEvent" itemscope itemtype="http://schema.org/Event"><div class="session-wrapper"><!-- position: relative --><div class="session-content"><!-- table-cell -->
+    	<div class="session-content-wrapper"><!-- position: relative --><span class="session-title" itemprop="name"><a href='sessions/les-elections-municipales-hebergees-dans-le-nuage/index.html'>Les élections municipales hébergées dans le nuage</a></span><span class="session-description" itemprop="description">Panel</span><span class="session-room" itemprop="location" itemscope itemtype="http://schema.org/Place"><span itemprop="name">Salle Libéo</span></span><span class="visuallyhidden">Durée : 45 minutes</span></div></div><button class="session-bookmark add"><span class="visuallyhidden">Ajouter cette conférence à mon horaire</span></button></div></td>
+			
+				<td data-session-id="861" class="session filter-all filter-entrepreneuriat filter-ux salle-ixmedia speaker-thumb" itemprop="subEvent" itemscope itemtype="http://schema.org/Event"><div class="session-wrapper"><!-- position: relative --><div class="session-content"><!-- table-cell -->
+    	<div class="session-content-wrapper"><!-- position: relative --><span class="session-title" itemprop="name"><a href='sessions/validation-de-lidee-au-produit/index.html'>Validation: de l'idée au produit</a></span><span class="session-speaker" itemprop="performer" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Jean-Michel Lacroix</span></span><span class="session-room" itemprop="location" itemscope itemtype="http://schema.org/Place"><span itemprop="name">Salle iXmédia</span></span><span class="visuallyhidden">Durée : 45 minutes</span></div></div><button class="session-bookmark add"><span class="visuallyhidden">Ajouter cette conférence à mon horaire</span></button></div></td>
+			
+				<td data-session-id="788" class="session filter-all filter-culture filter-medias-sociaux filter-mobilite salle-bell speaker-thumb" itemprop="subEvent" itemscope itemtype="http://schema.org/Event"><div class="session-wrapper"><!-- position: relative --><div class="session-content"><!-- table-cell -->
+    	<div class="session-content-wrapper"><!-- position: relative --><span class="session-title" itemprop="name"><a href='sessions/la-nouvelle-economie-du-contenu-viralite-imposture-et-authenticite/index.html'>La nouvelle économie du contenu: viralité, imposture et authenticité</a></span><span class="session-speaker" itemprop="performer" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Francis Gosselin</span></span><span class="session-room" itemprop="location" itemscope itemtype="http://schema.org/Place"><span itemprop="name">Salle Bell</span></span><span class="visuallyhidden">Durée : 45 minutes</span></div></div><button class="session-bookmark add"><span class="visuallyhidden">Ajouter cette conférence à mon horaire</span></button></div></td>
+			
+				<td data-session-id="992" class="session filter-all filter-donnees filter-mobilite salle-o2web panel" itemprop="subEvent" itemscope itemtype="http://schema.org/Event"><div class="session-wrapper"><!-- position: relative --><div class="session-content"><!-- table-cell -->
+    	<div class="session-content-wrapper"><!-- position: relative --><span class="session-title" itemprop="name"><a href='sessions/developpez-vos-resultats-grace-a-la-puissance-du-jeu-marketing/index.html'>Développez vos résultats grâce à la puissance du jeu marketing!</a></span><span class="session-description" itemprop="description">Panel</span><span class="session-room" itemprop="location" itemscope itemtype="http://schema.org/Place"><span itemprop="name">Salle O2 Web</span></span><span class="visuallyhidden">Durée : 45 minutes</span></div></div><button class="session-bookmark add"><span class="visuallyhidden">Ajouter cette conférence à mon horaire</span></button></div></td>
+			</tr><tr><td class="time-slot">11:15</td>
+				<td data-session-id="1057" class="session filter-all filter-culture filter-gouvernemental filter-programmation salle-libeo speaker-thumb" itemprop="subEvent" itemscope itemtype="http://schema.org/Event"><div class="session-wrapper"><!-- position: relative --><div class="session-content"><!-- table-cell -->
+    	<div class="session-content-wrapper"><!-- position: relative --><span class="session-title" itemprop="name"><a href='sessions/titre-a-venir-3/index.html'>L’insoutenable légèreté du Web: de la rigidité à l’agilité - le cas de l’ONF</a></span><span class="session-speaker" itemprop="performer" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Matthieu Stréliski</span></span><span class="session-room" itemprop="location" itemscope itemtype="http://schema.org/Place"><span itemprop="name">Salle Libéo</span></span><span class="visuallyhidden">Durée : 45 minutes</span></div></div><button class="session-bookmark add"><span class="visuallyhidden">Ajouter cette conférence à mon horaire</span></button></div></td>
+			
+				<td data-session-id="805" class="session filter-all filter-culture filter-entrepreneuriat salle-ixmedia speaker-thumb" itemprop="subEvent" itemscope itemtype="http://schema.org/Event"><div class="session-wrapper"><!-- position: relative --><div class="session-content"><!-- table-cell -->
+    	<div class="session-content-wrapper"><!-- position: relative --><span class="session-title" itemprop="name"><a href='sessions/equipe-distribuee-travailler-autrement/index.html'>Équipe distribuée: travailler autrement!</a></span><span class="session-speaker" itemprop="performer" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Jean-Philippe Boily</span></span><span class="session-room" itemprop="location" itemscope itemtype="http://schema.org/Place"><span itemprop="name">Salle iXmédia</span></span><span class="visuallyhidden">Durée : 45 minutes</span></div></div><button class="session-bookmark add"><span class="visuallyhidden">Ajouter cette conférence à mon horaire</span></button></div></td>
+			
+				<td data-session-id="792" class="session filter-all filter-commerce-electronique filter-medias-sociaux filter-ux salle-bell speaker-thumb" itemprop="subEvent" itemscope itemtype="http://schema.org/Event"><div class="session-wrapper"><!-- position: relative --><div class="session-content"><!-- table-cell -->
+    	<div class="session-content-wrapper"><!-- position: relative --><span class="session-title" itemprop="name"><a href='sessions/la-communaute-pillier-du-succes-dun-jeu-video-en-ligne/index.html'>La communauté: pillier du succès d'un jeu vidéo en ligne</a></span><span class="session-speaker" itemprop="performer" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Emile Gauthier</span></span><span class="session-room" itemprop="location" itemscope itemtype="http://schema.org/Place"><span itemprop="name">Salle Bell</span></span><span class="visuallyhidden">Durée : 45 minutes</span></div></div><button class="session-bookmark add"><span class="visuallyhidden">Ajouter cette conférence à mon horaire</span></button></div></td>
+			
+				<td data-session-id="776" class="session filter-all filter-mobilite filter-programmation filter-ux salle-o2web speaker-thumb" itemprop="subEvent" itemscope itemtype="http://schema.org/Event"><div class="session-wrapper"><!-- position: relative --><div class="session-content"><!-- table-cell -->
+    	<div class="session-content-wrapper"><!-- position: relative --><span class="session-title" itemprop="name"><a href='sessions/solutions-et-initiatives-au-carrefour-de-la-realite-augmentee-et-du-web/index.html'>Solutions et initiatives au carrefour de la réalité augmentée et du Web</a></span><span class="session-speaker" itemprop="performer" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Sylvie Daniel</span></span><span class="session-room" itemprop="location" itemscope itemtype="http://schema.org/Place"><span itemprop="name">Salle O2 Web</span></span><span class="visuallyhidden">Durée : 45 minutes</span></div></div><button class="session-bookmark add"><span class="visuallyhidden">Ajouter cette conférence à mon horaire</span></button></div></td>
+			</tr><tr><td class="time-slot">12:00</td>
+				<td data-session-id="768" headers="vide" class="session filter-all break no-speaker" colspan="4"><div class="session-wrapper"><!-- position: relative --><div class="session-content"><!-- table-cell -->
+    	<div class="session-content-wrapper"><!-- position: relative --><span class="session-title" itemprop="name">Dîner</span><span class="visuallyhidden">Durée : 1 heure 15 minutes</span></div></div><button class="session-bookmark add"><span class="visuallyhidden">Ajouter cette conférence à mon horaire</span></button></div></td>
+			</tr><tr><td class="time-slot">13:15</td>
+				<td data-session-id="840" class="session filter-all filter-commerce-electronique filter-design filter-ux salle-libeo speaker-thumb" itemprop="subEvent" itemscope itemtype="http://schema.org/Event"><div class="session-wrapper"><!-- position: relative --><div class="session-content"><!-- table-cell -->
+    	<div class="session-content-wrapper"><!-- position: relative --><span class="session-title" itemprop="name"><a href='sessions/comment-aborder-sereinement-loptimisation-de-son-site-e-commerce/index.html'>Comment aborder sereinement l’optimisation de son site e-commerce?</a></span><span class="session-speaker" itemprop="performer" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Anastasia Simitsis</span></span><span class="session-room" itemprop="location" itemscope itemtype="http://schema.org/Place"><span itemprop="name">Salle Libéo</span></span><span class="visuallyhidden">Durée : 45 minutes</span></div></div><button class="session-bookmark add"><span class="visuallyhidden">Ajouter cette conférence à mon horaire</span></button></div></td>
+			
+				<td data-session-id="790" class="session filter-all filter-ux salle-ixmedia speaker-thumb" itemprop="subEvent" itemscope itemtype="http://schema.org/Event"><div class="session-wrapper"><!-- position: relative --><div class="session-content"><!-- table-cell -->
+    	<div class="session-content-wrapper"><!-- position: relative --><span class="session-title" itemprop="name"><a href='sessions/sites-web-et-applications-web-il-y-a-une-difference-elle-est-importante/index.html'>Sites Web et applications Web: il y a une différence? Elle est importante?</a></span><span class="session-speaker" itemprop="performer" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Louis-André Labadie</span></span><span class="session-room" itemprop="location" itemscope itemtype="http://schema.org/Place"><span itemprop="name">Salle iXmédia</span></span><span class="visuallyhidden">Durée : 45 minutes</span></div></div><button class="session-bookmark add"><span class="visuallyhidden">Ajouter cette conférence à mon horaire</span></button></div></td>
+			
+				<td data-session-id="779" class="session filter-all filter-commerce-electronique filter-culture filter-education salle-bell speaker-thumb" itemprop="subEvent" itemscope itemtype="http://schema.org/Event"><div class="session-wrapper"><!-- position: relative --><div class="session-content"><!-- table-cell -->
+    	<div class="session-content-wrapper"><!-- position: relative --><span class="session-title" itemprop="name"><a href='sessions/le-web-daujourdhui-comme-milieu-de-laudionumerique-de-la-collaboration-a-la-diffusion/index.html'>Le Web d'aujourd'hui comme milieu de l'audionumérique: de la collaboration à la diffusion</a></span><span class="session-speaker" itemprop="performer" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Aaron Liu-Rosenbaum</span></span><span class="session-room" itemprop="location" itemscope itemtype="http://schema.org/Place"><span itemprop="name">Salle Bell</span></span><span class="visuallyhidden">Durée : 45 minutes</span></div></div><button class="session-bookmark add"><span class="visuallyhidden">Ajouter cette conférence à mon horaire</span></button></div></td>
+			
+				<td data-session-id="850" class="session filter-all filter-mobilite salle-o2web speaker-thumb" itemprop="subEvent" itemscope itemtype="http://schema.org/Event"><div class="session-wrapper"><!-- position: relative --><div class="session-content"><!-- table-cell -->
+    	<div class="session-content-wrapper"><!-- position: relative --><span class="session-title" itemprop="name"><a href='sessions/tiers-lieu-numerique-pour-vivre-et-travailler-autrement/index.html'>Tiers-Lieu et numérique pour vivre et travailler autrement</a></span><span class="session-speaker" itemprop="performer" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Lucile Aigron</span></span><span class="session-room" itemprop="location" itemscope itemtype="http://schema.org/Place"><span itemprop="name">Salle O2 Web</span></span><span class="visuallyhidden">Durée : 45 minutes</span></div></div><button class="session-bookmark add"><span class="visuallyhidden">Ajouter cette conférence à mon horaire</span></button></div></td>
+			</tr><tr><td class="time-slot">14:00</td>
+				<td data-session-id="1031" class="session filter-all filter-analytics filter-commerce-electronique filter-contenu filter-medias-sociaux salle-libeo speaker-thumb" itemprop="subEvent" itemscope itemtype="http://schema.org/Event"><div class="session-wrapper"><!-- position: relative --><div class="session-content"><!-- table-cell -->
+    	<div class="session-content-wrapper"><!-- position: relative --><span class="session-title" itemprop="name"><a href='sessions/comment-construire-strategie-marketing-contenu-efficace/index.html'>Comment construire une stratégie de marketing de contenu efficace ?</a></span><span class="session-speaker" itemprop="performer" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Jonathan Poliquin</span></span><span class="session-room" itemprop="location" itemscope itemtype="http://schema.org/Place"><span itemprop="name">Salle Libéo</span></span><span class="visuallyhidden">Durée : 45 minutes</span></div></div><button class="session-bookmark add"><span class="visuallyhidden">Ajouter cette conférence à mon horaire</span></button></div></td>
+			
+				<td data-session-id="1061" class="session filter-all filter-design filter-donnees filter-ux salle-ixmedia speaker-thumb" itemprop="subEvent" itemscope itemtype="http://schema.org/Event"><div class="session-wrapper"><!-- position: relative --><div class="session-content"><!-- table-cell -->
+    	<div class="session-content-wrapper"><!-- position: relative --><span class="session-title" itemprop="name"><a href='sessions/lenjeu-n1-du-big-data-rendre-les-donnees-accessibles-a-tous/index.html'>L'enjeu n°1 du Big Data: rendre les données accessibles à tous!</a></span><span class="session-speaker" itemprop="performer" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Eliot Jacquin</span></span><span class="session-room" itemprop="location" itemscope itemtype="http://schema.org/Place"><span itemprop="name">Salle iXmédia</span></span><span class="visuallyhidden">Durée : 45 minutes</span></div></div><button class="session-bookmark add"><span class="visuallyhidden">Ajouter cette conférence à mon horaire</span></button></div></td>
+			
+				<td data-session-id="1353" class="session filter-all filter-donnees filter-medias-sociaux filter-ux salle-bell speaker-thumb" itemprop="subEvent" itemscope itemtype="http://schema.org/Event"><div class="session-wrapper"><!-- position: relative --><div class="session-content"><!-- table-cell -->
+    	<div class="session-content-wrapper"><!-- position: relative --><span class="session-title" itemprop="name"><a href='sessions/osez-un-nouveau-modele-daffaires-pour-lexperience-client/index.html'> Osez un nouveau modèle d’affaires pour l’expérience client</a></span><span class="session-speaker" itemprop="performer" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Isabelle Duval</span></span><span class="session-room" itemprop="location" itemscope itemtype="http://schema.org/Place"><span itemprop="name">Salle Bell</span></span><span class="visuallyhidden">Durée : 45 minutes</span></div></div><button class="session-bookmark add"><span class="visuallyhidden">Ajouter cette conférence à mon horaire</span></button></div></td>
+			
+				<td data-session-id="1438" class="session filter-all filter-entrepreneuriat salle-o2web panel" itemprop="subEvent" itemscope itemtype="http://schema.org/Event"><div class="session-wrapper"><!-- position: relative --><div class="session-content"><!-- table-cell -->
+    	<div class="session-content-wrapper"><!-- position: relative --><span class="session-title" itemprop="name"><a href='sessions/de-la-startup-a-lagence-retour-dexperience/index.html'>De la startup à l'agence, retour d'expérience</a></span><span class="session-description" itemprop="description">Panel</span><span class="session-room" itemprop="location" itemscope itemtype="http://schema.org/Place"><span itemprop="name">Salle O2 Web</span></span><span class="visuallyhidden">Durée : 45 minutes</span></div></div><button class="session-bookmark add"><span class="visuallyhidden">Ajouter cette conférence à mon horaire</span></button></div></td>
+			</tr><tr><td class="time-slot">14:45</td>
+				<td data-session-id="770" headers="vide" class="session filter-all break small no-speaker" colspan="4"><div class="session-wrapper"><!-- position: relative --><div class="session-content"><!-- table-cell -->
+    	<div class="session-content-wrapper"><!-- position: relative --><span class="session-title" itemprop="name">Pause</span><span class="visuallyhidden">Durée : 15 minutes</span></div></div><button class="session-bookmark add"><span class="visuallyhidden">Ajouter cette conférence à mon horaire</span></button></div></td>
+			</tr><tr><td class="time-slot">15:00</td>
+				<td data-session-id="762" headers="vide" class="session filter-all filter-analytics filter-culture filter-entrepreneuriat keynote salle-grand-hall speaker-thumb" colspan="4" itemprop="subEvent" itemscope itemtype="http://schema.org/Event"><div class="session-wrapper"><!-- position: relative --><div class="session-content"><!-- table-cell -->
+    	<div class="session-content-wrapper"><!-- position: relative --><span class="session-title" itemprop="name"><a href='sessions/lean-analytics-using-data-build-better-business-faster/index.html'>Lean Analytics: Using Data to Build A Better Business Faster</a></span><span class="session-speaker" itemprop="performer" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Alistair Croll</span></span><span class="session-room" itemprop="location" itemscope itemtype="http://schema.org/Place"><span itemprop="name">Grand Hall</span></span><span class="session-time-slot" itemprop="subEvent"><span><time itemprop="startDate" datetime="2014-03-21T15:00:00+00:00">15:00</time></span> à <span><time itemprop="endDate" datetime="2014-03-21T16:30:00+00:00">16:30</time></span></span></div></div><span class="session-speaker-thumb"><!-- position: absolute --><img src="wp-content/uploads/2014/01/alistair_croll-187x160.png" alt=""></span><button class="session-bookmark add"><span class="visuallyhidden">Ajouter cette conférence à mon horaire</span></button></div></td>
+			</tr></tbody></table></div></div></div></div>
+    </div>
+</section><!-- end of Schedule section -->
+<!-- Place section -->
+<section id="lieu-et-coordonnees" class="place">
+    <div class="l-section-wrapper">
+        <div>
+            <header>
+                <h2><span>Lieu de</span> <span>l'événement</span></h2>
+                <a href="https://maps.google.ca/maps?q=Espace%2B400e%2B100%2C%2Brue%2BQuai%2BSt-Andr%C3%A9%2BQu%C3%A9bec%2C%2BQC&amp;hl=fr&amp;ie=UTF8&amp;hq=Espace%2B400e%2B100%2C%2Brue%2BQuai%2BSt-Andr%C3%A9%2BQu%C3%A9bec%2C%2BQC&amp;t=m&amp;z=16&amp;iwloc=A" class="route">Obtenir l'itinéraire</a>
+            </header>
+    
+            <div class="place-wrapper">
+                <div class="contact">
+                    <h2>Coordonnées</h2>
+                    <div class="contact-element" itemscope itemtype="http://schema.org/Organization">
+                        <span class="name" itemprop="name">Questions générales</span>
+                        <span class="telephone" itemprop="telephone">1-877-334-2547</span>
+                        <span class="email" itemprop="email"><a href="http://www.cloudflare.com/email-protection#a5cccbc3cae5d2c0c7c4d4d0c0c7c0c68bcad7c2"><span class="__cf_email__" data-cfemail="adc4c3cbc2eddac8cfccdcd8c8cfc8ce83c2dfca">[email&nbsp;protected]</span><script type="text/javascript">
+/* <![CDATA[ */
+(function(){try{var s,a,i,j,r,c,l,b=document.getElementsByTagName("script");l=b[b.length-1].previousSibling;a=l.getAttribute('data-cfemail');if(a){s='';r=parseInt(a.substr(0,2),16);for(j=2;a.length-j;j+=2){c=parseInt(a.substr(j,2),16)^r;s+=String.fromCharCode(c);}s=document.createTextNode(s);l.parentNode.replaceChild(s,l);}}catch(e){}})();
+/* ]]> */
+</script></a></span>
+                    </div>
+                    <div class="contact-element" itemscope itemtype="http://schema.org/Organization">
+                        <span class="name" itemprop="name">Vous êtes un média?</span>
+                        <span class="telephone" itemprop="telephone">418 704-1559 #228</span>
+                        <span class="email" itemprop="email"><a href="http://www.cloudflare.com/email-protection#88e5edece1e9fbc8ffedeae9f9fdedeaedeba6e7faef"><span class="__cf_email__" data-cfemail="c8a5adaca1a9bb88bfadaaa9b9bdadaaadabe6a7baaf">[email&nbsp;protected]</span><script type="text/javascript">
+/* <![CDATA[ */
+(function(){try{var s,a,i,j,r,c,l,b=document.getElementsByTagName("script");l=b[b.length-1].previousSibling;a=l.getAttribute('data-cfemail');if(a){s='';r=parseInt(a.substr(0,2),16);for(j=2;a.length-j;j+=2){c=parseInt(a.substr(j,2),16)^r;s+=String.fromCharCode(c);}s=document.createTextNode(s);l.parentNode.replaceChild(s,l);}}catch(e){}})();
+/* ]]> */
+</script></a></span>
+                    </div>
+                </div>
+                <div class="newsletter">
+                    <h2>Abonnez-vous à l'infolettre du <abbr title="Web à Québec">WAQ</abbr></h2>
+                    
+<style>
+	.widget_mailchimpsf_widget .widget-title {
+		line-height: 1.4em;
+		margin-bottom: 0.75em;
+	}
+	#mc_subheader {
+		line-height: 1.25em;
+		margin-bottom: 18px;
+	}
+	.mc_merge_var {
+		margin-bottom: 1.0em;
+	}
+	.mc_var_label,
+	.mc_interest_label {
+		display: block;
+		margin-bottom: 0.5em;
+	}
+	.mc_input {
+		-moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		box-sizing: border-box;
+		width: 100%;
+	}
+	.mc_input.mc_phone {
+		width: auto;
+	}
+	select.mc_select {
+		margin-top: 0.5em;
+		width: 100%;
+	}
+	.mc_address_label {
+		margin-top: 1.0em;
+		margin-bottom: 0.5em;
+		display: block;
+	}
+	.mc_address_label ~ select {
+		width: 100%;		
+	}
+	.mc_list li {
+		list-style: none;
+		background: none !important;
+	}
+	.mc_interests_header {
+		margin-top: 1.0em;
+		margin-bottom: 0.5em;
+	}
+	.mc_interest label,
+	.mc_interest input {
+		margin-bottom: 0.4em;
+	}
+	#mc_signup_submit {
+		margin-top: 1.5em;
+		width: 80%;
+	}
+	#mc_unsub_link a {
+		font-size: 0.75em;
+	}
+	#mc_unsub_link {
+		margin-top: 1.0em;
+	}
+	.mc_header_address,
+	.mc_email_format {
+		display: block;
+		font-weight: bold;
+		margin-top: 1.0em;
+		margin-bottom: 0.5em;
+	}
+	.mc_email_options {
+		margin-top: 0.5em;
+	}
+	.mc_email_type {
+		padding-left: 4px;
+	}
+</style>
+
+<div id="mc_signup">
+	<form method="post" action="index.html#mc_signup" id="mc_signup_form">
+		<input type="hidden" id="mc_submit_type" name="mc_submit_type" value="html" />
+		<input type="hidden" name="mcsf_action" value="mc_submit_signup_form" />
+		<input type="hidden" id="_mc_submit_signup_form_nonce" name="_mc_submit_signup_form_nonce" value="70aabfbf26" />		
+		
+	<div class="mc_form_inside">
+		
+		<div class="updated" id="mc_message">
+					</div><!-- /mc_message -->
+
+		
+<div class="mc_merge_var">
+		<label for="mc_mv_EMAIL" class="mc_var_label mc_header mc_header_email">Courriel</label>
+	<input type="text" size="18" placeholder="" name="mc_mv_EMAIL" id="mc_mv_EMAIL" class="mc_input"/>
+</div><!-- /mc_merge_var -->
+		<div class="mc_signup_submit">
+			<input type="submit" name="mc_signup_submit" id="mc_signup_submit" value="Envoyer" class="button" />
+		</div><!-- /mc_signup_submit -->
+	
+	
+				
+	</div><!-- /mc_form_inside -->
+	</form><!-- /mc_signup_form -->
+</div><!-- /mc_signup_container -->
+	                </div>
+            </div>
+        </div>
+    </div>
+    <p class="visuallyhidden">Le contenu Google Maps qui suit n'est pas accessible. <a href="https://maps.google.ca/maps?q=ESPACE+400E+BELL+100,+QUAI+SAINT-ANDR%C3%89+QU%C3%89BEC,+QC&amp;hl=fr&amp;ie=UTF8&amp;hq=ESPACE+400E+BELL+100,+QUAI+SAINT-ANDR%C3%89+QU%C3%89BEC,+QC&amp;t=m&amp;z=16&amp;iwloc=A">Accéder la carte Google Maps sur le site externe</a> </p>
+    <div class="googlemap" tabindex="-1">
+        <div id="gmap"></div>
+    </div>
+</section><!-- end of Place section --><!-- Blog section -->
+<section id="blogue" class="blog">
+    <div class="l-section-wrapper">
+
+        <header>
+            <h2>Blogue</h2>
+        </header>
+        
+        <div class="blog-wrapper"><div class="js-slider">
+      <div class="blog-container js-slider-container" itemscope itemtype="http://schema.org/Blog"><article class="slide" itemscope itemprop="blogPost" itemtype="http://schema.org/BlogPosting"><header class="article-header"><h3 class="article-title" itemprop="headline"><a href="2014/02/13/le-iron-web-prend-une-pause-place-au-openhack-quebec/index.html">Le Iron Web prend une pause... place au OpenHack Québec!</a></h3><p class="article-meta"><time class="article-date" itemprop="datePublished" datetime="2014-02-13">13/02/2014</time></p></header><div class="article-content" itemprop="description"><!-- extrait? --><p>
+Lancement du premier OpenHack Québec!
+Nous vous annonçons aujourd’hui l’organisation d’un premier OpenHack Québec en collaboration avec le Web à Québec 2014!
+
+Basé sur l'idée des rencontres OpenHack, c'est-à-dire des rencontres informelles pour simplement coder en groupe, …</p></div></article><article class="slide" itemscope itemprop="blogPost" itemtype="http://schema.org/BlogPosting"><header class="article-header"><h3 class="article-title" itemprop="headline"><a href="2014/02/10/benevoles-recherches-pour-les-operations-lors-de-levenement/index.html">Bénévoles recherchés pour les opérations lors de l’événement</a></h3><p class="article-meta"><time class="article-date" itemprop="datePublished" datetime="2014-02-10">10/02/2014</time></p></header><div class="article-thumb"><a href="2014/02/10/benevoles-recherches-pour-les-operations-lors-de-levenement/index.html"><img src="wp-content/uploads/2014/01/tumblr_inline_mt7xbaQi3t1qk4s5d-280x130.jpg" alt=""></a></div><div class="article-content" itemprop="description"><!-- extrait? --><p>Vous êtes motivés et vous avez du temps à donner?
+Nous avons besoin de bénévoles pour aider au bon déroulement du Web à Québec, édition 2014, qui aura lieu du 19 au 21 mars 2014. Nous …</p></div></article><article class="slide" itemscope itemprop="blogPost" itemtype="http://schema.org/BlogPosting"><header class="article-header"><h3 class="article-title" itemprop="headline"><a href="2014/02/03/startup-de-quebec-venez-pitcher-au-web-a-quebec/index.html">Startup de Québec: venez pitcher au Web à Québec!</a></h3><p class="article-meta"><time class="article-date" itemprop="datePublished" datetime="2014-02-03">03/02/2014</time></p></header><div class="article-thumb"><a href="2014/02/03/startup-de-quebec-venez-pitcher-au-web-a-quebec/index.html"><img src="wp-content/uploads/2014/02/859549_511453515573127_1450684700_o-280x130.jpg" alt=""></a></div><div class="article-content" itemprop="description"><!-- extrait? --><p>Dans la cadre des présentations qui se tiendront le jeudi 20 mars en avant-midi, 8 startups technologiques auront la chance d’exercer leur «Elevator Pitch» devant les participants du Web à Québec.
+
+Il s’agit d’une belle opportunité …</p></div></article><article class="slide" itemscope itemprop="blogPost" itemtype="http://schema.org/BlogPosting"><header class="article-header"><h3 class="article-title" itemprop="headline"><a href="2014/01/17/le-waq-vous-transporte/index.html">Le Web à Québec vous transporte ! </a></h3><p class="article-meta"><time class="article-date" itemprop="datePublished" datetime="2014-01-17">17/01/2014</time></p></header><div class="article-thumb"><a href="2014/01/17/le-waq-vous-transporte/index.html"><img src="wp-content/uploads/2014/01/waq-transporte-280x130.png" alt=""></a></div><div class="article-content" itemprop="description"><!-- extrait? --><p>Vous habitez à l’extérieur de Québec? Vous aimeriez assister au WAQ 2014 et profiter des conférenciers internationaux et locaux de renom sur les sujets les plus actuels du Web? Et si l’on vous organisait un …</p></div></article><article class="slide" itemscope itemprop="blogPost" itemtype="http://schema.org/BlogPosting"><header class="article-header"><h3 class="article-title" itemprop="headline"><a href="2014/01/17/devenez-partenaires-du-rassemblement-web-de-quebec/index.html">Devenez partenaires du rassemblement Web de Québec</a></h3><p class="article-meta"><time class="article-date" itemprop="datePublished" datetime="2014-01-17">17/01/2014</time></p></header><div class="article-thumb"><a href="2014/01/17/devenez-partenaires-du-rassemblement-web-de-quebec/index.html"><img src="wp-content/uploads/2014/01/858980_511453555573123_1041560668_o-280x130.jpg" alt=""></a></div><div class="article-content" itemprop="description"><!-- extrait? --><p>Le WAQ est l’occasion privilégiée d’avoir accès au plus grand rassemblement de décideurs, professionnels, gestionnaires, développeurs et étudiants de l’industrie du numérique de Québec. Consulter le plan de visibilité des commanditaires.</p></div></article><article class="slide" itemscope itemprop="blogPost" itemtype="http://schema.org/BlogPosting"><header class="article-header"><h3 class="article-title" itemprop="headline"><a href="2013/10/08/postes-disponibles-dans-lequipe-promotion-et-mobilisation/index.html">Postes disponibles dans l'équipe promotion et mobilisation</a></h3><p class="article-meta"><time class="article-date" itemprop="datePublished" datetime="2013-10-08">08/10/2013</time></p></header><div class="article-thumb"><a href="2013/10/08/postes-disponibles-dans-lequipe-promotion-et-mobilisation/index.html"><img src="wp-content/uploads/2013/10/tumblr_inline_mudbspbJgb1qk4s5d-280x130.jpg" alt=""></a></div><div class="article-content" itemprop="description"><!-- extrait? --><p>Le Web à Québec 2014 est à la recherche de candidats hors pair pour s’impliquer dans l’équipe « Promotion et mobilisation » de l’événement!
+
+Qui dit promotion et mobilisation, dit médias sociaux et communication interactive. On recherche donc …</p></div></article><article class="slide" itemscope itemprop="blogPost" itemtype="http://schema.org/BlogPosting"><header class="article-header"><h3 class="article-title" itemprop="headline"><a href="2013/09/16/postes-disponibles-dans-lequipe-de-la-programmation/index.html">Postes disponibles dans l'équipe de la programmation</a></h3><p class="article-meta"><time class="article-date" itemprop="datePublished" datetime="2013-09-16">16/09/2013</time></p></header><div class="article-content" itemprop="description"><!-- extrait? --><p>Tu es maniaque de numérique, tu t’informes sur tout ce qui a des pitons et on te désigne comme le geek du bureau? Tu reconnaîtrais Marissa Mayer sur la rue ? Pour toi le numérique c’est …</p></div></article><article class="slide" itemscope itemprop="blogPost" itemtype="http://schema.org/BlogPosting"><header class="article-header"><h3 class="article-title" itemprop="headline"><a href="2013/09/05/joignez-lequipe-organisatrice-du-web-a-quebec-2014/index.html">Joignez l’équipe organisatrice du Web à Québec 2014!</a></h3><p class="article-meta"><time class="article-date" itemprop="datePublished" datetime="2013-09-05">05/09/2013</time></p></header><div class="article-content" itemprop="description"><!-- extrait? --><p>Le Web à Québec est le rassemblement annuel donnant accès sous un même toit aux acteurs de la communauté Web du Québec ainsi qu’à des invités internationaux de renom. Prisé pour son concept de “présentations éclair” et …</p></div></article></div></div><div class="blog-nav"><button class="button prev"><span class="visuallyhidden">Articles précédents</span></button><button class="button next"><span class="visuallyhidden">Articles suivants</span></button><button class="button-page"><span class="visuallyhidden">Page </span>1</button><button class="button-page"><span class="visuallyhidden">Page </span>2</button><button class="button-page"><span class="visuallyhidden">Page </span>3</button></div></div>
+    </div>
+</section><!-- end of Blog section --><!-- Partners section -->
+<section id="partenaires" class="sponsors">
+    <div class="l-section-wrapper">
+
+        <header>
+            <h2>Partenaires</h2>
+        </header>
+
+        <section class="sponsors-group"><header><h3><span>Principaux</span></h3></header><ul class="sponsors-list"><li itemscope itemtype="http://schema.org/Organization"><a href="http://www.libeo.com"><img itemprop="image" src="wp-content/uploads/2014/01/libeo1.png" alt=""><span itemprop="name" class="visuallyhidden">Libéo</span></a></li><li itemscope itemtype="http://schema.org/Organization"><a href="http://www.bell.ca"><img itemprop="image" src="wp-content/uploads/2014/01/bell.png" alt=""><span itemprop="name" class="visuallyhidden">Bell</span></a></li><li itemscope itemtype="http://schema.org/Organization"><a href="http://www.ixmedia.com"><img itemprop="image" src="wp-content/uploads/2014/01/ixmedia.png" alt=""><span itemprop="name" class="visuallyhidden">iXmédia</span></a></li><li itemscope itemtype="http://schema.org/Organization"><a href="http://o2web.ca/"><img itemprop="image" src="wp-content/uploads/2014/02/o2webnew1.png" alt=""><span itemprop="name" class="visuallyhidden">O2 Web</span></a></li></ul></section><section class="sponsors-group"><header><h3><span>Associés</span></h3></header><ul class="sponsors-list"><li itemscope itemtype="http://schema.org/Organization"><a href="http://www.zapquebec.org/"><img itemprop="image" src="wp-content/uploads/2014/01/zap.png" alt=""><span itemprop="name" class="visuallyhidden">ZAP Québec</span></a></li><li itemscope itemtype="http://schema.org/Organization"><a href="http://www.connectngo.com/"><img itemprop="image" src="wp-content/uploads/2014/01/connectngo.png" alt=""><span itemprop="name" class="visuallyhidden">Connect & Go</span></a></li><li itemscope itemtype="http://schema.org/Organization"><a href="http://www.sunlife.ca/Canada/sunlifeCA?vgnLocale=fr_CA"><img itemprop="image" src="wp-content/uploads/2014/02/sun-life.png" alt=""><span itemprop="name" class="visuallyhidden">Financière Sun Life</span></a></li><li itemscope itemtype="http://schema.org/Organization"><a href="http://www.eq3.com"><img itemprop="image" src="wp-content/uploads/2014/02/eq3.png" alt=""><span itemprop="name" class="visuallyhidden">EQ3</span></a></li><li itemscope itemtype="http://schema.org/Organization"><a href="http://www.fernandezcom.ca"><img itemprop="image" src="wp-content/uploads/2014/02/fernandez.png" alt=""><span itemprop="name" class="visuallyhidden">Fernandez communication</span></a></li></ul></section><section class="sponsors-group"><header><h3><span>Publics</span></h3></header><ul class="sponsors-list"><li itemscope itemtype="http://schema.org/Organization"><a href="http://www.gouv.qc.ca"><img itemprop="image" src="wp-content/uploads/2014/01/gouv-qc.png" alt=""><span itemprop="name" class="visuallyhidden">Gouvernement du Québec</span></a></li><li itemscope itemtype="http://schema.org/Organization"><a href="http://www.mdeie.gouv.qc.ca/accord/"><img itemprop="image" src="wp-content/uploads/2014/01/accord.png" alt=""><span itemprop="name" class="visuallyhidden">Action concertée de coopération régionale de développement</span></a></li><li itemscope itemtype="http://schema.org/Organization"><a href="https://www.ville.quebec.qc.ca"><img itemprop="image" src="wp-content/uploads/2014/01/ville_de_quebec.png" alt=""><span itemprop="name" class="visuallyhidden">Ville de Québec</span></a></li><li itemscope itemtype="http://schema.org/Organization"><a href="http://www.crecn.qc.ca"><img itemprop="image" src="wp-content/uploads/2014/02/CRE.png" alt=""><span itemprop="name" class="visuallyhidden">Conférence régionale des élus</span></a></li></ul></section><section class="sponsors-group"><header><h3><span>Médias et collaborateurs</span></h3></header><ul class="sponsors-list"><li itemscope itemtype="http://schema.org/Organization"><a href="http://www.vetiq.org"><img itemprop="image" src="wp-content/uploads/2014/01/vetiq.png" alt=""><span itemprop="name" class="visuallyhidden">VETIQ</span></a></li><li itemscope itemtype="http://schema.org/Organization"><a href="http://startupacademie.com/"><img itemprop="image" src="wp-content/uploads/2014/02/startupacademie.png" alt=""><span itemprop="name" class="visuallyhidden">Startup-Académie</span></a></li><li itemscope itemtype="http://schema.org/Organization"><a href="http://webaquebec.org/www.aqiii.org"><img itemprop="image" src="wp-content/uploads/2014/02/aqiii.png" alt=""><span itemprop="name" class="visuallyhidden">AQIII</span></a></li><li itemscope itemtype="http://schema.org/Organization"><a href="http://webaquebec.org/www.uxpaquebec.org"><img itemprop="image" src="wp-content/uploads/2014/02/uxpaquebec.png" alt=""><span itemprop="name" class="visuallyhidden">UXPA Québec</span></a></li><li itemscope itemtype="http://schema.org/Organization"><a href="http://webaquebec.org/www.socom.ca"><img itemprop="image" src="wp-content/uploads/2014/02/socom.png" alt=""><span itemprop="name" class="visuallyhidden">SOCOM</span></a></li><li itemscope itemtype="http://schema.org/Organization"><a href="http://macquebec.com/"><img itemprop="image" src="wp-content/uploads/2014/02/macquebec.png" alt=""><span itemprop="name" class="visuallyhidden">MacQuébec</span></a></li><li itemscope itemtype="http://schema.org/Organization"><a href="http://www.cefrio.qc.ca/"><img itemprop="image" src="wp-content/uploads/2014/02/cefrio.png" alt=""><span itemprop="name" class="visuallyhidden">CEFRIO</span></a></li><li itemscope itemtype="http://schema.org/Organization"><a href="http://www.musiqueplus.com/emissions/m-net-1.950689?tab=videos"><img itemprop="image" src="wp-content/uploads/2014/02/mnet2011_blanc.png" alt=""><span itemprop="name" class="visuallyhidden">M.net</span></a></li><li itemscope itemtype="http://schema.org/Organization"><a href="http://www.rceq.ca"><img itemprop="image" src="wp-content/uploads/2014/02/rceq.png" alt=""><span itemprop="name" class="visuallyhidden">RCEQ</span></a></li><li itemscope itemtype="http://schema.org/Organization"><a href="http://www.technocompetences.qc.ca/"><img itemprop="image" src="wp-content/uploads/2014/02/technocompetences.png" alt=""><span itemprop="name" class="visuallyhidden">TECHNOCompétences</span></a></li></ul></section><section class="sponsors-group"><header><h3><span>Supporteurs</span></h3></header><ul class="sponsors-list"><li itemscope itemtype="http://schema.org/Organization"><a href="http://www.numadn.com"><img itemprop="image" src="wp-content/uploads/2014/01/numadn.png" alt=""><span itemprop="name" class="visuallyhidden">numadn</span></a></li><li itemscope itemtype="http://schema.org/Organization"><a href="http://www.cossette.com"><img itemprop="image" src="wp-content/uploads/2014/01/COSSETTE_black.png" alt=""><span itemprop="name" class="visuallyhidden">Cossette</span></a></li><li itemscope itemtype="http://schema.org/Organization"><a href="http://webaquebec.org/finfinaud.com"><img itemprop="image" src="wp-content/uploads/2014/01/finfinaud.png" alt=""><span itemprop="name" class="visuallyhidden">Fin Finaud</span></a></li><li itemscope itemtype="http://schema.org/Organization"><a href="http://www.brad.ca/fr/"><img itemprop="image" src="wp-content/uploads/2014/02/brad.png" alt=""><span itemprop="name" class="visuallyhidden">Brad</span></a></li><li itemscope itemtype="http://schema.org/Organization"><a href="http://cortexmedia.ca/"><img itemprop="image" src="wp-content/uploads/2014/02/cortexmedia.png" alt=""><span itemprop="name" class="visuallyhidden">Cortex Media</span></a></li><li itemscope itemtype="http://schema.org/Organization"><a href="http://www.tp1.ca"><img itemprop="image" src="wp-content/uploads/2014/03/tp1.png" alt=""><span itemprop="name" class="visuallyhidden">TP1</span></a></li></ul></section>
+    </div>
+</section><!-- end of Partners section --><!-- About section -->
+<section id="a-propos" class="about">
+    <div class="l-section-wrapper">
+
+        <header>
+            <h2>À propos</h2>
+        </header>
+
+        <div class="l-row about-wrapper">
+
+            <div class="l-col">
+                <p class="strong">Par et pour les gens qui imaginent le web</p>
+                <p>Le WAQ est l’occasion privilégiée d’avoir accès au plus grand rassemblement de décideurs, professionnels, gestionnaires, développeurs et étudiants de l’industrie du numérique de Québec. Le Web à Québec est un événement propulsé par Québec numérique.</p>
+
+                <section class="organizers-group"><header><h3>Conseil d'administration</h3></header><ul class="organizers-list"><li itemscope itemtype="http://schema.org/Person" class=""><figure itemscope itemtype="http://schema.org/Person"><figcaption><span itemprop="name">Jason <span class="last-name">Lemay</span></span></figcaption><img itemprop="image" src="wp-content/uploads/2013/12/jason_lemay.png" alt=""></figure><div class="overlay social-medias reversed"><a href="http://www.facebook.com/jasonlemay" class="Facebook"><img src="wp-content/themes/waq2014/img/icon-social-facebook-mono.png" alt="Facebook"></a><a href="https://twitter.com/jasonlemay" class="Twitter"><img src="wp-content/themes/waq2014/img/icon-social-twitter-mono.png" alt="Twitter"></a><a href="http://ca.linkedin.com/in/jasonlemay" class="LinkedIn"><img src="wp-content/themes/waq2014/img/icon-social-linkedin-mono.png" alt="LinkedIn"></a></div></li><li itemscope itemtype="http://schema.org/Person" class=" last-2"><figure itemscope itemtype="http://schema.org/Person"><figcaption><span itemprop="name">Carl-Frédéric <span class="last-name">De Celles</span></span></figcaption><img itemprop="image" src="wp-content/uploads/2013/12/carl-frederic_de_celles.png" alt=""></figure><div class="overlay social-medias reversed"><a href="https://twitter.com/cfd" class="Twitter"><img src="wp-content/themes/waq2014/img/icon-social-twitter-mono.png" alt="Twitter"></a><a href="http://ca.linkedin.com/in/cfdecelles" class="LinkedIn"><img src="wp-content/themes/waq2014/img/icon-social-linkedin-mono.png" alt="LinkedIn"></a></div></li><li itemscope itemtype="http://schema.org/Person" class=" last-3"><figure itemscope itemtype="http://schema.org/Person"><figcaption><span itemprop="name">Martin <span class="last-name">Huard</span></span></figcaption><img itemprop="image" src="wp-content/uploads/2013/12/martin_huard.png" alt=""></figure><div class="overlay social-medias reversed"><a href="https://twitter.com/martinhuard" class="Twitter"><img src="wp-content/themes/waq2014/img/icon-social-twitter-mono.png" alt="Twitter"></a><a href="http://ca.linkedin.com/in/martinhuard" class="LinkedIn"><img src="wp-content/themes/waq2014/img/icon-social-linkedin-mono.png" alt="LinkedIn"></a></div></li><li itemscope itemtype="http://schema.org/Person" class=" last-2 last-4"><figure itemscope itemtype="http://schema.org/Person"><figcaption><span itemprop="name">Jean-Philippe <span class="last-name">Doyle</span></span></figcaption><img itemprop="image" src="wp-content/uploads/2013/12/6NCuruKp-51x51.jpeg" alt=""></figure><div class="overlay social-medias reversed"><a href="https://www.facebook.com/jeanphilippe.doyle" class="Facebook"><img src="wp-content/themes/waq2014/img/icon-social-facebook-mono.png" alt="Facebook"></a><a href="https://twitter.com/j15e" class="Twitter"><img src="wp-content/themes/waq2014/img/icon-social-twitter-mono.png" alt="Twitter"></a><a href="http://ca.linkedin.com/in/j15e2000" class="LinkedIn"><img src="wp-content/themes/waq2014/img/icon-social-linkedin-mono.png" alt="LinkedIn"></a></div></li><li itemscope itemtype="http://schema.org/Person" class=""><figure itemscope itemtype="http://schema.org/Person"><figcaption><span itemprop="name">Joé <span class="last-name">Bussière</span></span></figcaption><img itemprop="image" src="wp-content/uploads/2013/12/joe_bussiere-51x51.jpg" alt=""></figure><div class="overlay social-medias reversed"><a href="https://www.facebook.com/joe.bussiere" class="Facebook"><img src="wp-content/themes/waq2014/img/icon-social-facebook-mono.png" alt="Facebook"></a><a href="https://twitter.com/joebussiere" class="Twitter"><img src="wp-content/themes/waq2014/img/icon-social-twitter-mono.png" alt="Twitter"></a><a href="http://www.linkedin.com/in/joebussiere" class="LinkedIn"><img src="wp-content/themes/waq2014/img/icon-social-linkedin-mono.png" alt="LinkedIn"></a></div></li><li itemscope itemtype="http://schema.org/Person" class=" last-2 last-3"><figure itemscope itemtype="http://schema.org/Person"><figcaption><span itemprop="name">Sylvie <span class="last-name">Bougie</span></span></figcaption><img itemprop="image" src="wp-content/uploads/2014/02/sylvie-web2-51x51.jpg" alt=""></figure><div class="overlay social-medias reversed"><a href="https://www.facebook.com/sylviebougie" class="Facebook"><img src="wp-content/themes/waq2014/img/icon-social-facebook-mono.png" alt="Facebook"></a><a href="https://twitter.com/Sbougieavocate" class="Twitter"><img src="wp-content/themes/waq2014/img/icon-social-twitter-mono.png" alt="Twitter"></a><a href="http://www.linkedin.com/in/sylviebougie" class="LinkedIn"><img src="wp-content/themes/waq2014/img/icon-social-linkedin-mono.png" alt="LinkedIn"></a></div></li></ul></section><section class="organizers-group"><header><h3>Direction générale</h3></header><ul class="organizers-list"><li itemscope itemtype="http://schema.org/Person" class=""><figure itemscope itemtype="http://schema.org/Person"><figcaption><span itemprop="name">Jonathan <span class="last-name">Parent</span></span></figcaption><img itemprop="image" src="wp-content/uploads/2013/12/jonathan_parent.png" alt=""></figure><div class="overlay social-medias reversed"><a href="https://www.facebook.com/jonathan.parent" class="Facebook"><img src="wp-content/themes/waq2014/img/icon-social-facebook-mono.png" alt="Facebook"></a><a href="https://twitter.com/jparent" class="Twitter"><img src="wp-content/themes/waq2014/img/icon-social-twitter-mono.png" alt="Twitter"></a><a href="http://ca.linkedin.com/in/joparent" class="LinkedIn"><img src="wp-content/themes/waq2014/img/icon-social-linkedin-mono.png" alt="LinkedIn"></a><a href="https://plus.google.com/108322563243929375701" class="Google+"><img src="wp-content/themes/waq2014/img/icon-social-google-mono.png" alt="Google+"></a></div></li></ul></section><section class="organizers-group"><header><h3>Comité exécutif</h3></header><ul class="organizers-list"><li itemscope itemtype="http://schema.org/Person" class=""><figure itemscope itemtype="http://schema.org/Person"><figcaption><span itemprop="name">Jason <span class="last-name">Lemay</span></span></figcaption><img itemprop="image" src="wp-content/uploads/2013/12/jason_lemay.png" alt=""></figure><div class="overlay social-medias reversed"><a href="http://www.facebook.com/jasonlemay" class="Facebook"><img src="wp-content/themes/waq2014/img/icon-social-facebook-mono.png" alt="Facebook"></a><a href="https://twitter.com/jasonlemay" class="Twitter"><img src="wp-content/themes/waq2014/img/icon-social-twitter-mono.png" alt="Twitter"></a><a href="http://ca.linkedin.com/in/jasonlemay" class="LinkedIn"><img src="wp-content/themes/waq2014/img/icon-social-linkedin-mono.png" alt="LinkedIn"></a></div></li><li itemscope itemtype="http://schema.org/Person" class=" last-2"><figure itemscope itemtype="http://schema.org/Person"><figcaption><span itemprop="name">Nicolas-Loïc <span class="last-name">Fortin</span></span></figcaption><img itemprop="image" src="wp-content/uploads/2014/01/nicolas-loic_fortin-51x51.jpg" alt=""></figure><div class="overlay social-medias reversed"><a href="http://www.linkedin.com/in/nicolasloicfortin" class="LinkedIn"><img src="wp-content/themes/waq2014/img/icon-social-linkedin-mono.png" alt="LinkedIn"></a></div></li><li itemscope itemtype="http://schema.org/Person" class=" last-3"><figure itemscope itemtype="http://schema.org/Person"><figcaption><span itemprop="name">Yhoanis <span class="last-name">Obando</span></span></figcaption><img itemprop="image" src="wp-content/uploads/2014/01/yhoanis_obando-51x51.png" alt=""></figure><div class="overlay social-medias reversed"><a href="http://www.facebook.com/yhoanisobando" class="Facebook"><img src="wp-content/themes/waq2014/img/icon-social-facebook-mono.png" alt="Facebook"></a><a href="http://www.twitter.com/Yhoanis" class="Twitter"><img src="wp-content/themes/waq2014/img/icon-social-twitter-mono.png" alt="Twitter"></a><a href="http://ca.linkedin.com/in/yhoanisobando/fr‎" class="LinkedIn"><img src="wp-content/themes/waq2014/img/icon-social-linkedin-mono.png" alt="LinkedIn"></a><a href="http://google.com/+YhoanisObando" class="Google+"><img src="wp-content/themes/waq2014/img/icon-social-google-mono.png" alt="Google+"></a></div></li><li itemscope itemtype="http://schema.org/Person" class=" last-2 last-4"><figure itemscope itemtype="http://schema.org/Person"><figcaption><span itemprop="name">Élisabeth <span class="last-name">Dumont</span></span></figcaption><img itemprop="image" src="wp-content/uploads/2014/01/1608623_10152170406701147_766276024_n-51x51.jpg" alt=""></figure><div class="overlay social-medias reversed"><a href="http://ca.linkedin.com/in/elisabethdumont/" class="LinkedIn"><img src="wp-content/themes/waq2014/img/icon-social-linkedin-mono.png" alt="LinkedIn"></a></div></li><li itemscope itemtype="http://schema.org/Person" class=""><figure itemscope itemtype="http://schema.org/Person"><figcaption><span itemprop="name">Stéphanie <span class="last-name">Salman</span></span></figcaption><img itemprop="image" src="wp-content/uploads/2014/01/0293f7d-51x51.jpg" alt=""></figure><div class="overlay social-medias reversed"><a href="http://ca.linkedin.com/in/stephaniesalman/" class="LinkedIn"><img src="wp-content/themes/waq2014/img/icon-social-linkedin-mono.png" alt="LinkedIn"></a></div></li></ul></section><section class="organizers-group"><header><h3>Comité de programmation</h3></header><ul class="organizers-list"><li itemscope itemtype="http://schema.org/Person" class=""><figure itemscope itemtype="http://schema.org/Person"><figcaption><span itemprop="name">Jason <span class="last-name">Lemay</span></span></figcaption><img itemprop="image" src="wp-content/uploads/2013/12/jason_lemay.png" alt=""></figure><div class="overlay social-medias reversed"><a href="http://www.facebook.com/jasonlemay" class="Facebook"><img src="wp-content/themes/waq2014/img/icon-social-facebook-mono.png" alt="Facebook"></a><a href="https://twitter.com/jasonlemay" class="Twitter"><img src="wp-content/themes/waq2014/img/icon-social-twitter-mono.png" alt="Twitter"></a><a href="http://ca.linkedin.com/in/jasonlemay" class="LinkedIn"><img src="wp-content/themes/waq2014/img/icon-social-linkedin-mono.png" alt="LinkedIn"></a></div></li><li itemscope itemtype="http://schema.org/Person" class=" last-2"><figure itemscope itemtype="http://schema.org/Person"><figcaption><span itemprop="name">Éric <span class="last-name">Letarte</span></span></figcaption><img itemprop="image" src="wp-content/uploads/2013/12/eric_letarte.png" alt=""></figure><div class="overlay social-medias reversed"><a href="https://www.facebook.com/eric.letarte" class="Facebook"><img src="wp-content/themes/waq2014/img/icon-social-facebook-mono.png" alt="Facebook"></a><a href="https://twitter.com/ericletarte" class="Twitter"><img src="wp-content/themes/waq2014/img/icon-social-twitter-mono.png" alt="Twitter"></a><a href="http://www.linkedin.com/in/ericletarte" class="LinkedIn"><img src="wp-content/themes/waq2014/img/icon-social-linkedin-mono.png" alt="LinkedIn"></a></div></li><li itemscope itemtype="http://schema.org/Person" class=" last-3"><figure itemscope itemtype="http://schema.org/Person"><figcaption><span itemprop="name">Marie-Andrée <span class="last-name">Girard</span></span></figcaption><img itemprop="image" src="wp-content/uploads/2013/12/mag.jpg" alt=""></figure></li><li itemscope itemtype="http://schema.org/Person" class=" last-2 last-4"><figure itemscope itemtype="http://schema.org/Person"><figcaption><span itemprop="name">Félix <span class="last-name">Bégin</span></span></figcaption><img itemprop="image" src="wp-content/uploads/2013/12/felix_begin.png" alt=""></figure><div class="overlay social-medias reversed"><a href="https://twitter.com/felixb1" class="Twitter"><img src="wp-content/themes/waq2014/img/icon-social-twitter-mono.png" alt="Twitter"></a><a href="http://ca.linkedin.com/pub/félix-bégin/1/b54/417" class="LinkedIn"><img src="wp-content/themes/waq2014/img/icon-social-linkedin-mono.png" alt="LinkedIn"></a></div></li><li itemscope itemtype="http://schema.org/Person" class=""><figure itemscope itemtype="http://schema.org/Person"><figcaption><span itemprop="name">Dave  <span class="last-name">G. Pelletier</span></span></figcaption><img itemprop="image" src="wp-content/uploads/2014/01/dave1.jpg" alt=""></figure><div class="overlay social-medias reversed"><a href="http://www.twitter.com/dgpelletier" class="Twitter"><img src="wp-content/themes/waq2014/img/icon-social-twitter-mono.png" alt="Twitter"></a><a href="http://www.linkedin.com/pub/dave-g-pelletier/14/52/72a" class="LinkedIn"><img src="wp-content/themes/waq2014/img/icon-social-linkedin-mono.png" alt="LinkedIn"></a></div></li><li itemscope itemtype="http://schema.org/Person" class=" last-2 last-3"><figure itemscope itemtype="http://schema.org/Person"><figcaption><span itemprop="name">Raymond <span class="last-name">Poirier</span></span></figcaption><img itemprop="image" src="wp-content/uploads/2014/01/RP_Tall.jpg" alt=""></figure></li><li itemscope itemtype="http://schema.org/Person" class=""><figure itemscope itemtype="http://schema.org/Person"><figcaption><span itemprop="name">Sébastien <span class="last-name">Morin</span></span></figcaption><img itemprop="image" src="wp-content/uploads/2014/01/Capture-d�%2580%2599écran-2014-01-16-à-15.45.22-51x51.png" alt=""></figure></li></ul></section><section class="organizers-group"><header><h3>Promotion et mobilisation</h3></header><ul class="organizers-list"><li itemscope itemtype="http://schema.org/Person" class=""><figure itemscope itemtype="http://schema.org/Person"><figcaption><span itemprop="name">Yhoanis <span class="last-name">Obando</span></span></figcaption><img itemprop="image" src="wp-content/uploads/2014/01/yhoanis_obando-51x51.png" alt=""></figure><div class="overlay social-medias reversed"><a href="http://www.facebook.com/yhoanisobando" class="Facebook"><img src="wp-content/themes/waq2014/img/icon-social-facebook-mono.png" alt="Facebook"></a><a href="http://www.twitter.com/Yhoanis" class="Twitter"><img src="wp-content/themes/waq2014/img/icon-social-twitter-mono.png" alt="Twitter"></a><a href="http://ca.linkedin.com/in/yhoanisobando/fr‎" class="LinkedIn"><img src="wp-content/themes/waq2014/img/icon-social-linkedin-mono.png" alt="LinkedIn"></a><a href="http://google.com/+YhoanisObando" class="Google+"><img src="wp-content/themes/waq2014/img/icon-social-google-mono.png" alt="Google+"></a></div></li><li itemscope itemtype="http://schema.org/Person" class=" last-2"><figure itemscope itemtype="http://schema.org/Person"><figcaption><span itemprop="name">César <span class="last-name">Monchablon</span></span></figcaption><img itemprop="image" src="wp-content/uploads/2014/01/970346_10201345243088688_1582916679_n1-51x51.jpg" alt=""></figure><div class="overlay social-medias reversed"><a href="https://www.facebook.com/pages/Pulse-Design/143242505795916" class="Facebook"><img src="wp-content/themes/waq2014/img/icon-social-facebook-mono.png" alt="Facebook"></a><a href="https://twitter.com/PulseDesign" class="Twitter"><img src="wp-content/themes/waq2014/img/icon-social-twitter-mono.png" alt="Twitter"></a><a href="http://www.linkedin.com/pub/c%C3%A9sar-monchablon/53/224/8a8" class="LinkedIn"><img src="wp-content/themes/waq2014/img/icon-social-linkedin-mono.png" alt="LinkedIn"></a></div></li><li itemscope itemtype="http://schema.org/Person" class=" last-3"><figure itemscope itemtype="http://schema.org/Person"><figcaption><span itemprop="name">Jean-François <span class="last-name">Frenette</span></span></figcaption><img itemprop="image" src="wp-content/uploads/2014/01/2048fdb94dae304cfe0009f1534e5f351-51x51.jpeg" alt=""></figure><div class="overlay social-medias reversed"><a href="http://facebook.com/JeanFrancoisFrenette" class="Facebook"><img src="wp-content/themes/waq2014/img/icon-social-facebook-mono.png" alt="Facebook"></a><a href="http://twitter.com/dezjeff" class="Twitter"><img src="wp-content/themes/waq2014/img/icon-social-twitter-mono.png" alt="Twitter"></a><a href="http://ca.linkedin.com/in/jeanfrancoisfrenette" class="LinkedIn"><img src="wp-content/themes/waq2014/img/icon-social-linkedin-mono.png" alt="LinkedIn"></a><a href="https://plus.google.com/106133496846526641697/posts" class="Google+"><img src="wp-content/themes/waq2014/img/icon-social-google-mono.png" alt="Google+"></a></div></li><li itemscope itemtype="http://schema.org/Person" class=" last-2 last-4"><figure itemscope itemtype="http://schema.org/Person"><figcaption><span itemprop="name">Noémie <span class="last-name">Beaulieu</span></span></figcaption><img itemprop="image" src="wp-content/uploads/2014/01/1057080_10203211757561418_1024929091_n-51x51.jpg" alt=""></figure><div class="overlay social-medias reversed"><a href="http://facebook.com/nbeaulieudesign" class="Facebook"><img src="wp-content/themes/waq2014/img/icon-social-facebook-mono.png" alt="Facebook"></a><a href="https://twitter.com/noemiebeaulieu" class="Twitter"><img src="wp-content/themes/waq2014/img/icon-social-twitter-mono.png" alt="Twitter"></a><a href="http://www.facebook.com/l.php?u=http%3A%2F%2Fca.linkedin.com%2Fpub%2Fno%25C3%25A9mie-beaulieu%2F31%2Fb33%2Fa31%2F&amp;h=hAQEfcNqk" class="LinkedIn"><img src="wp-content/themes/waq2014/img/icon-social-linkedin-mono.png" alt="LinkedIn"></a></div></li><li itemscope itemtype="http://schema.org/Person" class=""><figure itemscope itemtype="http://schema.org/Person"><figcaption><span itemprop="name">Pascal <span class="last-name">Audet</span></span></figcaption><img itemprop="image" src="wp-content/uploads/2014/01/1524815_10202205823921179_545260628_n-51x51.jpg" alt=""></figure><div class="overlay social-medias reversed"><a href="http://twitter.com/audet_pascal" class="Twitter"><img src="wp-content/themes/waq2014/img/icon-social-twitter-mono.png" alt="Twitter"></a></div></li><li itemscope itemtype="http://schema.org/Person" class=" last-2 last-3"><figure itemscope itemtype="http://schema.org/Person"><figcaption><span itemprop="name">Aleksandra <span class="last-name">Logist</span></span></figcaption><img itemprop="image" src="wp-content/uploads/2014/02/alexandra-227x190-51x51.jpg" alt=""></figure></li></ul></section><section class="organizers-group"><header><h3>Comité des bénévoles</h3></header><ul class="organizers-list"><li itemscope itemtype="http://schema.org/Person" class=""><figure itemscope itemtype="http://schema.org/Person"><figcaption><span itemprop="name">Élisabeth <span class="last-name">Dumont</span></span></figcaption><img itemprop="image" src="wp-content/uploads/2014/01/1608623_10152170406701147_766276024_n-51x51.jpg" alt=""></figure><div class="overlay social-medias reversed"><a href="http://ca.linkedin.com/in/elisabethdumont/" class="LinkedIn"><img src="wp-content/themes/waq2014/img/icon-social-linkedin-mono.png" alt="LinkedIn"></a></div></li><li itemscope itemtype="http://schema.org/Person" class=" last-2"><figure itemscope itemtype="http://schema.org/Person"><figcaption><span itemprop="name">Stéphanie <span class="last-name">Salman</span></span></figcaption><img itemprop="image" src="wp-content/uploads/2014/01/0293f7d-51x51.jpg" alt=""></figure><div class="overlay social-medias reversed"><a href="http://ca.linkedin.com/in/stephaniesalman/" class="LinkedIn"><img src="wp-content/themes/waq2014/img/icon-social-linkedin-mono.png" alt="LinkedIn"></a></div></li></ul></section><section class="organizers-group"><header><h3>Opérations et logistiques</h3></header><ul class="organizers-list"><li itemscope itemtype="http://schema.org/Person" class=""><figure itemscope itemtype="http://schema.org/Person"><figcaption><span itemprop="name">Nicolas-Loïc <span class="last-name">Fortin</span></span></figcaption><img itemprop="image" src="wp-content/uploads/2014/01/nicolas-loic_fortin-51x51.jpg" alt=""></figure><div class="overlay social-medias reversed"><a href="http://www.linkedin.com/in/nicolasloicfortin" class="LinkedIn"><img src="wp-content/themes/waq2014/img/icon-social-linkedin-mono.png" alt="LinkedIn"></a></div></li></ul></section><section class="organizers-group"><header><h3>Relations européennes, partenariats et commandites</h3></header><ul class="organizers-list"><li itemscope itemtype="http://schema.org/Person" class=""><figure itemscope itemtype="http://schema.org/Person"><figcaption><span itemprop="name">Karine <span class="last-name">Lesage</span></span></figcaption><img itemprop="image" src="wp-content/uploads/2014/01/karine_lesage-51x51.png" alt=""></figure><div class="overlay social-medias reversed"><a href="http://www.twitter.com/karinelesage" class="Twitter"><img src="wp-content/themes/waq2014/img/icon-social-twitter-mono.png" alt="Twitter"></a><a href="http://ca.linkedin.com/in/karinelesage" class="LinkedIn"><img src="wp-content/themes/waq2014/img/icon-social-linkedin-mono.png" alt="LinkedIn"></a></div></li><li itemscope itemtype="http://schema.org/Person" class=" last-2"><figure itemscope itemtype="http://schema.org/Person"><figcaption><span itemprop="name">Eliot <span class="last-name">Jacquin</span></span></figcaption><img itemprop="image" src="wp-content/uploads/2014/01/eliot_jacquin-51x51.png" alt=""></figure><div class="overlay social-medias reversed"><a href="http://www.twitter.com/ejacquin" class="Twitter"><img src="wp-content/themes/waq2014/img/icon-social-twitter-mono.png" alt="Twitter"></a><a href="http://ca.linkedin.com/in/eliotjacquin" class="LinkedIn"><img src="wp-content/themes/waq2014/img/icon-social-linkedin-mono.png" alt="LinkedIn"></a></div></li></ul></section>
+            </div>
+
+            <div class="l-col">
+                <div class="highlight">
+                    <p class="strong">Des bénévoles essentiels !</p>
+                    <p>Un merci tout spécial à notre équipe du tonnerre !</p>
+                </div>
+
+                
+            </div>
+
+        </div>
+
+    </div>
+</section><!-- end of About section --><!-- Footer section -->
+<footer class="footer">
+    <div class="l-section-wrapper">
+
+        <div class="visuallyhidden">
+            <h2>Informations générales</h2>
+        </div>
+
+        <div class="l-row footer-infos">
+
+            <div class="l-col">
+                <div class="contact-element" itemscope itemtype="http://schema.org/Place">
+                    <span class="name" itemprop="name">Espace 400<sup>e</sup> Bell</span>
+                    <span class="adresse" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                        <span class="streetAddress" itemprop="streetAddress">100, rue Quai St-André</span>
+                        <span class="addressLocality" itemprop="addressLocality">Québec</span> (QC) <span class="postalCode" itemprop="postalCode">G1K 3Y2</span>
+                    </span>
+                    <span class="link"><a href="https://maps.google.ca/maps?q=Espace%2B400e%2B100%2C%2Brue%2BQuai%2BSt-Andr%C3%A9%2BQu%C3%A9bec%2C%2BQC&amp;hl=fr&amp;ie=UTF8&amp;hq=Espace%2B400e%2B100%2C%2Brue%2BQuai%2BSt-Andr%C3%A9%2BQu%C3%A9bec%2C%2BQC&amp;t=m&amp;z=16&amp;iwloc=A">Comment s'y rendre</a></span>
+                </div>
+            </div>
+
+            <div class="l-col two-elements">
+                <div class="contact-element" itemscope itemtype="http://schema.org/Organization">
+                    <span class="name" itemprop="name">Questions générales</span>
+                    <span class="telephone" itemprop="telephone">1-877-334-2547</span>
+                    <span class="email" itemprop="email"><a href="http://www.cloudflare.com/email-protection#076e696168477062656676726265626429687560"><span class="__cf_email__" data-cfemail="167f787079566173747767637374737538796471">[email&nbsp;protected]</span><script type="text/javascript">
+/* <![CDATA[ */
+(function(){try{var s,a,i,j,r,c,l,b=document.getElementsByTagName("script");l=b[b.length-1].previousSibling;a=l.getAttribute('data-cfemail');if(a){s='';r=parseInt(a.substr(0,2),16);for(j=2;a.length-j;j+=2){c=parseInt(a.substr(j,2),16)^r;s+=String.fromCharCode(c);}s=document.createTextNode(s);l.parentNode.replaceChild(s,l);}}catch(e){}})();
+/* ]]> */
+</script></a></span>
+                </div>
+                <div class="contact-element" itemscope itemtype="http://schema.org/Organization">
+                    <span class="name" itemprop="name">Vous êtes un média?</span>
+                    <span class="telephone" itemprop="telephone">418 704-1559 #228</span>
+                    <span class="email" itemprop="email"><a href="http://www.cloudflare.com/email-protection#2a474f4e434b596a5d4f484b5b5f4f484f490445584d"><span class="__cf_email__" data-cfemail="355850515c544675425057544440505750561b5a4752">[email&nbsp;protected]</span><script type="text/javascript">
+/* <![CDATA[ */
+(function(){try{var s,a,i,j,r,c,l,b=document.getElementsByTagName("script");l=b[b.length-1].previousSibling;a=l.getAttribute('data-cfemail');if(a){s='';r=parseInt(a.substr(0,2),16);for(j=2;a.length-j;j+=2){c=parseInt(a.substr(j,2),16)^r;s+=String.fromCharCode(c);}s=document.createTextNode(s);l.parentNode.replaceChild(s,l);}}catch(e){}})();
+/* ]]> */
+</script></a></span>
+                </div>
+            </div>
+
+            <div class="l-col">
+                <div class="contact-element" itemscope itemtype="http://schema.org/Place">
+                    <span class="name" itemprop="name">Siège social</span>
+                    <span class="adresse" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                        <span class="streetAddress" itemprop="streetAddress">305, Charest Est, bureau 901</span>
+                        <span class="addressLocality" itemprop="addressLocality">Québec</span> (QC) <span class="postalCode" itemprop="postalCode">G1K 3H3</span>
+                        <span class="telephone" itemprop="telephone">418 647-3877</span>
+                    </span>
+                </div>
+            </div>
+
+            <div class="l-col large">
+                <p class="strong">Suivez-nous sur les réseaux sociaux et collaborez avec nous</p>
+                <p class="strong hashtag"><a href="https://twitter.com/search?q=%23WAQ14&amp;src=typd">#WAQ14</a></p>
+                <div class="social-medias">
+                    <a href="https://www.facebook.com/webaquebec" class="Facebook"><img src="wp-content/themes/waq2014/img/icon-social-facebook.png" alt="Facebook"></a><a href="https://twitter.com/webaquebec" class="Twitter"><img src="wp-content/themes/waq2014/img/icon-social-twitter.png" alt="Twitter"></a><a href="http://www.linkedin.com/company/web-qu-bec" class="LinkedIn"><img src="wp-content/themes/waq2014/img/icon-social-linkedin.png" alt="LinkedIn"></a>                </div>
+            </div>
+
+        </div>
+
+        <div class="l-row footer-bar">
+
+            <div class="l-col archives">
+                <h3>Archives</h3>
+                <ul>
+                    <li><a href="http://2013.webaquebec.org"><abbr title="Web à Québec">WAQ</abbr> <span class="visuallyhidden">édition</span> 2013</a></li><li><a href="http://2012.webaquebec.org"><abbr title="Web à Québec">WAQ</abbr> <span class="visuallyhidden">édition</span> 2012</a></li>                </ul>
+            </div>
+
+            <div class="l-col right">
+                <div><a href="accessibilite/index.html">Accessibilité</a></div>
+                <div><a href="https://github.com/webaquebec/webaquebec2014">Contribuez au site</a></div>
+                <div>
+                    <span class="strong">Conception et réalisation :</span>
+                    <a href="http://www.libeo.com" itemscope itemtype="http://schema.org/Organization">
+                        <span itemprop="name" class="visuallyhidden">Libéo</span>
+                        <img src="wp-content/themes/waq2014/img/logo-libeo-footer.png" alt="">
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</footer><!-- end of Footer section -->
+<script type='text/javascript' src='wp-content/plugins/conferencer/js/jquery.fadeshow.js%3Fver=0.3'></script>
+<script type='text/javascript' src='wp-content/plugins/conferencer/js/site.js%3Fver=0.3'></script>
+<script type='text/javascript' src='http://maps.googleapis.com/maps/api/js?sensor=false&#038;libraries=drawing&#038;language=fr'></script>
+<script type='text/javascript' src='wp-content/themes/waq2014/js/vendor/moment.min.js'></script>
+<script type='text/javascript' src='wp-content/themes/waq2014/js/vendor/underscore-min.js'></script>
+<script type='text/javascript' src='wp-content/themes/waq2014/js/plugins/buttonize.jquery.js'></script>
+<script type='text/javascript' src='wp-content/themes/waq2014/js/plugins/eminize.jquery.js'></script>
+<script type='text/javascript' src='wp-content/themes/waq2014/js/plugins/onfontresize.jquery.js'></script>
+<script type='text/javascript' src='wp-content/themes/waq2014/js/app/objects/Schedule.js'></script>
+<script type='text/javascript' src='wp-content/themes/waq2014/js/app/objects/CustomSchedule.js'></script>
+<script type='text/javascript' src='wp-content/themes/waq2014/js/app/objects/Countdown.js'></script>
+<script type='text/javascript' src='wp-content/themes/waq2014/js/app/objects/SnapMenu.js'></script>
+<script type='text/javascript' src='wp-content/themes/waq2014/js/app/objects/MobileMenu.js'></script>
+<script type='text/javascript' src='wp-content/themes/waq2014/js/app/objects/Slideshow.js'></script>
+<script type='text/javascript' src='wp-content/themes/waq2014/js/app/objects/GoogleMaps.js'></script>
+<script type='text/javascript' src='wp-content/themes/waq2014/js/app/WAQ.Common.js'></script>
+<script type='text/javascript' src='wp-content/themes/waq2014/js/main.js'></script>
+<div id="fb-root"></div>
+<script>
+  // Load the SDK asynchronously
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "https://connect.facebook.net/en_US/all.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-20043510-1', 'webaquebec.org');
+ga('send', 'pageview');
+</script>
+</div>
+<script type="text/javascript">
+/* <![CDATA[ */
+(function(){try{var s,a,i,j,r,c,l=document.getElementsByTagName("a"),t=document.createElement("textarea");for(i=0;l.length-i;i++){try{a=l[i].getAttribute("href");if(a&&"www.cloudflare.com/email-protection"==a.substr(7 ,35)){s='';j=43;r=parseInt(a.substr(j,2),16);for(j+=2;a.length-j&&a.substr(j,1)!='X';j+=2){c=parseInt(a.substr(j,2),16)^r;s+=String.fromCharCode(c);}j+=1;s+=a.substr(j,a.length-j);t.innerHTML=s.replace(/</g,"&lt;").replace(/>/g,"&gt;");l[i].setAttribute("href","mailto:"+t.value);}}catch(e){}}}catch(e){}})();
+/* ]]> */
+</script>
+</body>
+</html>

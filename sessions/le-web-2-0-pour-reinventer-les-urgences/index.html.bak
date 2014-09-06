@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<!--[if IE 7]>
+<html class="ie ie7 no-js" lang="fr">
+<![endif]-->
+<!--[if IE 8]>
+<html class="ie ie8 no-js" lang="fr">
+<![endif]-->
+<!--[if !(IE 7) | !(IE 8)  ]><!-->
+<html class="no-js" lang="fr">
+<!--<![endif]-->
+<head>
+	<meta charset="UTF-8" />
+	<!-- Set the viewport width to device width for mobile -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="profile" href="http://gmpg.org/xfn/11" />
+	<link rel="pingback" href="../../xmlrpc.php" />
+
+	<title>Le Web 2.0 pour réinventer les urgences  |  Web à Québec</title>
+
+	<meta name="dcterms.title" content="Le Web 2.0 pour réinventer les urgences" />
+	<meta name="description" content="Une conférence de Patrick Archambault présentée le jeudi 20 mars de 13h15 à 14h00 dans la salle iXmédia." />
+	<meta name="dcterms.description" content="Une conférence de Patrick Archambault présentée le jeudi 20 mars de 13h15 à 14h00 dans la salle iXmédia." />
+	<meta property="og:title" content="Le Web 2.0 pour réinventer les urgences" />
+	<meta property="og:description" content="Une conférence de Patrick Archambault présentée le jeudi 20 mars de 13h15 à 14h00 dans la salle iXmédia." />
+	<meta property="og:image" content="http://webaquebec.org/wp-content/themes/waq2014/img/fb-image.png" />
+	<meta property="og:type" content="event" />
+	<meta property="fb:app_id" content="604301956284044" />
+	<meta property="og:url" content="http://webaquebec.org/sessions/le-web-2-0-pour-reinventer-les-urgences/" />
+	<meta property="og:site_name" content="Web à Québec" />
+	<meta property="event:start_time" content="2014-03-20T13:15" />
+	<meta property="event:end_time" content="2014-03-20T14:00" />
+	<meta property="event:location" content="Salle iXmédia" />
+	
+	<link rel="alternate" type="application/rss+xml" title="Web à Québec &raquo; Le Web 2.0 pour réinventer les urgences Flux des commentaires" href="feed/index.html" />
+<link rel='stylesheet' id='conferencer-css'  href='../../wp-content/plugins/conferencer/css/screen.css%3Fver=0.3.css' type='text/css' media='all' />
+<link rel='stylesheet' id='fonts-css'  href='http://fonts.googleapis.com/css?family=Lusitana%3A400%2C700%7CRoboto%3A400%2C300%2C500%2C700%2C900%7CRoboto+Condensed%3A400%2C700%2C300&#038;ver=3.8.1' type='text/css' media='all' />
+<link rel='stylesheet' id='styles-css'  href='../../wp-content/themes/waq2014/css/styles.css%3Fver=3.8.1.css' type='text/css' media='all' />
+<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js?ver=1.10.2'></script>
+<script type='text/javascript' src='../../wp-content/plugins/mailchimp/js/scrollTo.js%3Fver=1.4.1'></script>
+<script type='text/javascript' src='../../wp-includes/js/jquery/jquery.form.min.js%3Fver=3.37.0'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var mailchimpSF = {"ajax_url":"http:\/\/webaquebec.org\/"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='../../wp-content/plugins/mailchimp/js/mailchimp.js%3Fver=1.4.1'></script>
+<script type='text/javascript' src='../../wp-content/themes/waq2014/js/vendor/modernizr-2.6.2.min.js%3Fver=2.6.2'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="../../xmlrpc.php%3Frsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../../wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='Sites Web: les contenus à valeur ajoutée pour l&rsquo;internaute et le référencement naturel' href='../sites-web-les-contenus-a-valeur-ajoutee-pour-linternaute-et-le-referencement-naturel/index.html' />
+<link rel='next' title='Comment aborder sereinement l’optimisation de son site e-commerce?' href='../comment-aborder-sereinement-loptimisation-de-son-site-e-commerce/index.html' />
+
+<link rel='canonical' href='index.html' />
+<link rel='shortlink' href='http://webaquebec.org/?p=837' />
+
+	<!-- IE Fix for HTML5 Tags -->
+	<!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<script type="text/javascript">
+  	var save_user_sessions_ajax = "http://webaquebec.org/wp-admin/admin-ajax.php?action=save_user_sessions&nonce=3441bc6252"
+var get_user_sessions_ajax = "http://webaquebec.org/wp-admin/admin-ajax.php?action=get_user_sessions&nonce=a02e8c0472"
+var fb_init_ajax = "http://webaquebec.org/wp-admin/admin-ajax.php?action=fb_init&nonce=260d76208e"
+var user_sessions = []
+var base_url = "http://webaquebec.org"
+var template_url = "http://webaquebec.org/wp-content/themes/waq2014"
+	</script>
+
+</head>
+<body class="not-zoomed">
+
+
+<!-- Page wrapper -->
+<div class="l-page-wrapper single-page salle-ixmedia" itemscope itemtype="http://schema.org/Event">
+
+  
+<!-- Home section -->
+<header class="home">
+    <div class="l-section-wrapper">
+
+        <a href="index.html#contenu" class="visuallyhidden focusable l-a11y">Passer au contenu</a>
+
+        <h1 itemprop="name" class="visuallyhidden">Le Web à Québec</h1>
+
+        <div class="event-logo">
+            <a href="../../index.html">
+                <img src="../../wp-content/themes/waq2014/img/logo.png" alt="">
+            </a>
+        </div>
+
+        <div class="event-subscribe event-subscribe-menu"><a href="https://www.eventbrite.com/e/billets-web-a-quebec-edition-2014-8015888739">Achetez vos billets</a></div>
+        <div class="event-back-link"><a href="../../index.html">Retour à l'horaire</a></div>
+
+    </div>
+</header><!-- end of Home section -->
+	  <!-- Page content section -->
+  <section id="content" class="page-content">
+      <div class="l-section-wrapper">
+
+          <div class="l-row">
+              <div class="l-col">
+
+                  <article>
+
+                      <header id="contenu" class="content-header go-to-content">
+                          <h1 itemprop="name">Le Web 2.0 pour réinventer les urgences</h1>
+                          <div class="informations">
+                              <span class="session-speaker" itemprop="performer" itemscope itemtype="http://schema.org/Person">
+                                  <span itemprop="name">Patrick Archambault </span>
+                              </span>
+                              <span class="session-meta">
+                                  <span class="date"><time datetime="2014-03-20">jeudi 20 mars</time></span>
+                                  <span class="time">
+                                      <time itemprop="startDate" datetime="2014-03-20 13:15">13 h 15</time> à
+                                      <time itemprop="endDate" datetime="2014-03-20 14:00">14 h 00</time>
+                                  </span>
+                                  <span class="location" itemprop="location" itemscope itemtype="http://schema.org/Place">
+                                      <span itemprop="address" itemscope itemtype="http://schema.org/Place">
+                                          <span itemprop="name">Salle iXmédia</span>
+                                      </span>
+                                  </span>
+                              </span>
+                                                        </div>
+                      </header>
+
+                      <div class="content">
+                          <p>Patrick Archambault est clinicien-chercheur boursier du Fonds de recherche Québec &#8211; Santé (FRQS) spécialisé en médecine d&rsquo;urgence, soins intensifs et en recherche en transfert des connaissances. Il travaille au Centre de santé et services sociaux Alphonse-Desjardins à l&rsquo;urgence et aux soins intensifs. Il est aussi professeur adjoint au Département de médecine familiale et médecine d&rsquo;urgence de l&rsquo;Université Laval.</p>
+<p>L’objectif principal de son programme de recherche est d’évaluer l’impact d’un wiki utilisé comme outil de transfert des connaissances sur la qualité des soins administrés à l’urgence et en soins critiques. Il mène actuellement différents projets correspondant aux étapes nécessaires à la meilleure compréhension du potentiel de cette technologie basée sur le partage et l’accès libre de l’information. Il travaille à mettre sur pied ce wiki pour permettre aux centres hospitaliers de la province du Québec de partager leurs connaissances et leur permettre de mettre en application les nouvelles pratiques exemplaires plus rapidement. Ses projets futurs seront d&rsquo;évaluer l&rsquo;impact d&rsquo;un wiki sur la qualité des soins et sur les coûts du système de santé.</p>
+<p>Il vous présentera un survol de son programme de recherche ainsi que quelques exemples concrets d&rsquo;utilisation d&rsquo;un wiki pour &laquo;&nbsp;réinventer&nbsp;&raquo; l&rsquo;utilisation des connaissances dans nos urgences. Il présentera aussi les défis à surmonter pour permettre à l&rsquo;ensemble du système de santé de bénéficier un jour de cette technologie simple et peu coûteuse.</p>
+                                                    <h2>Thématiques de cette conférence</h2><ul class="tags"><li><span>Gouvernemental</span></li><li><span>Médias Sociaux</span></li></ul>                      </div>
+
+                  </article>
+
+                  <div  class="back-link"><a href="../../index.html">Retour à l'horaire</a></div>
+
+              </div>
+              <div class="l-col sidebar">
+
+                  <aside class="highlight" role="complementary">
+                        <h2><span class="small">À propos de </span><span class="big">Patrick Archambault </span></h2><span class="img-crop"><img class="speaker-thumb" src="../../wp-content/uploads/2014/01/Photo_PArchambault-227x190.jpg" alt="" itemprop="image" /></span><div class="content"><p>Patrick Archambault est médecin chercheur clinicien boursier du FRQS spécialisé en médecine d’urgence, soins intensifs et en transfert des connaissances. Il travaille au sein du CSSS Alphonse-Desjardins (CHAU de Lévis) et est professeur adjoint au Département de médecine familiale et médecine d&rsquo;urgence et au sein de la Division de soins intensifs de l&rsquo;Université Laval. Son programme de recherche porte sur l&rsquo;impact des wikis comme outil de transfert des connaissances dans le réseau de la santé. Il veut développer une plateforme de collaboration qui permettra aux cliniciens, patients et aux décideurs du système de santé à partager les outils qui leur permettent de mettre en application les pratiques exemplaires.</p>
+</div><ul class="social"><li class="twitter"><a href="http://twitter.com/patarchambault">@patarchambault</a></li></ul>                  </aside>
+
+                    
+              </div>
+          </div>
+
+      </div>
+  </section><!-- end of sponsors section -->
+
+	<!-- Footer section -->
+<footer class="footer">
+    <div class="l-section-wrapper">
+
+        <div class="visuallyhidden">
+            <h2>Informations générales</h2>
+        </div>
+
+        <div class="l-row footer-infos">
+
+            <div class="l-col">
+                <div class="contact-element" itemscope itemtype="http://schema.org/Place">
+                    <span class="name" itemprop="name">Espace 400<sup>e</sup> Bell</span>
+                    <span class="adresse" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                        <span class="streetAddress" itemprop="streetAddress">100, rue Quai St-André</span>
+                        <span class="addressLocality" itemprop="addressLocality">Québec</span> (QC) <span class="postalCode" itemprop="postalCode">G1K 3Y2</span>
+                    </span>
+                    <span class="link"><a href="https://maps.google.ca/maps?q=Espace%2B400e%2B100%2C%2Brue%2BQuai%2BSt-Andr%C3%A9%2BQu%C3%A9bec%2C%2BQC&amp;hl=fr&amp;ie=UTF8&amp;hq=Espace%2B400e%2B100%2C%2Brue%2BQuai%2BSt-Andr%C3%A9%2BQu%C3%A9bec%2C%2BQC&amp;t=m&amp;z=16&amp;iwloc=A">Comment s'y rendre</a></span>
+                </div>
+            </div>
+
+            <div class="l-col two-elements">
+                <div class="contact-element" itemscope itemtype="http://schema.org/Organization">
+                    <span class="name" itemprop="name">Questions générales</span>
+                    <span class="telephone" itemprop="telephone">1-877-334-2547</span>
+                    <span class="email" itemprop="email"><a href="http://www.cloudflare.com/email-protection#afc6c1c9c0efd8cacdcededacacdcacc81c0ddc8"><span class="__cf_email__" data-cfemail="c8a1a6aea788bfadaaa9b9bdadaaadabe6a7baaf">[email&nbsp;protected]</span><script type="text/javascript">
+/* <![CDATA[ */
+(function(){try{var s,a,i,j,r,c,l,b=document.getElementsByTagName("script");l=b[b.length-1].previousSibling;a=l.getAttribute('data-cfemail');if(a){s='';r=parseInt(a.substr(0,2),16);for(j=2;a.length-j;j+=2){c=parseInt(a.substr(j,2),16)^r;s+=String.fromCharCode(c);}s=document.createTextNode(s);l.parentNode.replaceChild(s,l);}}catch(e){}})();
+/* ]]> */
+</script></a></span>
+                </div>
+                <div class="contact-element" itemscope itemtype="http://schema.org/Organization">
+                    <span class="name" itemprop="name">Vous êtes un média?</span>
+                    <span class="telephone" itemprop="telephone">418 704-1559 #228</span>
+                    <span class="email" itemprop="email"><a href="http://www.cloudflare.com/email-protection#e58880818c8496a592808784949080878086cb8a9782"><span class="__cf_email__" data-cfemail="7c111918151d0f3c0b191e1d0d09191e191f52130e1b">[email&nbsp;protected]</span><script type="text/javascript">
+/* <![CDATA[ */
+(function(){try{var s,a,i,j,r,c,l,b=document.getElementsByTagName("script");l=b[b.length-1].previousSibling;a=l.getAttribute('data-cfemail');if(a){s='';r=parseInt(a.substr(0,2),16);for(j=2;a.length-j;j+=2){c=parseInt(a.substr(j,2),16)^r;s+=String.fromCharCode(c);}s=document.createTextNode(s);l.parentNode.replaceChild(s,l);}}catch(e){}})();
+/* ]]> */
+</script></a></span>
+                </div>
+            </div>
+
+            <div class="l-col">
+                <div class="contact-element" itemscope itemtype="http://schema.org/Place">
+                    <span class="name" itemprop="name">Siège social</span>
+                    <span class="adresse" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                        <span class="streetAddress" itemprop="streetAddress">305, Charest Est, bureau 901</span>
+                        <span class="addressLocality" itemprop="addressLocality">Québec</span> (QC) <span class="postalCode" itemprop="postalCode">G1K 3H3</span>
+                        <span class="telephone" itemprop="telephone">418 647-3877</span>
+                    </span>
+                </div>
+            </div>
+
+            <div class="l-col large">
+                <p class="strong">Suivez-nous sur les réseaux sociaux et collaborez avec nous</p>
+                <p class="strong hashtag"><a href="https://twitter.com/search?q=%23WAQ14&amp;src=typd">#WAQ14</a></p>
+                <div class="social-medias">
+                    <a href="https://www.facebook.com/webaquebec" class="Facebook"><img src="../../wp-content/themes/waq2014/img/icon-social-facebook.png" alt="Facebook"></a><a href="https://twitter.com/webaquebec" class="Twitter"><img src="../../wp-content/themes/waq2014/img/icon-social-twitter.png" alt="Twitter"></a><a href="http://www.linkedin.com/company/web-qu-bec" class="LinkedIn"><img src="../../wp-content/themes/waq2014/img/icon-social-linkedin.png" alt="LinkedIn"></a>                </div>
+            </div>
+
+        </div>
+
+        <div class="l-row footer-bar">
+
+            <div class="l-col archives">
+                <h3>Archives</h3>
+                <ul>
+                    <li><a href="http://2013.webaquebec.org"><abbr title="Web à Québec">WAQ</abbr> <span class="visuallyhidden">édition</span> 2013</a></li><li><a href="http://2012.webaquebec.org"><abbr title="Web à Québec">WAQ</abbr> <span class="visuallyhidden">édition</span> 2012</a></li>                </ul>
+            </div>
+
+            <div class="l-col right">
+                <div><a href="../../accessibilite/index.html">Accessibilité</a></div>
+                <div><a href="https://github.com/webaquebec/webaquebec2014">Contribuez au site</a></div>
+                <div>
+                    <span class="strong">Conception et réalisation :</span>
+                    <a href="http://www.libeo.com" itemscope itemtype="http://schema.org/Organization">
+                        <span itemprop="name" class="visuallyhidden">Libéo</span>
+                        <img src="../../wp-content/themes/waq2014/img/logo-libeo-footer.png" alt="">
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</footer><!-- end of Footer section -->
+<script type='text/javascript' src='../../wp-content/plugins/conferencer/js/jquery.fadeshow.js%3Fver=0.3'></script>
+<script type='text/javascript' src='../../wp-content/plugins/conferencer/js/site.js%3Fver=0.3'></script>
+<script type='text/javascript' src='http://maps.googleapis.com/maps/api/js?sensor=false&#038;libraries=drawing&#038;language=fr'></script>
+<script type='text/javascript' src='../../wp-content/themes/waq2014/js/vendor/moment.min.js'></script>
+<script type='text/javascript' src='../../wp-content/themes/waq2014/js/vendor/underscore-min.js'></script>
+<script type='text/javascript' src='../../wp-content/themes/waq2014/js/plugins/buttonize.jquery.js'></script>
+<script type='text/javascript' src='../../wp-content/themes/waq2014/js/plugins/eminize.jquery.js'></script>
+<script type='text/javascript' src='../../wp-content/themes/waq2014/js/plugins/onfontresize.jquery.js'></script>
+<script type='text/javascript' src='../../wp-content/themes/waq2014/js/app/objects/Schedule.js'></script>
+<script type='text/javascript' src='../../wp-content/themes/waq2014/js/app/objects/CustomSchedule.js'></script>
+<script type='text/javascript' src='../../wp-content/themes/waq2014/js/app/objects/Countdown.js'></script>
+<script type='text/javascript' src='../../wp-content/themes/waq2014/js/app/objects/SnapMenu.js'></script>
+<script type='text/javascript' src='../../wp-content/themes/waq2014/js/app/objects/MobileMenu.js'></script>
+<script type='text/javascript' src='../../wp-content/themes/waq2014/js/app/objects/Slideshow.js'></script>
+<script type='text/javascript' src='../../wp-content/themes/waq2014/js/app/objects/GoogleMaps.js'></script>
+<script type='text/javascript' src='../../wp-content/themes/waq2014/js/app/WAQ.Common.js'></script>
+<script type='text/javascript' src='../../wp-content/themes/waq2014/js/main.js'></script>
+<div id="fb-root"></div>
+<script>
+  // Load the SDK asynchronously
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "https://connect.facebook.net/en_US/all.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-20043510-1', 'webaquebec.org');
+ga('send', 'pageview');
+</script>
+</div>
+<script type="text/javascript">
+/* <![CDATA[ */
+(function(){try{var s,a,i,j,r,c,l=document.getElementsByTagName("a"),t=document.createElement("textarea");for(i=0;l.length-i;i++){try{a=l[i].getAttribute("href");if(a&&"www.cloudflare.com/email-protection"==a.substr(7 ,35)){s='';j=43;r=parseInt(a.substr(j,2),16);for(j+=2;a.length-j&&a.substr(j,1)!='X';j+=2){c=parseInt(a.substr(j,2),16)^r;s+=String.fromCharCode(c);}j+=1;s+=a.substr(j,a.length-j);t.innerHTML=s.replace(/</g,"&lt;").replace(/>/g,"&gt;");l[i].setAttribute("href","mailto:"+t.value);}}catch(e){}}}catch(e){}})();
+/* ]]> */
+</script>
+</body>
+</html>
